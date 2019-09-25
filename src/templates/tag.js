@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import { Layout, Wrapper, Subline, Article, SectionTitle } from '../components'
 import config from '../../config'
-import CategoriesConfig from '../../config/categories'
+import TagsConfig from '../../config/tags'
 
 const Content = styled.div`
   grid-column: 2;
@@ -19,19 +19,20 @@ const Content = styled.div`
   }
 `
 
-const Category = ({ pageContext: { category }, data: { allMdx } }) => {
+const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
   const { nodes, totalCount } = allMdx
+  const subline = `${totalCount} 記事`
 
   return (
     <Layout>
       <Wrapper>
-        <Helmet title={`Category: ${category} | ${config.siteTitle}`} />
+        <Helmet title={`Tag: ${tag} | ${config.siteTitle}`} />
         <Content>
           <SectionTitle>
-            {CategoriesConfig[category]} {`${totalCount} 記事`}
+            {TagsConfig[tag]} {subline}
           </SectionTitle>
           <Subline sectionTitle>
-            <Link to="/categories">全てのカテゴリを見る</Link>
+            <Link to="/tags">全てのタグを見る</Link>
           </Subline>
           {nodes.map(post => (
             <Article
@@ -53,11 +54,11 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
   )
 }
 
-export default Category
+export default Tag
 
-Category.propTypes = {
+Tag.propTypes = {
   pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
   }).isRequired,
   data: PropTypes.shape({
     allMdx: PropTypes.shape({
@@ -68,11 +69,8 @@ Category.propTypes = {
 }
 
 export const postQuery = graphql`
-  query CategoryPage($category: String!) {
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: $category } } }
-    ) {
+  query TagPage($tag: String!) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { eq: $tag } } }) {
       totalCount
       nodes {
         frontmatter {

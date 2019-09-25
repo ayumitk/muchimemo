@@ -3,8 +3,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
-
+import Img from 'gatsby-image'
+import CategoriesConfig from '../../config/categories'
 import Subline from './Subline'
+import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
   display: flex;
@@ -39,31 +41,46 @@ const Initiale = styled.span`
   z-index: -1;
 `
 
-const Excerpt = styled.p`
+const Description = styled.p`
   grid-column: -1 / 1;
   margin-top: 1rem;
   margin-bottom: 1rem;
 `
 
-const Article = ({ title, date, excerpt, slug, timeToRead, categories }) => {
+const FeaturedImage = styled.div`
+  line-height: 0;
+  width: 100px;
+`
+
+const Article = ({ title, date, slug, description, categories, tags, image }) => {
   const firstChar = title.charAt(0)
 
   return (
     <Post>
+      <FeaturedImage>
+        <Img fluid={image} />
+      </FeaturedImage>
       <Title>
         <Initiale>{firstChar}</Initiale>
         <Link to={slug}>{title}</Link>
       </Title>
       <Subline>
-        {date} &mdash; {timeToRead} Min Read &mdash; In{' '}
+        {date}{' '}
         {categories.map((cat, i) => (
           <React.Fragment key={cat}>
             {!!i && ', '}
-            <Link to={`/categories/${kebabCase(cat)}`}>{cat}</Link>
+            <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
           </React.Fragment>
         ))}
       </Subline>
-      <Excerpt>{excerpt}</Excerpt>
+      <Description>{description}</Description>
+      <div>
+        {tags.map(tag => (
+          <span key={tag}>
+            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+          </span>
+        ))}
+      </div>
     </Post>
   )
 }
@@ -73,8 +90,9 @@ export default Article
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  excerpt: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
-  timeToRead: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
   categories: PropTypes.array.isRequired,
+  tags: PropTypes.array.isRequired,
+  image: PropTypes.object.isRequired,
 }

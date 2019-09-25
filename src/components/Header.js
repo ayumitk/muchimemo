@@ -1,43 +1,41 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { darken, lighten } from 'polished'
+import { Link } from 'gatsby'
+import config from '../../config'
+import Nav from './Nav'
 
 const Wrapper = styled.header`
-  background: linear-gradient(
-    45deg,
-    ${props => darken(0.1, props.theme.colors.primary)},
-    ${props => lighten(0.1, props.theme.colors.primary)}
-  );
   grid-column: 1 / -1;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 2rem 2rem 5rem 2rem;
-  box-shadow: inset 0px -10px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0 0 0;
+  text-align: center;
 `
 
-const Content = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-
+const SiteTitle = styled.div`
   a {
-    color: ${props => props.theme.colors.white};
-    font-size: 1.2rem;
+    color: ${props => props.theme.colors.grey.dark};
+    font-size: 1.8rem;
+    font-weight: bold;
     &:hover {
       opacity: 0.85;
-      color: ${props => props.theme.colors.white};
+      color: ${props => props.theme.colors.grey.dark};
     }
   }
 `
 
-const Header = ({ children }) => (
+const Tagline = styled.div`
+  font-size: 0.8rem;
+  color: ${props => props.theme.colors.grey.light};
+  margin-bottom: 1rem;
+`
+
+const Header = () => (
   <Wrapper>
-    <Content>{children}</Content>
+    <SiteTitle>
+      <Link to="/">{config.siteTitle}</Link>
+    </SiteTitle>
+    <Tagline>{config.siteTitleManifest}</Tagline>
+    <Nav />
   </Wrapper>
 )
 
 export default Header
-
-Header.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.node]).isRequired,
-}

@@ -1,12 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { Link } from 'gatsby'
+import { Heart } from 'styled-icons/boxicons-solid/Heart'
+import { MailOutline } from 'styled-icons/material/MailOutline'
+import config from '../../config'
+import Header from './Header'
 
 import SEO from './SEO'
 import theme from '../../config/theme'
 import useBuildTime from '../hooks/useBuildTime'
 
+import Button from './Button'
+
 const GlobalStyle = createGlobalStyle`
+
+  @font-face {
+    font-family: "NotoSansJP";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/font/NotoSansJP-DemiLight.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSansJP";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/font/NotoSansJP-Medium.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NotoSansJP";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/font/NotoSansJP-Bold.woff") format("woff");
+    font-display: swap;
+  }
+
   *,
   *:before,
   *:after {
@@ -22,19 +54,20 @@ const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.colors.primary};
   }
   html {
-    font-family: ${props => props.theme.fontFamily.sansSerif};
+    /* font-family: ${props => props.theme.fontFamily.sansSerif}; */
+    font-family: "NotoSansJP", sans-serif;
     font-size: ${props => props.theme.baseFontSize};
     h1 {
-      font-size: 3.052rem;
+      font-size: 2rem;
     }
     h2 {
-      font-size: 2.441rem;
+      font-size: 2rem;
     }
     h3 {
-      font-size: 1.953rem;
+      font-size: 1.8rem;
     }
     h4 {
-      font-size: 1.563rem;
+      font-size: 1.6rem;
     }
     h5 {
       font-size: 1.25rem;
@@ -42,19 +75,19 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 16px;
       h1 {
-        font-size: 2.488rem;
+        font-size: 1.6rem;
       }
       h2 {
-        font-size: 2.074rem;
+        font-size: 1.6rem;
       }
       h3 {
-        font-size: 1.728rem;
+        font-size: 1.6rem;
       }
       h4 {
-        font-size: 1.444rem;
+        font-size: 1.6rem;
       }
       h5 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
       }
     }
   }
@@ -84,7 +117,9 @@ const GlobalStyle = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, h6 {
     color: ${props => props.theme.colors.grey.dark};
-    font-family: ${props => props.theme.fontFamily.serif};
+    /* font-family: ${props => props.theme.fontFamily.serif}; */
+    font-family: "NotoSansJP", sans-serif;
+    line-height:1.25;
   }
   blockquote {
     font-style: italic;
@@ -107,7 +142,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
   textarea {
-    font-family: ${props => props.theme.fontFamily.sansSerif};
+    /* font-family: ${props => props.theme.fontFamily.sansSerif}; */
+    font-family: "NotoSansJP", sans-serif;
   }
   input, textarea {
     border-radius: .5rem;
@@ -184,6 +220,10 @@ const GlobalStyle = createGlobalStyle`
   [hidden] {
     display: none !important;
   }
+  svg{
+    width:1rem;
+    height:1rem;
+  }
 `
 
 const Footer = styled.footer`
@@ -202,10 +242,21 @@ const Layout = ({ children, customSEO }) => {
       <>
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
+        <Header />
         {children}
         <Footer>
-          &copy; 2019 by LekoArts. All rights reserved. <br />
-          <a href="https://github.com/LekoArts/gatsby-starter-minimal-blog">GitHub Repository</a> <br />
+          <div>
+            <Link to="/contact">
+              <Button big>
+                <MailOutline />
+                お問い合わせ
+              </Button>
+            </Link>
+          </div>
+          &copy; {new Date().getFullYear()}
+          {` `}
+          <Link to="/">{config.siteTitle}</Link> Made with <Heart /> in Canada.
+          <br />
           <span>Last build: {buildTime}</span>
         </Footer>
       </>

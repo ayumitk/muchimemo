@@ -2,25 +2,19 @@
 
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Layout, Wrapper, Header } from '../components'
+import { Layout, Wrapper } from '../components'
 
 import config from '../../config'
 
 const Content = styled.div`
   grid-column: 2;
-  box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 2rem 4rem;
-  background-color: ${props => props.theme.colors.bg};
   z-index: 9000;
-  margin-top: -3rem;
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    padding: 3rem 3rem;
+    /* padding: 3rem 3rem; */
   }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    padding: 2rem 1.5rem;
+    /* padding: 2rem 1.5rem; */
   }
   form {
     p {
@@ -44,12 +38,9 @@ const Success = () => (
   <Layout>
     <Wrapper>
       <Helmet title={`Contact | ${config.siteTitle}`} />
-      <Header>
-        <Link to="/">{config.siteTitle}</Link>
-      </Header>
       <Content>
-        <h1>Your message was sent!</h1>
-        <p>I'll answer your request as quick as possible.</p>
+        <h1>送信完了</h1>
+        <p>お問い合わせありがとうございます。なるべく早く返信しますね！</p>
       </Content>
     </Wrapper>
   </Layout>

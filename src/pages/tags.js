@@ -7,7 +7,7 @@ import kebabCase from 'lodash/kebabCase'
 
 import { Layout, Wrapper, SectionTitle } from '../components'
 import config from '../../config'
-import CategoriesConfig from '../../config/categories'
+import TagsConfig from '../../config/tags'
 
 const Content = styled.div`
   grid-column: 2;
@@ -26,20 +26,19 @@ const Title = styled.h3`
   margin-bottom: 0.75rem;
 `
 
-const Category = ({
+const Tag = ({
   data: {
     allMdx: { group },
   },
 }) => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Categories | ${config.siteTitle}`} />
+      <Helmet title={`Tags | ${config.siteTitle}`} />
       <Content>
-        <SectionTitle>Categories</SectionTitle>
-        {group.map(category => (
-          <Title key={category.fieldValue}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}`}>{CategoriesConfig[category.fieldValue]}</Link> (
-            {category.totalCount})
+        <SectionTitle>Tags</SectionTitle>
+        {group.map(tag => (
+          <Title key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>{TagsConfig[tag.fieldValue]}</Link> ({tag.totalCount})
           </Title>
         ))}
       </Content>
@@ -47,9 +46,9 @@ const Category = ({
   </Layout>
 )
 
-export default Category
+export default Tag
 
-Category.propTypes = {
+Tag.propTypes = {
   data: PropTypes.shape({
     allMdx: PropTypes.shape({
       group: PropTypes.array.isRequired,
@@ -58,9 +57,9 @@ Category.propTypes = {
 }
 
 export const postQuery = graphql`
-  query CategoriesPage {
+  query TagsPage {
     allMdx {
-      group(field: frontmatter___categories) {
+      group(field: frontmatter___tags) {
         fieldValue
         totalCount
       }
