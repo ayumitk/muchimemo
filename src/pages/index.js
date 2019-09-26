@@ -58,7 +58,7 @@ IndexPage.propTypes = {
 
 export const IndexQuery = graphql`
   query IndexQuery {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { fields: { sourceName: { eq: "post" } } }) {
       nodes {
         fields {
           slug

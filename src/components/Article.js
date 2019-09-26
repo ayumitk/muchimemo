@@ -10,20 +10,48 @@ import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
-
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+`
+
+const FeaturedImage = styled.div`
+  line-height: 0;
+  width: 250px;
+  margin-right: 30px;
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 180px;
+    margin-right: 20px;
+  }
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    width: 100px;
+    margin-right: 10px;
+  }
+`
+
+const PostInfo = styled.div`
+  flex: 1;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 1rem;
   }
 `
 
 const Title = styled.h2`
-  position: relative;
   text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin: 0;
+  position: relative;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 1rem;
+  }
   a {
     color: ${props => props.theme.colors.grey.dark};
     &:hover {
@@ -39,17 +67,23 @@ const Initiale = styled.span`
   opacity: 0.08;
   user-select: none;
   z-index: -1;
+  top: 1.5rem;
 `
 
 const Description = styled.p`
   grid-column: -1 / 1;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    display: none;
+  }
 `
 
-const FeaturedImage = styled.div`
-  line-height: 0;
-  width: 100px;
+const Tags = styled.div`
+  font-size: 0.875rem;
+  span {
+    padding-right: 0.5rem;
+  }
 `
 
 const Article = ({ title, date, slug, description, categories, tags, image }) => {
@@ -60,27 +94,29 @@ const Article = ({ title, date, slug, description, categories, tags, image }) =>
       <FeaturedImage>
         <Img fluid={image} />
       </FeaturedImage>
-      <Title>
-        <Initiale>{firstChar}</Initiale>
-        <Link to={slug}>{title}</Link>
-      </Title>
-      <Subline>
-        {date}{' '}
-        {categories.map((cat, i) => (
-          <React.Fragment key={cat}>
-            {!!i && ', '}
-            <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
-          </React.Fragment>
-        ))}
-      </Subline>
-      <Description>{description}</Description>
-      <div>
-        {tags.map(tag => (
-          <span key={tag}>
-            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
-          </span>
-        ))}
-      </div>
+      <PostInfo>
+        <Title>
+          <Initiale>{firstChar}</Initiale>
+          <Link to={slug}>{title}</Link>
+        </Title>
+        <Subline style={{ marginTop: `0.5rem` }}>
+          {date}{' '}
+          {categories.map((cat, i) => (
+            <React.Fragment key={cat}>
+              {!!i && ', '}
+              <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
+            </React.Fragment>
+          ))}
+        </Subline>
+        <Description>{description}</Description>
+        <Tags>
+          {tags.map(tag => (
+            <span key={tag}>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+            </span>
+          ))}
+        </Tags>
+      </PostInfo>
     </Post>
   )
 }

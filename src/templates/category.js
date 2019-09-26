@@ -71,7 +71,7 @@ export const postQuery = graphql`
   query CategoryPage($category: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: $category } } }
+      filter: { frontmatter: { categories: { eq: $category } }, fields: { sourceName: { eq: "post" } } }
     ) {
       totalCount
       nodes {

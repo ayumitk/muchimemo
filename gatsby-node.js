@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 // graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
 const wrapper = promise =>
@@ -9,31 +10,46 @@ const wrapper = promise =>
     return result
   })
 
-exports.onCreateNode = ({ node, actions }) => {
+exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  let slug
+  // let slug
 
   if (node.internal.type === 'Mdx') {
-    if (
-      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`
-    } else if (
-      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`
+    const parent = getNode(node.parent)
+
+    if (parent.internal.type === 'File') {
+      createNodeField({
+        name: `sourceName`,
+        node,
+        value: parent.sourceInstanceName,
+      })
     }
-    createNodeField({ node, name: 'slug', value: slug })
+
+    // if (
+    //   Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+    //   Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
+    // ) {
+    //   slug = `/${_.kebabCase(node.frontmatter.slug)}`
+    // } else if (
+    //   Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+    //   Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
+    // ) {
+    //   slug = `/${_.kebabCase(node.frontmatter.title)}`
+    // }
+
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: 'slug',
+      node,
+      value,
+    })
   }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const postTemplate = require.resolve('./src/templates/post.js')
   const categoryTemplate = require.resolve('./src/templates/category.js')
   const tagTemplate = require.resolve('./src/templates/tag.js')
 
@@ -44,7 +60,9 @@ exports.createPages = async ({ graphql, actions }) => {
           nodes {
             fields {
               slug
+              sourceName
             }
+            tableOfContents
             frontmatter {
               title
               description
@@ -65,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: n.fields.slug,
-      component: postTemplate,
+      component: require.resolve(`./src/templates/${String(n.fields.sourceName)}.js`),
       context: {
         slug: n.fields.slug,
         prev,

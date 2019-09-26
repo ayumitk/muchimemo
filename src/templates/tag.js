@@ -70,7 +70,10 @@ Tag.propTypes = {
 
 export const postQuery = graphql`
   query TagPage($tag: String!) {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { eq: $tag } } }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { tags: { eq: $tag } }, fields: { sourceName: { eq: "post" } } }
+    ) {
       totalCount
       nodes {
         frontmatter {

@@ -39,13 +39,6 @@ const Content = styled.article`
     border-bottom: solid 1px #ccc;
     margin: 2rem 0;
   }
-
-  .prism-code {
-    padding: 0.75rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    font-size: 16px;
-  }
 `
 
 const Title = styled.h1`

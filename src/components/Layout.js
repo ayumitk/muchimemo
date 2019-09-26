@@ -14,31 +14,6 @@ import useBuildTime from '../hooks/useBuildTime'
 import Button from './Button'
 
 const GlobalStyle = createGlobalStyle`
-
-  @font-face {
-    font-family: "NotoSansJP";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/font/NotoSansJP-DemiLight.woff") format("woff");
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "NotoSansJP";
-    font-style: normal;
-    font-weight: 600;
-    src: url("/font/NotoSansJP-Medium.woff") format("woff");
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "NotoSansJP";
-    font-style: normal;
-    font-weight: 700;
-    src: url("/font/NotoSansJP-Bold.woff") format("woff");
-    font-display: swap;
-  }
-
   *,
   *:before,
   *:after {
@@ -54,9 +29,12 @@ const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.colors.primary};
   }
   html {
-    /* font-family: ${props => props.theme.fontFamily.sansSerif}; */
-    font-family: "NotoSansJP", sans-serif;
+    font-family: ${props => props.theme.fontFamily.sansSerif};
     font-size: ${props => props.theme.baseFontSize};
+    h1, h2, h3, h4, h5{
+      font-family: ${props => props.theme.fontFamily.sansSerif};
+      /* font-weight: normal; */
+    }
     h1 {
       font-size: 2rem;
     }
@@ -117,8 +95,7 @@ const GlobalStyle = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, h6 {
     color: ${props => props.theme.colors.grey.dark};
-    /* font-family: ${props => props.theme.fontFamily.serif}; */
-    font-family: "NotoSansJP", sans-serif;
+    font-family: ${props => props.theme.fontFamily.serif};
     line-height:1.25;
   }
   blockquote {
@@ -142,8 +119,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
   textarea {
-    /* font-family: ${props => props.theme.fontFamily.sansSerif}; */
-    font-family: "NotoSansJP", sans-serif;
+    font-family: ${props => props.theme.fontFamily.sansSerif};
   }
   input, textarea {
     border-radius: .5rem;
@@ -234,6 +210,13 @@ const Footer = styled.footer`
   }
 `
 
+const Copyright = styled.p`
+  font-size: 0.875rem;
+  svg {
+    fill: ${props => props.theme.colors.secondary};
+  }
+`
+
 const Layout = ({ children, customSEO }) => {
   const buildTime = useBuildTime()
 
@@ -253,11 +236,13 @@ const Layout = ({ children, customSEO }) => {
               </Button>
             </Link>
           </div>
-          &copy; {new Date().getFullYear()}
-          {` `}
-          <Link to="/">{config.siteTitle}</Link> Made with <Heart /> in Canada.
-          <br />
-          <span>Last build: {buildTime}</span>
+          <Copyright>
+            &copy; {new Date().getFullYear()}
+            {` `}
+            <Link to="/">{config.siteTitle}</Link> Made with <Heart /> in Canada.
+            <br />
+            Last build: {buildTime}
+          </Copyright>
         </Footer>
       </>
     </ThemeProvider>

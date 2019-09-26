@@ -10,7 +10,8 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-sharp',
+
+    // for blog post pages
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -18,15 +19,33 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
+
+    // for static pages
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'page',
+        path: `${__dirname}/src/pages`,
+      },
+    },
+
+    // google analytics
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: config.googleAnalyticsID,
       },
     },
+
+    // MDX
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
+        defaultLayouts: {
+          page: require.resolve('./src/templates/page.js'),
+          post: require.resolve('./src/templates/post.js'),
+          default: require.resolve('./src/templates/post.js'),
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-external-links',
