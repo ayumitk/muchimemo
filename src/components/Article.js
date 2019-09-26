@@ -18,8 +18,8 @@ const Post = styled.article`
     margin-bottom: 2.5rem;
   }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 `
 
@@ -45,7 +45,6 @@ const PostInfo = styled.div`
 `
 
 const Title = styled.h2`
-  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   font-size: 1.5rem;
   margin: 0;
   position: relative;
@@ -60,66 +59,51 @@ const Title = styled.h2`
   }
 `
 
-const Initiale = styled.span`
-  position: absolute;
-  font-size: 7rem;
-  transform: translate(-50%, -50%);
-  opacity: 0.08;
-  user-select: none;
-  z-index: -1;
-  top: 1.5rem;
-`
-
 const Description = styled.p`
   grid-column: -1 / 1;
   margin: 0.5rem 0;
-  font-size: 0.875rem;
+  font-size: ${props => props.theme.fontSize.small};
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     display: none;
   }
 `
 
 const Tags = styled.div`
-  font-size: 0.875rem;
+  font-size: ${props => props.theme.fontSize.small};
   span {
     padding-right: 0.5rem;
   }
 `
 
-const Article = ({ title, date, slug, description, categories, tags, image }) => {
-  const firstChar = title.charAt(0)
-
-  return (
-    <Post>
-      <FeaturedImage>
-        <Img fluid={image} />
-      </FeaturedImage>
-      <PostInfo>
-        <Title>
-          <Initiale>{firstChar}</Initiale>
-          <Link to={slug}>{title}</Link>
-        </Title>
-        <Subline style={{ marginTop: `0.5rem` }}>
-          {date}{' '}
-          {categories.map((cat, i) => (
-            <React.Fragment key={cat}>
-              {!!i && ', '}
-              <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
-            </React.Fragment>
-          ))}
-        </Subline>
-        <Description>{description}</Description>
-        <Tags>
-          {tags.map(tag => (
-            <span key={tag}>
-              <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
-            </span>
-          ))}
-        </Tags>
-      </PostInfo>
-    </Post>
-  )
-}
+const Article = ({ title, date, slug, description, categories, tags, image }) => (
+  <Post>
+    <FeaturedImage>
+      <Img fluid={image} />
+    </FeaturedImage>
+    <PostInfo>
+      <Title>
+        <Link to={slug}>{title}</Link>
+      </Title>
+      <Subline style={{ marginTop: `0.5rem` }}>
+        {date}{' '}
+        {categories.map((cat, i) => (
+          <React.Fragment key={cat}>
+            {!!i && ', '}
+            <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
+          </React.Fragment>
+        ))}
+      </Subline>
+      <Description>{description}</Description>
+      <Tags>
+        {tags.map(tag => (
+          <span key={tag}>
+            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+          </span>
+        ))}
+      </Tags>
+    </PostInfo>
+  </Post>
+)
 
 export default Article
 

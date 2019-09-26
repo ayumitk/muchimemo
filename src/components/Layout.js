@@ -39,33 +39,32 @@ const GlobalStyle = createGlobalStyle`
       font-size: 2rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
     h3 {
-      font-size: 1.8rem;
+      font-size: 1.375rem;
     }
     h4 {
-      font-size: 1.6rem;
+      font-size: 1.125rem;
     }
     h5 {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 16px;
       h1 {
-        font-size: 1.6rem;
+        font-size: 1.625rem;
       }
       h2 {
-        font-size: 1.6rem;
+        font-size: 1.625rem;
       }
       h3 {
-        font-size: 1.6rem;
+        font-size: 1.375rem;
       }
       h4 {
-        font-size: 1.6rem;
+        font-size: 1.125rem;
       }
       h5 {
-        font-size: 1.6rem;
+        font-size: 1rem;
       }
     }
   }
@@ -204,14 +203,14 @@ const GlobalStyle = createGlobalStyle`
 
 const Footer = styled.footer`
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 3rem 0 1rem 0;
   span {
     font-size: 0.75rem;
   }
 `
 
 const Copyright = styled.p`
-  font-size: 0.875rem;
+  font-size: ${props => props.theme.fontSize.small};
   svg {
     fill: ${props => props.theme.colors.secondary};
   }

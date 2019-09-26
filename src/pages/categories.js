@@ -5,25 +5,13 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 
-import { Layout, Wrapper, SectionTitle } from '../components'
+import { Layout, Wrapper } from '../components'
 import config from '../../config'
 import CategoriesConfig from '../../config/categories'
 
 const Content = styled.div`
   grid-column: 2;
   z-index: 9000;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    /* padding: 3rem 3rem; */
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* padding: 2rem 1.5rem; */
-  }
-`
-
-const Title = styled.h3`
-  position: relative;
-  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  margin-bottom: 0.75rem;
 `
 
 const Category = ({
@@ -33,14 +21,14 @@ const Category = ({
 }) => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Categories | ${config.siteTitle}`} />
+      <Helmet title={`カテゴリ一覧 | ${config.siteTitle}`} />
       <Content>
-        <SectionTitle>Categories</SectionTitle>
+        <h1>カテゴリ一覧</h1>
         {group.map(category => (
-          <Title key={category.fieldValue}>
+          <p key={category.fieldValue}>
             <Link to={`/categories/${kebabCase(category.fieldValue)}`}>{CategoriesConfig[category.fieldValue]}</Link> (
             {category.totalCount})
-          </Title>
+          </p>
         ))}
       </Content>
     </Wrapper>

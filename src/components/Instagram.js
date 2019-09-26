@@ -6,7 +6,7 @@ function Instagram({ id }) {
     <div>
       <InstagramEmbed
         url={`https://www.instagram.com/p/${id}/`}
-        maxWidth={480}
+        maxWidth={320}
         hideCaption
         containerTagName="div"
         protocol=""

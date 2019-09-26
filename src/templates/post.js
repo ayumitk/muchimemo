@@ -17,27 +17,28 @@ const Content = styled.article`
   border-radius: 1rem;
   margin: 0 auto;
   z-index: 9000;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    /* padding: 3rem 3rem; */
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* padding: 2rem 1.5rem; */
-  }
   p {
     font-size: 1rem;
     letter-spacing: -0.003em;
     line-height: 1.8;
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 1rem;
+      font-size: 0.937rem;
     }
   }
   hr {
     border: 0;
-    border-bottom: solid 1px #ccc;
+    border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
     margin: 2rem 0;
+  }
+  p + h2 {
+    margin-top: 5rem;
+  }
+  p + h3,
+  div + h4 {
+    margin-top: 3.5rem;
   }
 `
 
@@ -47,6 +48,17 @@ const Title = styled.h1`
 
 const PostContent = styled.div`
   /* margin-top: 4rem; */
+`
+
+const Tags = styled.div`
+  margin: 0.5rem 0 1rem 0;
+  span a {
+    background: #e8f3ef;
+    display: inline-block;
+    margin-right: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+  }
 `
 
 const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) => {
@@ -73,13 +85,13 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
                 <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
               </React.Fragment>
             ))}
-            <br />
-            タグ{' '}
-            {post.tags.map(tag => (
-              <span key={tag}>
-                <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
-              </span>
-            ))}
+            <Tags>
+              {post.tags.map(tag => (
+                <span key={tag}>
+                  <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+                </span>
+              ))}
+            </Tags>
           </Subline>
 
           <div style={{ lineHeight: '0' }}>

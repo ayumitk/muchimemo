@@ -4,18 +4,20 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, Wrapper, Subline, Article, SectionTitle } from '../components'
+import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
 import CategoriesConfig from '../../config/categories'
 
 const Content = styled.div`
   grid-column: 2;
   z-index: 9000;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    /* padding: 3rem 3rem; */
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* padding: 2rem 1.5rem; */
+`
+
+const H1 = styled.h1`
+  span {
+    font-size: 1rem;
+    color: ${props => props.theme.colors.grey.light};
+    margin-left: 1rem;
   }
 `
 
@@ -25,14 +27,15 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
   return (
     <Layout>
       <Wrapper>
-        <Helmet title={`Category: ${category} | ${config.siteTitle}`} />
+        <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
         <Content>
-          <SectionTitle>
-            {CategoriesConfig[category]} {`${totalCount} 記事`}
-          </SectionTitle>
-          <Subline sectionTitle>
+          <H1>
+            {CategoriesConfig[category]}
+            <span>{`${totalCount} 記事`}</span>
+          </H1>
+          <p>
             <Link to="/categories">全てのカテゴリを見る</Link>
-          </Subline>
+          </p>
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}

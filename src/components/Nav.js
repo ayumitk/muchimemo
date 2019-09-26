@@ -12,6 +12,7 @@ const Content = styled.ul`
   margin: 0 auto;
   padding: 0;
   display: flex;
+  border-left: solid 1px rgba(255, 255, 255, 0.3);
   li {
     list-style: none;
     a {

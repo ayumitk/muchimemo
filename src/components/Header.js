@@ -10,10 +10,11 @@ const Wrapper = styled.header`
 `
 
 const SiteTitle = styled.div`
+  padding: 1rem 0 0 0;
+  font-size: 2rem;
+  font-weight: bold;
   a {
     color: ${props => props.theme.colors.grey.dark};
-    font-size: 1.8rem;
-    font-weight: bold;
     &:hover {
       opacity: 0.85;
       color: ${props => props.theme.colors.grey.dark};
@@ -24,7 +25,7 @@ const SiteTitle = styled.div`
 const Tagline = styled.div`
   font-size: 0.812rem;
   color: ${props => props.theme.colors.grey.light};
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `
 
 const SubNav = styled.nav`

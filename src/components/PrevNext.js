@@ -2,10 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
+import { LeftArrowAlt } from 'styled-icons/boxicons-regular/LeftArrowAlt'
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 6rem auto 0 auto;
+  margin: 2rem auto;
+  padding: 2rem 0;
+  border-top: 1px solid ${props => props.theme.colors.grey.ultraLight};
+  border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
   a {
     color: ${props => props.theme.colors.primary};
     display: flex;
@@ -36,15 +41,19 @@ const PrevNext = ({ next, prev }) => (
   <Wrapper>
     {prev && (
       <Prev>
-        <span>Previous</span>
-        <Link to={prev.fields.slug}>{prev.frontmatter.title}</Link>
+        <span>前の記事</span>
+        <Link to={prev.fields.slug}>
+          <LeftArrowAlt /> {prev.frontmatter.title}
+        </Link>
       </Prev>
     )}
 
     {next && (
       <Next>
-        <span>Next</span>
-        <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
+        <span>次の記事</span>
+        <Link to={next.fields.slug}>
+          {next.frontmatter.title} <RightArrowAlt />
+        </Link>
       </Next>
     )}
   </Wrapper>

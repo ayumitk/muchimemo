@@ -2,8 +2,8 @@ module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
   siteTitle: 'ムチでメモ', // Navigation and Site Title
-  siteTitleAlt: 'ムチでメモ - カナダ・バンクーバーで、M/Mロマンス小説とか、BLとか', // Alternative Site title for SEO
-  siteTitleManifest: 'カナダ・バンクーバーで、M/Mロマンス小説とか、BLとか',
+  siteTitleAlt: 'ムチでメモ - カナダ･バンクーバーで、M/Mロマンスとか、BLとか', // Alternative Site title for SEO
+  siteTitleManifest: 'カナダ･バンクーバーで、M/Mロマンスとか、BLとか',
   siteUrl: 'https://muchimemo.com', // Domain of your site. No trailing slash!
   siteLanguage: 'ja', // Language Tag on <html> element
   siteHeadline: 'Writing and publishing content', // Headline for schema.org JSONLD

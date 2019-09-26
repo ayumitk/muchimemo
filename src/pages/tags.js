@@ -5,25 +5,13 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 
-import { Layout, Wrapper, SectionTitle } from '../components'
+import { Layout, Wrapper } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
 
 const Content = styled.div`
   grid-column: 2;
   z-index: 9000;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    /* padding: 3rem 3rem; */
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* padding: 2rem 1.5rem; */
-  }
-`
-
-const Title = styled.h3`
-  position: relative;
-  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  margin-bottom: 0.75rem;
 `
 
 const Tag = ({
@@ -33,13 +21,13 @@ const Tag = ({
 }) => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Tags | ${config.siteTitle}`} />
+      <Helmet title={`タグ一覧 | ${config.siteTitle}`} />
       <Content>
-        <SectionTitle>Tags</SectionTitle>
+        <h1>タグ一覧</h1>
         {group.map(tag => (
-          <Title key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>{TagsConfig[tag.fieldValue]}</Link> ({tag.totalCount})
-          </Title>
+          <p key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>#{TagsConfig[tag.fieldValue]}</Link> ({tag.totalCount})
+          </p>
         ))}
       </Content>
     </Wrapper>
