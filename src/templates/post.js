@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
 
-import { Layout, Wrapper, Subline, SEO, PrevNext } from '../components'
+import { Layout, Wrapper, Subline, SEO, PrevNext, TableOfContents } from '../components'
 import CategoriesConfig from '../../config/categories'
 import TagsConfig from '../../config/tags'
 
@@ -64,6 +64,8 @@ const Tags = styled.div`
 const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) => {
   const post = postNode.frontmatter
 
+  const { tableOfContents } = postNode
+
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
   const disqusConfig = {
@@ -97,6 +99,8 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
           <div style={{ lineHeight: '0' }}>
             <Img fluid={featuredImgFluid} />
           </div>
+
+          <TableOfContents toc={tableOfContents} slug={slug} />
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
@@ -135,6 +139,7 @@ export const postQuery = graphql`
   query postBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MM/DD/YYYY")
