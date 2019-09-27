@@ -7,7 +7,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
 
-import { Layout, Wrapper, Subline, SEO, PrevNext, TableOfContents } from '../components'
+import { Layout, Wrapper, Subline, SEO, PrevNext } from '../components'
+import TableOfContents from '../components/TableOfContents'
 import CategoriesConfig from '../../config/categories'
 import TagsConfig from '../../config/tags'
 
@@ -100,7 +101,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
             <Img fluid={featuredImgFluid} />
           </div>
 
-          <TableOfContents toc={tableOfContents} slug={slug} />
+          <TableOfContents toc={tableOfContents} />
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
