@@ -1,20 +1,13 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Layout, Wrapper } from '../components'
 
 const Content = styled.article`
   grid-column: 2;
   max-width: 680px;
-  border-radius: 1rem;
   margin: 0 auto;
   z-index: 9000;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    /* padding: 3rem 3rem; */
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    /* padding: 2rem 1.5rem; */
-  }
   p {
     font-size: 1rem;
     letter-spacing: -0.003em;
@@ -41,6 +34,10 @@ function Page({ children }) {
       </Wrapper>
     </Layout>
   )
+}
+
+Page.propTypes = {
+  children: PropTypes.array.isRequired,
 }
 
 export default Page
