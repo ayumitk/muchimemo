@@ -11,6 +11,8 @@ import { Layout, Wrapper, Subline, SEO, PrevNext } from '../components'
 import TableOfContents from '../components/TableOfContents'
 import CategoriesConfig from '../../config/categories'
 import TagsConfig from '../../config/tags'
+import Share from '../components/Share';
+import config from '../../config'
 
 const Content = styled.article`
   grid-column: 2;
@@ -106,6 +108,17 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          <Share
+            socialConfig={{
+              twitterUsername:`${config.userTwitter}`,
+              config: {
+                url: `${config.siteUrl}${slug}`,
+                title: post.title,
+              },
+            }}
+            tags={[`${config.siteTitle}`]}
+          />
 
           <PrevNext prev={prev} next={next} />
 
