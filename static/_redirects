@@ -1,3 +1,39 @@
-/entry /
-/tv_movie /tv-movie
-/london_spy /london-spy
+/entry/tv_movie/london_spy /tv-movie/london-spy
+
+/entry/menstrual_cup /misc/menstrual-cup
+/entry/digital_minimalism /misc/digital-minimalism
+/entry/not_sure_i_want_kids /misc/not-sure-i-want-kids
+/entry/overseas /misc/relocate-from-japan
+/entry/audible /misc/audible
+/entry/couple/split_the_housework /misc/split-the-housework
+
+/entry/historical_bl_manga /bl-manga/historical-bl-manga-recommendations
+/entry/bl_manga/momo_to_manji /bl-manga/momo-to-manji
+/entry/blish_manga /bl-manga/blish-manga-recommendations
+/entry/bl_manga /bl-manga/bl-manga-recommendations
+/entry/bl_manga/liquor_and_cigarette /bl-manga/liquor-and-cigarette
+/entry/bl_manga/hatter /bl-manga/hatter
+/entry/bl_manga/koi_ga_ochitara /bl-manga/koi-ga-ochitara
+
+/entry/mm_romance/fatal_shadows /mm-romance/fatal_shadows
+/entry/mm_romance/fair_game /mm-romance/fair_game
+/entry/mm_romance/the_mermaid_murders /mm-romance/the-mermaid-murders
+/entry/adrien_english/adrien_jake_image /mm-romance/adrien-english-image
+/entry/adrien_english/introduction /mm-romance/adrien-english-introduction
+/adrien_english /mm-romance/adrien-english-index
+
+/entry/adrien_english/so_this_is_christmas/chapter12 /english/adrien-english/so-this-is-christmas/chapter12
+/entry/adrien_english/so_this_is_christmas/chapter11 /english/adrien-english/so-this-is-christmas/chapter11
+/entry/adrien_english/so_this_is_christmas/chapter10 /english/adrien-english/so-this-is-christmas/chapter10
+/entry/adrien_english/so_this_is_christmas/chapter9 /english/adrien-english/so-this-is-christmas/chapter9
+/entry/adrien_english/so_this_is_christmas/chapter8 /english/adrien-english/so-this-is-christmas/chapter8
+/entry/adrien_english/so_this_is_christmas/chapter7 /english/adrien-english/so-this-is-christmas/chapter7
+/entry/adrien_english/so_this_is_christmas/chapter6 /english/adrien-english/so-this-is-christmas/chapter6
+/entry/adrien_english/so_this_is_christmas/chapter5 /english/adrien-english/so-this-is-christmas/chapter5
+/entry/adrien_english/so_this_is_christmas/chapter4 /english/adrien-english/so-this-is-christmas/chapter4
+/entry/adrien_english/so_this_is_christmas/chapter3 /english/adrien-english/so-this-is-christmas/chapter3
+/entry/adrien_english/so_this_is_christmas/chapter2 /english/adrien-english/so-this-is-christmas/chapter2
+/entry/adrien_english/so_this_is_christmas/chapter1 /english/adrien-english/so-this-is-christmas/chapter1
+
+/entry/adrien_english/fatal_shadows/chapter2 /english/adrien-english/fatal-shadows/chapter2
+/entry/adrien_english/fatal_shadows/chapter1 /english/adrien-english/fatal-shadows/chapter1
