@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const affiliateId = 'ayutak04-22'
 
@@ -69,3 +70,15 @@ function Amazon({ asin, title, linkId }) {
 }
 
 export default Amazon
+
+Amazon.propTypes = {
+  asin: PropTypes.string,
+  title: PropTypes.string,
+  linkId: PropTypes.string,
+}
+
+Amazon.defaultProps = {
+  asin: null,
+  title: null,
+  linkId: null,
+}

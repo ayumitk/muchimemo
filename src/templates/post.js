@@ -101,7 +101,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
             <Img fluid={featuredImgFluid} />
           </div>
 
-          <TableOfContents toc={tableOfContents} />
+          {/* <TableOfContents toc={tableOfContents} /> */}
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>

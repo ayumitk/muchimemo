@@ -54,3 +54,11 @@ function TableOfContents({ toc }) {
 }
 
 export default TableOfContents
+
+TableOfContents.propTypes = {
+  toc: PropTypes.object,
+}
+
+TableOfContents.defaultProps = {
+  toc: null,
+}
