@@ -49,7 +49,7 @@ function Amazon({ asin, title, linkId }) {
     <>
       <AmazonLink>
         <a
-          href={`https://www.amazon.co.jp/gp/product/B079YY3DKK/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}`}
+          href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}`}
           target="_blank"
           rel="noopener noreferrer"
         >
