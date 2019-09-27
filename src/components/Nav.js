@@ -39,7 +39,13 @@ const Nav = () => (
           <Link to="/categories/bl/">{CategoriesConfig.bl}</Link>
         </li>
         <li>
+          <Link to="/categories/tv-movie/">{CategoriesConfig.tvMovie}</Link>
+        </li>
+        <li>
           <Link to="/categories/misc/">{CategoriesConfig.misc}</Link>
+        </li>
+        <li>
+          <Link to="/categories/english/">{CategoriesConfig.english}</Link>
         </li>
       </Content>
     </Wrapper>
