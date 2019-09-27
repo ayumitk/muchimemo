@@ -12,17 +12,23 @@ const Content = styled.ul`
   margin: 0 auto;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   border-left: solid 1px rgba(255, 255, 255, 0.3);
   li {
     list-style: none;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      width: 33.33%;
+    }
     a {
       display: block;
       font-size: 0.937rem;
       color: ${props => props.theme.colors.white};
       padding: 0.75rem 1rem;
       border-right: solid 1px rgba(255, 255, 255, 0.3);
+      border-bottom: solid 1px rgba(255, 255, 255, 0.3);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        padding: 0.35rem 0.5rem;
+        padding: 0.35rem 0;
+        font-size: 0.812rem;
       }
     }
   }
@@ -33,10 +39,10 @@ const Nav = () => (
     <Wrapper>
       <Content>
         <li>
-          <Link to="/categories/mm/">{CategoriesConfig.mm}</Link>
+          <Link to="/categories/mm-romance/">{CategoriesConfig.mmRomance}</Link>
         </li>
         <li>
-          <Link to="/categories/bl/">{CategoriesConfig.bl}</Link>
+          <Link to="/categories/bl-manga/">{CategoriesConfig.blManga}</Link>
         </li>
         <li>
           <Link to="/categories/tv-movie/">{CategoriesConfig.tvMovie}</Link>

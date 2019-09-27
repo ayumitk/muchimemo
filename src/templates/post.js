@@ -7,11 +7,11 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
 
-import { Layout, Wrapper, Subline, SEO, PrevNext } from '../components'
+import { Layout, Wrapper, Subline, SEO, PrevNext, Article } from '../components'
 import TableOfContents from '../components/TableOfContents'
 import CategoriesConfig from '../../config/categories'
 import TagsConfig from '../../config/tags'
-import Share from '../components/Share';
+import Share from '../components/Share'
 import config from '../../config'
 
 const Content = styled.article`
@@ -64,8 +64,10 @@ const Tags = styled.div`
   }
 `
 
-const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) => {
+const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx } }) => {
   const post = postNode.frontmatter
+
+  const { nodes } = allMdx
 
   const { tableOfContents } = postNode
 
@@ -111,7 +113,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
 
           <Share
             socialConfig={{
-              twitterUsername:`${config.userTwitter}`,
+              twitterUsername: `${config.userTwitter}`,
               config: {
                 url: `${config.siteUrl}${slug}`,
                 title: post.title,
@@ -119,6 +121,25 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
             }}
             tags={[`${config.siteTitle}`]}
           />
+
+          <h3>関連記事</h3>
+          {nodes.map(n => {
+            if (n.frontmatter.categories[0] === post.categories[0])
+              return (
+                <Article
+                  key={n.fields.slug}
+                  title={n.frontmatter.title}
+                  date={n.frontmatter.date}
+                  excerpt={n.excerpt}
+                  timeToRead={n.timeToRead}
+                  slug={n.fields.slug}
+                  description={n.frontmatter.description}
+                  categories={n.frontmatter.categories}
+                  tags={n.frontmatter.tags}
+                  image={n.frontmatter.squareimage.childImageSharp.fluid}
+                />
+              )
+          })}
 
           <PrevNext prev={prev} next={next} />
 
@@ -139,6 +160,10 @@ Post.propTypes = {
   }),
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired,
+    allMdx: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+      totalCount: PropTypes.number.isRequired,
+    }),
   }).isRequired,
 }
 
@@ -173,6 +198,36 @@ export const postQuery = graphql`
           mtime
           birthtime
         }
+      }
+    }
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {
+        fields: { sourceName: { eq: "post" }, slug: { ne: $slug } }
+        # frontmatter: { categories: { in: ["misc"] } }
+      }
+    ) {
+      totalCount
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "MM/DD/YYYY")
+          description
+          categories
+          tags
+          squareimage {
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+        excerpt(pruneLength: 200)
+        timeToRead
       }
     }
   }

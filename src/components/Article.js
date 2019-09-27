@@ -77,9 +77,11 @@ const Tags = styled.div`
 
 const Article = ({ title, date, slug, description, categories, tags, image }) => (
   <Post>
-    <FeaturedImage>
-      <Img fluid={image} />
-    </FeaturedImage>
+    <Link to={slug}>
+      <FeaturedImage>
+        <Img fluid={image} />
+      </FeaturedImage>
+    </Link>
     <PostInfo>
       <Title>
         <Link to={slug}>{title}</Link>
