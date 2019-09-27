@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
-import { Layout, Wrapper, Button } from '../components'
+import { Layout, Wrapper } from '../components'
 import CategoriesConfig from '../../config/categories'
 
 import config from '../../config'
