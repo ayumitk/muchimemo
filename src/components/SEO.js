@@ -18,7 +18,7 @@ const SEO = props => {
   if (article) {
     const postMeta = postNode.frontmatter
     title = `${postMeta.title} | ${config.siteTitle}`
-    description = postNode.excerpt
+    description = postNode.frontmatter.description
   } else {
     title = config.siteTitleAlt
     description = config.siteDescription

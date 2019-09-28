@@ -36,7 +36,7 @@ const Content = styled.div`
 const Contact = () => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <Helmet title={`お問い合わせ | ${config.siteTitle}`} />
       <Content>
         <h1>お問い合わせ</h1>
         <p>感想でも雑談でもお気軽に♪</p>

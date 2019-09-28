@@ -28,7 +28,7 @@ const Content = styled.ul`
       border-bottom: solid 1px rgba(255, 255, 255, 0.3);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         padding: 0.25rem 0;
-        font-size: 0.812rem;
+        font-size: ${props => props.theme.fontSize.small};
       }
     }
   }
@@ -39,19 +39,19 @@ const Nav = () => (
     <Wrapper>
       <Content>
         <li>
-          <Link to="/categories/mm-romance/">{CategoriesConfig.mmRomance}</Link>
+          <Link to="/categories/mm-romance">{CategoriesConfig.mmRomance}</Link>
         </li>
         <li>
-          <Link to="/categories/bl-manga/">{CategoriesConfig.blManga}</Link>
+          <Link to="/categories/bl-manga">{CategoriesConfig.blManga}</Link>
         </li>
         <li>
-          <Link to="/categories/tv-movie/">{CategoriesConfig.tvMovie}</Link>
+          <Link to="/categories/tv-movie">{CategoriesConfig.tvMovie}</Link>
         </li>
         <li>
-          <Link to="/categories/misc/">{CategoriesConfig.misc}</Link>
+          <Link to="/categories/misc">{CategoriesConfig.misc}</Link>
         </li>
         <li>
-          <Link to="/categories/english/">{CategoriesConfig.english}</Link>
+          <Link to="/categories/english">{CategoriesConfig.english}</Link>
         </li>
       </Content>
     </Wrapper>

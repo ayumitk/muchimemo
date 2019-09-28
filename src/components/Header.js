@@ -37,7 +37,7 @@ const SubNav = styled.nav`
     padding: 0;
     display: flex;
     justify-content: flex-end;
-    font-size: 0.812rem;
+    font-size: ${props => props.theme.fontSize.small};
     li {
       margin-left: 1rem;
     }
