@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
     }
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       h1 {
-        font-size: 1.625rem;
+        font-size: 1.375rem;
       }
       h2 {
         font-size: 1.625rem;

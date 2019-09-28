@@ -18,7 +18,7 @@ const Post = styled.article`
     margin-bottom: 2.5rem;
   }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 `

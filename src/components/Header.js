@@ -7,6 +7,7 @@ import Nav from './Nav'
 const Wrapper = styled.header`
   grid-column: 1 / -1;
   text-align: center;
+  margin-bottom: 1rem;
 `
 
 const SiteTitle = styled.div`
