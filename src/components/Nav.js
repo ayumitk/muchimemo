@@ -27,7 +27,7 @@ const Content = styled.ul`
       border-right: solid 1px rgba(255, 255, 255, 0.3);
       border-bottom: solid 1px rgba(255, 255, 255, 0.3);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        padding: 0.35rem 0;
+        padding: 0.25rem 0;
         font-size: 0.812rem;
       }
     }

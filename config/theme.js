@@ -19,7 +19,7 @@ const transitions = {
 }
 
 const fontSize = {
-  small: '0.875rem',
+  small: '0.812rem',
 }
 
 const fontFamily = {

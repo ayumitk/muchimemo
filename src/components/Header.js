@@ -23,7 +23,7 @@ const SiteTitle = styled.div`
 `
 
 const Tagline = styled.div`
-  font-size: 0.812rem;
+  font-size: 0.75rem;
   color: ${props => props.theme.colors.grey.light};
   margin-bottom: 1.5rem;
 `
