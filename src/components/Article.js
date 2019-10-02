@@ -5,14 +5,12 @@ import { Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Img from 'gatsby-image'
 import CategoryConfig from '../../config/category'
-import Subline from './Subline'
 import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  margin: ${props => (props.sm ? '0 0 1rem 0' : '1rem 0 3rem 0')};
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
@@ -25,8 +23,8 @@ const Post = styled.article`
 
 const FeaturedImage = styled.div`
   line-height: 0;
-  width: 250px;
-  margin-right: 30px;
+  width: ${props => (props.sm ? '100px' : '250px')};
+  margin-right: ${props => (props.sm ? '20px' : '30px')};
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     width: 180px;
     margin-right: 20px;
@@ -45,8 +43,8 @@ const PostInfo = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: ${props => (props.sm ? '1rem' : '1.5rem')};
+  margin: 0 0 0.5rem 0;
   position: relative;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     font-size: 1rem;
@@ -61,36 +59,41 @@ const Title = styled.h2`
 
 const Description = styled.p`
   grid-column: -1 / 1;
-  margin: 0.5rem 0;
-  font-size: ${props => props.theme.fontSize.small};
+  margin-bottom: ${props => (props.sm ? '0.25rem' : '0.5rem')};
+  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     display: none;
   }
 `
 
 const Tags = styled.div`
-  font-size: ${props => props.theme.fontSize.small};
+  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
   span {
     padding-right: 0.5rem;
   }
 `
 
-const Article = ({ title, date, slug, description, category, tags, image }) => (
-  <Post>
+const Subline = styled.p`
+  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
+  margin-bottom: ${props => (props.sm ? '0.25rem' : '0.5rem')};
+`
+
+const Article = ({ title, date, slug, description, category, tags, image, sm }) => (
+  <Post sm={sm}>
     <Link to={slug}>
-      <FeaturedImage>
+      <FeaturedImage sm={sm}>
         <Img fluid={image} />
       </FeaturedImage>
     </Link>
     <PostInfo>
-      <Title>
+      <Title sm={sm}>
         <Link to={slug}>{title}</Link>
       </Title>
-      <Subline style={{ marginTop: `0.5rem` }}>
+      <Subline sm={sm}>
         {date} <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category]}</Link>
       </Subline>
-      <Description>{description}</Description>
-      <Tags>
+      <Description sm={sm}>{description}</Description>
+      <Tags sm={sm}>
         {tags.map(tag => (
           <span key={tag}>
             <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>

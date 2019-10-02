@@ -143,6 +143,9 @@ const GlobalStyle = createGlobalStyle`
   [role='button'] {
     cursor: pointer;
   }
+  p{
+    margin:0;
+  }
   a,
   area,
   button,

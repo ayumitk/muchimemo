@@ -13,6 +13,7 @@ import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
 import Share from '../components/Share'
 import config from '../../config'
+import RelatedPosts from '../components/RelatedPosts'
 
 const Content = styled.article`
   grid-column: 2;
@@ -20,6 +21,18 @@ const Content = styled.article`
   border-radius: 1rem;
   margin: 0 auto;
   z-index: 9000;
+`
+
+const Title = styled.h1`
+  margin-bottom: 1rem;
+`
+
+const PostContent = styled.div`
+  hr {
+    border: 0;
+    border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
+    margin: 2rem 0;
+  }
   p {
     font-size: 1rem;
     letter-spacing: -0.003em;
@@ -31,11 +44,6 @@ const Content = styled.article`
       font-size: 0.937rem;
     }
   }
-  hr {
-    border: 0;
-    border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
-    margin: 2rem 0;
-  }
   p + h2 {
     margin-top: 5rem;
   }
@@ -43,14 +51,6 @@ const Content = styled.article`
   div + h4 {
     margin-top: 3.5rem;
   }
-`
-
-const Title = styled.h1`
-  margin-bottom: 1rem;
-`
-
-const PostContent = styled.div`
-  /* margin-top: 4rem; */
 `
 
 const Tags = styled.div`
@@ -64,10 +64,14 @@ const Tags = styled.div`
   }
 `
 
-const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) => {
+const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx } }) => {
   const post = postNode.frontmatter
 
   const { tableOfContents } = postNode
+
+  const { nodes } = allMdx
+
+  // console.log(nodes)
 
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
@@ -116,6 +120,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode } }) =>
           />
 
           <h3>関連記事</h3>
+          <RelatedPosts category={post.category} tags={post.tags} nodes={nodes} />
 
           <PrevNext prev={prev} next={next} />
 
@@ -136,6 +141,10 @@ Post.propTypes = {
   }),
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired,
+    allMdx: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+      totalCount: PropTypes.number.isRequired,
+    }),
   }).isRequired,
 }
 
@@ -171,6 +180,33 @@ export const postQuery = graphql`
           mtime
           birthtime
         }
+      }
+    }
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { sourceName: { eq: "post" }, slug: { ne: $slug } } }
+    ) {
+      totalCount
+      nodes {
+        frontmatter {
+          title
+          date(formatString: "MM/DD/YYYY")
+          description
+          category
+          tags
+          squareimage {
+            childImageSharp {
+              fluid(maxWidth: 600) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        fields {
+          slug
+        }
+        excerpt(pruneLength: 200)
+        timeToRead
       }
     }
   }
