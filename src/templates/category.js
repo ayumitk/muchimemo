@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
-import CategoriesConfig from '../../config/categories'
+import CategoryConfig from '../../config/category'
 
 const Content = styled.div`
   grid-column: 2;
@@ -30,11 +30,11 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
         <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
         <Content>
           <H1>
-            {CategoriesConfig[category]}
+            {CategoryConfig[category]}
             <span>{`${totalCount} 記事`}</span>
           </H1>
           <p>
-            <Link to="/categories">全てのカテゴリを見る</Link>
+            <Link to="/category">全てのカテゴリを見る</Link>
           </p>
           {nodes.map(post => (
             <Article
@@ -44,7 +44,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
               timeToRead={post.timeToRead}
               description={post.frontmatter.description}
               slug={post.fields.slug}
-              categories={post.frontmatter.categories}
+              category={post.frontmatter.category}
               tags={post.frontmatter.tags}
               key={post.fields.slug}
               image={post.frontmatter.squareimage.childImageSharp.fluid}
@@ -74,7 +74,7 @@ export const postQuery = graphql`
   query CategoryPage($category: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categories: { eq: $category } }, fields: { sourceName: { eq: "post" } } }
+      filter: { frontmatter: { category: { eq: $category } }, fields: { sourceName: { eq: "post" } } }
     ) {
       totalCount
       nodes {
@@ -82,7 +82,7 @@ export const postQuery = graphql`
           title
           date(formatString: "MM/DD/YYYY")
           description
-          categories
+          category
           tags
           squareimage {
             childImageSharp {

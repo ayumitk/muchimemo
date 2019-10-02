@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import CategoriesConfig from '../../config/categories'
+import CategoryConfig from '../../config/category'
 
 const Wrapper = styled.nav`
   background: ${props => props.theme.colors.grey.default};
@@ -39,19 +39,19 @@ const Nav = () => (
     <Wrapper>
       <Content>
         <li>
-          <Link to="/categories/mm-romance">{CategoriesConfig.mmRomance}</Link>
+          <Link to="/category/mm-romance">{CategoryConfig.mmRomance}</Link>
         </li>
         <li>
-          <Link to="/categories/bl-manga">{CategoriesConfig.blManga}</Link>
+          <Link to="/category/bl-manga">{CategoryConfig.blManga}</Link>
         </li>
         <li>
-          <Link to="/categories/tv-movie">{CategoriesConfig.tvMovie}</Link>
+          <Link to="/category/tv-movie">{CategoryConfig.tvMovie}</Link>
         </li>
         <li>
-          <Link to="/categories/misc">{CategoriesConfig.misc}</Link>
+          <Link to="/category/misc">{CategoryConfig.misc}</Link>
         </li>
         <li>
-          <Link to="/categories/english">{CategoriesConfig.english}</Link>
+          <Link to="/category/english">{CategoryConfig.english}</Link>
         </li>
       </Content>
     </Wrapper>

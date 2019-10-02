@@ -45,7 +45,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
               timeToRead={post.timeToRead}
               description={post.frontmatter.description}
               slug={post.fields.slug}
-              categories={post.frontmatter.categories}
+              category={post.frontmatter.category}
               tags={post.frontmatter.tags}
               key={post.fields.slug}
               image={post.frontmatter.squareimage.childImageSharp.fluid}
@@ -83,7 +83,7 @@ export const postQuery = graphql`
           title
           date(formatString: "MM/DD/YYYY")
           description
-          categories
+          category
           tags
           squareimage {
             childImageSharp {

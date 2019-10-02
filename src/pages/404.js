@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import { Layout, Wrapper } from '../components'
-import CategoriesConfig from '../../config/categories'
+import CategoryConfig from '../../config/category'
 
 import config from '../../config'
 
@@ -31,7 +31,7 @@ const NotFound = ({
         <h3>カテゴリから探す</h3>
         {group.map(category => (
           <p key={category.fieldValue}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}`}>{CategoriesConfig[category.fieldValue]}</Link> (
+            <Link to={`/category/${kebabCase(category.fieldValue)}`}>{CategoryConfig[category.fieldValue]}</Link> (
             {category.totalCount})
           </p>
         ))}
@@ -53,7 +53,7 @@ NotFound.propTypes = {
 export const postQuery = graphql`
   query NotFoundPage {
     allMdx {
-      group(field: frontmatter___categories) {
+      group(field: frontmatter___category) {
         fieldValue
         totalCount
       }

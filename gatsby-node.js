@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               title
               description
-              categories
+              category
               tags
             }
           }
@@ -95,10 +95,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const categorySet = new Set()
 
   _.each(posts, n => {
-    if (_.get(n, 'frontmatter.categories')) {
-      n.frontmatter.categories.forEach(cat => {
-        categorySet.add(cat)
-      })
+    if (_.get(n, 'frontmatter.category')) {
+      categorySet.add(n.frontmatter.category)
+      // n.frontmatter.category.forEach(cat => {
+      //   categorySet.add(cat)
+      // })
     }
   })
 
@@ -106,7 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   categories.forEach(category => {
     createPage({
-      path: `/categories/${_.kebabCase(category)}`,
+      path: `/category/${_.kebabCase(category)}`,
       component: categoryTemplate,
       context: {
         category,

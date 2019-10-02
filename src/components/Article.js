@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Img from 'gatsby-image'
-import CategoriesConfig from '../../config/categories'
+import CategoryConfig from '../../config/category'
 import Subline from './Subline'
 import TagsConfig from '../../config/tags'
 
@@ -75,7 +75,7 @@ const Tags = styled.div`
   }
 `
 
-const Article = ({ title, date, slug, description, categories, tags, image }) => (
+const Article = ({ title, date, slug, description, category, tags, image }) => (
   <Post>
     <Link to={slug}>
       <FeaturedImage>
@@ -87,13 +87,7 @@ const Article = ({ title, date, slug, description, categories, tags, image }) =>
         <Link to={slug}>{title}</Link>
       </Title>
       <Subline style={{ marginTop: `0.5rem` }}>
-        {date}{' '}
-        {categories.map((cat, i) => (
-          <React.Fragment key={cat}>
-            {!!i && ', '}
-            <Link to={`/categories/${kebabCase(cat)}`}>{CategoriesConfig[cat]}</Link>
-          </React.Fragment>
-        ))}
+        {date} <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category]}</Link>
       </Subline>
       <Description>{description}</Description>
       <Tags>
@@ -114,7 +108,7 @@ Article.propTypes = {
   date: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  categories: PropTypes.array.isRequired,
+  category: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   image: PropTypes.object.isRequired,
 }

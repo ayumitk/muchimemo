@@ -7,7 +7,7 @@ import kebabCase from 'lodash/kebabCase'
 
 import { Layout, Wrapper } from '../components'
 import config from '../../config'
-import CategoriesConfig from '../../config/categories'
+import CategoryConfig from '../../config/category'
 
 const Content = styled.div`
   grid-column: 2;
@@ -26,7 +26,7 @@ const Category = ({
         <h1>カテゴリ一覧</h1>
         {group.map(category => (
           <p key={category.fieldValue}>
-            <Link to={`/categories/${kebabCase(category.fieldValue)}`}>{CategoriesConfig[category.fieldValue]}</Link> (
+            <Link to={`/category/${kebabCase(category.fieldValue)}`}>{CategoryConfig[category.fieldValue]}</Link> (
             {category.totalCount})
           </p>
         ))}
@@ -48,7 +48,7 @@ Category.propTypes = {
 export const postQuery = graphql`
   query CategoriesPage {
     allMdx {
-      group(field: frontmatter___categories) {
+      group(field: frontmatter___category) {
         fieldValue
         totalCount
       }

@@ -35,7 +35,7 @@ const IndexPage = ({
             timeToRead={post.timeToRead}
             slug={post.fields.slug}
             description={post.frontmatter.description}
-            categories={post.frontmatter.categories}
+            category={post.frontmatter.category}
             tags={post.frontmatter.tags}
             key={post.fields.slug}
             image={post.frontmatter.squareimage.childImageSharp.fluid}
@@ -67,7 +67,7 @@ export const IndexQuery = graphql`
           title
           date(formatString: "MM/DD/YYYY")
           description
-          categories
+          category
           tags
           squareimage {
             childImageSharp {
