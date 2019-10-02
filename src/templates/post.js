@@ -182,6 +182,7 @@ export const postQuery = graphql`
       frontmatter {
         title
         date(formatString: "MM/DD/YYYY")
+        description
         categories
         tags
         featuredimage {
