@@ -14,6 +14,7 @@ import TagsConfig from '../../config/tags'
 import Share from '../components/Share'
 import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
+import PopularPosts from '../components/PopularPosts'
 
 const Content = styled.article`
   grid-column: 2;
@@ -121,6 +122,9 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx
 
           <h3>関連記事</h3>
           <RelatedPosts category={post.category} tags={post.tags} nodes={nodes} />
+
+          <h3>人気記事</h3>
+          <PopularPosts />
 
           <PrevNext prev={prev} next={next} />
 
