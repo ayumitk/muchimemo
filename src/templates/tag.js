@@ -31,12 +31,10 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
         <Helmet title={`タグ: ${tag} | ${config.siteTitle}`} />
         <Content>
           <H1>
-            #{TagsConfig[tag]}
+            #{TagsConfig[tag].label}
             <span>{subline}</span>
           </H1>
-          <p>
-            <Link to="/tags">全てのタグを見る</Link>
-          </p>
+          {TagsConfig[tag].description ? <p>{TagsConfig[tag].description}</p> : ''}
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}

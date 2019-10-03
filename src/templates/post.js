@@ -85,14 +85,14 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
+          <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
           <Title>{post.title}</Title>
           <Subline>
-            {post.date} カテゴリ：
-            <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category]}</Link>
+            {post.date}
             <Tags>
               {post.tags.map(tag => (
                 <span key={tag}>
-                  <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+                  <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
                 </span>
               ))}
             </Tags>

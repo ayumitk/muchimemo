@@ -26,7 +26,8 @@ const Tag = ({
         <h1>タグ一覧</h1>
         {group.map(tag => (
           <p key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>#{TagsConfig[tag.fieldValue]}</Link> ({tag.totalCount})
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>#{TagsConfig[tag.fieldValue].label}</Link> ({tag.totalCount}
+            )
           </p>
         ))}
       </Content>

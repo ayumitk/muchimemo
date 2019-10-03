@@ -2,8 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import styled from 'styled-components'
+import { ChevronRight } from 'styled-icons/boxicons-regular/ChevronRight'
 import CategoryConfig from '../../config/category'
-import {ChevronRight} from 'styled-icons/boxicons-regular/ChevronRight'
 
 const Categories = styled.ul`
   list-style: none;
@@ -15,10 +15,10 @@ const Categories = styled.ul`
     padding: 0.75rem 1rem;
     margin-top: -1px;
     font-size: ${props => props.theme.fontSize.small};
-    line-height:1;
-    text-align:left;
-    svg{
-      float:right;
+    line-height: 1;
+    text-align: left;
+    svg {
+      float: right;
     }
   }
 `
@@ -40,10 +40,15 @@ export default () => (
         {data.allMdx.group.map(category => (
           <li key={category.fieldValue}>
             <Link to={`/category/${kebabCase(category.fieldValue)}`}>
-              {CategoryConfig[category.fieldValue]} <span>({category.totalCount})</span> <ChevronRight />
+              {CategoryConfig[category.fieldValue].label} <span>({category.totalCount})</span> <ChevronRight />
             </Link>
           </li>
         ))}
+        <li>
+          <Link to="/category">
+            全てのカテゴリ <ChevronRight />
+          </Link>
+        </li>
       </Categories>
     )}
   />

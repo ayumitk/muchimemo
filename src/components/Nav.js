@@ -18,7 +18,8 @@ const Content = styled.ul`
     list-style: none;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       width: 28%;
-      &.mmRomance,&.misc{
+      &.mmRomance,
+      &.misc {
         width: 44%;
       }
     }
@@ -41,20 +42,20 @@ const Nav = () => (
   <>
     <Wrapper>
       <Content>
-        <li className={'mmRomance'}>
-          <Link to="/category/mm-romance">{CategoryConfig.mmRomance}</Link>
+        <li className="mmRomance">
+          <Link to="/category/mm-romance">{CategoryConfig.mmRomance.label}</Link>
         </li>
-        <li className={'blManga'}>
-          <Link to="/category/bl-manga">{CategoryConfig.blManga}</Link>
+        <li className="blManga">
+          <Link to="/category/bl-manga">{CategoryConfig.blManga.label}</Link>
         </li>
-        <li className={'tvMovie'}>
-          <Link to="/category/tv-movie">{CategoryConfig.tvMovie}</Link>
+        <li className="tvMovie">
+          <Link to="/category/tv-movie">{CategoryConfig.tvMovie.label}</Link>
         </li>
-        <li className={'misc'}>
-          <Link to="/category/misc">{CategoryConfig.misc}</Link>
+        <li className="misc">
+          <Link to="/category/misc">{CategoryConfig.misc.label}</Link>
         </li>
-        <li className={'english'}>
-          <Link to="/category/english">{CategoryConfig.english}</Link>
+        <li className="english">
+          <Link to="/category/english">{CategoryConfig.english.label}</Link>
         </li>
       </Content>
     </Wrapper>

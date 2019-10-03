@@ -3,10 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
+import kebabCase from 'lodash/kebabCase'
 
 import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
+import TagsConfig from '../../config/tags'
 
 const Content = styled.div`
   grid-column: 2;
@@ -22,7 +24,7 @@ const H1 = styled.h1`
 `
 
 const Category = ({ pageContext: { category }, data: { allMdx } }) => {
-  const { nodes, totalCount } = allMdx
+  const { nodes, totalCount, group } = allMdx
 
   return (
     <Layout>
@@ -30,12 +32,17 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
         <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
         <Content>
           <H1>
-            {CategoryConfig[category]}
+            {CategoryConfig[category].label}
             <span>{`${totalCount} 記事`}</span>
           </H1>
-          <p>
-            <Link to="/category">全てのカテゴリを見る</Link>
-          </p>
+          {CategoryConfig[category].description ? <p>{CategoryConfig[category].description}</p> : ''}
+          <ul>
+            {group.map(tag => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>{TagsConfig[tag.fieldValue].label}</Link>
+              </li>
+            ))}
+          </ul>
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}
@@ -66,6 +73,7 @@ Category.propTypes = {
     allMdx: PropTypes.shape({
       nodes: PropTypes.array.isRequired,
       totalCount: PropTypes.number.isRequired,
+      group: PropTypes.array.isRequired,
     }),
   }).isRequired,
 }
@@ -76,6 +84,10 @@ export const postQuery = graphql`
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { eq: $category } }, fields: { sourceName: { eq: "post" } } }
     ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
       totalCount
       nodes {
         frontmatter {

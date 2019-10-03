@@ -21,7 +21,7 @@ const Tags = styled.ul`
       font-size: ${props => props.theme.fontSize.small};
       background: rgba(0, 0, 0, 0.05);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        font-size:0.687rem;
+        font-size: 0.687rem;
         padding: 0.25rem 0.5rem;
       }
     }
@@ -45,10 +45,13 @@ export default () => (
         {data.allMdx.group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
-              #{TagsConfig[tag.fieldValue]} <span>({tag.totalCount})</span>
+              #{TagsConfig[tag.fieldValue].label} <span>({tag.totalCount})</span>
             </Link>
           </li>
         ))}
+        <li>
+          <Link to="/tags">全てのタグ</Link>
+        </li>
       </Tags>
     )}
   />

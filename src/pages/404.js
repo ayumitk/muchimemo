@@ -31,8 +31,8 @@ const NotFound = ({
         <h3>カテゴリから探す</h3>
         {group.map(category => (
           <p key={category.fieldValue}>
-            <Link to={`/category/${kebabCase(category.fieldValue)}`}>{CategoryConfig[category.fieldValue]}</Link> (
-            {category.totalCount})
+            <Link to={`/category/${kebabCase(category.fieldValue)}`}>{CategoryConfig[category.fieldValue].label}</Link>{' '}
+            ({category.totalCount})
           </p>
         ))}
       </Content>

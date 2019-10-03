@@ -90,13 +90,13 @@ const Article = ({ title, date, slug, description, category, tags, image, sm }) 
         <Link to={slug}>{title}</Link>
       </Title>
       <Subline sm={sm}>
-        {date} <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category]}</Link>
+        {date} <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
       </Subline>
       <Description sm={sm}>{description}</Description>
       <Tags sm={sm}>
         {tags.map(tag => (
           <span key={tag}>
-            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag]}</Link>
+            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
           </span>
         ))}
       </Tags>
