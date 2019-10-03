@@ -126,8 +126,6 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx
           <h3>人気記事</h3>
           <PopularPosts />
 
-          <PrevNext prev={prev} next={next} />
-
           <DiscussionEmbed {...disqusConfig} />
         </Content>
       </Wrapper>
