@@ -17,7 +17,10 @@ const Content = styled.ul`
   li {
     list-style: none;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      width: 33.33%;
+      width: 28%;
+      &.mmRomance,&.misc{
+        width: 44%;
+      }
     }
     a {
       display: block;
@@ -28,7 +31,7 @@ const Content = styled.ul`
       border-bottom: solid 1px rgba(255, 255, 255, 0.3);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         padding: 0.25rem 0;
-        font-size: ${props => props.theme.fontSize.small};
+        font-size: 0.75rem;
       }
     }
   }
@@ -38,19 +41,19 @@ const Nav = () => (
   <>
     <Wrapper>
       <Content>
-        <li>
+        <li className={'mmRomance'}>
           <Link to="/category/mm-romance">{CategoryConfig.mmRomance}</Link>
         </li>
-        <li>
+        <li className={'blManga'}>
           <Link to="/category/bl-manga">{CategoryConfig.blManga}</Link>
         </li>
-        <li>
+        <li className={'tvMovie'}>
           <Link to="/category/tv-movie">{CategoryConfig.tvMovie}</Link>
         </li>
-        <li>
+        <li className={'misc'}>
           <Link to="/category/misc">{CategoryConfig.misc}</Link>
         </li>
-        <li>
+        <li className={'english'}>
           <Link to="/category/english">{CategoryConfig.english}</Link>
         </li>
       </Content>

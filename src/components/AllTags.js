@@ -20,6 +20,10 @@ const Tags = styled.ul`
       color: ${props => props.theme.colors.grey.default};
       font-size: ${props => props.theme.fontSize.small};
       background: rgba(0, 0, 0, 0.05);
+      @media (max-width: ${props => props.theme.breakpoints.phone}) {
+        font-size:0.687rem;
+        padding: 0.25rem 0.5rem;
+      }
     }
   }
 `

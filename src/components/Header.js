@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import config from '../../config'
 import Nav from './Nav'
+import HamburgerMenu from './HamburgerMenu'
 
 const Wrapper = styled.header`
   grid-column: 1 / -1;
@@ -11,7 +12,7 @@ const Wrapper = styled.header`
 `
 
 const SiteTitle = styled.div`
-  padding: 1rem 0 0 0;
+  padding: 1.5rem 0 0 0;
   font-size: 2rem;
   font-weight: bold;
   a {
@@ -26,21 +27,9 @@ const SiteTitle = styled.div`
 const Tagline = styled.div`
   font-size: 0.75rem;
   color: ${props => props.theme.colors.grey.light};
-  margin-bottom: 1.5rem;
-`
-
-const SubNav = styled.nav`
-  padding: 0.5rem;
-  ul {
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    font-size: ${props => props.theme.fontSize.small};
-    li {
-      margin-left: 1rem;
-    }
+  margin-bottom: 1rem;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 0.625rem;
   }
 `
 
@@ -51,17 +40,8 @@ const Content = styled.div`
 
 const Header = () => (
   <Wrapper>
+    <HamburgerMenu />
     <Content>
-      <SubNav>
-        <ul>
-          <li>
-            <Link to="/about/">このサイトについて</Link>
-          </li>
-          <li>
-            <Link to="/contact/">お問い合わせ</Link>
-          </li>
-        </ul>
-      </SubNav>
       <SiteTitle>
         <Link to="/">{config.siteTitle}</Link>
       </SiteTitle>
