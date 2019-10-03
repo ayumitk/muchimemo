@@ -60,5 +60,6 @@ public/
 bundle-stats.json
 
 
-.env
+# Environment Variables
 .env.development
+.env.production

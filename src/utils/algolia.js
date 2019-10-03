@@ -35,7 +35,7 @@ const postQuery = `{
           tags
           category
         }
-        excerpt(pruneLength: 5000)
+        excerpt(pruneLength: 1000)
       }
     }
   }
