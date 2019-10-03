@@ -11,11 +11,6 @@ import CategoryConfig from '../../config/category'
 
 import config from '../../config'
 
-const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
-`
-
 const NotFound = ({
   data: {
     allMdx: { group },
@@ -24,7 +19,7 @@ const NotFound = ({
   <Layout>
     <Wrapper>
       <Helmet title={`お探しのページが見つかりません | ${config.siteTitle}`} />
-      <Content>
+      <div>
         <h1>404 Page not found.</h1>
         <p>お探しのページは、移動または削除された可能性があります。</p>
         <Link to="/">トップページへ</Link>
@@ -35,7 +30,7 @@ const NotFound = ({
             ({category.totalCount})
           </p>
         ))}
-      </Content>
+      </div>
     </Wrapper>
   </Layout>
 )

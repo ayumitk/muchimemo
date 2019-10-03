@@ -9,11 +9,6 @@ import { Layout, Wrapper } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
 
-const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
-`
-
 const Category = ({
   data: {
     allMdx: { group },
@@ -22,7 +17,7 @@ const Category = ({
   <Layout>
     <Wrapper>
       <Helmet title={`カテゴリ一覧 | ${config.siteTitle}`} />
-      <Content>
+      <div>
         <h1>カテゴリ一覧</h1>
         {group.map(category => (
           <p key={category.fieldValue}>
@@ -30,7 +25,7 @@ const Category = ({
             ({category.totalCount})
           </p>
         ))}
-      </Content>
+      </div>
     </Wrapper>
   </Layout>
 )

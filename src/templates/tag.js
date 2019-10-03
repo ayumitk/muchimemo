@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, Wrapper, Subline, Article, SectionTitle } from '../components'
+import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
-
-const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
-`
 
 const H1 = styled.h1`
   span {
@@ -29,7 +24,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
     <Layout>
       <Wrapper>
         <Helmet title={`タグ: ${tag} | ${config.siteTitle}`} />
-        <Content>
+        <div>
           <H1>
             #{TagsConfig[tag].label}
             <span>{subline}</span>
@@ -49,7 +44,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
               image={post.frontmatter.squareimage.childImageSharp.fluid}
             />
           ))}
-        </Content>
+        </div>
       </Wrapper>
     </Layout>
   )

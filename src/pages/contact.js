@@ -8,8 +8,6 @@ import { Layout, Wrapper, Button } from '../components'
 import config from '../../config'
 
 const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
   form {
     p {
       label,

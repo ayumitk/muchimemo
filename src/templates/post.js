@@ -17,11 +17,8 @@ import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 
 const Content = styled.article`
-  grid-column: 2;
   max-width: 680px;
-  border-radius: 1rem;
   margin: 0 auto;
-  z-index: 9000;
 `
 
 const Title = styled.h1`
@@ -116,14 +113,14 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             tags={[`${config.siteTitle}`]}
           />
 
-          <h3>関連記事</h3>
-          <RelatedPosts category={post.category} tags={post.tags} slug={slug} />
-
-          <h3>人気記事</h3>
-          <PopularPosts />
-
           <DiscussionEmbed {...disqusConfig} />
         </Content>
+
+        <h3>関連記事</h3>
+        <RelatedPosts category={post.category} tags={post.tags} slug={slug} />
+
+        <h3>人気記事</h3>
+        <PopularPosts />
       </Wrapper>
     </Layout>
   )

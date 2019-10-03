@@ -10,11 +10,6 @@ import config from '../../config'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
 
-const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
-`
-
 const H1 = styled.h1`
   span {
     font-size: 1rem;
@@ -30,7 +25,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
     <Layout>
       <Wrapper>
         <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
-        <Content>
+        <div>
           <H1>
             {CategoryConfig[category].label}
             <span>{`${totalCount} 記事`}</span>
@@ -57,7 +52,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
               image={post.frontmatter.squareimage.childImageSharp.fluid}
             />
           ))}
-        </Content>
+        </div>
       </Wrapper>
     </Layout>
   )

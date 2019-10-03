@@ -4,10 +4,8 @@ import PropTypes from 'prop-types'
 import { Layout, Wrapper } from '../components'
 
 const Content = styled.article`
-  grid-column: 2;
   max-width: 680px;
   margin: 0 auto;
-  z-index: 9000;
   p {
     font-size: 1rem;
     letter-spacing: -0.003em;

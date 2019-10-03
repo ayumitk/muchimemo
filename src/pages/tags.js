@@ -9,11 +9,6 @@ import { Layout, Wrapper } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
 
-const Content = styled.div`
-  grid-column: 2;
-  z-index: 9000;
-`
-
 const Tag = ({
   data: {
     allMdx: { group },
@@ -22,7 +17,7 @@ const Tag = ({
   <Layout>
     <Wrapper>
       <Helmet title={`タグ一覧 | ${config.siteTitle}`} />
-      <Content>
+      <div>
         <h1>タグ一覧</h1>
         {group.map(tag => (
           <p key={tag.fieldValue}>
@@ -30,7 +25,7 @@ const Tag = ({
             )
           </p>
         ))}
-      </Content>
+      </div>
     </Wrapper>
   </Layout>
 )
