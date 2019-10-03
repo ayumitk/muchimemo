@@ -86,7 +86,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
 
     // Algolia
-    {
+    /* {
       resolve: `gatsby-plugin-algolia`,
       options: {
         appId: process.env.ALGOLIA_APP_ID,
@@ -94,7 +94,7 @@ module.exports = {
         queries,
         chunkSize: 10000, // default: 1000
       },
-    },
+    }, */
 
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',

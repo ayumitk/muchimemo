@@ -40,7 +40,7 @@ const Content = styled.div`
 const Header = () => (
   <header>
     <HamburgerMenu />
-    <Search collapse indices={searchIndices} />
+    {/* <Search collapse indices={searchIndices} /> */}
     <Content>
       <SiteTitle>
         <Link to="/">{config.siteTitle}</Link>
