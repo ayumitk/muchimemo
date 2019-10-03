@@ -1,4 +1,5 @@
 const config = require('./config')
+const queries = require('./src/utils/algolia')
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
@@ -80,6 +81,17 @@ module.exports = {
     // images
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
+    // Algolia
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_API_KEY,
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
 
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',

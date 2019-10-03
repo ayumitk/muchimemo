@@ -16,7 +16,6 @@ const Categories = styled.ul`
     margin-top: -1px;
     font-size: ${props => props.theme.fontSize.small};
     line-height: 1;
-    text-align: left;
     svg {
       float: right;
     }

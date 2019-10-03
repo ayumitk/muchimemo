@@ -6,6 +6,11 @@ import styled from 'styled-components'
 import { Layout, Article, Wrapper } from '../components'
 import PopularPosts from '../components/PopularPosts'
 
+const Container = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto;
+`
+
 const IndexPage = ({
   data: {
     allMdx: { nodes: posts },
@@ -13,7 +18,7 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Wrapper>
-      <div>
+      <Container>
         <h2>人気記事</h2>
         <PopularPosts />
         <h2>新着記事</h2>
@@ -31,7 +36,7 @@ const IndexPage = ({
             image={post.frontmatter.squareimage.childImageSharp.fluid}
           />
         ))}
-      </div>
+      </Container>
     </Wrapper>
   </Layout>
 )

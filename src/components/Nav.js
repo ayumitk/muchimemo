@@ -30,6 +30,7 @@ const Content = styled.ul`
       padding: 0.75rem 1rem;
       border-right: solid 1px rgba(255, 255, 255, 0.3);
       border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+      text-align: center;
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         padding: 0.25rem 0;
         font-size: 0.75rem;

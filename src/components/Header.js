@@ -4,12 +4,12 @@ import { Link } from 'gatsby'
 import config from '../../config'
 import Nav from './Nav'
 import HamburgerMenu from './HamburgerMenu'
+import Search from './Search'
 
-const Wrapper = styled.header`
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-bottom: 1rem;
-`
+const searchIndices = [
+  { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
+  { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
+]
 
 const SiteTitle = styled.div`
   padding: 1.5rem 0 0 0;
@@ -34,13 +34,13 @@ const Tagline = styled.div`
 `
 
 const Content = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
+  text-align: center;
 `
 
 const Header = () => (
-  <Wrapper>
+  <header>
     <HamburgerMenu />
+    <Search collapse indices={searchIndices} />
     <Content>
       <SiteTitle>
         <Link to="/">{config.siteTitle}</Link>
@@ -48,7 +48,7 @@ const Header = () => (
       <Tagline>{config.siteTitleManifest}</Tagline>
     </Content>
     <Nav />
-  </Wrapper>
+  </header>
 )
 
 export default Header

@@ -71,7 +71,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
   const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
+    shortname: process.env.DISQUS_NAME,
     config: { identifier: slug, title: post.title },
   }
 
