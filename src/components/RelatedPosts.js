@@ -1,8 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 import { Article } from '.'
 
-const RelatedPosts = ({ category, tags, nodes }) => {
+const RelatedPosts = ({ category, tags, slug }) => {
+  const { allMdx } = useStaticQuery(
+    graphql`
+      query {
+        allMdx(filter: { fields: { sourceName: { eq: "post" } } }) {
+          nodes {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date(formatString: "MM/DD/YYYY")
+              description
+              category
+              tags
+              squareimage {
+                childImageSharp {
+                  fluid(maxWidth: 600) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const index = allMdx.nodes.findIndex(v => v.fields.slug === slug)
+  allMdx.nodes.splice(index, 1)
+
   const tagArray = []
 
   tags.forEach(tag => {
@@ -10,7 +42,7 @@ const RelatedPosts = ({ category, tags, nodes }) => {
     let tagName = ''
     const tagObject = {}
 
-    nodes.forEach(n => {
+    allMdx.nodes.forEach(n => {
       const tagCheck = n.frontmatter.tags.filter(nTag => nTag === tag)
       if (tagCheck.length > 0) {
         tagName = tagCheck[0]
@@ -32,7 +64,7 @@ const RelatedPosts = ({ category, tags, nodes }) => {
 
   return (
     <>
-      {nodes.map(n => {
+      {allMdx.nodes.map(n => {
         if (relatedTag) {
           if (n.frontmatter.tags.indexOf(relatedTag) >= 0) {
             return (
@@ -78,5 +110,5 @@ export default RelatedPosts
 RelatedPosts.propTypes = {
   category: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
-  nodes: PropTypes.array.isRequired,
+  slug: PropTypes.string.isRequired,
 }

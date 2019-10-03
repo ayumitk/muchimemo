@@ -65,14 +65,10 @@ const Tags = styled.div`
   }
 `
 
-const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx } }) => {
+const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
   const post = postNode.frontmatter
 
   const { tableOfContents } = postNode
-
-  const { nodes } = allMdx
-
-  // console.log(nodes)
 
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
@@ -121,7 +117,7 @@ const Post = ({ pageContext: { slug, prev, next }, data: { mdx: postNode, allMdx
           />
 
           <h3>関連記事</h3>
-          <RelatedPosts category={post.category} tags={post.tags} nodes={nodes} />
+          <RelatedPosts category={post.category} tags={post.tags} slug={slug} />
 
           <h3>人気記事</h3>
           <PopularPosts />
@@ -138,23 +134,10 @@ export default Post
 Post.propTypes = {
   pageContext: PropTypes.shape({
     slug: PropTypes.string.isRequired,
-    next: PropTypes.object,
-    prev: PropTypes.object,
-  }),
+  }).isRequired,
   data: PropTypes.shape({
     mdx: PropTypes.object.isRequired,
-    allMdx: PropTypes.shape({
-      nodes: PropTypes.array.isRequired,
-      totalCount: PropTypes.number.isRequired,
-    }),
   }).isRequired,
-}
-
-Post.defaultProps = {
-  pageContext: PropTypes.shape({
-    next: null,
-    prev: null,
-  }),
 }
 
 export const postQuery = graphql`
@@ -182,33 +165,6 @@ export const postQuery = graphql`
           mtime
           birthtime
         }
-      }
-    }
-    allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { sourceName: { eq: "post" }, slug: { ne: $slug } } }
-    ) {
-      totalCount
-      nodes {
-        frontmatter {
-          title
-          date(formatString: "MM/DD/YYYY")
-          description
-          category
-          tags
-          squareimage {
-            childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-        fields {
-          slug
-        }
-        excerpt(pruneLength: 200)
-        timeToRead
       }
     }
   }
