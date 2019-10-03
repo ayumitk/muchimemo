@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import { Layout, Article, Wrapper } from '../components'
+import PopularPosts from '../components/PopularPosts'
 
 const Content = styled.div`
   grid-column: 2;
@@ -27,6 +28,9 @@ const IndexPage = ({
   <Layout>
     <Wrapper>
       <Content>
+        <h2>人気記事</h2>
+        <PopularPosts />
+        <h2>新着記事</h2>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}

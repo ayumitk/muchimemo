@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import styled from 'styled-components'
 import TagsConfig from '../../config/tags'
@@ -28,10 +28,10 @@ const Tags = styled.ul`
   }
 `
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query AllTagsQuery {
+const AllTags = () => {
+  const { allMdx } = useStaticQuery(
+    graphql`
+      query {
         allMdx {
           group(field: frontmatter___tags) {
             fieldValue
@@ -39,20 +39,22 @@ export default () => (
           }
         }
       }
-    `}
-    render={data => (
-      <Tags>
-        {data.allMdx.group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
-              #{TagsConfig[tag.fieldValue].label} <span>({tag.totalCount})</span>
-            </Link>
-          </li>
-        ))}
-        <li>
-          <Link to="/tags">全てのタグ</Link>
+    `
+  )
+  return (
+    <Tags>
+      {allMdx.group.map(tag => (
+        <li key={tag.fieldValue}>
+          <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
+            #{TagsConfig[tag.fieldValue].label} <span>({tag.totalCount})</span>
+          </Link>
         </li>
-      </Tags>
-    )}
-  />
-)
+      ))}
+      <li>
+        <Link to="/tags">全てのタグ</Link>
+      </li>
+    </Tags>
+  )
+}
+
+export default AllTags
