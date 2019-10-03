@@ -6,6 +6,8 @@ import { Heart } from 'styled-icons/boxicons-solid/Heart'
 import { MailOutline } from 'styled-icons/material/MailOutline'
 import config from '../../config'
 import Header from './Header'
+import AllCategories from './AllCategories'
+import AllTags from './AllTags'
 
 import SEO from './SEO'
 import theme from '../../config/theme'
@@ -205,7 +207,6 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Footer = styled.footer`
-  text-align: center;
   padding: 3rem 0 1rem 0;
   span {
     font-size: 0.75rem;
@@ -213,9 +214,21 @@ const Footer = styled.footer`
 `
 
 const Copyright = styled.p`
-  font-size: ${props => props.theme.fontSize.small};
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  text-align: center;
   svg {
     fill: ${props => props.theme.colors.secondary};
+  }
+`
+
+const Container = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 0 auto 5rem auto;
+  padding: 0 1rem;
+  p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
   }
 `
 
@@ -230,7 +243,13 @@ const Layout = ({ children, customSEO }) => {
         <Header />
         {children}
         <Footer>
-          <div>
+          <Container>
+            <p>カテゴリ：</p>
+            <AllCategories />
+            <p>タグ：</p>
+            <AllTags />
+          </Container>
+          <div style={{ textAlign: 'center' }}>
             <Link to="/contact">
               <Button big>
                 <MailOutline />
