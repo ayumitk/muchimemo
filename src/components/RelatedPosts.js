@@ -7,7 +7,10 @@ const RelatedPosts = ({ category, tags, slug }) => {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
-        allMdx(filter: { fields: { sourceName: { eq: "post" } } }) {
+        allMdx(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { sourceName: { eq: "post" } } }
+        ) {
           nodes {
             fields {
               slug
@@ -62,45 +65,41 @@ const RelatedPosts = ({ category, tags, slug }) => {
 
   const relatedTag = tagArray[0].tagName
 
+  let count = 0
+  const newNodes = []
+  allMdx.nodes.forEach(n => {
+    if (relatedTag) {
+      if (n.frontmatter.tags.indexOf(relatedTag) >= 0) {
+        if (count < 5) {
+          newNodes.push(n)
+          count += 1
+        }
+      }
+    } else if (n.frontmatter.category === category) {
+      if (count < 5) {
+        newNodes.push(n)
+        count += 1
+      }
+    }
+  })
+
   return (
     <>
-      {allMdx.nodes.map(n => {
-        if (relatedTag) {
-          if (n.frontmatter.tags.indexOf(relatedTag) >= 0) {
-            return (
-              <Article
-                title={n.frontmatter.title}
-                date={n.frontmatter.date}
-                excerpt={n.excerpt}
-                timeToRead={n.timeToRead}
-                slug={n.fields.slug}
-                description={n.frontmatter.description}
-                category={n.frontmatter.category}
-                tags={n.frontmatter.tags}
-                key={n.fields.slug}
-                image={n.frontmatter.squareimage.childImageSharp.fluid}
-                sm
-              />
-            )
-          }
-        } else if (n.frontmatter.category === category) {
-          return (
-            <Article
-              title={n.frontmatter.title}
-              date={n.frontmatter.date}
-              excerpt={n.excerpt}
-              timeToRead={n.timeToRead}
-              slug={n.fields.slug}
-              description={n.frontmatter.description}
-              category={n.frontmatter.category}
-              tags={n.frontmatter.tags}
-              key={n.fields.slug}
-              image={n.frontmatter.squareimage.childImageSharp.fluid}
-              sm
-            />
-          )
-        }
-      })}
+      {newNodes.map(n => (
+        <Article
+          title={n.frontmatter.title}
+          date={n.frontmatter.date}
+          excerpt={n.excerpt}
+          timeToRead={n.timeToRead}
+          slug={n.fields.slug}
+          description={n.frontmatter.description}
+          category={n.frontmatter.category}
+          tags={n.frontmatter.tags}
+          key={n.fields.slug}
+          image={n.frontmatter.squareimage.childImageSharp.fluid}
+          sm
+        />
+      ))}
     </>
   )
 }

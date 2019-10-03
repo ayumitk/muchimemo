@@ -15,6 +15,7 @@ import Share from '../components/Share'
 import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
+import RecentPosts from '../components/RecentPosts'
 
 const Content = styled.article`
   max-width: 680px;
@@ -121,6 +122,9 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
         <h3>人気記事</h3>
         <PopularPosts />
+
+        <h3>最新記事</h3>
+        <RecentPosts />
       </Wrapper>
     </Layout>
   )
