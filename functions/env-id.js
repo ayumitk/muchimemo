@@ -1,6 +1,6 @@
-const { ALGOLIA_APP_ID } = process.env
+const { GATSBY_ALGOLIA_APP_ID } = process.env
 
 exports.handler = async (event, context) => ({
   statusCode: 200,
-  body: ALGOLIA_APP_ID,
+  body: GATSBY_ALGOLIA_APP_ID,
 })

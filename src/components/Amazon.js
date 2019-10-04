@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const affiliateId = process.env.AMAZON_AFFILIATE_ID
+const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
 const AmazonLink = styled.div`
   border: 1px solid ${props => props.theme.colors.grey.ultraLight};
