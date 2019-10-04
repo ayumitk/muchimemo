@@ -1,24 +1,3 @@
-const pageQuery = `{
-  pages: allMdx(
-    filter: {
-      fileAbsolutePath: { regex: "/pages/" }
-    }
-  ) {
-    edges {
-      node {
-        objectID: id
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-        }
-        excerpt(pruneLength: 5000)
-      }
-    }
-  }
-}`
-
 const postQuery = `{
   posts: allMdx(
     filter: { fileAbsolutePath: { regex: "/blog/" } }
@@ -50,12 +29,6 @@ const flatten = arr =>
 const settings = { attributesToSnippet: [`excerpt:20`] }
 
 const queries = [
-  {
-    query: pageQuery,
-    transformer: ({ data }) => flatten(data.pages.edges),
-    indexName: `Pages`,
-    settings,
-  },
   {
     query: postQuery,
     transformer: ({ data }) => flatten(data.posts.edges),

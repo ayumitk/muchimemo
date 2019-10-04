@@ -7,12 +7,10 @@ import Input from './Input'
 import * as HitComps from './HitComps'
 
 const Results = connectStateResults(({ searchState: state, searchResults: res, children }) =>
-  res && res.nbHits > 0 ? children : `No results for '${state.query}'`
+  res && res.nbHits > 0 ? children : `"${state.query}" が含まれるブログ記事はありません`
 )
 
-const Stats = connectStateResults(
-  ({ searchResults: res }) => res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
-)
+const Stats = connectStateResults(({ searchResults: res }) => res && res.nbHits > 0 && `${res.nbHits} 記事`)
 
 const useClickOutside = (ref, handler, events) => {
   if (!events) events = [`mousedown`, `touchstart`]
@@ -43,7 +41,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
         {indices.map(({ name, title, hitComp }) => (
           <Index key={name} indexName={name}>
             <header>
-              <h3>{title}</h3>
+              {/* <h3>{title}</h3> */}
               <Stats />
             </header>
             <Results>

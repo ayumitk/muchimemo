@@ -62,7 +62,7 @@ export const Form = styled.form`
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
   max-height: 80vh;
-  overflow: scroll;
+  overflow: auto;
   z-index: 2;
   -webkit-overflow-scrolling: touch;
   position: absolute;
@@ -75,13 +75,15 @@ export const HitsWrapper = styled.div`
   background: white;
   border-radius: ${props => props.theme.smallBorderRadius};
   > * + * {
-    padding-top: 1em !important;
-    border-top: 2px solid ${props => props.theme.darkGray};
+    /* padding-top: 1em !important; */
+    /* border-top: 1px solid ${props => props.theme.colors.grey.light}; */
   }
-  li + li {
-    margin-top: 0.7em;
-    padding-top: 0.7em;
-    border-top: 1px solid ${props => props.theme.lightGray};
+  ul{
+    border-bottom: 1px solid ${props => props.theme.colors.grey.light};
+  }
+  li {
+    padding: 0.7rem 0;
+    border-top: 1px solid ${props => props.theme.colors.grey.light};
   }
   * {
     margin-top: 0;
@@ -95,13 +97,9 @@ export const HitsWrapper = styled.div`
     background: ${props => props.theme.darkBlue};
   }
   header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5rem;
     h3 {
-      color: white;
       background: ${props => props.theme.gray};
-      padding: 0.1em 0.4em;
       border-radius: ${props => props.theme.smallBorderRadius};
     }
   }
@@ -114,7 +112,7 @@ export const HitsWrapper = styled.div`
 `
 
 export const PoweredBy = () => (
-  <span css="font-size: 0.6em; text-align: end; padding: 0;">
+  <span css="font-size: 0.625rem; text-align: end; padding: 0;">
     Powered by{` `}
     <a href="https://algolia.com">
       <Algolia size="1em" /> Algolia

@@ -6,10 +6,7 @@ import Nav from './Nav'
 import HamburgerMenu from './HamburgerMenu'
 import Search from './Search'
 
-const searchIndices = [
-  { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
-  { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
-]
+const searchIndices = [{ name: `Posts`, title: `ブログ記事`, hitComp: `PostHit` }]
 
 const SiteTitle = styled.div`
   padding: 1.5rem 0 0 0;
@@ -40,7 +37,7 @@ const Content = styled.div`
 const Header = () => (
   <header>
     <HamburgerMenu />
-    {/* <Search collapse indices={searchIndices} /> */}
+    <Search collapse indices={searchIndices} />
     <Content>
       <SiteTitle>
         <Link to="/">{config.siteTitle}</Link>
