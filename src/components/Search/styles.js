@@ -56,7 +56,7 @@ export const HitsWrapper = styled.div`
   top: 3rem;
   width: 80vw;
   max-width: 30rem;
-  box-shadow: 0 0 5px 0;
+  box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.9);
   padding: 0.7rem 1rem 0.4rem;
   background: white;
   font-size: 0.75rem;
@@ -66,6 +66,7 @@ export const HitsWrapper = styled.div`
   li {
     padding: 0.7rem 0;
     border-top: 1px solid ${props => props.theme.colors.grey.ultraLight};
+    line-height: 1.6;
   }
   * {
     margin-top: 0;
