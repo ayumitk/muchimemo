@@ -1,6 +1,5 @@
 import React from 'react'
 import YouTube from 'react-youtube'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 class Youtube extends React.Component {
@@ -12,8 +11,8 @@ class Youtube extends React.Component {
   render() {
     const { id } = this.props
     const opts = {
-      height: '390',
-      width: '640',
+      width: '288',
+      height: '162',
       playerVars: {
         // https://developers.google.com/youtube/player_parameters
         autoplay: 0,
