@@ -45,20 +45,6 @@ const expand = css`
   }
 `
 
-export const Input = styled.input`
-  outline: none;
-  border: none;
-  font-size: 1em;
-  background: transparent;
-  /* ${props => (props.collapse ? collapse : expand)}; */
-`
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-`
-
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
   max-height: 80vh;
@@ -67,23 +53,19 @@ export const HitsWrapper = styled.div`
   -webkit-overflow-scrolling: touch;
   position: absolute;
   right: 0;
-  top: calc(100% + 0.5em);
+  top: 3rem;
   width: 80vw;
-  max-width: 30em;
+  max-width: 30rem;
   box-shadow: 0 0 5px 0;
-  padding: 0.7em 1em 0.4em;
+  padding: 0.7rem 1rem 0.4rem;
   background: white;
-  border-radius: ${props => props.theme.smallBorderRadius};
-  > * + * {
-    /* padding-top: 1em !important; */
-    /* border-top: 1px solid ${props => props.theme.colors.grey.light}; */
-  }
-  ul{
-    border-bottom: 1px solid ${props => props.theme.colors.grey.light};
+  font-size: 0.75rem;
+  ul {
+    border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
   }
   li {
     padding: 0.7rem 0;
-    border-top: 1px solid ${props => props.theme.colors.grey.light};
+    border-top: 1px solid ${props => props.theme.colors.grey.ultraLight};
   }
   * {
     margin-top: 0;
@@ -92,22 +74,12 @@ export const HitsWrapper = styled.div`
   ul {
     list-style: none;
   }
-  mark {
-    color: ${props => props.theme.lightBlue};
-    background: ${props => props.theme.darkBlue};
-  }
   header {
     margin-bottom: 0.5rem;
-    h3 {
-      background: ${props => props.theme.gray};
-      border-radius: ${props => props.theme.smallBorderRadius};
-    }
-  }
-  h3 {
-    margin: 0 0 0.5em;
   }
   h4 {
     margin-bottom: 0.3em;
+    font-size: 1rem;
   }
 `
 

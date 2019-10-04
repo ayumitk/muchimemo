@@ -16,7 +16,7 @@ const styles = {
     top: '15px',
   },
   bmBurgerBars: {
-    background: '#373a47',
+    background: 'rgba(0,0,0,0.7)',
     height: '16%',
   },
   bmBurgerBarsHover: {
@@ -27,7 +27,7 @@ const styles = {
     width: '30px',
   },
   bmCross: {
-    background: '#bdc3c7',
+    background: '#DDD',
     height: '20px',
     width: '2px',
   },
@@ -37,7 +37,7 @@ const styles = {
     transitionDuration: '0.2s',
   },
   bmMenu: {
-    background: '#373a47',
+    background: 'rgba(0, 0, 0, 0.9)',
     padding: '2.5em 1.5em 0',
     fontSize: '1rem',
   },
@@ -45,12 +45,14 @@ const styles = {
     fill: '#373a47',
   },
   bmItemList: {
-    color: '#b8b7ad',
+    color: '#DDD',
   },
   bmItem: {
-    padding: '0.25rem 0',
+    padding: '0.75rem 0',
     display: 'block',
-    textAlign: 'left',
+    color: '#CCC',
+    lineHeight: '1',
+    fontSize: '0.812rem',
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0.3)',
@@ -75,7 +77,7 @@ class HamburgerMenu extends Component {
           <MailOutline /> お問い合わせ
         </Link>
         <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
-        <AllCategories />
+        <AllCategories dark />
       </Menu>
     )
   }
