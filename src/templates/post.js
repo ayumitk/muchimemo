@@ -16,6 +16,7 @@ import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
+import Bio from '../components/Bio'
 
 const Content = styled.article`
   max-width: 680px;
@@ -102,6 +103,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          <Bio />
 
           <Share
             socialConfig={{
