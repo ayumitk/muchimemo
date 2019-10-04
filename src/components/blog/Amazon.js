@@ -27,8 +27,7 @@ const AmazonInfo = styled.div`
 `
 
 const ProductName = styled.p`
-  margin: 0;
-  margin-bottom: 0.5rem !important;
+  margin: 0 !important;
   line-height: 1.4 !important;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     font-size: ${props => props.theme.fontSize.small} !important;
@@ -42,9 +41,20 @@ const Button = styled.button`
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: ${props => props.theme.fontSize.small};
+  margin-top: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `
 
-function Amazon({ asin, title, linkId }) {
+const Author = styled.p`
+  margin: 0 !important;
+  font-size: ${props => props.theme.fontSize.small} !important;
+  color: ${props => props.theme.colors.grey.default};
+`
+
+function Amazon({ asin, title, linkId, author }) {
   return (
     <>
       <AmazonLink>
@@ -61,7 +71,8 @@ function Amazon({ asin, title, linkId }) {
           </AmazonImage>
           <AmazonInfo>
             <ProductName>{title}</ProductName>
-            <Button>Amazonで購入する</Button>
+            {author ? <Author>{`作者 : ${author}`}</Author> : ''}
+            <Button type="button">Amazonで購入する</Button>
           </AmazonInfo>
         </a>
       </AmazonLink>
@@ -75,10 +86,12 @@ Amazon.propTypes = {
   asin: PropTypes.string,
   title: PropTypes.string,
   linkId: PropTypes.string,
+  author: PropTypes.string,
 }
 
 Amazon.defaultProps = {
   asin: null,
   title: null,
   linkId: null,
+  author: null,
 }

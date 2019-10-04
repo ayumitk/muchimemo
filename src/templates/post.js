@@ -7,7 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
 
-import { Layout, Wrapper, Subline, SEO, PrevNext } from '../components'
+import { Layout, Wrapper, SEO } from '../components'
 import TableOfContents from '../components/TableOfContents'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
@@ -24,7 +24,11 @@ const Content = styled.article`
 `
 
 const Title = styled.h1`
-  margin-bottom: 1rem;
+  margin: 0;
+  font-size: 2rem;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 1.25rem;
+  }
 `
 
 const PostContent = styled.div`
@@ -51,16 +55,66 @@ const PostContent = styled.div`
   div + h4 {
     margin-top: 3.5rem;
   }
+  strong {
+    color: ${props => props.theme.colors.secondary};
+  }
+  em {
+    font-size: 0.75rem;
+    color: ${props => props.theme.colors.grey.light};
+    display: block;
+    line-height: 1.25;
+  }
+  ul {
+    margin: 2rem 0;
+    li {
+      margin: 0.35rem 0;
+    }
+  }
+  blockquote {
+    background: rgba(0, 0, 0, 0.05);
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    &::before {
+      display: none;
+    }
+    p {
+      margin: 0;
+      font-size: ${props => props.theme.fontSize.small};
+    }
+  }
+  .gatsby-resp-image-wrapper {
+    margin-bottom: 0.5rem;
+    margin-left: 0 !important;
+  }
 `
 
 const Tags = styled.div`
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.25rem 0 0.5rem 0;
   span a {
     background: #e8f3ef;
     display: inline-block;
     margin-right: 0.25rem;
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
+    font-size: 0.687rem;
+  }
+`
+
+const PostInfo = styled.div`
+  display: flex;
+  font-size: 0.75rem;
+  padding: 0.5rem 0;
+  a {
+    display: inline-block;
+    color: #fff;
+    background: ${props => props.theme.colors.primary};
+    padding: 0.25rem 0.75rem 0.15rem 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  p {
+    margin-left: auto;
+    color: ${props => props.theme.colors.grey.light};
   }
 `
 
@@ -81,18 +135,18 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
-          <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
+          <PostInfo>
+            <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
+            <p>{post.date}</p>
+          </PostInfo>
           <Title>{post.title}</Title>
-          <Subline>
-            {post.date}
-            <Tags>
-              {post.tags.map(tag => (
-                <span key={tag}>
-                  <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
-                </span>
-              ))}
-            </Tags>
-          </Subline>
+          <Tags>
+            {post.tags.map(tag => (
+              <span key={tag}>
+                <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
+              </span>
+            ))}
+          </Tags>
 
           <div style={{ lineHeight: '0' }}>
             <Img fluid={featuredImgFluid} />

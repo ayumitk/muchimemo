@@ -1,6 +1,21 @@
 import React from 'react'
 import YouTube from 'react-youtube'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const YoutubeContainer = styled.div`
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+`
 
 class Youtube extends React.Component {
   _onReady(event) {
@@ -19,7 +34,11 @@ class Youtube extends React.Component {
       },
     }
 
-    return <YouTube videoId={id} opts={opts} onReady={this._onReady} />
+    return (
+      <YoutubeContainer>
+        <YouTube videoId={id} opts={opts} onReady={this._onReady} />
+      </YoutubeContainer>
+    )
   }
 }
 

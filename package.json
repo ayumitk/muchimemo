@@ -43,6 +43,7 @@
     "react-instantsearch-dom": "^5.7.0",
     "react-live": "^2.2.0",
     "react-share": "^3.0.1",
+    "react-twitter-embed": "^2.0.8",
     "react-youtube": "^7.9.0",
     "styled-components": "^4.4.0",
     "styled-icons": "^8.4.2",
