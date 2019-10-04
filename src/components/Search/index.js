@@ -97,7 +97,7 @@ const useClickOutside = (ref, handler, events) => {
   })
 }
 
-export default function Search({ indices, collapse, hitsAsGrid }) {
+export default function Search({ indices, hitsAsGrid }) {
   const ref = createRef()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
@@ -125,7 +125,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
         <SearchAlt2 />
       </SearchButton>
       <SearchContainer style={{ display: `${open ? 'flex' : 'none'}` }}>
-        <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
+        <Input onFocus={() => setFocus(true)} {...{ focus }} />
         <SearchAlt2 />
         <CloseIcon onClick={handleClose} />
       </SearchContainer>

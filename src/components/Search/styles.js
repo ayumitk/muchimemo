@@ -14,37 +14,6 @@ export const SearchIcon = styled(Search)`
   pointer-events: none;
 `
 
-const focus = css`
-  background: white;
-  cursor: text;
-  width: 5em;
-  + ${SearchIcon} {
-    margin: 0.3em;
-  }
-`
-
-const collapse = css`
-  width: 0;
-  cursor: pointer;
-  + ${SearchIcon} {
-    color: white;
-  }
-  ${props => props.focus && focus}
-  margin-left: ${props => (props.focus ? `-1.6em` : `-1em`)};
-  padding-left: ${props => (props.focus ? `1.6em` : `1em`)};
-  ::placeholder {
-  }
-`
-
-const expand = css`
-  width: 6em;
-  margin-left: -1.6em;
-  padding-left: 1.6em;
-  + ${SearchIcon} {
-    margin: 0.3em;
-  }
-`
-
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
   max-height: 80vh;

@@ -43,7 +43,7 @@ const StyledLogo = styled(Logo)`
 const Header = () => (
   <header>
     <HamburgerMenu />
-    <Search collapse indices={searchIndices} />
+    <Search indices={searchIndices} />
     <Content>
       <SiteTitle>
         <Link to="/">
