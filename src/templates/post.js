@@ -27,7 +27,7 @@ const Title = styled.h1`
   margin: 0;
   font-size: 2rem;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 `
 
@@ -102,8 +102,8 @@ const Tags = styled.div`
 
 const PostInfo = styled.div`
   display: flex;
-  font-size: 0.75rem;
-  padding: 0.5rem 0;
+  font-size: 0.687rem;
+  padding: 0.75rem 0 0.25rem 0;
   a {
     display: inline-block;
     color: #fff;
