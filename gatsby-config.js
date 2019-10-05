@@ -76,6 +76,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-copy-linked-files`,
           // TODO: Replace with "mdx-component-autolink-headers"
           {
             resolve: 'gatsby-remark-autolink-headers',
