@@ -16,6 +16,12 @@ const H1 = styled.h1`
   }
 `
 
+const Description = styled.p`
+  font-size: ${props => props.theme.fontSize.small};
+  color: ${props => props.theme.colors.grey.default};
+  margin-bottom: 1rem;
+`
+
 const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
   const { nodes, totalCount } = allMdx
   const subline = `${totalCount} 記事`
@@ -29,7 +35,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
             #{TagsConfig[tag].label}
             <span>{subline}</span>
           </H1>
-          {TagsConfig[tag].description ? <p>{TagsConfig[tag].description}</p> : ''}
+          {TagsConfig[tag].description ? <Description>{TagsConfig[tag].description}</Description> : ''}
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}

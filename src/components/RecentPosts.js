@@ -9,7 +9,7 @@ const RecentPosts = () => {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { fields: { sourceName: { ne: "page" } } }
-          limit: 5
+          limit: 3
         ) {
           nodes {
             fields {

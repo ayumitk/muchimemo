@@ -32,6 +32,7 @@ const Post = styled.article`
   }
   .post-info {
     flex: 1;
+    line-height: 1.4;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 1rem;
     }

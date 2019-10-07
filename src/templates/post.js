@@ -138,14 +138,25 @@ const PostContent = styled.div`
 `
 
 const Tags = styled.div`
-  margin: 0.25rem 0 0.5rem 0;
-  span a {
-    background: #e8f3ef;
-    display: inline-block;
-    margin-right: 0.25rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.687rem;
+  margin: 0.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    padding: 0 0.25rem 0.25rem 0;
+    a {
+      display: block;
+      border: solid 1px #ccc;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
+      color: ${props => props.theme.colors.grey.default};
+      /* font-size: ${props => props.theme.fontSize.small}; */
+      font-size: 0.75rem;
+      background: rgba(0, 0, 0, 0.05);
+      @media (max-width: ${props => props.theme.breakpoints.phone}) {
+        font-size: 0.687rem;
+        padding: 0.25rem 0.5rem;
+      }
+    }
   }
 `
 
@@ -191,9 +202,9 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <Title>{post.title}</Title>
           <Tags>
             {post.tags.map(tag => (
-              <span key={tag}>
+              <div key={tag}>
                 <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
-              </span>
+              </div>
             ))}
           </Tags>
 

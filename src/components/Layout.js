@@ -208,7 +208,8 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Footer = styled.footer`
-  padding: 3rem 0 1rem 0;
+  padding: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.05);
   span {
     font-size: 0.75rem;
   }
@@ -225,7 +226,7 @@ const Copyright = styled.p`
 
 const Container = styled.div`
   max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 3rem auto;
   padding: 0 1rem;
   p {
     font-weight: bold;
