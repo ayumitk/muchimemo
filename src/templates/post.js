@@ -6,7 +6,6 @@ import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
-import { QuoteAltLeft } from 'styled-icons/boxicons-solid/QuoteAltLeft'
 
 import { Layout, Wrapper, SEO } from '../components'
 import TableOfContents from '../components/TableOfContents'
@@ -89,7 +88,16 @@ const PostContent = styled.div`
     padding: 1rem;
     position: relative;
     &:before {
-      display:none;
+      background: url('https://cdn.blog.st-hatena.com/css/theme/evergreen/images/quote.png?version=97326deâ€¦&env=production') no-repeat;
+      background-size: 24px;
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: -4px;
+      left: -4px;
+      margin: 0;
+      content: '';
     }
     p {
       margin: 0;
