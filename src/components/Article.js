@@ -8,7 +8,7 @@ import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
-  margin: 0 0 1rem 0;
+  position: relative;
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
@@ -28,6 +28,12 @@ const Post = styled.article`
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       width: 100px;
       margin-right: 10px;
+    }
+  }
+  .post-info {
+    flex: 1;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 1rem;
     }
   }
   .category {
@@ -51,8 +57,9 @@ const Post = styled.article`
     font-size: 1rem;
     margin: 0 0 0.25rem 0;
     position: relative;
+    font-weight: bold;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 0.937rem;
+      font-size: 0.812rem;
     }
     a {
       color: ${props => props.theme.colors.grey.dark};
@@ -66,6 +73,15 @@ const Post = styled.article`
     font-size: 0.75rem;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       display: none;
+    }
+  }
+  .tags {
+    font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 0.687rem;
+    }
+    span {
+      padding-right: 0.5rem;
     }
   }
 
@@ -82,9 +98,22 @@ const articleLayout = props => {
         overflow: hidden;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        color:#FFF;
+        padding:0 0.25rem;
       }
       .featured-image{
         width:100%;
+      }
+      .post-info{
+        position:absolute;
+        bottom:0;
+        background:rgba(30,30,30,0.8);
+      }
+      .category .date{
+        display:none;
+      }
+      .tags{
+        display:none;
       }
     `
   }
@@ -98,23 +127,6 @@ const articleLayout = props => {
   `
 }
 
-const PostInfo = styled.div`
-  flex: 1;
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 1rem;
-  }
-`
-
-const Tags = styled.div`
-  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 0.687rem;
-  }
-  span {
-    padding-right: 0.5rem;
-  }
-`
-
 const Article = ({ title, date, slug, description, category, tags, image, sm, topPage }) => (
   <Post sm={sm} topPage={topPage}>
     <Link to={slug}>
@@ -122,7 +134,7 @@ const Article = ({ title, date, slug, description, category, tags, image, sm, to
         <Img fluid={image} />
       </div>
     </Link>
-    <PostInfo>
+    <div className="post-info">
       <div className="category">
         <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
         <p className="date">{date}</p>
@@ -131,14 +143,14 @@ const Article = ({ title, date, slug, description, category, tags, image, sm, to
         <Link to={slug}>{title}</Link>
       </p>
       <p className="description">{description}</p>
-      <Tags sm={sm}>
+      <div className="tags">
         {tags.map(tag => (
           <span key={tag}>
             <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
           </span>
         ))}
-      </Tags>
-    </PostInfo>
+      </div>
+    </div>
   </Post>
 )
 
