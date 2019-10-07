@@ -223,13 +223,10 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <DiscussionEmbed {...disqusConfig} />
         </Content>
 
-        <h3>関連記事</h3>
         <RelatedPosts category={post.category} tags={post.tags} slug={slug} />
 
-        <h3>人気記事</h3>
         <PopularPosts />
 
-        <h3>最新記事</h3>
         <RecentPosts />
       </Wrapper>
     </Layout>

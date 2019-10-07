@@ -19,8 +19,8 @@ const IndexPage = ({
   <Layout>
     <Wrapper>
       <Container>
-        <PopularPosts topPage />
-        <Heading>新着記事</Heading>
+        <PopularPosts grid />
+        <Heading>最新記事</Heading>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}

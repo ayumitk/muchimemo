@@ -1,20 +1,25 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { Article, Heading } from '.'
 
 const PopularPostsContainer = styled.div`
-  ul {
+  margin-bottom: 3rem;
+  ${props => Layout(props)}
+`
+
+const Layout = props => {
+  if (props.grid) {
+    return `
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 3rem;
+    `
   }
-`
+}
 
-const PopularPosts = ({ topPage }) => {
+const PopularPosts = ({ sm, grid }) => {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
@@ -47,9 +52,9 @@ const PopularPosts = ({ topPage }) => {
     `
   )
   return (
-    <PopularPostsContainer topPage={topPage}>
+    <>
       <Heading>人気記事</Heading>
-      <ul>
+      <PopularPostsContainer grid={grid} sm={sm}>
         {allMdx.nodes.map(n => (
           <Article
             title={n.frontmatter.title}
@@ -62,13 +67,23 @@ const PopularPosts = ({ topPage }) => {
             tags={n.frontmatter.tags}
             key={n.fields.slug}
             image={n.frontmatter.squareimage.childImageSharp.fluid}
-            PopularPosts
-            topPage
+            grid={grid}
+            sm={sm}
           />
         ))}
-      </ul>
-    </PopularPostsContainer>
+      </PopularPostsContainer>
+    </>
   )
 }
 
 export default PopularPosts
+
+PopularPosts.propTypes = {
+  sm: PropTypes.bool,
+  grid: PropTypes.bool,
+}
+
+PopularPosts.defaultProps = {
+  sm: false,
+  grid: false,
+}

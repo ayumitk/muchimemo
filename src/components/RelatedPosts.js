@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Article } from '.'
+import { Article, Heading } from '.'
 
 const RelatedPosts = ({ category, tags, slug }) => {
   const { allMdx } = useStaticQuery(
@@ -85,6 +85,7 @@ const RelatedPosts = ({ category, tags, slug }) => {
 
   return (
     <>
+      <Heading>関連記事</Heading>
       {newNodes.map(n => (
         <Article
           title={n.frontmatter.title}
@@ -97,7 +98,6 @@ const RelatedPosts = ({ category, tags, slug }) => {
           tags={n.frontmatter.tags}
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
-          sm
         />
       ))}
     </>

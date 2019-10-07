@@ -91,7 +91,7 @@ const Post = styled.article`
 `
 
 const articleLayout = props => {
-  if (props.topPage) {
+  if (props.grid) {
     return `
       margin: 0 !important;
       .title{
@@ -132,8 +132,8 @@ const articleLayout = props => {
   `
 }
 
-const Article = ({ title, date, slug, description, category, tags, image, sm, topPage }) => (
-  <Post sm={sm} topPage={topPage}>
+const Article = ({ title, date, slug, description, category, tags, image, sm, grid }) => (
+  <Post sm={sm} grid={grid}>
     <Link to={slug}>
       <div className="featured-image" sm={sm}>
         <Img fluid={image} />
@@ -170,10 +170,10 @@ Article.propTypes = {
   tags: PropTypes.array.isRequired,
   image: PropTypes.object.isRequired,
   sm: PropTypes.bool,
-  topPage: PropTypes.bool,
+  grid: PropTypes.bool,
 }
 
 Article.defaultProps = {
   sm: false,
-  topPage: false,
+  grid: false,
 }

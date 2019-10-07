@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Article } from '.'
+import { Article, Heading } from '.'
 
 const RecentPosts = () => {
   const { allMdx } = useStaticQuery(
@@ -36,6 +36,7 @@ const RecentPosts = () => {
   )
   return (
     <div>
+      <Heading>最新記事</Heading>
       {allMdx.nodes.map(n => (
         <Article
           title={n.frontmatter.title}
