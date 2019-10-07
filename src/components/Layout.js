@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-family: ${props => props.theme.fontFamily.sansSerif};
     font-size: ${props => props.theme.baseFontSize};
+    line-height: 1.6;
     h1, h2, h3, h4, h5{
       font-family: ${props => props.theme.fontFamily.sansSerif};
       /* font-weight: normal; */

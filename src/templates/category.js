@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import kebabCase from 'lodash/kebabCase'
 
 import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
-import TagsConfig from '../../config/tags'
+import Tag from '../components/Tag'
 
 const H1 = styled.h1`
   span {
@@ -16,6 +15,12 @@ const H1 = styled.h1`
     color: ${props => props.theme.colors.grey.light};
     margin-left: 1rem;
   }
+`
+
+const Description = styled.p`
+  font-size: ${props => props.theme.fontSize.small};
+  color: ${props => props.theme.colors.grey.default};
+  margin-bottom: 1rem;
 `
 
 const Category = ({ pageContext: { category }, data: { allMdx } }) => {
@@ -30,14 +35,12 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
             {CategoryConfig[category].label}
             <span>{`${totalCount} 記事`}</span>
           </H1>
-          {CategoryConfig[category].description ? <p>{CategoryConfig[category].description}</p> : ''}
-          <ul>
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>{TagsConfig[tag.fieldValue].label}</Link>
-              </li>
-            ))}
-          </ul>
+          {CategoryConfig[category].description ? (
+            <Description>{CategoryConfig[category].description}</Description>
+          ) : (
+            ''
+          )}
+          <Tag tag={group} />
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}

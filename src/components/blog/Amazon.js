@@ -60,7 +60,7 @@ const Author = styled.p`
 const Kindle = styled.p`
   margin: 0 !important;
   background: #ffa724;
-  font-size: 0.625rem !important;
+  font-size: 0.562rem !important;
   padding: 0.25rem 0.5rem;
   display: inline-block;
   line-height: 1 !important;
