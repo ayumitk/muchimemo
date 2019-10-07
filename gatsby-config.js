@@ -6,7 +6,7 @@ require('dotenv').config({
 
 const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
-module.exports = {
+const cfg = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
@@ -29,7 +29,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'post',
-        path: `${__dirname}/blog`,
+        path: `${__dirname}/content/blog`,
       },
     },
 
@@ -57,6 +57,7 @@ module.exports = {
         defaultLayouts: {
           page: require.resolve('./src/templates/page.js'),
           post: require.resolve('./src/templates/post.js'),
+          draft: require.resolve('./src/templates/post.js'),
           default: require.resolve('./src/templates/post.js'),
         },
         gatsbyRemarkPlugins: [
@@ -136,3 +137,15 @@ module.exports = {
     'gatsby-plugin-netlify',
   ],
 }
+
+if (process.env.CONTEXT !== 'production') {
+  cfg.plugins.push({
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `draft`,
+      path: `${__dirname}/content/draft`,
+    },
+  })
+}
+
+module.exports = cfg

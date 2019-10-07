@@ -9,7 +9,7 @@ const RelatedPosts = ({ category, tags, slug }) => {
       query {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { sourceName: { eq: "post" } } }
+          filter: { fields: { sourceName: { ne: "page" } } }
         ) {
           nodes {
             fields {

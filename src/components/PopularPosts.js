@@ -8,7 +8,7 @@ const PopularPosts = () => {
       query {
         allMdx(
           filter: {
-            fields: { slug: { in: ["/tv-movie/london-spy/", "/misc/menstrual-cup/"] }, sourceName: { eq: "post" } }
+            fields: { slug: { in: ["/tv-movie/london-spy/", "/misc/menstrual-cup/"] }, sourceName: { ne: "page" } }
           }
         ) {
           nodes {

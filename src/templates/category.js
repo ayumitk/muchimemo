@@ -77,7 +77,7 @@ export const postQuery = graphql`
   query CategoryPage($category: String!) {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } }, fields: { sourceName: { eq: "post" } } }
+      filter: { frontmatter: { category: { eq: $category } }, fields: { sourceName: { ne: "page" } } }
     ) {
       group(field: frontmatter___tags) {
         fieldValue

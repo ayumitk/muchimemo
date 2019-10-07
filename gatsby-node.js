@@ -81,9 +81,14 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1]
     const prev = index === posts.length - 1 ? null : posts[index + 1]
 
+    let templateName = 'post'
+    if (n.fields.sourceName === 'page') {
+      templateName = 'page'
+    }
+
     createPage({
       path: n.fields.slug,
-      component: require.resolve(`./src/templates/${String(n.fields.sourceName)}.js`),
+      component: require.resolve(`./src/templates/${templateName}.js`),
       context: {
         slug: n.fields.slug,
         prev,
