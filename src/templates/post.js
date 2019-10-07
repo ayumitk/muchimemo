@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
+import { QuoteAltLeft } from 'styled-icons/boxicons-solid/QuoteAltLeft'
 
 import { Layout, Wrapper, SEO } from '../components'
 import TableOfContents from '../components/TableOfContents'
@@ -43,44 +44,61 @@ const PostContent = styled.div`
     line-height: 1.8;
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: 0 0 2rem 0;
+    margin: 1.75rem 0 0 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.937rem;
     }
   }
-  p + h2 {
-    margin-top: 5rem;
+  h2,
+  h3,
+  h4 {
+    margin: 5rem 0 -0.75rem 0;
   }
-  p + h3,
-  div + h4 {
-    margin-top: 3.5rem;
+  h2 {
+    font-size: 1.375rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h2 + h3{
+    margin-top:1.5rem;
   }
   strong {
     color: ${props => props.theme.colors.secondary};
   }
   em {
-    font-size: 0.75rem;
+    font-size: 0.687rem;
     color: ${props => props.theme.colors.grey.light};
     display: block;
     line-height: 1.25;
+    margin: 0.5rem 0 0 0;
   }
   ul {
-    margin: 2rem 0;
+    margin: 1.75rem 0;
+    padding-left: 1.5rem;
     li {
       margin: 0.35rem 0;
     }
   }
   blockquote {
     background: rgba(0, 0, 0, 0.05);
-    margin: 0 0 2rem 0;
+    margin: 1.75rem 0 0 0;
     padding: 1rem;
-    &::before {
-      display: none;
+    position: relative;
+    &:before {
+      display:none;
     }
     p {
       margin: 0;
-      font-size: ${props => props.theme.fontSize.small};
+      font-style: normal;
+      /* font-size: ${props => props.theme.fontSize.small}; */
     }
+  }
+  .twitter-tweet{
+    margin: 1.75rem 0 0 0 !important;
   }
   .gatsby-resp-image-wrapper {
     margin-bottom: 0.5rem;

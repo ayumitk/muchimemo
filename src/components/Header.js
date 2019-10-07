@@ -38,6 +38,7 @@ const Content = styled.div`
 const StyledLogo = styled(Logo)`
   width: calc(111px * 1.3);
   height: calc(25px * 1.3);
+  color: ${props => props.theme.colors.grey.dark};
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     width: calc(111px * 1);
     height: calc(25px * 1);

@@ -8,7 +8,7 @@ const StyledTableOfContents = styled.div`
   /* border: 1px solid ${props => props.theme.colors.grey.ultraLight}; */
   background: rgba(0,0,0,0.05);
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: ${props => props.theme.fontSize.small};
+    /* font-size: ${props => props.theme.fontSize.small}; */
     padding: 0.5rem;
     margin: 0.5rem 0 2rem 0;
   }

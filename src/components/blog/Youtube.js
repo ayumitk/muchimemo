@@ -8,6 +8,7 @@ const YoutubeContainer = styled.div`
   position: relative;
   width: 100%;
   padding-top: 56.25%;
+  margin: 1.75rem 0 0 0;
   iframe {
     position: absolute;
     top: 0;

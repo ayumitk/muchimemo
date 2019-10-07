@@ -7,6 +7,7 @@ const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 const AmazonLink = styled.div`
   border: 1px solid ${props => props.theme.colors.grey.ultraLight};
   padding: 1rem;
+  margin: 1.75rem 0 0 0;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     padding: 0.5rem;
   }

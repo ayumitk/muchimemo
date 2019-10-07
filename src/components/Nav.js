@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import CategoryConfig from '../../config/category'
 
 const Wrapper = styled.nav`
-  background: ${props => props.theme.colors.grey.default};
+  /* background: ${props => props.theme.colors.grey.default}; */
+  background: ${props => props.theme.colors.grey.dark};
 `
 
 const Content = styled.ul`
@@ -13,7 +14,7 @@ const Content = styled.ul`
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  border-left: solid 1px rgba(255, 255, 255, 0.3);
+  border-left: solid 1px rgba(255, 255, 255, 0.2);
   li {
     list-style: none;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
@@ -28,8 +29,8 @@ const Content = styled.ul`
       font-size: 0.937rem;
       color: ${props => props.theme.colors.white};
       padding: 0.75rem 1rem;
-      border-right: solid 1px rgba(255, 255, 255, 0.3);
-      border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+      border-right: solid 1px rgba(255, 255, 255, 0.2);
+      border-bottom: solid 1px rgba(255, 255, 255, 0.2);
       text-align: center;
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         padding: 0.25rem 0;
