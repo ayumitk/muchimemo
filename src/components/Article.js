@@ -8,9 +8,7 @@ import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
-  display: flex;
-  flex-wrap: wrap;
-  margin: ${props => (props.sm ? '0 0 1rem 0' : '1rem 0 3rem 0')};
+  margin: 0 0 1rem 0;
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     margin-top: 1.5rem;
     margin-bottom: 2.5rem;
@@ -19,21 +17,86 @@ const Post = styled.article`
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
+  .featured-image {
+    line-height: 0;
+    width: ${props => (props.sm ? '100px' : '250px')};
+    margin-right: ${props => (props.sm ? '20px' : '30px')};
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      width: 180px;
+      margin-right: 20px;
+    }
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      width: 100px;
+      margin-right: 10px;
+    }
+  }
+  .category {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    a {
+      display: block;
+      background: ${props => props.theme.colors.primary};
+      color: #fff;
+      line-height: 1;
+      font-size: 0.625rem;
+      padding: 0.25rem 0.5rem;
+    }
+    .date {
+      font-size: 0.75rem;
+      margin-left: auto;
+    }
+  }
+  .title {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+    position: relative;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 0.937rem;
+    }
+    a {
+      color: ${props => props.theme.colors.grey.dark};
+      &:hover {
+        color: ${props => props.theme.colors.primaryLight};
+      }
+    }
+  }
+  .description {
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      display: none;
+    }
+  }
+
+  ${props => articleLayout(props)}
 `
 
-const FeaturedImage = styled.div`
-  line-height: 0;
-  width: ${props => (props.sm ? '100px' : '250px')};
-  margin-right: ${props => (props.sm ? '20px' : '30px')};
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    width: 180px;
-    margin-right: 20px;
+const articleLayout = props => {
+  if (props.topPage) {
+    return `
+      margin: 0 !important;
+      .title a{
+        font-size:0.75rem;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .featured-image{
+        width:100%;
+      }
+    `
   }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    width: 100px;
-    margin-right: 10px;
+  if (props.sm) {
+    return `
+      color: blue;
+    `
   }
-`
+  return `
+    display: flex;
+  `
+}
 
 const PostInfo = styled.div`
   flex: 1;
@@ -42,57 +105,32 @@ const PostInfo = styled.div`
   }
 `
 
-const Title = styled.h2`
-  font-size: ${props => (props.sm ? '1rem' : '1.5rem')};
-  margin: 0 0 0.5rem 0;
-  position: relative;
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 1rem;
-  }
-  a {
-    color: ${props => props.theme.colors.grey.dark};
-    &:hover {
-      color: ${props => props.theme.colors.primaryLight};
-    }
-  }
-`
-
-const Description = styled.p`
-  grid-column: -1 / 1;
-  margin-bottom: ${props => (props.sm ? '0.25rem' : '0.5rem')};
-  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    display: none;
-  }
-`
-
 const Tags = styled.div`
   font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 0.687rem;
+  }
   span {
     padding-right: 0.5rem;
   }
 `
 
-const Subline = styled.p`
-  font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
-  margin-bottom: ${props => (props.sm ? '0.25rem' : '0.5rem')};
-`
-
-const Article = ({ title, date, slug, description, category, tags, image, sm }) => (
-  <Post sm={sm}>
+const Article = ({ title, date, slug, description, category, tags, image, sm, topPage }) => (
+  <Post sm={sm} topPage={topPage}>
     <Link to={slug}>
-      <FeaturedImage sm={sm}>
+      <div className="featured-image" sm={sm}>
         <Img fluid={image} />
-      </FeaturedImage>
+      </div>
     </Link>
     <PostInfo>
-      <Title sm={sm}>
+      <div className="category">
+        <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
+        <p className="date">{date}</p>
+      </div>
+      <p className="title">
         <Link to={slug}>{title}</Link>
-      </Title>
-      <Subline sm={sm}>
-        {date} <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
-      </Subline>
-      <Description sm={sm}>{description}</Description>
+      </p>
+      <p className="description">{description}</p>
       <Tags sm={sm}>
         {tags.map(tag => (
           <span key={tag}>
@@ -114,4 +152,11 @@ Article.propTypes = {
   category: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   image: PropTypes.object.isRequired,
+  sm: PropTypes.bool,
+  topPage: PropTypes.bool,
+}
+
+Article.defaultProps = {
+  sm: false,
+  topPage: false,
 }

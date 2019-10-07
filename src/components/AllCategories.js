@@ -10,7 +10,8 @@ const Categories = styled.ul`
   padding: 0;
   margin: 0 0 2rem 0;
   li a {
-    border: solid ${props => (props.dark ? '0' : '1px')} ${props => props.theme.colors.grey.ultraLight};
+    /* border: solid ${props => (props.dark ? '0' : '1px')} ${props => props.theme.colors.grey.ultraLight}; */
+    border: solid ${props => (props.dark ? '0' : '1px')} #CCC;
     display: block;
     padding: 0.75rem ${props => (props.dark ? '0' : '1rem')};
     margin-top: -1px;

@@ -16,10 +16,11 @@ const Tags = styled.ul`
     a {
       display: block;
       border: solid 1px #ccc;
-      padding: 0.35rem 0.75rem;
+      padding: 0.25rem 0.75rem;
       border-radius: 0.25rem;
       color: ${props => props.theme.colors.grey.default};
-      font-size: ${props => props.theme.fontSize.small};
+      /* font-size: ${props => props.theme.fontSize.small}; */
+      font-size: 0.75rem;
       background: rgba(0, 0, 0, 0.05);
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         font-size: 0.687rem;

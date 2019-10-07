@@ -1,8 +1,17 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import { Article } from '.'
 
-const PopularPosts = () => {
+const PopularPostsContainer = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 0;
+  padding: 0;
+`
+
+const PopularPosts = ({ topPage }) => {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
@@ -35,7 +44,7 @@ const PopularPosts = () => {
     `
   )
   return (
-    <div>
+    <PopularPostsContainer topPage={topPage}>
       {allMdx.nodes.map(n => (
         <Article
           title={n.frontmatter.title}
@@ -49,9 +58,10 @@ const PopularPosts = () => {
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
           PopularPosts
+          topPage
         />
       ))}
-    </div>
+    </PopularPostsContainer>
   )
 }
 

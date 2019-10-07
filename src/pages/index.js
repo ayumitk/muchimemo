@@ -20,7 +20,7 @@ const IndexPage = ({
     <Wrapper>
       <Container>
         <h2>人気記事</h2>
-        <PopularPosts />
+        <PopularPosts topPage />
         <h2>新着記事</h2>
         {posts.map(post => (
           <Article
