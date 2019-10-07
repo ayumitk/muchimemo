@@ -87,10 +87,15 @@ const PostContent = styled.div`
     th,td{
       border: 1px solid #CCC;
       padding:0.2rem;
+      @media (max-width: ${props => props.theme.breakpoints.phone}) {
+        /* font-size: 0.937rem; */
+        font-size:0.875rem;
+      }
     }
     th{
       background: rgba(0, 0, 0, 0.05);
       font-weight:bold;
+      white-space:nowrap;
     }
   }
   blockquote {
@@ -113,6 +118,9 @@ const PostContent = styled.div`
     p {
       margin: 0;
       font-style: normal;
+      @media (max-width: ${props => props.theme.breakpoints.phone}) {
+        font-size: 0.937rem;
+      }
       /* font-size: ${props => props.theme.fontSize.small}; */
     }
   }

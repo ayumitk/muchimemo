@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
 const AmazonLink = styled.div`
-  border: 1px solid ${props => props.theme.colors.grey.ultraLight};
+  /* border: 1px solid ${props => props.theme.colors.grey.ultraLight}; */
+  border: 5px solid rgba(0,0,0,0.1);
   padding: 1rem;
   margin: 1.75rem 0 0 0;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
@@ -30,13 +31,14 @@ const AmazonInfo = styled.div`
 const ProductName = styled.p`
   margin: 0 !important;
   line-height: 1.4 !important;
+  font-weight: bold;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     font-size: ${props => props.theme.fontSize.small} !important;
   }
 `
 
 const Button = styled.button`
-  background: ${props => props.theme.colors.secondary};
+  background: ${props => props.theme.colors.primary};
   color: #fff;
   border: 0;
   padding: 0.25rem 0.5rem;
@@ -55,7 +57,17 @@ const Author = styled.p`
   color: ${props => props.theme.colors.grey.default};
 `
 
-function Amazon({ asin, title, linkId, author }) {
+const Kindle = styled.p`
+  margin: 0 !important;
+  background: #ffa724;
+  font-size: 0.625rem !important;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  line-height: 1 !important;
+  color: #000;
+`
+
+function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
   return (
     <>
       <AmazonLink>
@@ -74,6 +86,7 @@ function Amazon({ asin, title, linkId, author }) {
             <ProductName>{title}</ProductName>
             {author ? <Author>{`作者 : ${author}`}</Author> : ''}
             <Button type="button">Amazonで購入する</Button>
+            {KindleUnlimited ? <Kindle>Kindle Unlimited 対象作品</Kindle> : ''}
           </AmazonInfo>
         </a>
       </AmazonLink>
@@ -88,6 +101,7 @@ Amazon.propTypes = {
   title: PropTypes.string,
   linkId: PropTypes.string,
   author: PropTypes.string,
+  KindleUnlimited: PropTypes.bool,
 }
 
 Amazon.defaultProps = {
@@ -95,4 +109,5 @@ Amazon.defaultProps = {
   title: null,
   linkId: null,
   author: null,
+  KindleUnlimited: false,
 }
