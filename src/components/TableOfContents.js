@@ -9,6 +9,7 @@ const StyledTableOfContents = styled.div`
   background: rgba(0,0,0,0.05);
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     /* font-size: ${props => props.theme.fontSize.small}; */
+    font-size: 0.937rem;
     padding: 0.5rem;
     margin: 0.5rem 0 2rem 0;
   }

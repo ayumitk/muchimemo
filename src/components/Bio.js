@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
+import { TwitterFollowButton } from 'react-twitter-embed'
 import config from '../../config'
 
 const BioContainer = styled.div`
@@ -65,13 +66,10 @@ const Bio = () => {
       </div>
       <Info>
         <Name>{config.author}</Name>
-        <p>
+        <p style={{ marginBottom: '0.5rem' }}>
           カナダ、バンクーバー在住。壇蜜に似てるとか、鞭が似合うとか言われますが、職業は女王様ではありません。M/Mロマンス小説とBLマンガがあれば生きていける。
         </p>
-        <TwitterButton href={`https://twitter.com/${config.userTwitter}`}>
-          <Twitter />
-          {config.userTwitter}をフォロー
-        </TwitterButton>
+        <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>
     </BioContainer>
   )
