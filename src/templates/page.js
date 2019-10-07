@@ -12,15 +12,23 @@ const Content = styled.article`
     line-height: 1.8;
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: 2rem 0;
+    margin: 1.75rem 0 0 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 1rem;
+      font-size: 0.937rem;
     }
   }
-  hr {
-    border: 0;
-    border-bottom: solid 1px #ccc;
-    margin: 2rem 0;
+  h2,
+  h3 {
+    margin: 5rem 0 -0.75rem 0;
+  }
+  h2 {
+    font-size: 1.375rem;
+  }
+  h3 {
+    font-size: 1.125rem;
+  }
+  h2 + h3 {
+    margin-top: 1.75rem;
   }
 `
 

@@ -63,7 +63,7 @@ const PostContent = styled.div`
     font-size: 1rem;
   }
   h2 + h3{
-    margin-top:1.5rem;
+    margin-top:1.75rem;
   }
   strong {
     color: ${props => props.theme.colors.secondary};
@@ -80,6 +80,17 @@ const PostContent = styled.div`
     padding-left: 1.5rem;
     li {
       margin: 0.35rem 0;
+    }
+  }
+  table{
+    margin: 1.75rem 0 0 0;
+    th,td{
+      border: 1px solid #CCC;
+      padding:0.2rem;
+    }
+    th{
+      background: rgba(0, 0, 0, 0.05);
+      font-weight:bold;
     }
   }
   blockquote {
@@ -111,6 +122,10 @@ const PostContent = styled.div`
   .gatsby-resp-image-wrapper {
     margin-bottom: 0.5rem;
     margin-left: 0 !important;
+  }
+  .translation{
+    font-size:0.75rem;
+    color: ${props => props.theme.colors.grey.light};
   }
 `
 
