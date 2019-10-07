@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Layout, Article, Wrapper } from '../components'
+import { Layout, Article, Wrapper, Heading } from '../components'
 import PopularPosts from '../components/PopularPosts'
 
 const Container = styled.div`
@@ -19,9 +19,8 @@ const IndexPage = ({
   <Layout>
     <Wrapper>
       <Container>
-        <h2>人気記事</h2>
         <PopularPosts topPage />
-        <h2>新着記事</h2>
+        <Heading>新着記事</Heading>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}

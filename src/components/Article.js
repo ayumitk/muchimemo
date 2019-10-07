@@ -40,6 +40,7 @@ const Post = styled.article`
     line-height: 1;
     display: flex;
     align-items: center;
+    margin-bottom: 0.25rem;
     a {
       display: block;
       background: ${props => props.theme.colors.primary};
@@ -51,6 +52,7 @@ const Post = styled.article`
     .date {
       font-size: 0.75rem;
       margin-left: auto;
+      color: ${props => props.theme.colors.grey.light};
     }
   }
   .title {
@@ -59,7 +61,7 @@ const Post = styled.article`
     position: relative;
     font-weight: bold;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 0.812rem;
+      font-size: 0.875rem;
     }
     a {
       color: ${props => props.theme.colors.grey.dark};
@@ -92,14 +94,17 @@ const articleLayout = props => {
   if (props.topPage) {
     return `
       margin: 0 !important;
-      .title a{
+      .title{
         font-size:0.75rem;
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        color:#FFF;
-        padding:0 0.25rem;
+        line-height:1.3;
+        a{
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          color:#FFF;
+          padding:0 0.5rem;
+        }
       }
       .featured-image{
         width:100%;
