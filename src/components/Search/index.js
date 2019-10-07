@@ -24,7 +24,8 @@ const SearchContainer = styled.div`
     height: 1rem;
     border-radius: 1rem;
     width: -webkit-fill-available;
-    font-size: 0.875rem;
+    /* font-size: 0.875rem; */
+    font-size: 14px;
     padding-left: 1.8rem;
   }
   svg {

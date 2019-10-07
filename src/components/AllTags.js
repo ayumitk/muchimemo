@@ -24,6 +24,9 @@ const Tags = styled.ul`
         font-size: 0.687rem;
         padding: 0.25rem 0.5rem;
       }
+      span {
+        font-size: 0.687rem;
+      }
     }
   }
 `
