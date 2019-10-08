@@ -16,7 +16,7 @@ const AmazonLink = styled.div`
     display: flex;
   }
   &:hover{
-    border-color: ${props => props.theme.color.primary};
+    border-color: ${props => props.theme.colors.primary};
   }
 `
 
