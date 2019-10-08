@@ -1,8 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import { Article, Heading } from '.'
 
-const RecentPosts = () => {
+const RecentPosts = ({sm}) => {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
@@ -49,7 +50,7 @@ const RecentPosts = () => {
           tags={n.frontmatter.tags}
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
-          RecentPosts
+          sm = {sm}
         />
       ))}
     </div>
@@ -57,3 +58,11 @@ const RecentPosts = () => {
 }
 
 export default RecentPosts
+
+RecentPosts.propTypes = {
+  sm: PropTypes.bool,
+}
+
+RecentPosts.defaultProps = {
+  sm: false,
+}

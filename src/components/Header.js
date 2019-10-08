@@ -45,8 +45,15 @@ const StyledLogo = styled(Logo)`
   }
 `
 
+const HeaderContainer = styled.header`
+  margin-bottom: 0.5rem;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    margin-bottom: 0;
+  }
+`
+
 const Header = () => (
-  <header>
+  <HeaderContainer>
     <HamburgerMenu />
     <Search indices={searchIndices} />
     <Content>
@@ -58,7 +65,7 @@ const Header = () => (
       </SiteTitle>
     </Content>
     <Nav />
-  </header>
+  </HeaderContainer>
 )
 
 export default Header

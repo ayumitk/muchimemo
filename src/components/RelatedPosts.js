@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Article, Heading } from '.'
 
-const RelatedPosts = ({ category, tags, slug }) => {
+const RelatedPosts = ({ category, tags, slug, sm }) => {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
@@ -98,6 +98,7 @@ const RelatedPosts = ({ category, tags, slug }) => {
           tags={n.frontmatter.tags}
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
+          sm={sm}
         />
       ))}
     </>
@@ -110,4 +111,9 @@ RelatedPosts.propTypes = {
   category: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   slug: PropTypes.string.isRequired,
+  sm: PropTypes.bool,
+}
+
+RelatedPosts.defaultProps = {
+  sm: false,
 }

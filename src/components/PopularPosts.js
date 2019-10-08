@@ -13,8 +13,11 @@ const Layout = props => {
   if (props.grid) {
     return `
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 0.75rem;
+    @media (max-width: ${props.theme.breakpoints.phone}) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     `
   }
 }
@@ -25,7 +28,7 @@ const PopularPosts = ({ sm, grid }) => {
       query {
         allMdx(
           filter: {
-            fields: { slug: { in: ["/tv-movie/london-spy/", "/misc/menstrual-cup/"] }, sourceName: { ne: "page" } }
+            fields: { slug: { in: ["/tv-movie/london-spy/", "/misc/menstrual-cup/", "/misc/digital-minimalism/", "/mm-romance/a-dangerous-thing/"] }, sourceName: { ne: "page" } }
           }
         ) {
           nodes {

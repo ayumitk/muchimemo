@@ -9,13 +9,9 @@ import TagsConfig from '../../config/tags'
 
 const Post = styled.article`
   position: relative;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
+  margin: 2rem 0;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 0  0 2rem 0;
   }
   .featured-image {
     line-height: 0;
@@ -32,10 +28,6 @@ const Post = styled.article`
   }
   .post-info {
     flex: 1;
-    line-height: 1.4;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 1rem;
-    }
   }
   .category {
     line-height: 1;
@@ -57,10 +49,11 @@ const Post = styled.article`
     }
   }
   .title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin: 0 0 0.25rem 0;
     position: relative;
     font-weight: bold;
+    line-height:1.4;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.875rem;
       line-height:1.25;
@@ -74,13 +67,14 @@ const Post = styled.article`
   }
   .description {
     margin-bottom: 0.25rem;
-    font-size: 0.75rem;
+    font-size: 0.812rem;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       display: none;
     }
   }
   .tags {
-    font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)};
+    font-size:0.812rem;
+    /* font-size: ${props => (props.sm ? '0.75rem' : props.theme.fontSize.small)}; */
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.687rem;
     }
@@ -97,16 +91,25 @@ const articleLayout = props => {
     return `
       margin: 0 !important;
       .title{
-        font-size:0.687rem;
-        line-height:1.25;
+        font-size:0.75rem;
+        line-height:1.4;
         font-weight: normal;
+        margin:0.5rem 0 0.75rem 0;
+        @media (max-width: ${props.theme.breakpoints.phone}) {
+          font-size:0.687rem;
+          line-height:1.25;
+          margin:0.25rem 0;
+        }
         a{
           display: -webkit-box;
           overflow: hidden;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           color:#FFF;
-          padding:0 0.5rem;
+          padding:0 0.75rem;
+          @media (max-width: ${props.theme.breakpoints.phone}) {
+            padding:0 0.5rem;
+          }
         }
       }
       .featured-image{
@@ -120,14 +123,23 @@ const articleLayout = props => {
       .category .date{
         display:none;
       }
-      .tags{
+      .tags, .description{
         display:none;
       }
     `
   }
   if (props.sm) {
     return `
-      color: blue;
+    display: flex;
+    .featured-image{
+      width:150px;
+    }
+    .title{
+      font-size: 1rem;
+    }
+    .tags, .description{
+      font-size: 0.75rem;
+    }
     `
   }
   return `

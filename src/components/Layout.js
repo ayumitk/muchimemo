@@ -209,7 +209,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Footer = styled.footer`
   padding: 1.5rem 0;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.03);
   span {
     font-size: 0.75rem;
   }

@@ -25,7 +25,7 @@ const Content = styled.article`
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.625rem;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     font-size: 1.125rem;
   }
@@ -86,42 +86,17 @@ const PostContent = styled.div`
     margin: 1.75rem 0 0 0;
     th,td{
       border: 1px solid #CCC;
-      padding:0.2rem;
+      padding:0.25rem 0.5rem;
+      font-size:0.875rem;
+      line-height:1.25;
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        /* font-size: 0.937rem; */
-        font-size:0.875rem;
+        padding:0.25rem;
       }
     }
     th{
       background: rgba(0, 0, 0, 0.05);
       font-weight:bold;
       white-space:nowrap;
-    }
-  }
-  blockquote {
-    background: rgba(0, 0, 0, 0.05);
-    margin: 1.75rem 0 0 0;
-    padding: 1rem;
-    position: relative;
-    &:before {
-      background: url('https://cdn.blog.st-hatena.com/css/theme/evergreen/images/quote.png?version=97326deâ€¦&env=production') no-repeat;
-      background-size: 24px;
-      content: '';
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      top: -4px;
-      left: -4px;
-      margin: 0;
-      content: '';
-    }
-    p {
-      margin: 0;
-      font-style: normal;
-      @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        font-size: 0.937rem;
-      }
-      /* font-size: ${props => props.theme.fontSize.small}; */
     }
   }
   .twitter-tweet{
@@ -232,13 +207,13 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           />
 
           <DiscussionEmbed {...disqusConfig} />
+
+          <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
+
+<PopularPosts sm />
+
+<RecentPosts sm />
         </Content>
-
-        <RelatedPosts category={post.category} tags={post.tags} slug={slug} />
-
-        <PopularPosts />
-
-        <RecentPosts />
       </Wrapper>
     </Layout>
   )

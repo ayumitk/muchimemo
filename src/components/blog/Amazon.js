@@ -86,7 +86,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
             <ProductName>{title}</ProductName>
             {author ? <Author>{`作者 : ${author}`}</Author> : ''}
             <Button type="button">Amazonで購入する</Button>
-            {KindleUnlimited ? <Kindle>Kindle Unlimited 対象作品</Kindle> : ''}
+            {KindleUnlimited ? <div><Kindle>Kindle Unlimited 対象作品</Kindle></div> : ''}
           </AmazonInfo>
         </a>
       </AmazonLink>

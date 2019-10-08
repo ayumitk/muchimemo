@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
+
+const TableContainer = styled.div`
+  overflow:auto;
+`
 
 function AdrienEnglishSeries() {
   return (
-    <>
+    <TableContainer>
       <table>
         <tr>
           <th />
@@ -100,7 +105,7 @@ function AdrienEnglishSeries() {
           <td />
         </tr>
       </table>
-    </>
+    </TableContainer>
   )
 }
 
