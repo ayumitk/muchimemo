@@ -11,6 +11,8 @@ featuredimage: ./featuredimage.jpg
 squareimage: ./featuredimage_s.jpg
 ---
 
+import { Amazon, Blockquote, Youtube, Twitter } from '../../../../src/components/blog'
+
 ここ最近見て衝撃を受けたBBCドラマ『[ロンドン･スパイ](https://www.bbc.co.uk/programmes/b06pmnwn)』について、ぜひ語らせて頂きたい。  
 2015年にイギリスBBCで放送されたドラマで、特に新しいドラマでもないんだけど、非常に私好みでした。
 
@@ -43,8 +45,6 @@ _デート中、Source : [BBC Two - London Spy](https://www.bbc.co.uk/programmes
 という、**半分以上が邪な理由**で見始めたんだけど、私の嗅覚に間違いはなかった。
 
 公式のトレーラーはこちら。
-
-import Youtube from '../../../../src/components/blog/Youtube.js'
 
 <Youtube id="O1PEQkpKTLI" />
 
@@ -80,8 +80,9 @@ _Source : [BBC Two - London Spy](https://www.bbc.co.uk/programmes/b06pmnwn)_
 
 一番始めに言いたいのは、このドラマはスパイドラマでも、スリラードラマでもありません。複雑に絡み合ったヒューマンドラマであり、最高に美しいラブストーリーです！
 
-> 孤独な銀行家が失踪し、残された恋人に衝撃の事実が突きつけられる。なんと、彼はスパイ活動に携わっていた。事件の真相は、危険と陰謀が渦巻く世界の中にある。
-> _Source : [ロンドン･スパイ | Netflix (ネットフリックス) 公式サイト](https://www.netflix.com/jp/title/80048568)_
+<Blockquote srcName="ロンドン･スパイ | Netflix (ネットフリックス) 公式サイト" srcURL="https://www.netflix.com/jp/title/80048568">
+孤独な銀行家が失踪し、残された恋人に衝撃の事実が突きつけられる。なんと、彼はスパイ活動に携わっていた。事件の真相は、危険と陰謀が渦巻く世界の中にある。
+</Blockquote>
 
 ね、タイトルは「ロンドン･スパイ」だし、あらすじはこんなんですが、あくまでもラブストーリーです。 スパイドラマを見たくてこのドラマを見ても、全然面白くないんじゃないかな？
 
@@ -210,9 +211,7 @@ BBCドラマ『[SHERLOCK/シャーロック](https://amzn.to/2AL2ICe)』のマ�
 
 画面に映っているシーン自体は短かったと思うんですが、濃すぎて記憶に残りますね。
 
-import { TwitterTweetEmbed } from 'react-twitter-embed';
-
-<TwitterTweetEmbed tweetId={'678542316022427648'} />
+<Twitter id={'678542316022427648'} />
 
 ## バッグの中のスパイ事件
 
@@ -250,8 +249,6 @@ Netflixで見れます。
 
 本もあるので、さわりだけ読んでみたんですが、ドラマでは出てこなかったセリフもあって、読んだらこの世界をもっと理解できそうです。  
 放送されなかった結末があるらしいですし。
-
-import Amazon from '../../../../src/components/blog/Amazon';
 
 <Amazon
   asin="B01E4BC1L6"

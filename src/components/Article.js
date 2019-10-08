@@ -142,13 +142,47 @@ const articleLayout = props => {
     }
     `
   }
+  if (props.InternalLink) {
+    return `
+    border:solid 1px #CCC;
+    display: flex;
+    align-items:center;
+    .featured-image{
+      width:150px;
+      margin-right:0;
+      @media (max-width: ${props.theme.breakpoints.phone}) {
+        width:100px;
+      }
+    }
+    .title{
+      font-size: 1rem;
+      @media (max-width: ${props.theme.breakpoints.phone}) {
+        font-size: 0.875rem;
+        line-height: 1.25;
+      }
+    }
+    .tags, .description{
+      font-size: 0.75rem;
+      @media (max-width: ${props.theme.breakpoints.phone}) {
+        font-size: 0.687rem;
+      }
+    }
+    .category .date,
+    .description{
+      margin-top:0;
+    }
+    .post-info{
+      padding:0.5rem 1rem;
+    }
+    `
+  }
   return `
     display: flex;
   `
 }
 
-const Article = ({ title, date, slug, description, category, tags, image, sm, grid }) => (
-  <Post sm={sm} grid={grid}>
+const Article = ({ title, date, slug, description, category, tags, image, sm, grid, InternalLink }) => (
+  <Post sm={sm} grid={grid} InternalLink={InternalLink}>
     <Link to={slug}>
       <div className="featured-image" sm={sm}>
         <Img fluid={image} />
@@ -186,9 +220,11 @@ Article.propTypes = {
   image: PropTypes.object.isRequired,
   sm: PropTypes.bool,
   grid: PropTypes.bool,
+  InternalLink: PropTypes.bool,
 }
 
 Article.defaultProps = {
   sm: false,
   grid: false,
+  InternalLink: false,
 }

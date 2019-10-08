@@ -1,17 +1,14 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Article, Heading } from '.'
+import { Article } from '..'
 
-const RecentPosts = ({ sm }) => {
+function InternalLink({ slug }) {
   const { allMdx } = useStaticQuery(
     graphql`
       query {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { sourceName: { ne: "page" } } }
-          limit: 3
-        ) {
+        allMdx(filter: { fields: { sourceName: { ne: "page" } } }) {
           nodes {
             fields {
               slug
@@ -35,10 +32,12 @@ const RecentPosts = ({ sm }) => {
       }
     `
   )
+
+  const newNodes = [allMdx.nodes.find(n => n.fields.slug === slug)]
+
   return (
-    <div>
-      <Heading>最新記事</Heading>
-      {allMdx.nodes.map(n => (
+    <>
+      {newNodes.map(n => (
         <Article
           title={n.frontmatter.title}
           date={n.frontmatter.date}
@@ -50,19 +49,15 @@ const RecentPosts = ({ sm }) => {
           tags={n.frontmatter.tags}
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
-          sm={sm}
+          InternalLink
         />
       ))}
-    </div>
+    </>
   )
 }
 
-export default RecentPosts
+export default InternalLink
 
-RecentPosts.propTypes = {
-  sm: PropTypes.bool,
-}
-
-RecentPosts.defaultProps = {
-  sm: false,
+InternalLink.propTypes = {
+  slug: PropTypes.string.isRequired,
 }

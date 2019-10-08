@@ -9,6 +9,14 @@ import config from '../../config'
 import CategoryConfig from '../../config/category'
 import Tag from '../components/Tag'
 
+const Content = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 2rem auto;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    margin: 0 auto;
+  }
+`
+
 const H1 = styled.h1`
   span {
     font-size: 1rem;
@@ -23,6 +31,10 @@ const Description = styled.p`
   margin-bottom: 1rem;
 `
 
+const Header = styled.header`
+  margin-bottom: 2rem;
+`
+
 const Category = ({ pageContext: { category }, data: { allMdx } }) => {
   const { nodes, totalCount, group } = allMdx
 
@@ -30,17 +42,19 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
     <Layout>
       <Wrapper>
         <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
-        <div>
-          <H1>
-            {CategoryConfig[category].label}
-            <span>{`${totalCount} 記事`}</span>
-          </H1>
-          {CategoryConfig[category].description ? (
-            <Description>{CategoryConfig[category].description}</Description>
-          ) : (
-            ''
-          )}
-          <Tag tag={group} />
+        <Content>
+          <Header>
+            <H1>
+              {CategoryConfig[category].label}
+              <span>{`${totalCount} 記事`}</span>
+            </H1>
+            {CategoryConfig[category].description ? (
+              <Description>{CategoryConfig[category].description}</Description>
+            ) : (
+              ''
+            )}
+            <Tag tag={group} />
+          </Header>
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}
@@ -55,7 +69,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
               image={post.frontmatter.squareimage.childImageSharp.fluid}
             />
           ))}
-        </div>
+        </Content>
       </Wrapper>
     </Layout>
   )

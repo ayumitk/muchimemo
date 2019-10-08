@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { Layout, Article, Wrapper, Heading } from '../components'
 import PopularPosts from '../components/PopularPosts'
 
-const Container = styled.div`
+const Content = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
 `
@@ -18,7 +18,7 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Wrapper>
-      <Container>
+      <Content>
         <PopularPosts grid />
         <Heading>最新記事</Heading>
         {posts.map(post => (
@@ -35,7 +35,7 @@ const IndexPage = ({
             image={post.frontmatter.squareimage.childImageSharp.fluid}
           />
         ))}
-      </Container>
+      </Content>
     </Wrapper>
   </Layout>
 )

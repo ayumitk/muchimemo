@@ -8,6 +8,14 @@ import { Layout, Wrapper, Article } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
 
+const Content = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 2rem auto;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    margin: 0 auto;
+  }
+`
+
 const H1 = styled.h1`
   span {
     font-size: 1rem;
@@ -22,6 +30,10 @@ const Description = styled.p`
   margin-bottom: 1rem;
 `
 
+const Header = styled.header`
+  margin-bottom: 2rem;
+`
+
 const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
   const { nodes, totalCount } = allMdx
   const subline = `${totalCount} 記事`
@@ -30,12 +42,14 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
     <Layout>
       <Wrapper>
         <Helmet title={`タグ: ${tag} | ${config.siteTitle}`} />
-        <div>
-          <H1>
-            #{TagsConfig[tag].label}
-            <span>{subline}</span>
-          </H1>
-          {TagsConfig[tag].description ? <Description>{TagsConfig[tag].description}</Description> : ''}
+        <Content>
+          <Header>
+            <H1>
+              #{TagsConfig[tag].label}
+              <span>{subline}</span>
+            </H1>
+            {TagsConfig[tag].description ? <Description>{TagsConfig[tag].description}</Description> : ''}
+          </Header>
           {nodes.map(post => (
             <Article
               title={post.frontmatter.title}
@@ -50,7 +64,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
               image={post.frontmatter.squareimage.childImageSharp.fluid}
             />
           ))}
-        </div>
+        </Content>
       </Wrapper>
     </Layout>
   )

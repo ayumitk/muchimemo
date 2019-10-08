@@ -5,7 +5,7 @@ import { Layout, Wrapper } from '../components'
 
 const Content = styled.article`
   max-width: 680px;
-  margin: 0 auto;
+  margin: 0 auto 6rem auto;
   p {
     font-size: 1rem;
     letter-spacing: -0.003em;

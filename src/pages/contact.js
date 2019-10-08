@@ -8,6 +8,11 @@ import { Layout, Wrapper, Button } from '../components'
 import config from '../../config'
 
 const Content = styled.div`
+  max-width: ${props => props.theme.maxWidth};
+  margin: 2rem auto;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    margin: 0 auto;
+  }
   form {
     p {
       label,

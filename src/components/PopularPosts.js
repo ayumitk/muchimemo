@@ -28,7 +28,17 @@ const PopularPosts = ({ sm, grid }) => {
       query {
         allMdx(
           filter: {
-            fields: { slug: { in: ["/tv-movie/london-spy/", "/misc/menstrual-cup/", "/misc/digital-minimalism/", "/mm-romance/a-dangerous-thing/"] }, sourceName: { ne: "page" } }
+            fields: {
+              slug: {
+                in: [
+                  "/tv-movie/london-spy/"
+                  "/misc/menstrual-cup/"
+                  "/misc/digital-minimalism/"
+                  "/mm-romance/a-dangerous-thing/"
+                ]
+              }
+              sourceName: { ne: "page" }
+            }
           }
         ) {
           nodes {
