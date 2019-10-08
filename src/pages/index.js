@@ -1,15 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-
-import { Layout, Article, Wrapper, Heading } from '../components'
+import { Layout, Article, Wrapper, Heading, Content } from '../components'
 import PopularPosts from '../components/PopularPosts'
-
-const Content = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-`
 
 const IndexPage = ({
   data: {

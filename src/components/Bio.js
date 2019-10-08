@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import { Twitter } from 'styled-icons/boxicons-logos/Twitter'
 import { TwitterFollowButton } from 'react-twitter-embed'
 import config from '../../config'
 

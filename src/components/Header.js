@@ -7,6 +7,8 @@ import HamburgerMenu from './HamburgerMenu'
 import Search from './Search'
 import Logo from '../../assets/logo.svg'
 
+import Content from './Content'
+
 const searchIndices = [{ name: `Posts`, title: `ブログ記事`, hitComp: `PostHit` }]
 
 const SiteTitle = styled.div`
@@ -31,7 +33,7 @@ const Tagline = styled.div`
   }
 `
 
-const Content = styled.div`
+const StyledContent = styled(Content)`
   text-align: center;
 `
 
@@ -56,14 +58,14 @@ const Header = () => (
   <HeaderContainer>
     <HamburgerMenu />
     <Search indices={searchIndices} />
-    <Content>
+    <StyledContent>
       <SiteTitle>
         <Link to="/">
           <StyledLogo />
         </Link>
         <Tagline>{config.siteTitleManifest}</Tagline>
       </SiteTitle>
-    </Content>
+    </StyledContent>
     <Nav />
   </HeaderContainer>
 )

@@ -2,10 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
-import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
-
-import { Layout, Wrapper } from '../components'
+import { Layout, Wrapper, Content } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
 
@@ -17,7 +15,7 @@ const Tag = ({
   <Layout>
     <Wrapper>
       <Helmet title={`タグ一覧 | ${config.siteTitle}`} />
-      <div>
+      <Content>
         <h1>タグ一覧</h1>
         {group.map(tag => (
           <p key={tag.fieldValue}>
@@ -25,7 +23,7 @@ const Tag = ({
             )
           </p>
         ))}
-      </div>
+      </Content>
     </Wrapper>
   </Layout>
 )

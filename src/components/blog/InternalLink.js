@@ -1,8 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Article } from '..'
+import { Article } from '../layout'
 
 function InternalLink({ slug }) {
   const { allMdx } = useStaticQuery(

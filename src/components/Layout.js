@@ -1,19 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
-import { Link } from 'gatsby'
-import { Heart } from 'styled-icons/boxicons-solid/Heart'
-import { MailOutline } from 'styled-icons/material/MailOutline'
-import config from '../../config'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import Header from './Header'
-import AllCategories from './AllCategories'
-import AllTags from './AllTags'
-
+import Footer from './Footer'
 import SEO from './SEO'
 import theme from '../../config/theme'
 import useBuildTime from '../hooks/useBuildTime'
-
-import Button from './Button'
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -207,33 +199,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Footer = styled.footer`
-  padding: 1.5rem 0;
-  background: rgba(0, 0, 0, 0.03);
-  span {
-    font-size: 0.75rem;
-  }
-`
-
-const Copyright = styled.p`
-  font-size: 0.75rem;
-  margin-top: 1rem;
-  text-align: center;
-  svg {
-    fill: ${props => props.theme.colors.secondary};
-  }
-`
-
-const Container = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto 3rem auto;
-  padding: 0 1rem;
-  p {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-`
-
 const Layout = ({ children, customSEO }) => {
   const buildTime = useBuildTime()
 
@@ -244,29 +209,7 @@ const Layout = ({ children, customSEO }) => {
         <GlobalStyle />
         <Header />
         {children}
-        <Footer>
-          <Container>
-            <p>カテゴリ：</p>
-            <AllCategories />
-            <p>タグ：</p>
-            <AllTags />
-          </Container>
-          <div style={{ textAlign: 'center' }}>
-            <Link to="/contact">
-              <Button big>
-                <MailOutline />
-                お問い合わせ
-              </Button>
-            </Link>
-          </div>
-          <Copyright>
-            &copy; {new Date().getFullYear()}
-            {` `}
-            <Link to="/">{config.siteTitle}</Link> Made with <Heart /> in Canada.
-            <br />
-            Last build: {buildTime}
-          </Copyright>
-        </Footer>
+        <Footer />
       </>
     </ThemeProvider>
   )

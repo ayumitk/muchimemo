@@ -3,19 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-
-import { Layout, Wrapper, Article } from '../components'
+import { Layout, Wrapper, Article, Content, Tag } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
-import Tag from '../components/Tag'
-
-const Content = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 2rem auto;
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin: 0 auto;
-  }
-`
 
 const H1 = styled.h1`
   span {

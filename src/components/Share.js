@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import {
   FacebookShareButton,
@@ -8,58 +8,58 @@ import {
   LineShareButton,
   PocketShareButton,
   EmailShareButton,
-} from 'react-share';
+} from 'react-share'
 
-import { FacebookF } from 'styled-icons/fa-brands/FacebookF';
-import { Twitter } from 'styled-icons/fa-brands/Twitter';
-import { Line } from 'styled-icons/fa-brands/Line';
-import { GetPocket } from 'styled-icons/fa-brands/GetPocket';
-import { MailOutline } from 'styled-icons/material/MailOutline';
+import { FacebookF } from 'styled-icons/fa-brands/FacebookF'
+import { Twitter } from 'styled-icons/fa-brands/Twitter'
+import { Line } from 'styled-icons/fa-brands/Line'
+import { GetPocket } from 'styled-icons/fa-brands/GetPocket'
+import { MailOutline } from 'styled-icons/material/MailOutline'
 
 const ShareButtons = styled.div`
-  display:flex;
+  display: flex;
   margin: 2rem 0;
-  .share-button{
-    color: #FFF;
+  .share-button {
+    color: #fff;
     width: calc(100% / 5);
     text-align: center;
     padding: 0.25rem 0;
     cursor: pointer;
     transition: all 0.2s ease-out;
-    &:hover{
+    &:hover {
       opacity: 0.8;
     }
-    svg{
+    svg {
       vertical-align: middle;
     }
-    span{
+    span {
       font-size: 0.687rem;
-      display:block;
+      display: block;
       @media (max-width: 565.98px) {
-        display:none;
+        display: none;
       }
     }
-    &.facebook{
+    &.facebook {
       background: #3b5998;
     }
-    &.twitter{
+    &.twitter {
       background: #1da1f2;
     }
-    &.line{
+    &.line {
       background: #00c300;
-      svg{
+      svg {
         width: 1.3rem;
-        height:1.3rem;
+        height: 1.3rem;
       }
     }
-    &.pocket{
+    &.pocket {
       background: #ef4056;
     }
-    &.email{
+    &.email {
       background: #9c9c9c;
     }
   }
-`;
+`
 
 const Share = ({ socialConfig, tags }) => (
   <ShareButtons>
@@ -67,7 +67,13 @@ const Share = ({ socialConfig, tags }) => (
       <FacebookF />
       <span>Facebook</span>
     </FacebookShareButton>
-    <TwitterShareButton url={socialConfig.config.url} title={socialConfig.config.title} via={socialConfig.twitterUsername.split('@').join('')} hashtags={tags} className="share-button twitter">
+    <TwitterShareButton
+      url={socialConfig.config.url}
+      title={socialConfig.config.title}
+      via={socialConfig.twitterUsername.split('@').join('')}
+      hashtags={tags}
+      className="share-button twitter"
+    >
       <Twitter />
       <span>Twitter</span>
     </TwitterShareButton>
@@ -84,7 +90,7 @@ const Share = ({ socialConfig, tags }) => (
       <span>EMail</span>
     </EmailShareButton>
   </ShareButtons>
-);
+)
 
 Share.propTypes = {
   socialConfig: PropTypes.shape({
@@ -95,10 +101,10 @@ Share.propTypes = {
     }),
   }).isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
-};
+}
 
 Share.defaultProps = {
   tags: [],
-};
+}
 
-export default Share;
+export default Share

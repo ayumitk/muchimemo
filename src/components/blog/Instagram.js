@@ -1,5 +1,6 @@
 import React from 'react'
 import InstagramEmbed from 'react-instagram-embed'
+import PropTypes from 'prop-types'
 
 function Instagram({ id }) {
   return (
@@ -21,3 +22,7 @@ function Instagram({ id }) {
 }
 
 export default Instagram
+
+Instagram.propTypes = {
+  id: PropTypes.string.isRequired,
+}

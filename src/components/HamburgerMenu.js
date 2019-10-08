@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { slide as Menu } from 'react-burger-menu'
 import { HomeAlt } from 'styled-icons/boxicons-regular/HomeAlt'

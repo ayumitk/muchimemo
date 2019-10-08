@@ -6,17 +6,13 @@ import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
-
-import { Layout, Wrapper, SEO } from '../components'
-import TableOfContents from '../components/TableOfContents'
+import { Layout, Wrapper, SEO, Bio, Share, TableOfContents } from '../components'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
-import Share from '../components/Share'
 import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
-import Bio from '../components/Bio'
 
 const Content = styled.article`
   max-width: 680px;
@@ -211,9 +207,9 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
 
-                    <PopularPosts sm />
+          <PopularPosts sm />
 
-                    <RecentPosts sm />
+          <RecentPosts sm />
         </Content>
       </Wrapper>
     </Layout>

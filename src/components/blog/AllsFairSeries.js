@@ -11,7 +11,7 @@ function AllsFairSeries() {
     <TableContainer>
       <table>
         <tr>
-          <th />
+          <th>&nbsp;</th>
           <th>原書</th>
           <th>日本語翻訳版</th>
           <th>ジーナ</th>

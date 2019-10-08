@@ -3,11 +3,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { Layout, Wrapper, Button } from '../components'
+import { Layout, Wrapper, Button, Content } from '../components'
 
 import config from '../../config'
 
-const Content = styled.div`
+const StyledContent = styled(Content)`
   max-width: ${props => props.theme.maxWidth};
   margin: 2rem auto;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
@@ -40,7 +40,7 @@ const Contact = () => (
   <Layout>
     <Wrapper>
       <Helmet title={`お問い合わせ | ${config.siteTitle}`} />
-      <Content>
+      <StyledContent>
         <h1>お問い合わせ</h1>
         <p>感想でも雑談でもお気軽に♪</p>
         <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
@@ -65,7 +65,7 @@ const Contact = () => (
           </p>
           <input type="hidden" name="form-name" value="contact-form" />
         </form>
-      </Content>
+      </StyledContent>
     </Wrapper>
   </Layout>
 )

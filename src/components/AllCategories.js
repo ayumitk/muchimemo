@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import styled from 'styled-components'
 import { ChevronRight } from 'styled-icons/boxicons-regular/ChevronRight'
+import PropTypes from 'prop-types'
 import CategoryConfig from '../../config/category'
 
 const Categories = styled.ul`
@@ -56,3 +57,11 @@ const AllCategories = ({ dark }) => {
 }
 
 export default AllCategories
+
+AllCategories.propTypes = {
+  dark: PropTypes.bool,
+}
+
+AllCategories.defaultProps = {
+  dark: false,
+}

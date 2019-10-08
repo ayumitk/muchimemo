@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const TableContainer = styled.div`
-  overflow:auto;
+  overflow: auto;
 `
 
 function AdrienEnglishSeries() {
@@ -11,7 +11,7 @@ function AdrienEnglishSeries() {
     <TableContainer>
       <table>
         <tr>
-          <th />
+          <th>&nbsp;</th>
           <th>原書</th>
           <th>日本語翻訳版</th>
           <th>ジーナ</th>

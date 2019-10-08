@@ -15,6 +15,9 @@ const AmazonLink = styled.div`
   a {
     display: flex;
   }
+  &:hover{
+    border-color: ${props => props.theme.color.primary};
+  }
 `
 
 const AmazonImage = styled.div`
@@ -86,7 +89,13 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
             <ProductName>{title}</ProductName>
             {author ? <Author>{`作者 : ${author}`}</Author> : ''}
             <Button type="button">Amazonで購入する</Button>
-            {KindleUnlimited ? <div><Kindle>Kindle Unlimited 対象作品</Kindle></div> : ''}
+            {KindleUnlimited ? (
+              <div>
+                <Kindle>Kindle Unlimited 対象作品</Kindle>
+              </div>
+            ) : (
+              ''
+            )}
           </AmazonInfo>
         </a>
       </AmazonLink>
