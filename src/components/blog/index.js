@@ -1,4 +1,5 @@
 import AdrienEnglishSeries from './AdrienEnglishSeries'
+import AllsFairSeries from './AllsFairSeries'
 import Amazon from './Amazon'
 import Blockquote from './Blockquote'
 import Instagram from './Instagram'
@@ -7,4 +8,14 @@ import Twitter from './Twitter'
 import Youtube from './Youtube'
 import Recommended from './Recommended'
 
-export { AdrienEnglishSeries, Amazon, Blockquote, Instagram, InternalLink, Recommended, Twitter, Youtube }
+export {
+  AdrienEnglishSeries,
+  AllsFairSeries,
+  Amazon,
+  Blockquote,
+  Instagram,
+  InternalLink,
+  Recommended,
+  Twitter,
+  Youtube,
+}
