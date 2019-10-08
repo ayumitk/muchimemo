@@ -133,9 +133,15 @@ const articleLayout = props => {
     display: flex;
     .featured-image{
       width:150px;
+      @media (max-width: ${props.theme.breakpoints.phone}) {
+        width:100px;
+      }
     }
     .title{
       font-size: 1rem;
+      @media (max-width: ${props.theme.breakpoints.phone}) {
+        font-size: 0.875rem;
+      }
     }
     .tags, .description{
       font-size: 0.75rem;
