@@ -37,13 +37,15 @@ const StyledTableOfContents = styled.div`
 
 function TableOfContents({ toc }) {
   return (
-    <StyledTableOfContents>
-      <p>この記事の目次</p>
-      <ol>
-        {toc.items.map(first => (
-          <li key={first.title}>
-            <a href={first.url}>{first.title}</a>
-            {/* {first.items ? (
+    <>
+      {toc.items ? (
+        <StyledTableOfContents>
+          <p>この記事の目次</p>
+          <ol>
+            {toc.items.map(first => (
+              <li key={first.title}>
+                <a href={first.url}>{first.title}</a>
+                {/* {first.items ? (
               <ol>
                 {first.items.map(second => (
                   <li key={second.title}>
@@ -54,10 +56,14 @@ function TableOfContents({ toc }) {
             ) : (
               ''
             )} */}
-          </li>
-        ))}
-      </ol>
-    </StyledTableOfContents>
+              </li>
+            ))}
+          </ol>
+        </StyledTableOfContents>
+      ) : (
+        ''
+      )}
+    </>
   )
 }
 

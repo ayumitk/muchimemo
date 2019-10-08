@@ -62,8 +62,8 @@ const PostContent = styled.div`
   h4 {
     font-size: 1rem;
   }
-  h2 + h3{
-    margin-top:1.75rem;
+  h2 + h3 {
+    margin-top: 1.75rem;
   }
   strong {
     color: ${props => props.theme.colors.secondary};
@@ -82,32 +82,33 @@ const PostContent = styled.div`
       margin: 0.35rem 0;
     }
   }
-  table{
+  table {
     margin: 1.75rem 0 0 0;
-    th,td{
-      border: 1px solid #CCC;
-      padding:0.25rem 0.5rem;
-      font-size:0.875rem;
-      line-height:1.25;
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      line-height: 1.25;
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        padding:0.25rem;
+        padding: 0.25rem;
       }
     }
-    th{
+    th {
       background: rgba(0, 0, 0, 0.05);
-      font-weight:bold;
-      white-space:nowrap;
+      font-weight: bold;
+      white-space: nowrap;
     }
   }
-  .twitter-tweet{
+  .twitter-tweet {
     margin: 1.75rem 0 0 0 !important;
   }
   .gatsby-resp-image-wrapper {
     margin-bottom: 0.5rem;
     margin-left: 0 !important;
   }
-  .translation{
-    font-size:0.75rem;
+  .translation {
+    font-size: 0.75rem;
     color: ${props => props.theme.colors.grey.light};
   }
 `
@@ -210,9 +211,9 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
 
-<PopularPosts sm />
+                    <PopularPosts sm />
 
-<RecentPosts sm />
+                    <RecentPosts sm />
         </Content>
       </Wrapper>
     </Layout>
