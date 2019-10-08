@@ -33,25 +33,23 @@ function InternalLink({ slug }) {
     `
   )
 
-  const newNodes = [allMdx.nodes.find(n => n.fields.slug === slug)]
+  const post = allMdx.nodes.find(n => n.fields.slug === slug)
 
   return (
     <>
-      {newNodes.map(n => (
-        <Article
-          title={n.frontmatter.title}
-          date={n.frontmatter.date}
-          excerpt={n.excerpt}
-          timeToRead={n.timeToRead}
-          slug={n.fields.slug}
-          description={n.frontmatter.description}
-          category={n.frontmatter.category}
-          tags={n.frontmatter.tags}
-          key={n.fields.slug}
-          image={n.frontmatter.squareimage.childImageSharp.fluid}
-          InternalLink
-        />
-      ))}
+      <Article
+        title={post.frontmatter.title}
+        date={post.frontmatter.date}
+        excerpt={post.excerpt}
+        timeToRead={post.timeToRead}
+        slug={post.fields.slug}
+        description={post.frontmatter.description}
+        category={post.frontmatter.category}
+        tags={post.frontmatter.tags}
+        key={post.fields.slug}
+        image={post.frontmatter.squareimage.childImageSharp.fluid}
+        InternalLink
+      />
     </>
   )
 }
