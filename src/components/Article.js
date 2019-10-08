@@ -48,7 +48,7 @@ const Post = styled.article`
       color: #fff;
       line-height: 1;
       font-size: 0.625rem;
-      padding: 0.25rem 0.5rem;
+      padding: 0.15rem 0.5rem;
     }
     .date {
       font-size: 0.75rem;
@@ -63,6 +63,7 @@ const Post = styled.article`
     font-weight: bold;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.875rem;
+      line-height:1.25;
     }
     a {
       color: ${props => props.theme.colors.grey.dark};
@@ -96,8 +97,9 @@ const articleLayout = props => {
     return `
       margin: 0 !important;
       .title{
-        font-size:0.75rem;
-        line-height:1.3;
+        font-size:0.687rem;
+        line-height:1.25;
+        font-weight: normal;
         a{
           display: -webkit-box;
           overflow: hidden;
