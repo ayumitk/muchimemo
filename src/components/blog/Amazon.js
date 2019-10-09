@@ -73,7 +73,7 @@ const Kindle = styled.p`
 function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
   return (
     <>
-      <AmazonLink>
+      <AmazonLink className="amazon-link">
         <a
           href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}`}
           target="_blank"

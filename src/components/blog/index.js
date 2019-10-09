@@ -5,6 +5,7 @@ import Blockquote from './Blockquote'
 import Instagram from './Instagram'
 import InternalLink from './InternalLink'
 import Recommended from './Recommended'
+import SoThisIsChristmasIndex from './SoThisIsChristmasIndex'
 import Twitter from './Twitter'
 import Vocabulary from './Vocabulary'
 import Youtube from './Youtube'
@@ -17,6 +18,7 @@ export {
   Instagram,
   InternalLink,
   Recommended,
+  SoThisIsChristmasIndex,
   Twitter,
   Vocabulary,
   Youtube,

@@ -61,6 +61,9 @@ const PostContent = styled.div`
   h2 + h3 {
     margin-top: 1.75rem;
   }
+  .amazon-link + h3 {
+    margin-top: 1.75rem;
+  }
   strong {
     color: ${props => props.theme.colors.secondary};
   }
