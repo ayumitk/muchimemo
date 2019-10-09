@@ -17,7 +17,7 @@ const RelatedPosts = ({ category, tags, slug, sm }) => {
             }
             frontmatter {
               title
-              date(formatString: "MM/DD/YYYY")
+              date(formatString: "YYYY/MM/DD")
               description
               category
               tags

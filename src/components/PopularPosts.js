@@ -47,7 +47,7 @@ const PopularPosts = ({ sm, grid }) => {
             }
             frontmatter {
               title
-              date(formatString: "MM/DD/YYYY")
+              date(formatString: "YYYY/MM/DD")
               description
               category
               tags

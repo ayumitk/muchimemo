@@ -4,9 +4,10 @@ import Amazon from './Amazon'
 import Blockquote from './Blockquote'
 import Instagram from './Instagram'
 import InternalLink from './InternalLink'
-import Twitter from './Twitter'
-import Youtube from './Youtube'
 import Recommended from './Recommended'
+import Twitter from './Twitter'
+import Vocabulary from './Vocabulary'
+import Youtube from './Youtube'
 
 export {
   AdrienEnglishSeries,
@@ -17,5 +18,6 @@ export {
   InternalLink,
   Recommended,
   Twitter,
+  Vocabulary,
   Youtube,
 }

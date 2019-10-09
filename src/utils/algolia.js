@@ -10,7 +10,7 @@ const postQuery = `{
         }
         frontmatter {
           title
-          date(formatString: "MM/DD/YYYY")
+          date(formatString: "YYYY/MM/DD")
           tags
           category
         }
