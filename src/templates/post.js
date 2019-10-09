@@ -64,6 +64,9 @@ const PostContent = styled.div`
   .amazon-link + h3 {
     margin-top: 1.75rem;
   }
+  .vocabulary + .vocabulary {
+    margin-top: 1rem;
+  }
   strong {
     color: ${props => props.theme.colors.secondary};
   }

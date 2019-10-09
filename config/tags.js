@@ -57,4 +57,8 @@ module.exports = {
     label: '歴史モノ',
     description: '',
   },
+  recommendedManga: {
+    label: 'おすすめマンガリスト',
+    description: '',
+  },
 }

@@ -60,7 +60,7 @@ Blockquote.propTypes = {
   book: PropTypes.bool,
   srcName: PropTypes.string,
   srcURL: PropTypes.string,
-  children: PropTypes.array.isRequired,
+  children: PropTypes.string.isRequired,
 }
 
 Blockquote.defaultProps = {

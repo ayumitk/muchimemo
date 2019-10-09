@@ -15,13 +15,12 @@ const IndexContainer = styled.div`
     font-size: 0.937rem;
     padding: 0.5rem;
   }
-  a {
-    display: block;
-    margin: 0.5rem;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin: 0.25rem;
-    }
-  }
+`
+
+const IndexHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h2 {
     margin: 0 !important;
     font-size: 1rem !important;
@@ -32,20 +31,18 @@ const IndexContainer = styled.div`
   button {
     background: ${props => props.theme.colors.primary};
     border: 0;
-    padding: 0.25rem 0 0.25rem 0.5rem;
+    padding: 0.2rem 0 0.2rem 0.5rem;
     font-size: 0.75rem;
-    line-height: 1;
     width: 3.4rem;
     text-align: center;
     margin-left: 0.5rem;
     color: #fff;
     border-radius: 1rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      padding: 0.1rem 0 0.1rem 0.5rem;
+      font-size: 0.687rem;
+    }
   }
-`
-
-const IndexHeader = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 const IndexLinks = styled.div`
@@ -53,6 +50,13 @@ const IndexLinks = styled.div`
   padding: 1rem;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     padding: 0;
+  }
+  a {
+    display: block;
+    margin: 0.5rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin: 0.25rem;
+    }
   }
 `
 
