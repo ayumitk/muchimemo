@@ -27,14 +27,15 @@ const PopularPosts = ({ sm, grid }) => {
     graphql`
       query {
         allMdx(
+          sort: { fields: [frontmatter___date], order: DESC }
           filter: {
             fields: {
               slug: {
                 in: [
-                  "/tv-movie/london-spy/"
-                  "/misc/menstrual-cup/"
                   "/misc/digital-minimalism/"
-                  "/mm-romance/a-dangerous-thing/"
+                  "/misc/not-sure-i-want-kids/"
+                  "/misc/relocate-from-japan/"
+                  "/misc/menstrual-cup/"
                 ]
               }
               sourceName: { ne: "page" }

@@ -2,10 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+const VocabularyContainer = styled.dl`
+  border: solid 1px #ccc;
+  padding: 1rem;
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin: 0;
+  }
+`
+
 function Vocabulary({ en, ja }) {
   return (
     <>
-      <div>Vocabulary.js</div>
+      <VocabularyContainer>
+        <dt>{en}</dt>
+        <dd>{ja}</dd>
+      </VocabularyContainer>
     </>
   )
 }
