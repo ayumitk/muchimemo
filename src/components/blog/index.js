@@ -6,6 +6,7 @@ import Instagram from './Instagram'
 import InternalLink from './InternalLink'
 import Recommended from './Recommended'
 import SoThisIsChristmasIndex from './SoThisIsChristmasIndex'
+import TheArtOfMurderSeries from './TheArtOfMurderSeries'
 import Twitter from './Twitter'
 import Vocabulary from './Vocabulary'
 import Youtube from './Youtube'
@@ -19,6 +20,7 @@ export {
   InternalLink,
   Recommended,
   SoThisIsChristmasIndex,
+  TheArtOfMurderSeries,
   Twitter,
   Vocabulary,
   Youtube,
