@@ -57,6 +57,14 @@ const IndexLinks = styled.div`
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       margin: 0.25rem;
     }
+    &.active {
+      &::after {
+        content: ' ←今ここ';
+        color: ${props => props.theme.colors.secondary};
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+    }
   }
 `
 
@@ -102,40 +110,40 @@ class SoThisIsChristmasIndex extends Component {
           </button>
         </IndexHeader>
         <IndexLinks isOpen={isOpen}>
-          <Link to="/english/so-this-is-christmas-1/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-1/">
             <RightArrowCircle /> チャプター 1 : ケビンと再会
           </Link>
-          <Link to="/english/so-this-is-christmas-2/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-2/">
             <RightArrowCircle /> チャプター 2 : 二人のラブラブな生活っぷり
           </Link>
-          <Link to="/english/so-this-is-christmas-3/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-3/">
             <RightArrowCircle /> チャプター 3 : カフェで険悪ムード
           </Link>
-          <Link to="/english/so-this-is-christmas-4/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-4/">
             <RightArrowCircle /> チャプター 4 : パブでミーティング
           </Link>
-          <Link to="/english/so-this-is-christmas-5/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-5/">
             <RightArrowCircle /> チャプター 5 : 新居で夜の思い出を作ろう
           </Link>
-          <Link to="/english/so-this-is-christmas-6/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-6/">
             <RightArrowCircle /> チャプター 6 : Facebookチェック
           </Link>
-          <Link to="/english/so-this-is-christmas-7/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-7/">
             <RightArrowCircle /> チャプター 7 : 初めてのリバ
           </Link>
-          <Link to="/english/so-this-is-christmas-8/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-8/">
             <RightArrowCircle /> チャプター 8 : 久々にガイ登場
           </Link>
-          <Link to="/english/so-this-is-christmas-9/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-9/">
             <RightArrowCircle /> チャプター 9 : ナタリーの爆弾投下
           </Link>
-          <Link to="/english/so-this-is-christmas-10/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-10/">
             <RightArrowCircle /> チャプター 10 : 大人のはじけるクリスマスプレゼント
           </Link>
-          <Link to="/english/so-this-is-christmas-11/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-11/">
             <RightArrowCircle /> チャプター 11 : アイヴァー発見
           </Link>
-          <Link to="/english/so-this-is-christmas-12/">
+          <Link activeClassName="active" to="/english/so-this-is-christmas-12/">
             <RightArrowCircle /> チャプター 12 : ジェイク実家の新年パーティー
           </Link>
         </IndexLinks>

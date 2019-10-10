@@ -39,30 +39,45 @@ const PostContent = styled.div`
     line-height: 1.8;
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: 1.75rem 0 0 0;
+    margin: 2.5rem 0 0 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.937rem;
+      margin-top: 1.75rem;
     }
   }
-  h2,
-  h3,
-  h4 {
+  h2 {
+    font-size: 1.5rem;
+    margin: 8rem 0 -0.75rem 0;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 1.375rem;
+      margin: 5rem 0 -0.75rem 0;
+    }
+  }
+  h3 {
     margin: 5rem 0 -0.75rem 0;
   }
-  h2 {
-    font-size: 1.375rem;
+  h2 + blockquote {
+    margin-top: 3rem;
   }
   h3 {
     font-size: 1.125rem;
   }
   h4 {
     font-size: 1rem;
+    /* margin-bottom: -1.25rem; */
+    margin: 0.5rem 0;
   }
   h2 + h3 {
-    margin-top: 1.75rem;
+    margin-top: 2.5rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-top: 1.75rem;
+    }
   }
   .amazon-link + h3 {
-    margin-top: 1.75rem;
+    margin-top: 2.5rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-top: 1.75rem;
+    }
   }
   .vocabulary + .vocabulary {
     margin-top: 1rem;
@@ -77,15 +92,30 @@ const PostContent = styled.div`
     line-height: 1.25;
     margin: 0.5rem 0 0 0;
   }
+  small {
+    color: ${props => props.theme.colors.secondary};
+    font-size: 0.75rem;
+    margin: 2.5rem 0 0 0;
+    display: block;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin: 1.75rem 0 0 0;
+    }
+  }
   ul {
-    margin: 1.75rem 0;
+    margin: 2.5rem 0;
     padding-left: 1.5rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-top: 1.75rem;
+    }
     li {
       margin: 0.35rem 0;
     }
   }
   table {
-    margin: 1.75rem 0 0 0;
+    margin: 2.5rem 0 0 0;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-top: 1.75rem;
+    }
     th,
     td {
       border: 1px solid #ccc;
@@ -112,6 +142,7 @@ const PostContent = styled.div`
   .translation {
     font-size: 0.75rem;
     color: ${props => props.theme.colors.grey.light};
+    margin: 0.5rem 0 0 0;
   }
 `
 
