@@ -32,7 +32,7 @@ const PopularPosts = ({ sm, grid }) => {
             fields: {
               slug: {
                 in: [
-                  "/misc/digital-minimalism/"
+                  "/bl-manga/bl-ish-manga/"
                   "/misc/not-sure-i-want-kids/"
                   "/misc/relocate-from-japan/"
                   "/misc/menstrual-cup/"

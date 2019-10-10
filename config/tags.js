@@ -61,4 +61,8 @@ module.exports = {
     label: 'おすすめマンガリスト',
     description: '',
   },
+  omad: {
+    label: '1日1食',
+    description: '',
+  },
 }
