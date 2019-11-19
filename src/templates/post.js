@@ -13,6 +13,7 @@ import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
+import Marshmallow from '../components/Marshmallow'
 
 const Content = styled.article`
   max-width: 680px;
@@ -65,7 +66,7 @@ const PostContent = styled.div`
   h4 {
     font-size: 1rem;
     /* margin-bottom: -1.25rem; */
-    margin: 0.5rem 0;
+    margin: 2.5rem 0 -0.75rem 0;
   }
   h2 + h3 {
     margin-top: 2.5rem;
@@ -226,6 +227,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          <Marshmallow />
 
           <Bio />
 

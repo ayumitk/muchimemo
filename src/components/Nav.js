@@ -18,10 +18,10 @@ const Content = styled.ul`
   li {
     list-style: none;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      width: 28%;
+      width: 30%;
       &.mmRomance,
-      &.misc {
-        width: 44%;
+      &.podcast {
+        width: 40%;
       }
     }
     a {
@@ -52,6 +52,9 @@ const Nav = () => (
         </li>
         <li className="tvMovie">
           <Link to="/category/tv-movie">{CategoryConfig.tvMovie.label}</Link>
+        </li>
+        <li className="podcast">
+          <Link to="/category/podcast">{CategoryConfig.podcast.label}</Link>
         </li>
         <li className="misc">
           <Link to="/category/misc">{CategoryConfig.misc.label}</Link>

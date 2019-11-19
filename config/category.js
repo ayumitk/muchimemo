@@ -20,4 +20,9 @@ module.exports = {
     description:
       'M/Mロマンス小説でもBLマンガでもない、割と真面目に書いた記事たち。日々思ったことを無秩序に綴っています。',
   },
+  podcast: {
+    label: 'ポッドキャスト',
+    description:
+      'ゆるゆると語ってます。',
+  },
 }
