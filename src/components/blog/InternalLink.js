@@ -26,6 +26,7 @@ function InternalLink({ slug }) {
                 }
               }
             }
+            excerpt(pruneLength: 100)
           }
         }
       }
