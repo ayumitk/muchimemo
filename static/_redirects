@@ -1,4 +1,7 @@
 /entry/tv_movie/london_spy /tv-movie/london-spy
+/entry/tv_movie/queer_eye /tv-movie/queer-eye
+
+/entry/podcast/e0 /podcast/episode-0
 
 /entry/menstrual_cup /misc/menstrual-cup
 /entry/digital_minimalism /misc/digital-minimalism
@@ -6,6 +9,7 @@
 /entry/overseas /misc/relocate-from-japan
 /entry/audible /misc/audible
 /entry/couple/split_the_housework /misc/split-the-housework
+/entry/one_meal_a_day_diet /misc/one-meal-a-day-diet
 
 /entry/historical_bl_manga /bl-manga/historical-bl-manga-recommendations
 /entry/bl_manga/momo_to_manji /bl-manga/momo-to-manji
@@ -16,8 +20,11 @@
 /entry/bl_manga/koi_ga_ochitara /bl-manga/koi-ga-ochitara
 
 /entry/mm_romance/fatal_shadows /mm-romance/fatal_shadows
+/entry/mm_romance/a_dangerous_thing /mm-romance/a-dangerous-thing
 /entry/mm_romance/fair_game /mm-romance/fair_game
+/entry/mm_romance/fair_play /mm-romance/fair-play
 /entry/mm_romance/the_mermaid_murders /mm-romance/the-mermaid-murders
+/entry/mm_romance/how_to_howl_at_the_moon /mm-romance/how-to-howl-at-the-moon
 /entry/adrien_english/adrien_jake_image /mm-romance/adrien-english-image
 /entry/adrien_english/introduction /mm-romance/adrien-english-introduction
 /adrien_english /mm-romance/adrien-english-index
