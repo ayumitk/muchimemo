@@ -30,6 +30,7 @@ const RecentPosts = ({ sm }) => {
                 }
               }
             }
+            excerpt(pruneLength: 100)
           }
         }
       }
