@@ -2,6 +2,7 @@ import AdrienEnglishSeries from './AdrienEnglishSeries'
 import AllsFairSeries from './AllsFairSeries'
 import Amazon from './Amazon'
 import Blockquote from './Blockquote'
+import HowlAtTheMoonSeries from './HowlAtTheMoonSeries'
 import Instagram from './Instagram'
 import InternalLink from './InternalLink'
 import Recommended from './Recommended'
@@ -16,6 +17,7 @@ export {
   AllsFairSeries,
   Amazon,
   Blockquote,
+  HowlAtTheMoonSeries,
   Instagram,
   InternalLink,
   Recommended,

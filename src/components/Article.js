@@ -187,7 +187,7 @@ const articleLayout = props => {
   `
 }
 
-const Article = ({ title, date, slug, description, category, tags, image, sm, grid, InternalLink }) => (
+const Article = ({ title, date, slug, description, category, tags, image, sm, grid, InternalLink, excerpt }) => (
   <Post sm={sm} grid={grid} InternalLink={InternalLink}>
     <Link to={slug}>
       <div className="featured-image" sm={sm}>
@@ -202,7 +202,7 @@ const Article = ({ title, date, slug, description, category, tags, image, sm, gr
       <p className="title">
         <Link to={slug}>{title}</Link>
       </p>
-      <p className="description">{description}</p>
+      <p className="description">{`${(description === '') ? excerpt : description}`}</p>
       <div className="tags">
         {tags.map(tag => (
           <span key={tag}>
@@ -227,6 +227,7 @@ Article.propTypes = {
   sm: PropTypes.bool,
   grid: PropTypes.bool,
   InternalLink: PropTypes.bool,
+  excerpt: PropTypes.string.isRequired,
 }
 
 Article.defaultProps = {

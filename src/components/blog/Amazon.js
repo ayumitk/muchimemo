@@ -106,7 +106,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
 export default Amazon
 
 Amazon.propTypes = {
-  asin: PropTypes.string,
+  asin: PropTypes.string.isRequired,
   title: PropTypes.string,
   linkId: PropTypes.string,
   author: PropTypes.string,
@@ -114,7 +114,6 @@ Amazon.propTypes = {
 }
 
 Amazon.defaultProps = {
-  asin: null,
   title: null,
   linkId: null,
   author: null,

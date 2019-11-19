@@ -65,4 +65,20 @@ module.exports = {
     label: '1日1食',
     description: '',
   },
+  fatalShadows: {
+    label: '天使の影',
+    description: '',
+  },
+  soThisIsChristmas: {
+    label: 'So This Is Christmas',
+    description: '',
+  },
+  eliEaston: {
+    label: 'イーライ・イーストン',
+    description: '',
+  },
+  howlAtTheMoon: {
+    label: '月吠えシリーズ',
+    description: '',
+  },
 }
