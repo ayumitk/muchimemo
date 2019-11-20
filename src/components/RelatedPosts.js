@@ -29,7 +29,7 @@ const RelatedPosts = ({ category, tags, slug, sm }) => {
                 }
               }
             }
-            excerpt(pruneLength: 100)
+            excerpt(pruneLength: 130)
           }
         }
       }

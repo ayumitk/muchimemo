@@ -192,7 +192,7 @@ module.exports = [
           url: 'https://amzn.to/30XRBAx',
         },
         ja: {
-          title: 'マーメイド・マーダーズ',
+          title: 'マーメイド･マーダーズ',
           url: 'https://amzn.to/2IDWJDJ',
         },
         review: 'the-mermaid-murders',

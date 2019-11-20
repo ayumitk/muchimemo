@@ -9,19 +9,21 @@ const SEO = props => {
 
   let title
   let description
+  let image
 
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
   const homeURL = `${config.siteUrl}${realPrefix}`
   const URL = `${homeURL}${postPath || ''}`
-  const image = `${homeURL}${config.siteBanner}`
 
   if (article) {
     const postMeta = postNode.frontmatter
     title = `${postMeta.title} | ${config.siteTitle}`
-    description = postMeta.description
+    description = postMeta.description === '' ? postNode.excerpt : postMeta.description
+    image = `${homeURL}${postNode.frontmatter.featuredimage.childImageSharp.fluid.src}`
   } else {
     title = config.siteTitleAlt
     description = config.siteDescription
+    image = `${homeURL}${config.siteBanner}`
   }
 
   // schema.org in JSONLD format
@@ -158,7 +160,7 @@ const SEO = props => {
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={description} />
       {config.siteFBAppID && <meta property="fb:app_id" content={config.siteFBAppID} />}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={config.userTwitter ? config.userTwitter : ''} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:url" content={config.siteUrl} />

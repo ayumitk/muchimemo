@@ -100,7 +100,7 @@ export const postQuery = graphql`
         fields {
           slug
         }
-        excerpt(pruneLength: 100)
+        excerpt(pruneLength: 130)
         timeToRead
       }
     }

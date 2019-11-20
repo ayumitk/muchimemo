@@ -272,6 +272,7 @@ export const postQuery = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       body
       tableOfContents
+      excerpt(pruneLength: 130)
       frontmatter {
         title
         date(formatString: "YYYY/MM/DD")

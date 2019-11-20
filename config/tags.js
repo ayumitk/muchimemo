@@ -74,7 +74,7 @@ module.exports = {
     description: '',
   },
   eliEaston: {
-    label: 'イーライ・イーストン',
+    label: 'イーライ･イーストン',
     description: '',
   },
   howlAtTheMoon: {

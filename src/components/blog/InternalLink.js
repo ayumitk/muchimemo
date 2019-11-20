@@ -26,7 +26,7 @@ function InternalLink({ slug }) {
                 }
               }
             }
-            excerpt(pruneLength: 100)
+            excerpt(pruneLength: 130)
           }
         }
       }

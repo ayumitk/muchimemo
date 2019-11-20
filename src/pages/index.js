@@ -64,7 +64,7 @@ export const IndexQuery = graphql`
             }
           }
         }
-        excerpt(pruneLength: 100)
+        excerpt(pruneLength: 130)
         timeToRead
       }
     }

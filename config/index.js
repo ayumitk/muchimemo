@@ -17,8 +17,8 @@ module.exports = {
   // siteFBAppID: '123456789', // Facebook App ID - Optional
   userTwitter: '@gina_muchimemo', // Twitter Username - Optional
   twitterScreenName: 'gina_muchimemo',
-  // ogSiteName: 'minimal', // Facebook Site Name - Optional
-  // ogLanguage: 'en_US', // Facebook Language
+  ogSiteName: 'ムチでメモ', // Facebook Site Name - Optional
+  ogLanguage: 'ja_JP', // Facebook Language
   googleAnalyticsID: 'UA-121956784-2',
 
   // Manifest and Progress color

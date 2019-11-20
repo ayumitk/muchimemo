@@ -60,7 +60,7 @@ const PopularPosts = ({ sm, grid }) => {
                 }
               }
             }
-            excerpt(pruneLength: 100)
+            excerpt(pruneLength: 130)
           }
         }
       }
