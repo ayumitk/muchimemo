@@ -70,7 +70,7 @@ const IndexLinks = styled.div`
   }
 `
 
-class SoThisIsChristmasIndex extends Component {
+class FatalShadowsIndex extends Component {
   constructor(props) {
     super(props)
     this.state = { isOpen: false }
@@ -112,41 +112,11 @@ class SoThisIsChristmasIndex extends Component {
           </button>
         </IndexHeader>
         <IndexLinks isOpen={isOpen}>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-1/">
-            <RightArrowCircle /> チャプター 1 : ケビンと再会
+          <Link activeClassName="active" to="/english/fatal-shadows-1/">
+            <RightArrowCircle /> チャプター 1 : 二人の出会い
           </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-2/">
-            <RightArrowCircle /> チャプター 2 : 二人のラブラブな生活っぷり
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-3/">
-            <RightArrowCircle /> チャプター 3 : カフェで険悪ムード
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-4/">
-            <RightArrowCircle /> チャプター 4 : パブでミーティング
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-5/">
-            <RightArrowCircle /> チャプター 5 : 新居で夜の思い出を作ろう
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-6/">
-            <RightArrowCircle /> チャプター 6 : Facebookチェック
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-7/">
-            <RightArrowCircle /> チャプター 7 : 初めてのリバ
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-8/">
-            <RightArrowCircle /> チャプター 8 : 久々にガイ登場
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-9/">
-            <RightArrowCircle /> チャプター 9 : ナタリーの爆弾投下
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-10/">
-            <RightArrowCircle /> チャプター 10 : 大人のはじけるクリスマスプレゼント
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-11/">
-            <RightArrowCircle /> チャプター 11 : アイヴァー発見
-          </Link>
-          <Link activeClassName="active" to="/english/so-this-is-christmas-12/">
-            <RightArrowCircle /> チャプター 12 : ジェイク実家の新年パーティー
+          <Link activeClassName="active" to="/english/fatal-shadows-2/">
+            <RightArrowCircle /> チャプター 2 : いきなりファーストネーム
           </Link>
         </IndexLinks>
       </IndexContainer>
@@ -154,12 +124,12 @@ class SoThisIsChristmasIndex extends Component {
   }
 }
 
-export default SoThisIsChristmasIndex
+export default FatalShadowsIndex
 
-SoThisIsChristmasIndex.propTypes = {
+FatalShadowsIndex.propTypes = {
   open: PropTypes.bool,
 }
 
-SoThisIsChristmasIndex.defaultProps = {
+FatalShadowsIndex.defaultProps = {
   open: false,
 }

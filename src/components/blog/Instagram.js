@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 function Instagram({ id }) {
   return (
-    <div style={{marginTop:'2.5rem'}}>
+    <div style={{ marginTop: '2.5rem' }}>
       <InstagramEmbed
         url={`https://www.instagram.com/p/${id}/`}
         maxWidth={320}

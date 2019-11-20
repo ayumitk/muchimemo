@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-minimal-blog",
-  "description": "Typography driven blog, focus on the content & minimal style. Powered by MDX. Live Preview with react-live.",
-  "version": "3.0.0",
-  "author": "LekoArts <hello@lekoarts.de> (https://www.lekoarts.de)",
+  "name": "muchimemo",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Gina (https://twitter.com/gina_muchimemo)",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.0",
     "@mdx-js/react": "^1.5.0",
