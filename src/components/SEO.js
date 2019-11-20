@@ -19,7 +19,7 @@ const SEO = props => {
     const postMeta = postNode.frontmatter
     title = `${postMeta.title} | ${config.siteTitle}`
     description = postMeta.description === '' ? postNode.excerpt : postMeta.description
-    image = `${homeURL}${postNode.frontmatter.featuredimage.childImageSharp.fluid.src}`
+    image = `${homeURL}${postNode.frontmatter.cardimage.childImageSharp.fluid.src}`
   } else {
     title = config.siteTitleAlt
     description = config.siteDescription

@@ -286,6 +286,13 @@ export const postQuery = graphql`
             }
           }
         }
+        cardimage {
+          childImageSharp {
+            fluid(maxWidth: 680) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       timeToRead
       parent {
