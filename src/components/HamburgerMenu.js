@@ -4,6 +4,7 @@ import { slide as Menu } from 'react-burger-menu'
 import { HomeAlt } from 'styled-icons/boxicons-regular/HomeAlt'
 import { MailOutline } from 'styled-icons/material/MailOutline'
 import { Info } from 'styled-icons/icomoon/Info'
+import { Key } from 'styled-icons/boxicons-regular/Key'
 import AllCategories from './AllCategories'
 
 const styles = {
@@ -77,6 +78,9 @@ class HamburgerMenu extends Component {
         </Link>
         <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
         <AllCategories dark />
+        <Link to="/privacy">
+          <Key /> プライバシーポリシー
+        </Link>
       </Menu>
     )
   }

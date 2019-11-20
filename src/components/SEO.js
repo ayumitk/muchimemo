@@ -56,7 +56,7 @@ const SEO = props => {
       '@type': 'Person',
       name: config.author,
     },
-    datePublished: '2019-01-07T10:30:00+01:00',
+    datePublished: '2018-09-20T10:30:00+01:00',
     dateModified: buildTime,
     image: {
       '@type': 'ImageObject',
@@ -116,7 +116,7 @@ const SEO = props => {
       dateModified: postNode.parent.mtime,
       description,
       headline: title,
-      inLanguage: 'en',
+      inLanguage: 'ja',
       url: URL,
       name: title,
       image: {

@@ -14,7 +14,7 @@ module.exports = {
   author: 'ジーナ', // Author for schemaORGJSONLD
   siteLogo: '/img/logo.png', // Image for schemaORGJSONLD
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
+  siteFBAppID: '560994258050661', // Facebook App ID - Optional
   userTwitter: '@gina_muchimemo', // Twitter Username - Optional
   twitterScreenName: 'gina_muchimemo',
   ogSiteName: 'ムチでメモ', // Facebook Site Name - Optional
