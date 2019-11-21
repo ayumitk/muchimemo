@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: 'ムチでメモ', // Navigation and Site Title
   siteTitleAlt: 'ムチでメモ - カナダ･バンクーバーで、M/Mロマンスとか、BLとか', // Alternative Site title for SEO
   siteTitleManifest: 'カナダ･バンクーバーで、M/Mロマンスとか、BLとか',
-  siteUrl: 'https://muchimemo.com', // Domain of your site. No trailing slash!
+  siteUrl: 'https://www.muchimemo.com', // Domain of your site. No trailing slash!
   siteLanguage: 'ja', // Language Tag on <html> element
   siteHeadline: 'Writing and publishing content', // Headline for schema.org JSONLD
   siteBanner: '/img/banner.jpg', // Your image for og:image tag. You can find it in the /static folder

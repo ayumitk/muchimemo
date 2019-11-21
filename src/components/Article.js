@@ -153,8 +153,9 @@ const articleLayout = props => {
     border:solid 1px #CCC;
     display: flex;
     align-items:center;
+    margin-top:2.5rem;
     @media (max-width: ${props.theme.breakpoints.phone}) {
-      margin: 1.75rem 0;
+      margin-top:2rem;
     }
     .featured-image{
       width:150px;
@@ -170,10 +171,8 @@ const articleLayout = props => {
         line-height: 1.25;
       }
     }
-    .tags{
-      display:none;
-    }
     .tags, .description{
+      display:none;
       font-size: 0.75rem;
       @media (max-width: ${props.theme.breakpoints.phone}) {
         font-size: 0.687rem;

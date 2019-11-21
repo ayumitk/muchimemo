@@ -37,34 +37,37 @@ const PostContent = styled.div`
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
     margin: ${marginLg} 0;
   }
-  p {
-    font-size: 1rem;
-    line-height: 1.8;
-    /* letter-spacing: -0.003em;
-    --baseline-multiplier: 0.179;
-    --x-height-multiplier: 0.35; */
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 0.937rem;
-    }
-  }
   h2 {
     font-size: 1.625rem;
-    margin: 8rem 0 -0.75rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 1.375rem;
-      margin: 5rem 0 -0.5rem 0;
+      font-size: 1.5rem;
     }
   }
   h3 {
     font-size: 1.25rem;
-    margin: 5rem 0 -1rem 0;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin-bottom: -0.5rem;
-    }
   }
   h4 {
     font-size: 1rem;
-    margin: ${marginLg} 0 -0.75rem 0;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      font-size: 0.937rem;
+    }
+  }
+  h2,
+  h3 {
+    margin-top: 8rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-top: 5rem;
+    }
+  }
+  h2,
+  h3,
+  h4 {
+    line-height: 1.25;
+    margin-bottom: -0.75rem;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       margin-bottom: -0.5rem;
     }
@@ -130,6 +133,7 @@ const PostContent = styled.div`
   h2 + blockquote,
   h2 + h3,
   h3 + blockquote,
+  h4,
   .amazon-link + h3,
   small,
   ul,
@@ -229,6 +233,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           <Bio />
 
+          <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
+
           <Share
             socialConfig={{
               twitterUsername: `${config.userTwitter}`,
@@ -241,8 +247,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           />
 
           <DiscussionEmbed {...disqusConfig} />
-
-          <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
 
           <PopularPosts sm />
 
