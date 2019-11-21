@@ -12,7 +12,8 @@ const BlockquiteContainer = styled.blockquote`
   padding: 1.5rem;
   position: relative;
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    padding: 1rem;
+    padding: 1.25rem;
+    font-size: 0.875rem;
   }
   &:before {
     background: url('https://cdn.blog.st-hatena.com/css/theme/evergreen/images/quote.png?version=97326deÃ¢â‚¬Â¦&env=production')

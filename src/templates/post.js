@@ -14,6 +14,7 @@ import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
 import Marshmallow from '../components/Marshmallow'
+import theme from '../../config/theme'
 
 const Content = styled.article`
   max-width: 680px;
@@ -28,22 +29,34 @@ const Title = styled.h1`
   }
 `
 
+const marginLg = '2.5rem'
+
 const PostContent = styled.div`
   hr {
     border: 0;
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
-    margin: 2rem 0;
+    margin: ${marginLg} 0;
+  }
+  p,
+  h2 + blockquote,
+  h2 + h3,
+  .amazon-link + h3,
+  small,
+  ul,
+  table {
+    margin-top: ${marginLg};
+    @media (max-width: ${theme.breakpoints.phone}) {
+      margin-top: 2rem;
+    }
   }
   p {
     font-size: 1rem;
-    letter-spacing: -0.003em;
     line-height: 1.8;
+    /* letter-spacing: -0.003em;
     --baseline-multiplier: 0.179;
-    --x-height-multiplier: 0.35;
-    margin: 2.5rem 0 0 0;
+    --x-height-multiplier: 0.35; */
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.937rem;
-      margin-top: 1.75rem;
     }
   }
   h2 {
@@ -51,33 +64,21 @@ const PostContent = styled.div`
     margin: 8rem 0 -0.75rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 1.375rem;
-      margin: 5rem 0 -0.75rem 0;
+      margin: 5rem 0 -0.5rem 0;
     }
   }
   h3 {
+    font-size: 1.25rem;
     margin: 5rem 0 -0.75rem 0;
-  }
-  h2 + blockquote {
-    margin-top: 3rem;
-  }
-  h3 {
-    font-size: 1.125rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-bottom: -0.5rem;
+    }
   }
   h4 {
     font-size: 1rem;
-    /* margin-bottom: -1.25rem; */
-    margin: 2.5rem 0 -0.75rem 0;
-  }
-  h2 + h3 {
-    margin-top: 2.5rem;
+    margin: ${marginLg} 0 -0.75rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin-top: 1.75rem;
-    }
-  }
-  .amazon-link + h3 {
-    margin-top: 2.5rem;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin-top: 1.75rem;
+      margin-bottom: -0.5rem;
     }
   }
   .vocabulary + .vocabulary {
@@ -96,27 +97,15 @@ const PostContent = styled.div`
   small {
     color: ${props => props.theme.colors.secondary};
     font-size: 0.75rem;
-    margin: 2.5rem 0 0 0;
     display: block;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin: 1.75rem 0 0 0;
-    }
   }
   ul {
-    margin: 2.5rem 0;
     padding-left: 1.5rem;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin-top: 1.75rem;
-    }
     li {
       margin: 0.35rem 0;
     }
   }
   table {
-    margin: 2.5rem 0 0 0;
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin-top: 1.75rem;
-    }
     th,
     td {
       border: 1px solid #ccc;
@@ -134,7 +123,7 @@ const PostContent = styled.div`
     }
   }
   .twitter-tweet {
-    margin: 1.75rem 0 0 0 !important;
+    margin: ${marginLg} 0 0 0 !important;
   }
   .gatsby-resp-image-wrapper {
     margin-bottom: 0.5rem;
@@ -144,6 +133,7 @@ const PostContent = styled.div`
     font-size: 0.75rem;
     color: ${props => props.theme.colors.grey.light};
     margin: 0.5rem 0 0 0;
+    line-height: 1.5;
   }
 `
 
