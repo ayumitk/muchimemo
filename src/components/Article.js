@@ -153,6 +153,9 @@ const articleLayout = props => {
     border:solid 1px #CCC;
     display: flex;
     align-items:center;
+    @media (max-width: ${props.theme.breakpoints.phone}) {
+      margin: 1.75rem 0;
+    }
     .featured-image{
       width:150px;
       margin-right:0;
@@ -166,6 +169,9 @@ const articleLayout = props => {
         font-size: 0.875rem;
         line-height: 1.25;
       }
+    }
+    .tags{
+      display:none;
     }
     .tags, .description{
       font-size: 0.75rem;
@@ -202,7 +208,7 @@ const Article = ({ title, date, slug, description, category, tags, image, sm, gr
       <p className="title">
         <Link to={slug}>{title}</Link>
       </p>
-      <p className="description">{`${(description === '') ? excerpt : description}`}</p>
+      <p className="description">{`${description === '' ? excerpt : description}`}</p>
       <div className="tags">
         {tags.map(tag => (
           <span key={tag}>
