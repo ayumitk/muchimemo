@@ -12,6 +12,14 @@ const cfg = {
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
+    // google analytics
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+      },
+    },
+
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
 
@@ -39,14 +47,6 @@ const cfg = {
       options: {
         name: 'page',
         path: `${__dirname}/src/pages`,
-      },
-    },
-
-    // google analytics
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
       },
     },
 
