@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const BlockquiteContainer = styled.blockquote`
   font-family: ${props => (props.book ? props.theme.fontFamily.serif : '')};
   font-style: normal;
-  line-height: 1.6;
+  line-height: 1.8;
   font-size: 0.937rem;
   background: rgba(0, 0, 0, 0.05);
   margin: 1.75rem 0 0 0;
@@ -14,6 +14,7 @@ const BlockquiteContainer = styled.blockquote`
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     padding: 1.25rem;
     font-size: 0.875rem;
+    line-height: 1.6;
   }
   &:before {
     background: url('https://cdn.blog.st-hatena.com/css/theme/evergreen/images/quote.png?version=97326deÃ¢â‚¬Â¦&env=production')

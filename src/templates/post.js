@@ -37,18 +37,6 @@ const PostContent = styled.div`
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
     margin: ${marginLg} 0;
   }
-  p,
-  h2 + blockquote,
-  h2 + h3,
-  .amazon-link + h3,
-  small,
-  ul,
-  table {
-    margin-top: ${marginLg};
-    @media (max-width: ${theme.breakpoints.phone}) {
-      margin-top: 2rem;
-    }
-  }
   p {
     font-size: 1rem;
     line-height: 1.8;
@@ -60,7 +48,7 @@ const PostContent = styled.div`
     }
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
     margin: 8rem 0 -0.75rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 1.375rem;
@@ -69,7 +57,7 @@ const PostContent = styled.div`
   }
   h3 {
     font-size: 1.25rem;
-    margin: 5rem 0 -0.75rem 0;
+    margin: 5rem 0 -1rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       margin-bottom: -0.5rem;
     }
@@ -132,15 +120,34 @@ const PostContent = styled.div`
   .translation {
     font-size: 0.75rem;
     color: ${props => props.theme.colors.grey.light};
-    margin: 0.5rem 0 0 0;
-    line-height: 1.5;
+    margin-top: 1rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+  }
+  p,
+  h2 + blockquote,
+  h2 + h3,
+  h3 + blockquote,
+  .amazon-link + h3,
+  small,
+  ul,
+  table {
+    margin-top: ${marginLg};
+    @media (max-width: ${theme.breakpoints.phone}) {
+      margin-top: 2rem;
+    }
   }
 `
 
 const Tags = styled.div`
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    margin: 0.25rem 0;
+  }
   div{
     padding: 0 0.25rem 0.25rem 0;
     a {
