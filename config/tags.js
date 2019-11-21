@@ -53,10 +53,6 @@ module.exports = {
     description:
       '脳ミソが沸騰しそうなくらい素敵な声で朗読してもらえるオーディオブックのご紹介。M/Mロマンス小説で悶えるもよし、英語学習にも最適。隙間時間にビジネス書を聴いて新たな知識追加も。',
   },
-  historical: {
-    label: '歴史モノ',
-    description: '',
-  },
   recommendedManga: {
     label: 'おすすめマンガリスト',
     description: '',

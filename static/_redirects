@@ -13,8 +13,8 @@
 
 /entry/historical_bl_manga /bl-manga/historical-bl-manga-recommendations
 /entry/bl_manga/momo_to_manji /bl-manga/momo-to-manji
-/entry/blish_manga /bl-manga/blish-manga-recommendations
-/entry/bl_manga /bl-manga/bl-manga-recommendations
+/entry/blish_manga /bl-manga/bl-ish-manga
+/entry/bl_manga /bl-manga/all-bl-manga
 /entry/bl_manga/liquor_and_cigarette /bl-manga/liquor-and-cigarette
 /entry/bl_manga/hatter /bl-manga/hatter
 /entry/bl_manga/koi_ga_ochitara /bl-manga/koi-ga-ochitara
@@ -25,9 +25,9 @@
 /entry/mm_romance/fair_play /mm-romance/fair-play
 /entry/mm_romance/the_mermaid_murders /mm-romance/the-mermaid-murders
 /entry/mm_romance/how_to_howl_at_the_moon /mm-romance/how-to-howl-at-the-moon
-/entry/adrien_english/adrien_jake_image /mm-romance/adrien-english-image
-/entry/adrien_english/introduction /mm-romance/adrien-english-introduction
-/adrien_english /mm-romance/adrien-english-index
+/entry/adrien_english/adrien_jake_image /english/adrien-english
+/entry/adrien_english/introduction /english/adrien-english
+/adrien_english /english/adrien-english
 
 /entry/adrien_english/so_this_is_christmas/chapter12 /english/so-this-is-christmas-12
 /entry/adrien_english/so_this_is_christmas/chapter11 /english/so-this-is-christmas-11
@@ -68,3 +68,6 @@
 /archive/category/%E6%B5%B7%E5%A4%96%E7%A7%BB%E4%BD%8F /tags/relocate
 /archive/category/%E6%AE%BA%E3%81%97%E3%81%AE%E3%82%A2%E3%83%BC%E3%83%88 /tags/the-art-of-murder
 /archive/category/%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%96%E3%83%83%E3%82%AF /tags/audio-book
+/archive/category/1%E6%97%A51%E9%A3%9F /tags/omad
+/archive/category/%E3%82%A4%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%BB%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%B3 /tags/eli-easton
+/archive/category/%E6%9C%88%E5%90%A0%E3%81%88%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA /tags/howl-at-the-moon
