@@ -77,4 +77,12 @@ module.exports = {
     label: '月吠えシリーズ',
     description: '',
   },
+  drugChase: {
+    label: 'ドラッグ･チェイスシリーズ',
+    description: '',
+  },
+  edenWinters: {
+    label: 'エデン･ウィンターズ',
+    description: '',
+  },
 }

@@ -1,5 +1,94 @@
 module.exports = [
   {
+    name: 'DiversionSeries',
+    content: [
+      {
+        id: 1,
+        en: {
+          title: 'Diversion',
+          url: 'https://amzn.to/2QJkVcO',
+        },
+        ja: {
+          title: '還流',
+          url: 'https://amzn.to/2D5qDO0',
+        },
+        review: 'diversion',
+      },
+      {
+        id: 2,
+        en: {
+          title: 'Collusion',
+          url: 'https://amzn.to/2OaQASu',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 3,
+        en: {
+          title: 'Corruption',
+          url: 'https://amzn.to/2XBAynQ',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 4,
+        en: {
+          title: 'Manipulation',
+          url: 'https://amzn.to/2XESYnC',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 5,
+        en: {
+          title: 'Redemption',
+          url: 'https://amzn.to/35oeccf',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 6,
+        en: {
+          title: 'Reunion',
+          url: 'https://amzn.to/2pGCgrx',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 7,
+        en: {
+          title: 'Suspicion',
+          url: 'https://amzn.to/2pDAVlg',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+    ]
+  },
+  {
     name: 'AdrienEnglishSeries',
     content: [
       {
