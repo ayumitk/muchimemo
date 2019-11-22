@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
@@ -74,7 +75,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
   return (
     <>
       <AmazonLink className="amazon-link">
-        <a
+        <OutboundLink
           href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`}
           target="_blank"
           rel="noopener noreferrer"
@@ -97,7 +98,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
               ''
             )}
           </AmazonInfo>
-        </a>
+        </OutboundLink>
       </AmazonLink>
     </>
   )
