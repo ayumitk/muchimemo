@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
@@ -71,14 +72,6 @@ const Kindle = styled.p`
 `
 
 function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
-  const eventTracker = ({ ga }) => {
-    ga('send', 'event', {
-      eventCategory: 'Amazon Button',
-      eventAction: 'Click',
-      eventLabel: `${asin} ${title}`,
-    })
-  }
-
   return (
     <>
       <AmazonLink className="amazon-link">
@@ -86,7 +79,15 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
           href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={eventTracker}
+          onClick={e => {
+            e.preventDefault()
+            trackCustomEvent({
+              category: 'Amazon Button',
+              action: 'Click',
+              label: title,
+              value: asin,
+            })
+          }}
         >
           <AmazonImage>
             <img
