@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import CategoryConfig from '../../config/category'
+import ReactGA from 'react-ga'
 
 const Wrapper = styled.nav`
   /* background: ${props => props.theme.colors.grey.default}; */
@@ -40,31 +41,41 @@ const Content = styled.ul`
   }
 `
 
-const Nav = () => (
+const Nav = () => {
+  const eventTracker = (label) =>{
+    const path = location.pathname
+    ReactGA.event({
+      category: 'Global Nav',
+      action: path,
+      label: label
+    })
+  }
+  return(
   <>
     <Wrapper>
       <Content>
         <li className="mmRomance">
-          <Link to="/category/mm-romance">{CategoryConfig.mmRomance.label}</Link>
+          <Link to="/category/mm-romance" onClick={eventTracker(CategoryConfig.mmRomance.label)}>{CategoryConfig.mmRomance.label}</Link>
         </li>
         <li className="blManga">
-          <Link to="/category/bl-manga">{CategoryConfig.blManga.label}</Link>
+          <Link to="/category/bl-manga" onClick={eventTracker(CategoryConfig.blManga.label)}>{CategoryConfig.blManga.label}</Link>
         </li>
         <li className="tvMovie">
-          <Link to="/category/tv-movie">{CategoryConfig.tvMovie.label}</Link>
+          <Link to="/category/tv-movie" onClick={eventTracker(CategoryConfig.tvMovie.label)}>{CategoryConfig.tvMovie.label}</Link>
         </li>
         <li className="podcast">
-          <Link to="/category/podcast">{CategoryConfig.podcast.label}</Link>
+          <Link to="/category/podcast" onClick={eventTracker(CategoryConfig.podcast.label)}>{CategoryConfig.podcast.label}</Link>
         </li>
         <li className="misc">
-          <Link to="/category/misc">{CategoryConfig.misc.label}</Link>
+          <Link to="/category/misc" onClick={eventTracker(CategoryConfig.misc.label)}>{CategoryConfig.misc.label}</Link>
         </li>
         <li className="english">
-          <Link to="/category/english">{CategoryConfig.english.label}</Link>
+          <Link to="/category/english" onClick={eventTracker(CategoryConfig.english.label)}>{CategoryConfig.english.label}</Link>
         </li>
       </Content>
     </Wrapper>
   </>
 )
+}
 
 export default Nav

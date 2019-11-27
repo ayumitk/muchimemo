@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
 
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
@@ -71,6 +72,14 @@ const Kindle = styled.p`
 `
 
 function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
+  const eventTracker = () => {
+    const path = location.pathname
+    ReactGA.event({
+      category: 'Amazon Button',
+      action: path,
+      label: `${asin} ${title}`
+    })
+  }
   return (
     <>
       <AmazonLink className="amazon-link">
@@ -78,6 +87,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
           href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={eventTracker}
         >
           <AmazonImage>
             <img

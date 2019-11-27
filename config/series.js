@@ -86,7 +86,31 @@ module.exports = [
         },
         review: '',
       },
-    ]
+      {
+        id: 7.1,
+        en: {
+          title: 'Relation',
+          url: 'https://amzn.to/2rlHhXd',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 8,
+        en: {
+          title: 'Tradition',
+          url: '',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+    ],
   },
   {
     name: 'AdrienEnglishSeries',

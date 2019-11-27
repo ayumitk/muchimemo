@@ -23,9 +23,13 @@ const Series = name => {
           <tr>
             <td>{s.id}</td>
             <td>
-              <a href={s.en.url} target="_blank" rel="noopener noreferrer">
-                {s.en.title}
-              </a>
+              {s.en.url === '' ? (
+                `${s.en.title}`
+              ) : (
+                <a href={s.en.url} target="_blank" rel="noopener noreferrer">
+                  {s.en.title}
+                </a>
+              )}
             </td>
             <td>
               {s.ja.title === '' ? (
