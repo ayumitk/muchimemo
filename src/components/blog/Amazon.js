@@ -73,9 +73,10 @@ const Kindle = styled.p`
 
 function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
   const eventTracker = () => {
+    const path = location.pathname
     ReactGA.event({
       category: 'Amazon Button',
-      action: 'Click',
+      action: path,
       label: `${asin} ${title}`
     })
   }
