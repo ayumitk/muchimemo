@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import Img from 'gatsby-image'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
 
@@ -192,32 +194,75 @@ const articleLayout = props => {
   `
 }
 
-const Article = ({ title, date, slug, description, category, tags, image, sm, grid, InternalLink, excerpt }) => (
-  <Post sm={sm} grid={grid} InternalLink={InternalLink}>
-    <Link to={slug}>
-      <div className="featured-image" sm={sm}>
-        <Img fluid={image} />
+const Article = ({
+  title,
+  date,
+  slug,
+  description,
+  category,
+  tags,
+  image,
+  sm,
+  grid,
+  InternalLink,
+  excerpt,
+  relatedPost,
+  popularPost,
+  recentPost,
+  categoryList,
+  tagList,
+}) => {
+  const eventTracker = label => {
+    let eventCategory = 'List'
+    if (relatedPost) {
+      eventCategory = 'Related Post'
+    } else if (InternalLink) {
+      eventCategory = 'Internal Link'
+    } else if (popularPost) {
+      eventCategory = 'Popular Post'
+    } else if (recentPost) {
+      eventCategory = 'Recent Post'
+    } else if (categoryList) {
+      eventCategory = 'Category List'
+    } else if (tagList) {
+      eventCategory = 'Tag List'
+    }
+
+    ReactGA.event({
+      category: eventCategory,
+      action: globalHistory.location.pathname,
+      label,
+    })
+  }
+  return (
+    <Post sm={sm} grid={grid} InternalLink={InternalLink}>
+      <Link to={slug} onClick={eventTracker(title)}>
+        <div className="featured-image" sm={sm}>
+          <Img fluid={image} />
+        </div>
+      </Link>
+      <div className="post-info">
+        <div className="category">
+          <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
+          <p className="date">{date}</p>
+        </div>
+        <p className="title">
+          <Link to={slug} onClick={eventTracker(title)}>
+            {title}
+          </Link>
+        </p>
+        <p className="description">{`${description === '' ? excerpt : description}`}</p>
+        <div className="tags">
+          {tags.map(tag => (
+            <span key={tag}>
+              <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
+            </span>
+          ))}
+        </div>
       </div>
-    </Link>
-    <div className="post-info">
-      <div className="category">
-        <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
-        <p className="date">{date}</p>
-      </div>
-      <p className="title">
-        <Link to={slug}>{title}</Link>
-      </p>
-      <p className="description">{`${description === '' ? excerpt : description}`}</p>
-      <div className="tags">
-        {tags.map(tag => (
-          <span key={tag}>
-            <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
-          </span>
-        ))}
-      </div>
-    </div>
-  </Post>
-)
+    </Post>
+  )
+}
 
 export default Article
 
@@ -233,10 +278,20 @@ Article.propTypes = {
   grid: PropTypes.bool,
   InternalLink: PropTypes.bool,
   excerpt: PropTypes.string.isRequired,
+  relatedPost: PropTypes.bool,
+  popularPost: PropTypes.bool,
+  recentPost: PropTypes.bool,
+  categoryList: PropTypes.bool,
+  tagList: PropTypes.bool,
 }
 
 Article.defaultProps = {
   sm: false,
   grid: false,
   InternalLink: false,
+  relatedPost: false,
+  popularPost: false,
+  recentPost: false,
+  categoryList: false,
+  tagList: false,
 }

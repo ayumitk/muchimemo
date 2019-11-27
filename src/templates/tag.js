@@ -53,6 +53,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
               tags={post.frontmatter.tags}
               key={post.fields.slug}
               image={post.frontmatter.squareimage.childImageSharp.fluid}
+              tagList
             />
           ))}
         </Content>

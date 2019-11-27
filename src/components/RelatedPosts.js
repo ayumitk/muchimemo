@@ -100,6 +100,7 @@ const RelatedPosts = ({ category, tags, slug, sm }) => {
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
           sm={sm}
+          relatedPost
         />
       ))}
     </>

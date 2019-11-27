@@ -52,6 +52,7 @@ const RecentPosts = ({ sm }) => {
           key={n.fields.slug}
           image={n.frontmatter.squareimage.childImageSharp.fluid}
           sm={sm}
+          recentPost
         />
       ))}
     </div>

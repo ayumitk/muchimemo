@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import { slide as Menu } from 'react-burger-menu'
 import { HomeAlt } from 'styled-icons/boxicons-regular/HomeAlt'
@@ -59,31 +59,23 @@ const styles = {
   },
 }
 
-class HamburgerMenu extends Component {
-  showSettings(event) {
-    event.preventDefault()
-  }
-
-  render() {
-    return (
-      <Menu styles={styles}>
-        <Link to="/">
-          <HomeAlt /> ホーム
-        </Link>
-        <Link to="/about">
-          <Info /> このサイトについて
-        </Link>
-        <Link to="/contact">
-          <MailOutline /> お問い合わせ
-        </Link>
-        <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
-        <AllCategories dark />
-        <Link to="/privacy">
-          <Key /> プライバシーポリシー
-        </Link>
-      </Menu>
-    )
-  }
-}
+const HamburgerMenu = () => (
+  <Menu styles={styles}>
+    <Link to="/">
+      <HomeAlt /> ホーム
+    </Link>
+    <Link to="/about">
+      <Info /> このサイトについて
+    </Link>
+    <Link to="/contact">
+      <MailOutline /> お問い合わせ
+    </Link>
+    <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
+    <AllCategories dark />
+    <Link to="/privacy">
+      <Key /> プライバシーポリシー
+    </Link>
+  </Menu>
+)
 
 export default HamburgerMenu
