@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import CategoryConfig from '../../config/category'
 import ReactGA from 'react-ga'
+import { globalHistory } from "@reach/router"
 
 const Wrapper = styled.nav`
   /* background: ${props => props.theme.colors.grey.default}; */
@@ -45,7 +46,7 @@ const Nav = () => {
   const eventTracker = (label) =>{
     ReactGA.event({
       category: 'Global Nav',
-      action: location.pathname,
+      action: globalHistory.location.pathname,
       label: label
     })
   }
