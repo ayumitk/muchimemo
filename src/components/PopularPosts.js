@@ -84,6 +84,7 @@ const PopularPosts = ({ sm, grid }) => {
             image={n.frontmatter.squareimage.childImageSharp.fluid}
             grid={grid}
             sm={sm}
+            popularPost
           />
         ))}
       </PopularPostsContainer>

@@ -57,6 +57,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
               tags={post.frontmatter.tags}
               key={post.fields.slug}
               image={post.frontmatter.squareimage.childImageSharp.fluid}
+              categoryList
             />
           ))}
         </Content>
