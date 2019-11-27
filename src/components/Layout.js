@@ -207,7 +207,7 @@ const Layout = ({ children, customSEO }) => {
       <>
         {!customSEO && <SEO buildTime={buildTime} />}
         <GlobalStyle />
-        <Header location={location} />
+        <Header />
         {children}
         <Footer />
       </>
