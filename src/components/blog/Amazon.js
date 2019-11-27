@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
+import { globalHistory } from "@reach/router"
 
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
@@ -73,10 +74,9 @@ const Kindle = styled.p`
 
 function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
   const eventTracker = () => {
-    const path = location.pathname
     ReactGA.event({
       category: 'Amazon Button',
-      action: path,
+      action: globalHistory.location.pathname,
       label: `${asin} ${title}`
     })
   }

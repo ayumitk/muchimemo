@@ -20,7 +20,7 @@ const Series = name => {
           <th>ジーナ</th>
         </tr>
         {target.content.map(s => (
-          <tr>
+          <tr key={s.id}>
             <td>{s.id}</td>
             <td>
               {s.en.url === '' ? (
