@@ -43,10 +43,9 @@ const Content = styled.ul`
 
 const Nav = () => {
   const eventTracker = (label) =>{
-    const path = location.pathname
     ReactGA.event({
       category: 'Global Nav',
-      action: path,
+      action: location.pathname,
       label: label
     })
   }
