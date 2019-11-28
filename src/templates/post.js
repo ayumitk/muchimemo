@@ -207,7 +207,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
-          <GiftCard />
           <PostInfo>
             <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
             <p>{post.date}</p>
@@ -230,6 +229,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          <GiftCard post />
 
           <Marshmallow />
 

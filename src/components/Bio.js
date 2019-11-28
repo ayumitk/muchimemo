@@ -21,20 +21,6 @@ const Info = styled.div`
   margin-left: 0.75rem;
 `
 
-const TwitterButton = styled.a`
-  display: inline-block;
-  background: #1da1f2;
-  color: #fff;
-  font-size: 0.687rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
-  margin-top: 0.5rem;
-  &:hover {
-    color: #fff;
-    opacity: 0.8;
-  }
-`
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {

@@ -2,13 +2,24 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Gift } from 'styled-icons/boxicons-regular/Gift'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 
 const Container = styled.div`
-  background: #232f3e;
-  color: #fff;
+  background: rgba(0, 0, 0, 0.075);
   border-radius: 0.25rem;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
+  margin-top: 2rem;
+`
+
+const Title = styled.p`
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.25;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    font-size: 0.875rem;
+  }
 `
 
 const Copy = styled.div`
@@ -16,18 +27,18 @@ const Copy = styled.div`
   margin: 0.5rem 0;
   display: flex;
   justify-content: center;
-  input {
-    background: rgba(255, 255, 255, 0.9);
-    color: #232f3e;
+  input[type='text'] {
+    background: #fff;
     border-radius: 0.25rem;
-    flex: 1;
     text-align: center;
+    padding: 0.5rem;
+    min-width: 340px;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      padding: 0.4rem;
+      min-width: 250px;
     }
   }
   button {
-    background: #48a3c6;
+    background: ${props => props.theme.colors.grey.light};
     border: 0;
     border-radius: 0.25rem;
     padding: 0.25rem 1rem;
@@ -38,6 +49,7 @@ const Copy = styled.div`
     white-space: nowrap;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
     }
     &:hover {
       opacity: 0.8;
@@ -46,30 +58,42 @@ const Copy = styled.div`
   }
   span {
     position: absolute;
-  }
-`
-
-const Note = styled.p`
-  font-size: 0.687rem;
-  a {
-    color: #48a3c6;
-    &:hover {
-      text-decoration: underline;
+    top: -3rem;
+    padding: 0.5em 1em 0.4em;
+    background-color: ${props => props.theme.colors.secondary};
+    border-radius: 0.25rem;
+    color: #fff;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      border: solid transparent;
+      margin-left: 1px;
+      border-top-color: ${props => props.theme.colors.secondary};
+      border-width: 6px;
     }
   }
 `
 
+const Note = styled.p`
+  font-size: 0.687rem !important;
+  strong {
+    color: ${props => props.theme.colors.secondary};
+  }
+`
+
 const SupportButton = styled.a`
-  background: #ffa724;
+  background: ${props => props.theme.colors.primary};
   font-weight: bold;
-  color: #000;
+  color: #fff;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   display: inline-block;
   margin-top: 0.5rem;
   &:hover {
     opacity: 0.8;
-    color: #000;
+    color: #fff;
   }
 `
 
@@ -81,32 +105,59 @@ class GiftCard extends Component {
 
   render() {
     const { value, copied } = this.state
+    const { post } = this.props
+
     return (
-      <div>
-        <Container>
-          <p style={{ textAlign: 'center' }}>この記事が気に入ったら、ジーナをサポートをしませんか？</p>
+      <Container>
+        <Title>このブログが気に入ったら、ジーナをサポートしてみませんか？</Title>
 
-          <Copy>
-            <input value={value} />
-            <CopyToClipboard text={value} onCopy={() => this.setState({ copied: true })}>
-              <button type="button">コピー</button>
-            </CopyToClipboard>
-            {copied ? <span>Copied.</span> : null}
-          </Copy>
+        <Copy>
+          <input type="text" value={value} />
+          <CopyToClipboard
+            text={value}
+            onCopy={() => {
+              this.setState({
+                copied: true,
+              })
+              setTimeout(() => {
+                this.setState({
+                  copied: false,
+                })
+              }, 3000)
+            }}
+          >
+            <button type="button">コピー</button>
+          </CopyToClipboard>
+          <span
+            style={{
+              transition: '0.5s',
+              opacity: copied ? 1 : 0,
+            }}
+          >
+            クリップボードにコピーしました
+          </span>
+        </Copy>
 
-          <Note>
-            サポートはAmazonギフト券にて15円から受け付けています。上のメールアドレス宛にお送りください。
-            <a href="#">詳しくはこちら</a>
-          </Note>
+        <Note>
+          サポートはAmazonギフト券にて<strong>15円</strong>から受け付けています。上のメールアドレス宛にお送りください。
+          {post ? <Link to="/support/">詳しくはこちら »</Link> : null}
+        </Note>
 
-          <SupportButton href="https://www.amazon.co.jp/dp/B06X982RQ9/" target="_blank" rel="noopener noreferrer">
-            <Gift />
-            Amazonギフト券でサポート
-          </SupportButton>
-        </Container>
-      </div>
+        <SupportButton href="https://www.amazon.co.jp/dp/B06X982RQ9/" target="_blank" rel="noopener noreferrer">
+          <Gift />
+          Amazonギフト券でサポート
+        </SupportButton>
+      </Container>
     )
   }
 }
 
 export default GiftCard
+
+GiftCard.propTypes = {
+  post: PropTypes.bool,
+}
+
+GiftCard.defaultProps = {
+  post: false,
+}

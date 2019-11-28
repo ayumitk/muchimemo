@@ -8,7 +8,7 @@ import config from '../../config'
 const Success = () => (
   <Layout>
     <Wrapper>
-      <Helmet title={`Contact | ${config.siteTitle}`} />
+      <Helmet title={`送信完了 | ${config.siteTitle}`} />
       <Content>
         <h1>送信完了</h1>
         <p>お問い合わせありがとうございます。なるべく早く返信しますね！</p>
