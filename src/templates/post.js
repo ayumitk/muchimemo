@@ -15,6 +15,7 @@ import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
 import Marshmallow from '../components/Marshmallow'
 import theme from '../../config/theme'
+import GiftCard from '../components/GiftCard'
 
 const Content = styled.article`
   max-width: 680px;
@@ -206,6 +207,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
+          <GiftCard />
           <PostInfo>
             <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
             <p>{post.date}</p>
