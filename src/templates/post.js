@@ -46,6 +46,12 @@ const PostContent = styled.div`
   }
   h3 {
     font-size: 1.25rem;
+    span {
+      color: ${props => props.theme.colors.grey.default};
+      font-size: 0.875rem;
+      display: block;
+      font-weight: normal;
+    }
   }
   h4 {
     font-size: 1rem;
