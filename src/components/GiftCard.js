@@ -10,15 +10,21 @@ const Container = styled.div`
   border-radius: 0.25rem;
   padding: 1.5rem 1rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 `
 
 const Title = styled.p`
   text-align: center;
   font-weight: bold;
   line-height: 1.25;
+  br {
+    display: none;
+  }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
     font-size: 0.875rem;
+    br {
+      display: block;
+    }
   }
 `
 
@@ -34,7 +40,8 @@ const Copy = styled.div`
     padding: 0.5rem;
     min-width: 340px;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      min-width: 250px;
+      min-width: 220px;
+      font-size: 0.875rem;
     }
   }
   button {
@@ -109,7 +116,11 @@ class GiftCard extends Component {
 
     return (
       <Container>
-        <Title>このブログが気に入ったら、ジーナをサポートしてみませんか？</Title>
+        <Title>
+          このブログが気に入ったら、
+          <br />
+          ジーナをサポートしてみませんか？
+        </Title>
 
         <Copy>
           <input type="text" value={value} />

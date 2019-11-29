@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { TwitterFollowButton } from 'react-twitter-embed'
@@ -53,6 +53,16 @@ const Bio = () => {
         <Name>{config.author}</Name>
         <p style={{ marginBottom: '0.5rem' }}>
           カナダ、バンクーバー在住。壇蜜に似てるとか、鞭が似合うとか言われますが、職業は女王様ではありません。M/Mロマンス小説とBLマンガがあれば生きていける。
+          <br />
+          <a
+            href="https://marshmallow-qa.com/gina_muchimemo?utm_medium=url_text&utm_source=promotion"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginRight: '0.5rem' }}
+          >
+            質問や感想はこちら »
+          </a>
+          <Link to="/support/">サポートはこちら »</Link>
         </p>
         <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>

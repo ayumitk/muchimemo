@@ -6,7 +6,7 @@ import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
 
 const MarshmallowContainer = styled.div`
-  margin-top: 3rem;
+  margin-top: 2rem;
   .gatsby-image-wrapper {
     overflow: inherit !important;
   }
