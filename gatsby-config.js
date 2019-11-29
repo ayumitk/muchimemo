@@ -19,6 +19,7 @@ const cfg = {
         trackingId: config.googleAnalyticsID,
         head: false,
         respectDNT: true,
+        pageTransitionDelay: 0,
       },
     },
 

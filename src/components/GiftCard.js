@@ -4,6 +4,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Gift } from 'styled-icons/boxicons-regular/Gift'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 
 const Container = styled.div`
   background: rgba(0, 0, 0, 0.075);
@@ -21,7 +23,6 @@ const Title = styled.p`
     display: none;
   }
   @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 0.875rem;
     br {
       display: block;
     }
@@ -102,6 +103,20 @@ const SupportButton = styled.a`
     opacity: 0.8;
     color: #fff;
   }
+  svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-bottom: 0.24rem;
+    margin-right: 0.15rem;
+  }
+`
+
+const PinkGift = styled(Gift)`
+  color: ${props => props.theme.colors.secondary};
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.24rem;
+  margin-right: 0.15rem;
 `
 
 class GiftCard extends Component {
@@ -111,12 +126,21 @@ class GiftCard extends Component {
   }
 
   render() {
+    const eventTracker = label => {
+      ReactGA.event({
+        category: 'Support',
+        action: globalHistory.location.pathname,
+        label,
+      })
+    }
+
     const { value, copied } = this.state
     const { post } = this.props
 
     return (
       <Container>
         <Title>
+          <PinkGift />
           このブログが気に入ったら、
           <br />
           ジーナをサポートしてみませんか？
@@ -135,6 +159,7 @@ class GiftCard extends Component {
                   copied: false,
                 })
               }, 3000)
+              eventTracker('コピー')
             }}
           >
             <button type="button">コピー</button>
@@ -154,7 +179,12 @@ class GiftCard extends Component {
           {post ? <Link to="/support/">詳しくはこちら »</Link> : null}
         </Note>
 
-        <SupportButton href="https://www.amazon.co.jp/dp/B06X982RQ9/" target="_blank" rel="noopener noreferrer">
+        <SupportButton
+          href="https://www.amazon.co.jp/dp/B06X982RQ9/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={eventTracker('Amazonギフト券でサポート')}
+        >
           <Gift />
           Amazonギフト券でサポート
         </SupportButton>
