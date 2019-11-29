@@ -12,10 +12,15 @@ const Content = styled.article`
     line-height: 1.8;
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: 1.75rem 0 0 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       font-size: 0.937rem;
     }
+    strong {
+      color: ${props => props.theme.colors.secondary};
+    }
+  }
+  p + p {
+    margin: 1.75rem 0 0 0;
   }
   h2,
   h3 {
