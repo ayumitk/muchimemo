@@ -72,7 +72,7 @@ const Kindle = styled.p`
   color: #000;
 `
 
-function Amazon({ asin, title, linkId, author, KindleUnlimited }) {
+function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook }) {
   const eventTracker = () => {
     ReactGA.event({
       category: 'Amazon Button',
@@ -121,6 +121,7 @@ Amazon.propTypes = {
   linkId: PropTypes.string,
   author: PropTypes.string,
   KindleUnlimited: PropTypes.bool,
+  audiobook: PropTypes.bool,
 }
 
 Amazon.defaultProps = {
@@ -128,4 +129,5 @@ Amazon.defaultProps = {
   linkId: null,
   author: null,
   KindleUnlimited: false,
+  audiobook:false,
 }

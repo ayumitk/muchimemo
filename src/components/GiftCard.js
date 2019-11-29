@@ -103,10 +103,20 @@ const SupportButton = styled.a`
     opacity: 0.8;
     color: #fff;
   }
+  svg{
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-bottom: 0.24rem;
+    margin-right:0.15rem;
+  }
 `
 
 const PinkGift = styled(Gift)`
   color: ${props => props.theme.colors.secondary};
+  width: 1.25rem;
+    height: 1.25rem;
+    margin-bottom: 0.24rem;
+    margin-right:0.15rem;
 `
 
 class GiftCard extends Component {
