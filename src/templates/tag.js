@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { Layout, Wrapper, Article, Content } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
+import Bio from '../components/Bio'
 
 const H1 = styled.h1`
   span {
@@ -56,6 +57,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
               tagList
             />
           ))}
+          <Bio />
         </Content>
       </Wrapper>
     </Layout>

@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { Layout, Wrapper, Article, Content, Tag } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
+import Bio from '../components/Bio'
 
 const H1 = styled.h1`
   span {
@@ -60,6 +61,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
               categoryList
             />
           ))}
+          <Bio />
         </Content>
       </Wrapper>
     </Layout>

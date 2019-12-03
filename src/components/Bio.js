@@ -4,6 +4,8 @@ import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { TwitterFollowButton } from 'react-twitter-embed'
 import config from '../../config'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 
 const BioContainer = styled.div`
   display: flex;
@@ -34,6 +36,14 @@ const Bio = () => {
     }
   `)
 
+  const eventTracker = label => {
+    ReactGA.event({
+      category: 'Profile',
+      action: globalHistory.location.pathname,
+      label,
+    })
+  }
+
   return (
     <BioContainer>
       <div>
@@ -59,10 +69,11 @@ const Bio = () => {
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginRight: '0.5rem' }}
+            onClick={eventTracker('質問や感想はこちら »')}
           >
             質問や感想はこちら »
           </a>
-          <Link to="/support/">サポートはこちら »</Link>
+          <Link to="/support/" onClick={eventTracker('サポートはこちら »')}>サポートはこちら »</Link>
         </p>
         <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>

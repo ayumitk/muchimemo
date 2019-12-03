@@ -19,7 +19,7 @@ const Content = styled.article`
       color: ${props => props.theme.colors.secondary};
     }
   }
-  p + p {
+  p {
     margin: 1.75rem 0 0 0;
   }
   h2,
