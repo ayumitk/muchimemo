@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase'
 import { Layout, Wrapper, Content } from '../components'
 import config from '../../config'
 import CategoryConfig from '../../config/category'
+import Bio from '../components/Bio'
 
 const Category = ({
   data: {
@@ -23,6 +24,7 @@ const Category = ({
             ({category.totalCount})
           </p>
         ))}
+        <Bio />
       </Content>
     </Wrapper>
   </Layout>

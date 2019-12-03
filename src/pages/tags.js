@@ -6,6 +6,7 @@ import kebabCase from 'lodash/kebabCase'
 import { Layout, Wrapper, Content } from '../components'
 import config from '../../config'
 import TagsConfig from '../../config/tags'
+import Bio from '../components/Bio'
 
 const Tag = ({
   data: {
@@ -23,6 +24,7 @@ const Tag = ({
             )
           </p>
         ))}
+        <Bio />
       </Content>
     </Wrapper>
   </Layout>

@@ -8,11 +8,8 @@ import { Layout, Wrapper, Button, Content } from '../components'
 import config from '../../config'
 
 const StyledContent = styled(Content)`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 2rem auto;
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    margin: 0 auto;
-  }
+  max-width: 680px;
+  margin: 0 auto 6rem auto;
   form {
     p {
       label,
@@ -42,20 +39,20 @@ const Contact = () => (
       <Helmet title={`お問い合わせ | ${config.siteTitle}`} />
       <StyledContent>
         <h1>お問い合わせ</h1>
-        <p>感想でも雑談でもお気軽に♪</p>
+        <p style={{marginBottom:'1.5rem'}}>感想でも雑談でもお気軽に♪</p>
         <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
-          <p>
+          <p style={{marginBottom:'1.5rem'}}>
             <label htmlFor="contact-name">
               お名前
               <input name="name" id="contact-name" type="text" required />
             </label>
           </p>
-          <p>
+          <p style={{marginBottom:'1.5rem'}}>
             <label htmlFor="contact-email">
               メールアドレス <input name="email" id="contact-email" type="email" required />
             </label>
           </p>
-          <p>
+          <p style={{marginBottom:'1.5rem'}}>
             <label htmlFor="contact-message">
               メッセージ <textarea name="message" id="contact-message" required />
             </label>

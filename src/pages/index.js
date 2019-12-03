@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Layout, Article, Wrapper, Heading, Content } from '../components'
 import PopularPosts from '../components/PopularPosts'
+import Bio from '../components/Bio'
 
 const IndexPage = ({
   data: {
@@ -28,6 +29,7 @@ const IndexPage = ({
             image={post.frontmatter.squareimage.childImageSharp.fluid}
           />
         ))}
+        <Bio />
       </Content>
     </Wrapper>
   </Layout>
