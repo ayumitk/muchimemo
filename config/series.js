@@ -24,7 +24,7 @@ module.exports = [
           title: '',
           url: '',
         },
-        review: '',
+        review: 'collusion',
       },
       {
         id: 3,
@@ -99,10 +99,10 @@ module.exports = [
         review: '',
       },
       {
-        id: 8,
+        id: 7.2,
         en: {
-          title: 'Tradition',
-          url: '',
+          title: 'Tradition(Free)',
+          url: 'https://dl.bookfunnel.com/i5w7vtoq79',
         },
         ja: {
           title: '',
