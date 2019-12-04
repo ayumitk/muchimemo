@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { MailOutline } from 'styled-icons/material/MailOutline'
 import { Heart } from 'styled-icons/boxicons-solid/Heart'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 import config from '../../config'
 import Button from './Button'
 import AllCategories from './AllCategories'
@@ -38,6 +40,15 @@ const Container = styled.div`
 
 const Footer = () => {
   const buildTime = useBuildTime()
+
+  const eventTracker = label => {
+    ReactGA.event({
+      category: 'Footer',
+      action: globalHistory.location.pathname,
+      label,
+    })
+  }
+
   return (
     <>
       <FooterContainer>
@@ -48,7 +59,7 @@ const Footer = () => {
           <AllTags />
         </Container>
         <div style={{ textAlign: 'center' }}>
-          <Link to="/contact">
+          <Link to="/contact" onClick={eventTracker('お問い合わせ')}>
             <Button big>
               <MailOutline />
               お問い合わせ
@@ -58,7 +69,10 @@ const Footer = () => {
         <Copyright>
           &copy; {new Date().getFullYear()}
           {` `}
-          <Link to="/">{config.siteTitle}</Link> Made with <Heart /> in Canada.
+          <Link to="/" onClick={eventTracker(config.siteTitle)}>
+            {config.siteTitle}
+          </Link>{' '}
+          Made with <Heart /> in Canada.
           <br />
           Last build: {buildTime}
         </Copyright>

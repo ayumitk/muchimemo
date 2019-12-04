@@ -6,6 +6,8 @@ import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from 'disqus-react'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 import { Layout, Wrapper, SEO, Bio, Share, TableOfContents } from '../components'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
@@ -208,20 +210,35 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
     config: { identifier: slug, title: post.title },
   }
 
+  const eventTracker = (category, label) => {
+    ReactGA.event({
+      category,
+      action: globalHistory.location.pathname,
+      label,
+    })
+  }
+
   return (
     <Layout customSEO>
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
           <PostInfo>
-            <Link to={`/category/${kebabCase(post.category)}`}>{CategoryConfig[post.category].label}</Link>
+            <Link
+              to={`/category/${kebabCase(post.category)}`}
+              onClick={eventTracker('Category', CategoryConfig[post.category].label)}
+            >
+              {CategoryConfig[post.category].label}
+            </Link>
             <p>{post.date}</p>
           </PostInfo>
           <Title>{post.title}</Title>
           <Tags>
             {post.tags.map(tag => (
               <div key={tag}>
-                <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
+                <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+                  #{TagsConfig[tag].label}
+                </Link>
               </div>
             ))}
           </Tags>

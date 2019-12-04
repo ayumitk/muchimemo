@@ -50,6 +50,7 @@ const Nav = () => {
       label,
     })
   }
+
   return (
     <Wrapper>
       <Content>

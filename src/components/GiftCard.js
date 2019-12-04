@@ -19,7 +19,7 @@ const Title = styled.p`
   text-align: center;
   font-weight: bold;
   line-height: 1.25;
-  margin:0 !important;
+  margin: 0 !important;
   br {
     display: none;
   }
@@ -160,10 +160,11 @@ class GiftCard extends Component {
                   copied: false,
                 })
               }, 3000)
-              eventTracker('コピー')
             }}
           >
-            <button type="button">コピー</button>
+            <button type="button" onClick={eventTracker('コピー')}>
+              コピー
+            </button>
           </CopyToClipboard>
           <span
             style={{
@@ -177,7 +178,11 @@ class GiftCard extends Component {
 
         <Note>
           サポートはAmazonギフト券にて<strong>15円</strong>から受け付けています。上のメールアドレス宛にお送りください。
-          {post ? <Link to="/support/" onClick={eventTracker('詳しくはこちら »')}>詳しくはこちら »</Link> : null}
+          {post ? (
+            <Link to="/support/" onClick={eventTracker('詳しくはこちら »')}>
+              詳しくはこちら »
+            </Link>
+          ) : null}
         </Note>
 
         <SupportButton

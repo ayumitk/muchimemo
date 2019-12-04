@@ -5,6 +5,8 @@ import { HomeAlt } from 'styled-icons/boxicons-regular/HomeAlt'
 import { MailOutline } from 'styled-icons/material/MailOutline'
 import { Info } from 'styled-icons/icomoon/Info'
 import { Key } from 'styled-icons/boxicons-regular/Key'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 import AllCategories from './AllCategories'
 
 const styles = {
@@ -59,23 +61,33 @@ const styles = {
   },
 }
 
-const HamburgerMenu = () => (
-  <Menu styles={styles}>
-    <Link to="/">
-      <HomeAlt /> ホーム
-    </Link>
-    <Link to="/about">
-      <Info /> このサイトについて
-    </Link>
-    <Link to="/contact">
-      <MailOutline /> お問い合わせ
-    </Link>
-    <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
-    <AllCategories dark />
-    <Link to="/privacy">
-      <Key /> プライバシーポリシー
-    </Link>
-  </Menu>
-)
+const HamburgerMenu = () => {
+  const eventTracker = label => {
+    ReactGA.event({
+      category: 'Hamburger Menu',
+      action: globalHistory.location.pathname,
+      label,
+    })
+  }
+
+  return (
+    <Menu styles={styles}>
+      <Link to="/" onClick={eventTracker('ホーム')}>
+        <HomeAlt /> ホーム
+      </Link>
+      <Link to="/about" onClick={eventTracker('このサイトについて')}>
+        <Info /> このサイトについて
+      </Link>
+      <Link to="/contact" onClick={eventTracker('お問い合わせ')}>
+        <MailOutline /> お問い合わせ
+      </Link>
+      <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
+      <AllCategories dark />
+      <Link to="/privacy" onClick={eventTracker('プライバシーポリシー')}>
+        <Key /> プライバシーポリシー
+      </Link>
+    </Menu>
+  )
+}
 
 export default HamburgerMenu

@@ -212,20 +212,23 @@ const Article = ({
   categoryList,
   tagList,
 }) => {
-  const eventTracker = label => {
-    let eventCategory = 'List'
-    if (relatedPost) {
-      eventCategory = 'Related Post'
-    } else if (InternalLink) {
-      eventCategory = 'Internal Link'
-    } else if (popularPost) {
-      eventCategory = 'Popular Post'
-    } else if (recentPost) {
-      eventCategory = 'Recent Post'
-    } else if (categoryList) {
-      eventCategory = 'Category List'
-    } else if (tagList) {
-      eventCategory = 'Tag List'
+  const eventTracker = (eventCategory, label) => {
+    if (eventCategory === '') {
+      if (relatedPost) {
+        eventCategory = 'Related Post'
+      } else if (InternalLink) {
+        eventCategory = 'Internal Link'
+      } else if (popularPost) {
+        eventCategory = 'Popular Post'
+      } else if (recentPost) {
+        eventCategory = 'Recent Post'
+      } else if (categoryList) {
+        eventCategory = 'Category List'
+      } else if (tagList) {
+        eventCategory = 'Tag List'
+      } else {
+        eventCategory = 'List'
+      }
     }
 
     ReactGA.event({
@@ -236,18 +239,23 @@ const Article = ({
   }
   return (
     <Post sm={sm} grid={grid} InternalLink={InternalLink}>
-      <Link to={slug} onClick={eventTracker(title)}>
+      <Link to={slug} onClick={eventTracker('', title)}>
         <div className="featured-image" sm={sm}>
           <Img fluid={image} />
         </div>
       </Link>
       <div className="post-info">
         <div className="category">
-          <Link to={`/category/${kebabCase(category)}`}>{CategoryConfig[category].label}</Link>
+          <Link
+            to={`/category/${kebabCase(category)}`}
+            onClick={eventTracker('Category', CategoryConfig[category].label)}
+          >
+            {CategoryConfig[category].label}
+          </Link>
           <p className="date">{date}</p>
         </div>
         <p className="title">
-          <Link to={slug} onClick={eventTracker(title)}>
+          <Link to={slug} onClick={eventTracker('', title)}>
             {title}
           </Link>
         </p>
@@ -255,7 +263,9 @@ const Article = ({
         <div className="tags">
           {tags.map(tag => (
             <span key={tag}>
-              <Link to={`/tags/${kebabCase(tag)}`}>#{TagsConfig[tag].label}</Link>
+              <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+                #{TagsConfig[tag].label}
+              </Link>
             </span>
           ))}
         </div>
