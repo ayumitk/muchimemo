@@ -10,7 +10,7 @@ module.exports = {
   siteBanner: '/img/banner.jpg', // Your image for og:image tag. You can find it in the /static folder
   favicon: 'src/favicon.png', // Your image for favicons. You can find it in the /src folder
   siteDescription:
-    'カナダ、バンクーバーで暮らす、鞭が似合うとか、壇蜜に似てるとか言われるジーナが、ただただ日々思うことを垂れ流しています。M/Mロマンス小説とBLマンガがあれば生きていける。', // Your site description
+    'カナダ、バンクーバーで暮らす、鞭が似合うとか、壇蜜に似てるとか言われるジーナが、ただただ日々思うことを垂れ流しています。M/Mロマンス小説とBLマンガが日々の糧。', // Your site description
   author: 'ジーナ', // Author for schemaORGJSONLD
   siteLogo: '/img/logo.png', // Image for schemaORGJSONLD
 

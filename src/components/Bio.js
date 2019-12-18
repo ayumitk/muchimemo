@@ -62,7 +62,7 @@ const Bio = () => {
       <Info>
         <Name>{config.author}</Name>
         <p style={{ marginBottom: '0.5rem' }}>
-          カナダ、バンクーバー在住。壇蜜に似てるとか、鞭が似合うとか言われますが、職業は女王様ではありません。M/Mロマンス小説とBLマンガがあれば生きていける。
+          カナダ、バンクーバー在住。壇蜜に似てるとか、鞭が似合うとか言われますが、職業は女王様ではありません。M/Mロマンス小説とBLマンガが日々の糧。
           <br />
           <a
             href="https://marshmallow-qa.com/gina_muchimemo?utm_medium=url_text&utm_source=promotion"
