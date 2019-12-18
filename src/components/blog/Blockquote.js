@@ -50,7 +50,10 @@ function Blockquote({ book, children, srcName, srcURL }) {
       <BlockquoteContainer book={book}>
         {children}
         <Source>
-          Source : <a href={srcURL}>{srcName}</a>
+          Source :{' '}
+          <a href={srcURL} target="_blank" rel="noopener noreferrer">
+            {srcName}
+          </a>
         </Source>
       </BlockquoteContainer>
     </>
