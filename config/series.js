@@ -317,10 +317,10 @@ module.exports = [
           url: 'https://amzn.to/2IBmvZp',
         },
         ja: {
-          title: '',
-          url: '',
+          title: 'モネ･マーダーズ',
+          url: 'https://amzn.to/2EtBEJD',
         },
-        review: '',
+        review: 'the-monet-murders',
       },
       {
         id: 3,
