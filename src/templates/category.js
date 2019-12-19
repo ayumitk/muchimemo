@@ -32,7 +32,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
   return (
     <Layout>
       <Wrapper>
-        <Helmet title={`カテゴリ: ${category} | ${config.siteTitle}`} />
+        <Helmet title={`カテゴリ: ${CategoryConfig[category].label} | ${config.siteTitle}`} />
         <Content>
           <Header>
             <H1>
