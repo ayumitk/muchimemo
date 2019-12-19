@@ -33,7 +33,7 @@ const Tag = ({ pageContext: { tag }, data: { allMdx } }) => {
   return (
     <Layout>
       <Wrapper>
-        <Helmet title={`タグ: ${tag} | ${config.siteTitle}`} />
+        <Helmet title={`タグ: ${TagsConfig[tag].label} | ${config.siteTitle}`} />
         <Content>
           <Header>
             <H1>
