@@ -89,4 +89,8 @@ module.exports = {
     label: 'フィリップ･ベッソン',
     description: '',
   },
+  andreAciman: {
+    label: 'アンドレ･アシマン',
+    description: '',
+  },
 }
