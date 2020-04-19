@@ -223,10 +223,10 @@ module.exports = [
           url: 'https://amzn.to/2ooj0hO',
         },
         ja: {
-          title: '',
-          url: '',
+          title: 'フェア･チャンス',
+          url: 'https://amzn.to/2QJeztx',
         },
-        review: '',
+        review: 'fair-chance',
       },
     ],
   },
