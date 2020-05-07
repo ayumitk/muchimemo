@@ -93,4 +93,8 @@ module.exports = {
     label: 'アンドレ･アシマン',
     description: '',
   },
+  bookClub: {
+    label: '読書会',
+    description: '',
+  },
 }
