@@ -110,6 +110,18 @@ module.exports = [
         },
         review: '',
       },
+      {
+        id: 8,
+        en: {
+          title: 'Decision',
+          url: 'https://amzn.to/2LdQFmc',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
     ],
   },
   {
