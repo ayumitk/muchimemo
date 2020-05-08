@@ -74,12 +74,13 @@ const cfg = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 830,
+              maxWidth: 1200,
               quality: 90,
               withWebp: true,
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-images-medium-zoom`,
           `gatsby-remark-copy-linked-files`,
           // TODO: Replace with "mdx-component-autolink-headers"
           {
@@ -91,7 +92,7 @@ const cfg = {
         ],
         // TODO: Remove this workaround
         // https://github.com/gatsbyjs/gatsby/issues/15486
-        plugins: [`gatsby-remark-images`, `gatsby-remark-autolink-headers`],
+        plugins: [`gatsby-remark-images`, `gatsby-remark-images-medium-zoom`, `gatsby-remark-autolink-headers`],
       },
     },
 
