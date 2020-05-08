@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
-import { LeftArrowAlt } from 'styled-icons/boxicons-regular/LeftArrowAlt'
+import { RightArrowAlt } from '@styled-icons/boxicons-regular/RightArrowAlt'
+import { LeftArrowAlt } from '@styled-icons/boxicons-regular/LeftArrowAlt'
 
 const Wrapper = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from 'react'
 import { InstantSearch, Index, Hits, connectStateResults } from 'react-instantsearch-dom'
 import algoliasearch from 'algoliasearch/lite'
 import styled from 'styled-components'
-import { SearchAlt2 } from 'styled-icons/boxicons-regular/SearchAlt2'
+import { SearchAlt2 } from '@styled-icons/boxicons-regular/SearchAlt2'
 
 import { Root, HitsWrapper, PoweredBy } from './styles'
 import Input from './Input'

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { Gift } from 'styled-icons/boxicons-regular/Gift'
+import { Gift } from '@styled-icons/boxicons-regular/Gift'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'

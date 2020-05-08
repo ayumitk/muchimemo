@@ -129,5 +129,5 @@ Amazon.defaultProps = {
   linkId: null,
   author: null,
   KindleUnlimited: false,
-  audiobook:false,
+  audiobook: false,
 }

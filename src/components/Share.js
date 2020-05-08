@@ -10,11 +10,11 @@ import {
   EmailShareButton,
 } from 'react-share'
 
-import { FacebookF } from 'styled-icons/fa-brands/FacebookF'
-import { Twitter } from 'styled-icons/fa-brands/Twitter'
-import { Line } from 'styled-icons/fa-brands/Line'
-import { GetPocket } from 'styled-icons/fa-brands/GetPocket'
-import { MailOutline } from 'styled-icons/material/MailOutline'
+import { FacebookF } from '@styled-icons/fa-brands/FacebookF'
+import { Twitter } from '@styled-icons/fa-brands/Twitter'
+import { Line } from '@styled-icons/fa-brands/Line'
+import { GetPocket } from '@styled-icons/fa-brands/GetPocket'
+import { MailOutline } from '@styled-icons/material/MailOutline'
 
 const ShareButtons = styled.div`
   display: flex;

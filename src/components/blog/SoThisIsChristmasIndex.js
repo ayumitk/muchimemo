@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { RightArrowCircle } from 'styled-icons/boxicons-solid/RightArrowCircle'
-import { ChevronDown } from 'styled-icons/boxicons-regular/ChevronDown'
-import { ChevronUp } from 'styled-icons/boxicons-regular/ChevronUp'
+import { RightArrowCircle } from '@styled-icons/boxicons-solid/RightArrowCircle'
+import { ChevronDown } from '@styled-icons/boxicons-regular/ChevronDown'
+import { ChevronUp } from '@styled-icons/boxicons-regular/ChevronUp'
 
 const IndexContainer = styled.div`
   background: #f4f7f6;

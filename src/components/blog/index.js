@@ -10,8 +10,10 @@ import Twitter from './Twitter'
 import Vocabulary from './Vocabulary'
 import Youtube from './Youtube'
 import Series from './Series'
+import EventAnnouncement from './EventAnnouncement'
 
 export {
+  EventAnnouncement,
   Series,
   Amazon,
   Blockquote,
