@@ -20,6 +20,7 @@ const StyledTableOfContents = styled.div`
     padding-left: 1.5rem;
     li {
       margin: 0.25rem 0;
+      list-style: none;
       @media (max-width: ${props => props.theme.breakpoints.phone}) {
         margin: 0.15rem 0;
       }

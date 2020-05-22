@@ -24,7 +24,7 @@ module.exports = [
           title: '',
           url: '',
         },
-        review: '',
+        review: 'collusion',
       },
       {
         id: 3,

@@ -93,6 +93,7 @@ const PostContent = styled.div`
     display: block;
     line-height: 1.25;
     margin: 0.5rem 0 0 0;
+    font-style: normal;
   }
   small {
     color: ${props => props.theme.colors.secondary};
