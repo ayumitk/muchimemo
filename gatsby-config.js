@@ -1,3 +1,4 @@
+const twemoji = require('remark-twemoji')
 const config = require('./config')
 const queries = require('./src/utils/algolia')
 require('dotenv').config({
@@ -63,6 +64,7 @@ const cfg = {
           draft: require.resolve('./src/templates/post.js'),
           default: require.resolve('./src/templates/post.js'),
         },
+        remarkPlugins: [twemoji],
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-external-links',

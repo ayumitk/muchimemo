@@ -35,6 +35,12 @@ const Title = styled.h1`
 const marginLg = '2.5rem'
 
 const PostContent = styled.div`
+  img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+  }
   hr {
     border: 0;
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
