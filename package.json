@@ -52,8 +52,10 @@
     "react-share": "^3.0.1",
     "react-twitter-embed": "^2.0.8",
     "react-youtube": "^7.9.0",
+    "remark-twemoji": "^0.1.1",
     "styled-components": "^4.4.0",
     "styled-icons": "^10.2.1",
+    "twemoji": "^13.0.0",
     "typeface-bitter": "^0.0.71",
     "typeface-open-sans": "^0.0.75"
   },
