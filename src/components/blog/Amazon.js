@@ -72,7 +72,8 @@ const Kindle = styled.p`
   color: #000;
 `
 
-function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook }) {
+function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url }) {
+  const link = `https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`
   const eventTracker = () => {
     ReactGA.event({
       category: 'Amazon Button',
@@ -83,12 +84,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook }) {
   return (
     <>
       <AmazonLink className="amazon-link">
-        <a
-          href={`https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={eventTracker}
-        >
+        <a href={url || link} target="_blank" rel="noopener noreferrer" onClick={eventTracker}>
           <AmazonImage>
             <img
               src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
@@ -122,6 +118,7 @@ Amazon.propTypes = {
   author: PropTypes.string,
   KindleUnlimited: PropTypes.bool,
   audiobook: PropTypes.bool,
+  url: PropTypes.string,
 }
 
 Amazon.defaultProps = {
@@ -130,4 +127,5 @@ Amazon.defaultProps = {
   author: null,
   KindleUnlimited: false,
   audiobook: false,
+  url: null,
 }

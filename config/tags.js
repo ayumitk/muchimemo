@@ -97,4 +97,8 @@ module.exports = {
     label: '読書会',
     description: '',
   },
+  chat: {
+    label: 'チャットコミュニティ',
+    description: '',
+  },
 }
