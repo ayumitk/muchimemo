@@ -106,7 +106,8 @@ const PostContent = styled.div`
     font-size: 0.75rem;
     display: block;
   }
-  ul {
+  ul,
+  ol {
     padding-left: 1.5rem;
     li {
       margin: 0.35rem 0;
@@ -153,6 +154,7 @@ const PostContent = styled.div`
   .amazon-link + h3,
   small,
   ul,
+  ol,
   table {
     margin-top: ${marginLg};
     @media (max-width: ${theme.breakpoints.phone}) {

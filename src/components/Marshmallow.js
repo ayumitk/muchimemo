@@ -69,7 +69,7 @@ const Marshmallow = () => {
   return (
     <MarshmallowContainer>
       <a
-        href="https://marshmallow-qa.com/gina_muchimemo?utm_medium=url_text&utm_source=promotion"
+        href="https://marshmallow-qa.com/muchimemo?utm_medium=url_text&utm_source=promotion"
         target="_blank"
         rel="noopener noreferrer"
         onClick={eventTracker()}
