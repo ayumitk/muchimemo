@@ -3,9 +3,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import { TwitterFollowButton } from 'react-twitter-embed'
-import config from '../../config'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
+import config from '../../config'
 
 const BioContainer = styled.div`
   display: flex;
@@ -62,7 +62,9 @@ const Bio = () => {
       <Info>
         <Name>{config.author}</Name>
         <p style={{ marginBottom: '0.5rem' }}>
-          カナダ、バンクーバー在住。壇蜜に似てるとか、鞭が似合うとか言われますが、職業は女王様ではありません。M/Mロマンス小説とBLマンガが日々の糧。
+          鞭が似合うとか、壇蜜に似てるとか言われる、M/Mロマンス小説とBLマンガ愛好家。
+          <br />
+          カナダ、バンクーバー在住。
           <br />
           <a
             href="https://marshmallow-qa.com/gina_muchimemo?utm_medium=url_text&utm_source=promotion"
@@ -73,7 +75,9 @@ const Bio = () => {
           >
             質問や感想はこちら »
           </a>
-          <Link to="/support/" onClick={eventTracker('サポートはこちら »')}>サポートはこちら »</Link>
+          <Link to="/support/" onClick={eventTracker('サポートはこちら »')}>
+            サポートはこちら »
+          </Link>
         </p>
         <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>
