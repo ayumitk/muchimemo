@@ -47,8 +47,6 @@ function EventAnnouncement({ title, bookName, bookUrl, date, capacity, tool }) {
           』<br />
           日程：{date}
           <br />
-          定員：{capacity}
-          <br />
           ツール：{tool}
         </p>
       </Container>

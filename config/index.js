@@ -15,8 +15,8 @@ module.exports = {
   siteLogo: '/img/logo.png', // Image for schemaORGJSONLD
 
   siteFBAppID: '560994258050661', // Facebook App ID - Optional
-  userTwitter: '@gina_muchimemo', // Twitter Username - Optional
-  twitterScreenName: 'gina_muchimemo',
+  userTwitter: '@muchimemo', // Twitter Username - Optional
+  twitterScreenName: 'muchimemo',
   ogSiteName: 'ムチでメモ', // Facebook Site Name - Optional
   ogLanguage: 'ja_JP', // Facebook Language
   googleAnalyticsID: 'UA-121956784-2',
