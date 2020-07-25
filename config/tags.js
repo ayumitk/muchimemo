@@ -101,4 +101,16 @@ module.exports = {
     label: 'チャットコミュニティ',
     description: '',
   },
+  vocabulary: {
+    label: '単語帳',
+    description: '',
+  },
+  noun: {
+    label: '名詞',
+    description: '',
+  },
+  adjective: {
+    label: '形容詞',
+    description: '',
+  },
 }

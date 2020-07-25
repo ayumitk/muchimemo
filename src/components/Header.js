@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import ReactGA from 'react-ga'
+import { globalHistory } from '@reach/router'
 import config from '../../config'
 import Nav from './Nav'
 import HamburgerMenu from './HamburgerMenu'
 import Search from './Search'
 import Logo from '../../assets/logo.svg'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 
 import Content from './Content'
 
@@ -65,20 +65,21 @@ const Header = () => {
     })
   }
 
-  return(
-  <HeaderContainer>
-    <HamburgerMenu />
-    <Search indices={searchIndices} />
-    <StyledContent>
-      <SiteTitle>
-        <Link to="/" onClick={eventTracker()}>
-          <StyledLogo />
-        </Link>
-        <Tagline>{config.siteTitleManifest}</Tagline>
-      </SiteTitle>
-    </StyledContent>
-    <Nav />
-  </HeaderContainer>
-)}
+  return (
+    <HeaderContainer>
+      <HamburgerMenu />
+      <Search indices={searchIndices} />
+      <StyledContent>
+        <SiteTitle>
+          <Link to="/" onClick={eventTracker()}>
+            <StyledLogo />
+          </Link>
+          <Tagline>{config.siteTitleManifest}</Tagline>
+        </SiteTitle>
+      </StyledContent>
+      <Nav />
+    </HeaderContainer>
+  )
+}
 
 export default Header

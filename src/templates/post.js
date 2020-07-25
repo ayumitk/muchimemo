@@ -35,6 +35,10 @@ const Title = styled.h1`
 const marginLg = '2.5rem'
 
 const PostContent = styled.div`
+  span.thanks {
+    font-size: 0.687rem;
+    color: ${props => props.theme.colors.grey.light};
+  }
   img.emoji {
     height: 1em;
     width: 1em;
@@ -256,7 +260,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             <Img fluid={featuredImgFluid} />
           </div>
 
-          <TableOfContents toc={tableOfContents} />
+          {post.toc && <TableOfContents toc={tableOfContents} />}
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
