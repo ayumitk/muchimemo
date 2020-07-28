@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { makeStyles, InputLabel, MenuItem, Card, FormControl, Select } from '@material-ui/core'
-import { Layout, Wrapper, Content } from '../components'
-import config from '../../config'
+import { Layout, Wrapper, Content, SEO } from '../components'
 import TagsConfig from '../../config/tags'
 
 const VocabularyList = styled.div`
@@ -181,9 +179,14 @@ const Vocabulary = ({ data: { allMdx } }) => {
   }
 
   return (
-    <Layout>
+    <Layout customSEO>
       <Wrapper>
-        <Helmet title={`M/Mロマンス小説のための単語帳 | ${config.siteTitle}`} />
+        <SEO
+          pageTitle="M/Mロマンス小説のための単語帳"
+          pageDescription="M/Mロマンス小説をよく見かける単語・イディオム集を作成中です。例文はほぼ濡れ場。"
+          pageOgp="/img/vocabulary.jpg"
+          page
+        />
         <Content>
           <Title>M/Mロマンス小説のための単語帳</Title>
 

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import config from '../../config'
 
 const SEO = props => {
-  const { postNode, postPath, article, buildTime } = props
+  const { postNode, postPath, article, buildTime, pageTitle, pageOgp, page, pageDescription } = props
 
   let title
   let description
@@ -20,6 +20,10 @@ const SEO = props => {
     title = `${postMeta.title} | ${config.siteTitle}`
     description = postMeta.description === '' ? postNode.excerpt : postMeta.description
     image = `${homeURL}${postNode.frontmatter.cardimage.childImageSharp.fluid.src}`
+  } else if (page) {
+    title = `${pageTitle} | ${config.siteTitle}`
+    description = pageDescription === '' ? config.siteDescription : pageDescription
+    image = pageOgp === '' ? `${homeURL}${config.siteBanner}` : `${homeURL}${pageOgp}`
   } else {
     title = config.siteTitleAlt
     description = config.siteDescription
@@ -182,6 +186,10 @@ SEO.propTypes = {
   postPath: PropTypes.string,
   article: PropTypes.bool,
   buildTime: PropTypes.string,
+  page: PropTypes.bool,
+  pageTitle: PropTypes.string,
+  pageDescription: PropTypes.string,
+  pageOgp: PropTypes.string,
 }
 
 SEO.defaultProps = {
@@ -189,4 +197,8 @@ SEO.defaultProps = {
   postPath: null,
   article: false,
   buildTime: null,
+  page: false,
+  pageTitle: null,
+  pageDescription: null,
+  pageOgp: null,
 }
