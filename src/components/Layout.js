@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles'
 import Header from './Header'
 import Footer from './Footer'
 import SEO from './SEO'
@@ -199,18 +200,28 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const muiTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#47a89c',
+    },
+  },
+})
+
 const Layout = ({ children, customSEO }) => {
   const buildTime = useBuildTime()
 
   return (
     <ThemeProvider theme={theme}>
-      <>
-        {!customSEO && <SEO buildTime={buildTime} />}
-        <GlobalStyle />
-        <Header />
-        {children}
-        <Footer />
-      </>
+      <MuiThemeProvider theme={muiTheme}>
+        <>
+          {!customSEO && <SEO buildTime={buildTime} />}
+          <GlobalStyle />
+          <Header />
+          {children}
+          <Footer />
+        </>
+      </MuiThemeProvider>
     </ThemeProvider>
   )
 }

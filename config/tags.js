@@ -102,7 +102,7 @@ module.exports = {
     description: '',
   },
   vocabulary: {
-    label: '単語帳',
+    label: '単語',
     description: '',
   },
   noun: {
@@ -111,6 +111,14 @@ module.exports = {
   },
   adjective: {
     label: '形容詞',
+    description: '',
+  },
+  verb: {
+    label: '動詞',
+    description: '',
+  },
+  idiom: {
+    label: 'イディオム',
     description: '',
   },
 }

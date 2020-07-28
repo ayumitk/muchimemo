@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 import { Layout, Wrapper, Content } from '../components'
 import config from '../../config'
-import styled from 'styled-components'
 
 const StyledContent = styled(Content)`
   max-width: 680px;

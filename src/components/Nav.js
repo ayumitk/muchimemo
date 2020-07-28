@@ -84,6 +84,11 @@ const Nav = () => {
             {CategoryConfig.english.label}
           </Link>
         </li>
+        <li className="vocabulary">
+          <Link to="/vocabulary" onClick={eventTracker(CategoryConfig.vocabulary.label)}>
+            {CategoryConfig.vocabulary.label}
+          </Link>
+        </li>
       </Content>
     </Wrapper>
   )

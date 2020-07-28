@@ -247,13 +247,14 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           </PostInfo>
           <Title>{post.title}</Title>
           <Tags>
-            {post.tags.map(tag => (
-              <div key={tag}>
-                <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
-                  #{TagsConfig[tag].label}
-                </Link>
-              </div>
-            ))}
+            {post.tags &&
+              post.tags.map(tag => (
+                <div key={tag}>
+                  <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+                    #{TagsConfig[tag].label}
+                  </Link>
+                </div>
+              ))}
           </Tags>
 
           <div style={{ lineHeight: '0' }}>
@@ -272,7 +273,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           <Bio />
 
-          <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
+          <RelatedPosts category={post.category} tags={post.tags && post.tags} slug={slug} sm />
 
           <Share
             socialConfig={{
@@ -333,6 +334,9 @@ export const postQuery = graphql`
             }
           }
         }
+        toc
+        books
+        type
       }
       timeToRead
       parent {

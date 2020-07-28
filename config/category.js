@@ -22,7 +22,10 @@ module.exports = {
   },
   podcast: {
     label: 'ポッドキャスト',
-    description:
-      'ゆるゆると語ってます。',
+    description: 'ゆるゆると語ってます。',
+  },
+  vocabulary: {
+    label: '単語帳',
+    description: '',
   },
 }
