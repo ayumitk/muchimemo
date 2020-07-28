@@ -18,6 +18,7 @@ import RecentPosts from '../components/RecentPosts'
 import Marshmallow from '../components/Marshmallow'
 import theme from '../../config/theme'
 import GiftCard from '../components/GiftCard'
+import EnglishNotes from '../components/blog/EnglishNotes'
 
 const Content = styled.article`
   max-width: 680px;
@@ -35,6 +36,10 @@ const Title = styled.h1`
 const marginLg = '2.5rem'
 
 const PostContent = styled.div`
+  span.thanks {
+    font-size: 0.687rem;
+    color: ${props => props.theme.colors.grey.light};
+  }
   img.emoji {
     height: 1em;
     width: 1em;
@@ -243,24 +248,27 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           </PostInfo>
           <Title>{post.title}</Title>
           <Tags>
-            {post.tags.map(tag => (
-              <div key={tag}>
-                <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
-                  #{TagsConfig[tag].label}
-                </Link>
-              </div>
-            ))}
+            {post.tags &&
+              post.tags.map(tag => (
+                <div key={tag}>
+                  <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+                    #{TagsConfig[tag].label}
+                  </Link>
+                </div>
+              ))}
           </Tags>
 
           <div style={{ lineHeight: '0' }}>
             <Img fluid={featuredImgFluid} />
           </div>
 
-          <TableOfContents toc={tableOfContents} />
+          {post.toc && <TableOfContents toc={tableOfContents} />}
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          {post.category === 'vocabulary' && <EnglishNotes />}
 
           <GiftCard post />
 
@@ -268,7 +276,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           <Bio />
 
-          <RelatedPosts category={post.category} tags={post.tags} slug={slug} sm />
+          <RelatedPosts category={post.category} tags={post.tags && post.tags} slug={slug} sm />
 
           <Share
             socialConfig={{
@@ -329,6 +337,9 @@ export const postQuery = graphql`
             }
           }
         }
+        toc
+        books
+        type
       }
       timeToRead
       parent {

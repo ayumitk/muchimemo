@@ -1,10 +1,8 @@
 /* eslint jsx-a11y/label-has-for:0 */
 
 import React from 'react'
-import Helmet from 'react-helmet'
-import { Layout, Wrapper, Content } from '../components'
-import config from '../../config'
 import styled from 'styled-components'
+import { Layout, Wrapper, Content, SEO } from '../components'
 
 const StyledContent = styled(Content)`
   max-width: 680px;
@@ -12,9 +10,9 @@ const StyledContent = styled(Content)`
 `
 
 const Success = () => (
-  <Layout>
+  <Layout customSEO>
     <Wrapper>
-      <Helmet title={`送信完了 | ${config.siteTitle}`} />
+      <SEO pageTitle="送信完了" pageDescription="" pageOgp="" page />
       <StyledContent>
         <h1>送信完了</h1>
         <p>お問い合わせありがとうございます。なるべく早く返信しますね！</p>

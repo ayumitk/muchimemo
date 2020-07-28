@@ -69,11 +69,11 @@ const Nav = () => {
             {CategoryConfig.tvMovie.label}
           </Link>
         </li>
-        <li className="podcast">
+        {/* <li className="podcast">
           <Link to="/category/podcast" onClick={eventTracker(CategoryConfig.podcast.label)}>
             {CategoryConfig.podcast.label}
           </Link>
-        </li>
+        </li> */}
         <li className="misc">
           <Link to="/category/misc" onClick={eventTracker(CategoryConfig.misc.label)}>
             {CategoryConfig.misc.label}
@@ -82,6 +82,11 @@ const Nav = () => {
         <li className="english">
           <Link to="/category/english" onClick={eventTracker(CategoryConfig.english.label)}>
             {CategoryConfig.english.label}
+          </Link>
+        </li>
+        <li className="vocabulary">
+          <Link to="/vocabulary" onClick={eventTracker(CategoryConfig.vocabulary.label)}>
+            {CategoryConfig.vocabulary.label}
           </Link>
         </li>
       </Content>

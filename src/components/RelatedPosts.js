@@ -64,7 +64,7 @@ const RelatedPosts = ({ category, tags, slug, sm }) => {
     return a.tagPoint < b.tagPoint ? -1 : 1
   })
 
-  const relatedTag = tagArray[0].tagName
+  const relatedTag = tags ? tagArray[0].tagName : null
 
   let count = 0
   const newNodes = []
