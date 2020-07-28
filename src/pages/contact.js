@@ -1,11 +1,8 @@
 /* eslint jsx-a11y/label-has-for:0 */
 
 import React from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import { Layout, Wrapper, Button, Content } from '../components'
-
-import config from '../../config'
+import { Layout, Wrapper, Button, Content, SEO } from '../components'
 
 const StyledContent = styled(Content)`
   max-width: 680px;
@@ -34,25 +31,25 @@ const StyledContent = styled(Content)`
 `
 
 const Contact = () => (
-  <Layout>
+  <Layout customSEO>
     <Wrapper>
-      <Helmet title={`お問い合わせ | ${config.siteTitle}`} />
+      <SEO pageTitle="お問い合わせ" pageDescription="" pageOgp="" page />
       <StyledContent>
         <h1>お問い合わせ</h1>
-        <p style={{marginBottom:'1.5rem'}}>感想でも雑談でもお気軽に♪</p>
+        <p style={{ marginBottom: '1.5rem' }}>感想でも雑談でもお気軽に♪</p>
         <form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action="/success">
-          <p style={{marginBottom:'1.5rem'}}>
+          <p style={{ marginBottom: '1.5rem' }}>
             <label htmlFor="contact-name">
               お名前
               <input name="name" id="contact-name" type="text" required />
             </label>
           </p>
-          <p style={{marginBottom:'1.5rem'}}>
+          <p style={{ marginBottom: '1.5rem' }}>
             <label htmlFor="contact-email">
               メールアドレス <input name="email" id="contact-email" type="email" required />
             </label>
           </p>
-          <p style={{marginBottom:'1.5rem'}}>
+          <p style={{ marginBottom: '1.5rem' }}>
             <label htmlFor="contact-message">
               メッセージ <textarea name="message" id="contact-message" required />
             </label>
