@@ -65,12 +65,6 @@ const StyledLink = styled(Link)`
     margin-top: 0.25rem;
     color: ${props => props.theme.colors.grey.light};
     font-size: 0.687rem;
-    & span:after {
-      content: ', ';
-    }
-    & span:last-child:after {
-      display: none;
-    }
   }
 `
 
@@ -132,12 +126,8 @@ const Vocabulary = ({ data: { allMdx } }) => {
   nodes.filter(post => {
     if (book === 'all') {
       postBooks.push(post)
-    } else {
-      post.frontmatter.books.forEach(from => {
-        if (from === book) {
-          postBooks.push(post)
-        }
-      })
+    } else if (post.frontmatter.books === book) {
+      postBooks.push(post)
     }
   })
   postBooks.filter(post => {
@@ -147,7 +137,7 @@ const Vocabulary = ({ data: { allMdx } }) => {
       posts.push(post)
     }
   })
-  posts.sort(function(a, b) {
+  posts.sort((a, b) => {
     if (order === 'new') {
       if (a.frontmatter.date > b.frontmatter.date) {
         return -1
@@ -167,6 +157,7 @@ const Vocabulary = ({ data: { allMdx } }) => {
       return 1
     }
   })
+  console.log(posts)
 
   const orderHandleChange = event => {
     setOrder(event.target.value)
@@ -219,7 +210,7 @@ const Vocabulary = ({ data: { allMdx } }) => {
                   アドリアン・イングリッシュ
                 </MenuItem>
                 <MenuItem value="allsFair" className={classes.menuItem}>
-                  フェア・ゲーム
+                  All's Fair
                 </MenuItem>
               </Select>
             </FormControl>
@@ -261,11 +252,7 @@ const Vocabulary = ({ data: { allMdx } }) => {
                     <div className="article-text">
                       <div className={`type ${post.frontmatter.type}`}>{TagsConfig[post.frontmatter.type].label}</div>
                       <div>{post.frontmatter.title}</div>
-                      <div className="book">
-                        {post.frontmatter.books.map(bookName => (
-                          <span key={book}>{TagsConfig[bookName].label}</span>
-                        ))}
-                      </div>
+                      <div className="book">{TagsConfig[post.frontmatter.books].label}</div>
                     </div>
                   </StyledLink>
                 </Card>

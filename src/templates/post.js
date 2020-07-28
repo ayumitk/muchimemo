@@ -18,6 +18,7 @@ import RecentPosts from '../components/RecentPosts'
 import Marshmallow from '../components/Marshmallow'
 import theme from '../../config/theme'
 import GiftCard from '../components/GiftCard'
+import EnglishNotes from '../components/blog/EnglishNotes'
 
 const Content = styled.article`
   max-width: 680px;
@@ -266,6 +267,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
+
+          {post.category === 'vocabulary' && <EnglishNotes />}
 
           <GiftCard post />
 
