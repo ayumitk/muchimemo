@@ -209,6 +209,7 @@ const Article = ({
   relatedPost,
   popularPost,
   recentPost,
+  vocabularyPost,
   categoryList,
   tagList,
 }) => {
@@ -222,6 +223,8 @@ const Article = ({
         eventCategory = 'Popular Post'
       } else if (recentPost) {
         eventCategory = 'Recent Post'
+      } else if (vocabularyPost) {
+        eventCategory = 'Vocabulary Post'
       } else if (categoryList) {
         eventCategory = 'Category List'
       } else if (tagList) {
@@ -291,6 +294,7 @@ Article.propTypes = {
   relatedPost: PropTypes.bool,
   popularPost: PropTypes.bool,
   recentPost: PropTypes.bool,
+  vocabularyPost: PropTypes.bool,
   categoryList: PropTypes.bool,
   tagList: PropTypes.bool,
 }
@@ -302,6 +306,7 @@ Article.defaultProps = {
   relatedPost: false,
   popularPost: false,
   recentPost: false,
+  vocabularyPost: false,
   categoryList: false,
   tagList: false,
 }

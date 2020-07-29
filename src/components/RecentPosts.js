@@ -9,7 +9,7 @@ const RecentPosts = ({ sm }) => {
       query {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { sourceName: { ne: "page" } } }
+          filter: { fields: { sourceName: { ne: "page" } }, frontmatter: { category: { ne: "vocabulary" } } }
           limit: 4
         ) {
           nodes {

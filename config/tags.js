@@ -117,8 +117,20 @@ module.exports = {
     label: '動詞',
     description: '',
   },
+  adverb: {
+    label: '副詞',
+    description: '',
+  },
   idiom: {
     label: 'イディオム',
+    description: '',
+  },
+  slang: {
+    label: 'スラング',
+    description: '',
+  },
+  kjCharles: {
+    label: 'KJ･チャールズ ',
     description: '',
   },
 }
