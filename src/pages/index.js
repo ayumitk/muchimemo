@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Layout, Article, Wrapper, Heading, Content } from '../components'
 import PopularPosts from '../components/PopularPosts'
+import VocabularyPosts from '../components/VocabularyPosts'
 import Bio from '../components/Bio'
 
 const IndexPage = ({
@@ -14,6 +15,7 @@ const IndexPage = ({
     <Wrapper>
       <Content>
         <PopularPosts grid />
+        <VocabularyPosts grid />
         <Heading>最新記事</Heading>
         {posts.map(post => (
           <Article
