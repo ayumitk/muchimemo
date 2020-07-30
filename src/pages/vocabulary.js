@@ -176,13 +176,13 @@ const Vocabulary = ({ data: { allMdx } }) => {
     <Layout customSEO>
       <Wrapper>
         <SEO
-          pageTitle="M/Mロマンス小説のための単語帳"
-          pageDescription="M/Mロマンス小説をよく見かける単語・イディオム集を作成中です。例文はほぼ濡れ場。"
+          pageTitle="M/Mロマンス小説の単語帳"
+          pageDescription="例文はほぼ濡れ場。M/Mロマンス小説でよく見かける単語•イディオム•スラング集を作成中です。日常生活であまり役に立たない言葉の数々を集めて行きます。"
           pageOgp="/img/vocabulary.jpg"
           page
         />
         <Content>
-          <Title>M/Mロマンス小説のための単語帳</Title>
+          <Title>M/Mロマンス小説の単語帳</Title>
 
           <div className={classes.formGroup}>
             <FormControl className={classes.formControl}>
