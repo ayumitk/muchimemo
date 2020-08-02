@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
+import AmazonConfig from '../../../config/amazon'
 
 const affiliateId = process.env.GATSBY_AMAZON_AFFILIATE_ID
 
@@ -26,6 +27,7 @@ const AmazonImage = styled.div`
   margin-right: 10px;
   img {
     width: 100px;
+    border: solid 1px rgba(0, 0, 0, 0.15);
   }
 `
 
@@ -72,7 +74,7 @@ const Kindle = styled.p`
   color: #000;
 `
 
-function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url }) {
+function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, book }) {
   const link = `https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`
   const eventTracker = () => {
     ReactGA.event({
@@ -80,6 +82,59 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url }
       action: globalHistory.location.pathname,
       label: `${asin} ${title}`,
     })
+  }
+  console.log(AmazonConfig[book])
+  if (book) {
+    return (
+      <>
+        {AmazonConfig[book].jp.url && (
+          <AmazonLink className="amazon-link">
+            <a href={AmazonConfig[book].jp.url} target="_blank" rel="noopener noreferrer" onClick={eventTracker}>
+              <AmazonImage>
+                <img
+                  src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].jp.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                  alt={`${AmazonConfig[book].jp.title} 画像`}
+                />
+              </AmazonImage>
+              <AmazonInfo>
+                <ProductName>{AmazonConfig[book].jp.title}</ProductName>
+                {AmazonConfig[book].jp.author ? <Author>{`作者 : ${AmazonConfig[book].jp.author}`}</Author> : ''}
+                <Button type="button">Amazonで購入する</Button>
+                {AmazonConfig[book].jp.unlimited ? (
+                  <div>
+                    <Kindle>Kindle Unlimited 対象作品</Kindle>
+                  </div>
+                ) : (
+                  ''
+                )}
+              </AmazonInfo>
+            </a>
+          </AmazonLink>
+        )}
+        <AmazonLink className="amazon-link">
+          <a href={AmazonConfig[book].en.url} target="_blank" rel="noopener noreferrer" onClick={eventTracker}>
+            <AmazonImage>
+              <img
+                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].en.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                alt={`${AmazonConfig[book].en.title} 画像`}
+              />
+            </AmazonImage>
+            <AmazonInfo>
+              <ProductName>{AmazonConfig[book].en.title}</ProductName>
+              {AmazonConfig[book].en.author ? <Author>{`作者 : ${AmazonConfig[book].en.author}`}</Author> : ''}
+              <Button type="button">Amazonで購入する</Button>
+              {AmazonConfig[book].en.unlimited ? (
+                <div>
+                  <Kindle>Kindle Unlimited 対象作品</Kindle>
+                </div>
+              ) : (
+                ''
+              )}
+            </AmazonInfo>
+          </a>
+        </AmazonLink>
+      </>
+    )
   }
   return (
     <>
@@ -112,7 +167,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url }
 export default Amazon
 
 Amazon.propTypes = {
-  asin: PropTypes.string.isRequired,
+  asin: PropTypes.string,
   title: PropTypes.string,
   linkId: PropTypes.string,
   author: PropTypes.string,
@@ -122,6 +177,7 @@ Amazon.propTypes = {
 }
 
 Amazon.defaultProps = {
+  asin: null,
   title: null,
   linkId: null,
   author: null,
