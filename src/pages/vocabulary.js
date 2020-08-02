@@ -61,6 +61,9 @@ const StyledLink = styled(Link)`
     &.adverb {
       background: #e5ecd6;
     }
+    &.slang {
+      background: #f2f2f2;
+    }
   }
   .book {
     text-align: right;
@@ -210,10 +213,16 @@ const Vocabulary = ({ data: { allMdx } }) => {
                   殺しのアート
                 </MenuItem>
                 <MenuItem value="adrienEnglish" className={classes.menuItem}>
-                  アドリアン・イングリッシュ
+                  アドリアン•イングリッシュ
                 </MenuItem>
                 <MenuItem value="allsFair" className={classes.menuItem}>
                   All's Fair
+                </MenuItem>
+                <MenuItem value="thinkOfEngland" className={classes.menuItem}>
+                  イングランドを想え
+                </MenuItem>
+                <MenuItem value="drugChase" className={classes.menuItem}>
+                  ドラッグ•チェイス
                 </MenuItem>
               </Select>
             </FormControl>

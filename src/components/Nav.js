@@ -8,6 +8,25 @@ import CategoryConfig from '../../config/category'
 const Wrapper = styled.nav`
   /* background: ${props => props.theme.colors.grey.default}; */
   background: ${props => props.theme.colors.grey.dark};
+  .vocabulary{
+    position: relative;
+    a::after{
+      content:'New';
+      color:${props => props.theme.colors.secondary};
+      position:absolute;
+      right:4px;
+      top:2px;
+      line-height:1;
+      font-size:0.625rem;
+      animation: blink 1.4s linear infinite;
+      font-weight:bold;
+    }
+  }
+  @keyframes blink{
+    0%{opacity: .2;}
+    40%{opacity: 1;}
+    100%{opacity: 1;}
+  }
 `
 
 const Content = styled.ul`
@@ -22,7 +41,7 @@ const Content = styled.ul`
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
       width: 30%;
       &.mmRomance,
-      &.podcast {
+      &.misc {
         width: 40%;
       }
     }

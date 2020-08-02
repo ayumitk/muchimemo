@@ -11,11 +11,11 @@ import Vocabulary from './Vocabulary'
 import Youtube from './Youtube'
 import Series from './Series'
 import EventAnnouncement from './EventAnnouncement'
-import EnglishNotes from './EnglishNotes'
+import VocabularyFooter from './VocabularyFooter'
 
 export {
   EventAnnouncement,
-  EnglishNotes,
+  VocabularyFooter,
   Series,
   Amazon,
   Blockquote,

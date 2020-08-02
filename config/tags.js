@@ -78,7 +78,7 @@ module.exports = {
     description: '',
   },
   drugChase: {
-    label: 'ドラッグ･チェイスシリーズ',
+    label: 'ドラッグ･チェイス',
     description: '',
   },
   edenWinters: {
@@ -130,7 +130,11 @@ module.exports = {
     description: '',
   },
   kjCharles: {
-    label: 'KJ･チャールズ ',
+    label: 'KJ･チャールズ',
+    description: '',
+  },
+  thinkOfEngland: {
+    label: 'イングランドを想え',
     description: '',
   },
 }
