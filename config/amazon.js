@@ -95,6 +95,22 @@ module.exports = {
       unlimited: true,
     },
   },
+  deathOfAPirateKing: {
+    jp: {
+      asin: 'B00U6WBU2E',
+      title: '海賊王の死 (アドリアン･イングリッシュ #4)',
+      url: 'https://amzn.to/30jfc1F',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: true,
+    },
+    en: {
+      asin: 'B0067QUX9E',
+      title: 'Death of a Pirate King (The Adrien English Mysteries #4)',
+      url: 'https://amzn.to/2EB40VA',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
   soThisIsChristmas: {
     jp: {
       asin: 'B077ZGFZ7S',
