@@ -44,17 +44,20 @@ const BlockquoteContainer = styled.blockquote`
 
 const Source = styled.em``
 
-function Blockquote({ book, children, srcName, srcURL }) {
+function Blockquote({ book, children, srcName, srcURL, chapter }) {
   return (
     <>
       <BlockquoteContainer book={book}>
         {children}
-        <Source>
-          Source :{' '}
-          <a href={srcURL} target="_blank" rel="noopener noreferrer">
-            {srcName}
-          </a>
-        </Source>
+        {srcName && (
+          <Source>
+            Source :{' '}
+            <a href={srcURL} target="_blank" rel="noopener noreferrer">
+              {srcName}
+            </a>
+            {chapter && `, Chapter ${chapter}`}
+          </Source>
+        )}
       </BlockquoteContainer>
     </>
   )
@@ -66,6 +69,7 @@ Blockquote.propTypes = {
   book: PropTypes.bool,
   srcName: PropTypes.string,
   srcURL: PropTypes.string,
+  chapter: PropTypes.string,
   children: PropTypes.string.isRequired,
 }
 
@@ -73,4 +77,5 @@ Blockquote.defaultProps = {
   book: false,
   srcName: null,
   srcURL: null,
+  chapter: null,
 }

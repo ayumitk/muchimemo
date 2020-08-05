@@ -180,7 +180,7 @@ const Vocabulary = ({ data: { allMdx } }) => {
       <Wrapper>
         <SEO
           pageTitle="M/Mロマンス小説の単語帳"
-          pageDescription="例文はほぼ濡れ場。M/Mロマンス小説でよく見かける単語•イディオム•スラング集を作成中です。日常生活であまり役に立たない言葉の数々を集めて行きます。"
+          pageDescription="例文はほぼ濡れ場。M/Mロマンス小説（海外BL小説）でよく見かける単語•イディオム•スラング集を作成中です。日常生活であまり役に立たない言葉の数々を集めて行きます。"
           pageOgp="/img/vocabulary.jpg"
           page
         />

@@ -34,8 +34,8 @@ const PopularPosts = ({ sm, grid }) => {
                 in: [
                   "/bl-manga/bl-ish-manga/"
                   "/bl-manga/historical-bl-manga/"
-                  "/misc/relocate-from-japan/"
-                  "/mm-romance/book-club-1/"
+                  "/mm-romance/slack/"
+                  "/english/vocabulary/"
                 ]
               }
               sourceName: { ne: "page" }

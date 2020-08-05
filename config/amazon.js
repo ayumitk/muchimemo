@@ -4,7 +4,7 @@ module.exports = {
       asin: 'B08CK9CLQM',
       title: 'イングランドを想え',
       url: 'https://amzn.to/2D5Kq2W',
-      author: 'KJ・チャールズ',
+      author: 'KJ･チャールズ',
       unlimited: false,
     },
     en: {
@@ -18,9 +18,9 @@ module.exports = {
   diversion: {
     jp: {
       asin: 'B01LZ2CASG',
-      title: '還流 (ドラッグ・チェイス #1)',
+      title: '還流 (ドラッグ･チェイス #1)',
       url: 'https://amzn.to/2Dq3WY6',
-      author: 'エデン・ウィンターズ',
+      author: 'エデン･ウィンターズ',
       unlimited: true,
     },
     en: {
@@ -50,7 +50,7 @@ module.exports = {
   monetMurders: {
     jp: {
       asin: 'B082H6P92M',
-      title: 'モネ・マーダーズ (殺しのアート #2)',
+      title: 'モネ･マーダーズ (殺しのアート #2)',
       url: 'https://amzn.to/39NkkOA',
       author: 'ジョシュ･ラニヨン',
       unlimited: false,
@@ -95,6 +95,22 @@ module.exports = {
       unlimited: true,
     },
   },
+  hellYouSay: {
+    jp: {
+      asin: 'B00N8RVP24',
+      title: '悪魔の聖餐 (アドリアン･イングリッシュ #3)',
+      url: 'https://amzn.to/33yQJHs',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: true,
+    },
+    en: {
+      asin: 'B006LNC468',
+      title: 'The Hell You Say (The Adrien English Mysteries #3)',
+      url: 'https://amzn.to/31jaLmO',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
   deathOfAPirateKing: {
     jp: {
       asin: 'B00U6WBU2E',
@@ -125,6 +141,22 @@ module.exports = {
       url: 'https://amzn.to/2D8VL2M',
       author: 'Josh Lanyon',
       unlimited: true,
+    },
+  },
+  dontLookBack: {
+    jp: {
+      asin: 'B00HD59DYY',
+      title: 'ドント･ルックバック',
+      url: 'https://amzn.to/31gcSaS',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: true,
+    },
+    en: {
+      asin: 'B00891DC8Y',
+      title: "Don't Look Back",
+      url: 'https://amzn.to/3gpPq1d',
+      author: 'Josh Lanyon',
+      unlimited: false,
     },
   },
 }
