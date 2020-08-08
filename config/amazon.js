@@ -159,4 +159,20 @@ module.exports = {
       unlimited: false,
     },
   },
+  speechless: {
+    jp: {
+      asin: 'B01BL25AC8',
+      title: 'Speechless',
+      url: 'https://amzn.to/3a8sYat',
+      author: 'キム･フィールディング ',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B008MMXCMQ',
+      title: 'Speechless',
+      url: 'https://amzn.to/3a3UDJV',
+      author: 'Kim Fielding',
+      unlimited: false,
+    },
+  },
 }
