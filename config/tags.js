@@ -137,4 +137,8 @@ module.exports = {
     label: 'イングランドを想え',
     description: '',
   },
+  kimFielding: {
+    label: 'キム･フィールディング',
+    description: '',
+  },
 }
