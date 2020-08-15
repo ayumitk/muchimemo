@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import amazon from '../../../config/amazon'
 
 const BlockquoteContainer = styled.blockquote`
   font-family: ${props => (props.book ? props.theme.fontFamily.serif : '')};
@@ -44,7 +45,11 @@ const BlockquoteContainer = styled.blockquote`
 
 const Source = styled.em``
 
-function Blockquote({ book, children, srcName, srcURL, chapter }) {
+function Blockquote({ book, children, srcName, srcURL, chapter, srcBook, lang }) {
+  if (srcBook) {
+    srcName = amazon[srcBook][lang].title
+    srcURL = amazon[srcBook][lang].url
+  }
   return (
     <>
       <BlockquoteContainer book={book}>
