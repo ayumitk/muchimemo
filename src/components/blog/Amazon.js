@@ -83,7 +83,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
       label: `${asin} ${title}`,
     })
   }
-  console.log(AmazonConfig[book])
+  // console.log(AmazonConfig[book])
   if (book) {
     return (
       <>

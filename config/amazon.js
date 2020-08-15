@@ -164,7 +164,7 @@ module.exports = {
       asin: 'B01BL25AC8',
       title: 'Speechless',
       url: 'https://amzn.to/3a8sYat',
-      author: 'キム･フィールディング ',
+      author: 'キム･フィールディング',
       unlimited: false,
     },
     en: {
@@ -173,6 +173,38 @@ module.exports = {
       url: 'https://amzn.to/3a3UDJV',
       author: 'Kim Fielding',
       unlimited: false,
+    },
+  },
+  howToHowlAtTheMoon: {
+    jp: {
+      asin: 'B07J67WTTM',
+      title: '月への吠えかた教えます (月吠えシリーズ #1)',
+      url: 'https://amzn.to/2Y0Fu7p',
+      author: 'イーライ･イーストン',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B00T12QQOW',
+      title: 'How to Howl at the Moon (Howl at the Moon #1)',
+      url: 'https://amzn.to/2Y3Z6az',
+      author: 'Eli Easton',
+      unlimited: true,
+    },
+  },
+  howToWalkLikeAMan: {
+    jp: {
+      asin: 'B07YXLFLG9',
+      title: 'ヒトの世界の歩きかた (月吠えシリーズ #2)',
+      url: 'https://amzn.to/3av0dVJ',
+      author: 'イーライ･イーストン',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B0176KQPH8',
+      title: 'How to Walk Like a Man (Howl at the Moon #2)',
+      url: 'https://amzn.to/3g00Wzx',
+      author: 'Eli Easton',
+      unlimited: true,
     },
   },
 }

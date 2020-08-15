@@ -224,6 +224,9 @@ const Vocabulary = ({ data: { allMdx } }) => {
                 <MenuItem value="drugChase" className={classes.menuItem}>
                   ドラッグ•チェイス
                 </MenuItem>
+                <MenuItem value="howlAtTheMoon" className={classes.menuItem}>
+                  月吠えシリーズ
+                </MenuItem>
               </Select>
             </FormControl>
 
