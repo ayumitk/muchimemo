@@ -127,6 +127,22 @@ module.exports = {
       unlimited: true,
     },
   },
+  darkTide: {
+    jp: {
+      asin: 'B01BL25AEG',
+      title: '瞑き流れ (アドリアン･イングリッシュ #5)',
+      url: 'https://amzn.to/2Y4lP6A',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: true,
+    },
+    en: {
+      asin: 'B006N9XHLQ',
+      title: 'The Dark Tide (The Adrien English Mysteries #5)',
+      url: 'https://amzn.to/2CADLOA',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
   soThisIsChristmas: {
     jp: {
       asin: 'B077ZGFZ7S',
