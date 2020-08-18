@@ -47,7 +47,11 @@ function VocabularySeriesMoan({ current }) {
               groan（喘ぐ、うめき声、不満の声を上げる）
             </a>
           </li>
-          <li>sob（準備中）</li>
+          <li>
+            <a href="/vocabulary/sob/" className={current === 'sob' && 'current'}>
+              sob（泣きじゃくる）
+            </a>
+          </li>
           <li>whine（準備中）</li>
           <li>gasp（準備中）</li>
         </ul>

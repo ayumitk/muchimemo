@@ -11,11 +11,10 @@ import AllCategories from './AllCategories'
 
 const styles = {
   bmBurgerButton: {
-    position: 'absolute',
+    position: 'relative',
     width: '30px',
     height: '20px',
-    left: '15px',
-    top: '15px',
+    margin: '0.9rem 0.5rem',
   },
   bmBurgerBars: {
     background: 'rgba(0,0,0,0.7)',
