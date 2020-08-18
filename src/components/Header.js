@@ -15,6 +15,9 @@ const searchIndices = [{ name: `Posts`, title: `ブログ記事`, hitComp: `Post
 
 const SiteTitle = styled.div`
   padding: 1rem 0 0.75rem 0;
+  @media (max-width: ${props => props.theme.breakpoints.phone}) {
+    padding: 0.5rem 0 0.75rem 0;
+  }
   a {
     color: ${props => props.theme.colors.grey.dark};
     display: block;
@@ -37,6 +40,7 @@ const Tagline = styled.div`
 
 const StyledContent = styled(Content)`
   text-align: center;
+  margin: 0 auto 1rem auto;
 `
 
 const StyledLogo = styled(Logo)`
@@ -67,8 +71,10 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <HamburgerMenu />
-      <Search indices={searchIndices} />
+      <div style={{ display: `flex`, justifyContent: `space-between` }}>
+        <HamburgerMenu />
+        <Search indices={searchIndices} />
+      </div>
       <StyledContent>
         <SiteTitle>
           <Link to="/" onClick={eventTracker()}>
