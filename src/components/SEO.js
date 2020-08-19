@@ -175,6 +175,7 @@ const SEO = props => {
       {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
       {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+      <meta name="google-site-verification" content="ugXDabOeIzHktqQo6ZhCRdh4EZWaMVO5-qhndwhLGDI" />
     </Helmet>
   )
 }
