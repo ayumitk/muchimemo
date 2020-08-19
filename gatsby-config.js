@@ -18,7 +18,7 @@ const cfg = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: config.googleAnalyticsID,
-        head: false,
+        head: true,
         respectDNT: true,
         pageTransitionDelay: 250,
       },
