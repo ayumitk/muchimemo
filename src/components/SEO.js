@@ -175,7 +175,17 @@ const SEO = props => {
       {!article && <script type="application/ld+json">{JSON.stringify(schemaOrgWebPage)}</script>}
       {article && <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>}
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+
       <meta name="google-site-verification" content="ugXDabOeIzHktqQo6ZhCRdh4EZWaMVO5-qhndwhLGDI" />
+      {/* Global site tag (gtag.js) - Google Analytics */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121956784-2"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-121956784-2');
+      </script>
+
     </Helmet>
   )
 }
