@@ -11,6 +11,7 @@ import * as HitComps from './HitComps'
 const SearchContainer = styled.div`
   display: flex;
   padding: 0.5rem;
+  padding-left: 0;
   form {
     flex: 1;
   }
@@ -19,13 +20,14 @@ const SearchContainer = styled.div`
     height: 1rem;
     border-radius: 1rem;
     width: -webkit-fill-available;
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 1.8rem;
-    border: solid 1px #ccc;
+    border: solid 1px #999;
+    -webkit-appearance: none;
   }
   svg {
     position: absolute;
-    left: 1rem;
+    left: 0.75rem;
     top: 50%;
     transform: translateY(-45%);
   }
