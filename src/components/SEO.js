@@ -17,7 +17,11 @@ const SEO = props => {
 
   if (article) {
     const postMeta = postNode.frontmatter
-    title = `${postMeta.title} | ${config.siteTitle}`
+    if (postMeta.category === 'vocabulary') {
+      title = `${postMeta.title} - M/Mロマンス小説（海外BL小説）原書を読むための単語帳 | ${config.siteTitle}`
+    } else {
+      title = `${postMeta.title} | ${config.siteTitle}`
+    }
     description = postMeta.description === '' ? postNode.excerpt : postMeta.description
     image = `${homeURL}${postNode.frontmatter.cardimage.childImageSharp.fluid.src}`
   } else if (page) {
