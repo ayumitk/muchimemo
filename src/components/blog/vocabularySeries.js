@@ -52,8 +52,8 @@ function VocabularySeriesMoan({ current }) {
               sob（泣きじゃくる）
             </a>
           </li>
-          <li>whine（準備中）</li>
-          <li>gasp（準備中）</li>
+          <li>gasp</li>
+          <li>whine</li>
         </ul>
         <p>他にも見つけたら随時追加しまーす</p>
       </Container>
@@ -72,6 +72,11 @@ function VocabularySeriesThink({ current }) {
               reckon（思う）
             </a>
           </li>
+          <li>guess</li>
+          <li>suppose</li>
+          <li>expect</li>
+          <li>assume</li>
+          <li>believe</li>
         </ul>
         <p>他にも見つけたら随時追加しまーす</p>
       </Container>
@@ -79,4 +84,28 @@ function VocabularySeriesThink({ current }) {
   )
 }
 
-export { VocabularySeriesMoan, VocabularySeriesThink }
+function VocabularySeriesAnal({ current }) {
+  return (
+    <>
+      <Container>
+        <h4>その他のアナルを指す単語：</h4>
+        <ul>
+          <li>
+            <a href="/vocabulary/pucker/" className={current === 'pucker' && 'current'}>
+              pucker（しわ、ひだ）
+            </a>
+          </li>
+          <li>
+            <a href="/vocabulary/clench/" className={current === 'clench' && 'current'}>
+              clench（ギュッと締め付ける）
+            </a>
+          </li>
+          <li>knot</li>
+        </ul>
+        <p>他にも見つけたら随時追加しまーす</p>
+      </Container>
+    </>
+  )
+}
+
+export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal }
