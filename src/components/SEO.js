@@ -18,7 +18,7 @@ const SEO = props => {
   if (article) {
     const postMeta = postNode.frontmatter
     if (postMeta.category === 'vocabulary') {
-      title = `${postMeta.title} - M/Mロマンス小説（海外BL小説）原書を読むための単語帳 | ${config.siteTitle}`
+      title = `${postMeta.title} - M/Mロマンス小説（海外BL）原書を読むための単語帳 | ${config.siteTitle}`
     } else {
       title = `${postMeta.title} | ${config.siteTitle}`
     }
