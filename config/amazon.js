@@ -191,6 +191,22 @@ module.exports = {
       unlimited: false,
     },
   },
+  theGig: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: 'キム･フィールディング',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B0722W3LRN',
+      title: 'The Gig',
+      url: 'https://amzn.to/31wQGKY',
+      author: 'Kim Fielding',
+      unlimited: false,
+    },
+  },
   howToHowlAtTheMoon: {
     jp: {
       asin: 'B07J67WTTM',
