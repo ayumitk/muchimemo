@@ -129,12 +129,16 @@ module.exports = {
     label: 'スラング',
     description: '',
   },
+  thinkOfEngland: {
+    label: 'イングランドを想え',
+    description: '',
+  },
   kjCharles: {
     label: 'KJ･チャールズ',
     description: '',
   },
-  thinkOfEngland: {
-    label: 'イングランドを想え',
+  speechless: {
+    label: 'Speechless',
     description: '',
   },
   kimFielding: {
