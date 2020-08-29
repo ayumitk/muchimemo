@@ -125,6 +125,10 @@ module.exports = {
     label: 'イディオム',
     description: '',
   },
+  phrasalVerb: {
+    label: '句動詞',
+    description: '',
+  },
   slang: {
     label: 'スラング',
     description: '',
