@@ -78,7 +78,7 @@ function VocabularySeriesThink({ current }) {
           <li>assume</li>
           <li>believe</li>
         </ul>
-        <p>他にも見つけたら随時追加しまーす</p>
+        <p style={{ fontSize: '0.75rem' }}>他にも見つけたら随時追加しまーす</p>
       </Container>
     </>
   )
@@ -102,10 +102,35 @@ function VocabularySeriesAnal({ current }) {
           </li>
           <li>knot</li>
         </ul>
-        <p>他にも見つけたら随時追加しまーす</p>
+        <p style={{ fontSize: '0.75rem' }}>他にも見つけたら随時追加しまーす</p>
       </Container>
     </>
   )
 }
 
-export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal }
+function VocabularySeriesPush({ current }) {
+  return (
+    <>
+      <Container>
+        <h4>その他「push」の句動詞（phrasal verb）：</h4>
+        <ul>
+          <li>
+            <a href="/vocabulary/push-up/" className={current === 'push-up' && 'current'}>
+              push up（押し上げる）
+            </a>
+          </li>
+          <li>push ahead（押し進める）</li>
+          <li>push around（こき使う）</li>
+          <li>push in（割り込む）</li>
+          <li>push off（あっちへ行け）</li>
+          <li>push on（続行する）</li>
+          <li>push out（排除する）</li>
+          <li>push over（押し倒す、ひっくり返す）</li>
+        </ul>
+        <p style={{ fontSize: '0.75rem' }}>他にも見つけたら随時追加しまーす</p>
+      </Container>
+    </>
+  )
+}
+
+export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal, VocabularySeriesPush }

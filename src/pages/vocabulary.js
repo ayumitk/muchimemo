@@ -240,19 +240,22 @@ const Vocabulary = ({ data: { allMdx } }) => {
                   全て
                 </MenuItem>
                 <MenuItem value="noun" className={classes.menuItem}>
-                  名詞
+                  名詞（noun）
                 </MenuItem>
                 <MenuItem value="adjective" className={classes.menuItem}>
-                  形容詞
+                  形容詞(adjective)
                 </MenuItem>
                 <MenuItem value="verb" className={classes.menuItem}>
-                  動詞
+                  動詞（verb）
                 </MenuItem>
                 <MenuItem value="adverb" className={classes.menuItem}>
-                  副詞
+                  副詞（adverb）
                 </MenuItem>
                 <MenuItem value="idiom" className={classes.menuItem}>
-                  イディオム
+                  イディオム（idiom）
+                </MenuItem>
+                <MenuItem value="phrasalVerb" className={classes.menuItem}>
+                  句動詞（phrasal verb）
                 </MenuItem>
               </Select>
             </FormControl>
