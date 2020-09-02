@@ -84,6 +84,31 @@ function VocabularySeriesThink({ current }) {
   )
 }
 
+function VocabularySeriesHug({ current }) {
+  return (
+    <>
+      <Container>
+        <h4>その他の「抱き締める」単語：</h4>
+        <ul>
+          <li>hug（抱き締める）</li>
+          <li>
+            <a href="/vocabulary/cuddle/" className={current === 'cuddle' && 'current'}>
+              cuddle（抱き締める）
+            </a>
+          </li>
+          <li>
+            <a href="/vocabulary/snuggle/" className={current === 'snuggle' && 'current'}>
+              snuggle（抱き締める）
+            </a>
+          </li>
+          <li>embrace（抱き締める）</li>
+        </ul>
+        <p style={{ fontSize: '0.75rem' }}>他にも見つけたら随時追加しまーす</p>
+      </Container>
+    </>
+  )
+}
+
 function VocabularySeriesAnal({ current }) {
   return (
     <>
@@ -133,4 +158,4 @@ function VocabularySeriesPush({ current }) {
   )
 }
 
-export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal, VocabularySeriesPush }
+export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal, VocabularySeriesPush, VocabularySeriesHug }
