@@ -59,13 +59,13 @@ const AllTags = () => {
     <Tags>
       {allMdx.group.map(tag => (
         <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(tag.fieldValue)}`} onClick={eventTracker(TagsConfig[tag.fieldValue].label)}>
+          <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} onClick={eventTracker(TagsConfig[tag.fieldValue].label)}>
             #{TagsConfig[tag.fieldValue].label} <span>({tag.totalCount})</span>
           </Link>
         </li>
       ))}
       <li>
-        <Link to="/tags" onClick={eventTracker('全てのタグ')}>
+        <Link to="/tags/" onClick={eventTracker('全てのタグ')}>
           全てのタグ
         </Link>
       </li>

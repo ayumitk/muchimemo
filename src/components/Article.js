@@ -250,7 +250,7 @@ const Article = ({
       <div className="post-info">
         <div className="category">
           <Link
-            to={`/category/${kebabCase(category)}`}
+            to={`/category/${kebabCase(category)}/`}
             onClick={eventTracker('Category', CategoryConfig[category].label)}
           >
             {CategoryConfig[category].label}
@@ -266,7 +266,7 @@ const Article = ({
         <div className="tags">
           {tags.map(tag => (
             <span key={tag}>
-              <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+              <Link to={`/tags/${kebabCase(tag)}/`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
                 #{TagsConfig[tag].label}
               </Link>
             </span>

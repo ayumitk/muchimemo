@@ -54,7 +54,7 @@ const AllCategories = ({ dark }) => {
       {allMdx.group.map(category => (
         <li key={category.fieldValue}>
           <Link
-            to={`/category/${kebabCase(category.fieldValue)}`}
+            to={`/category/${kebabCase(category.fieldValue)}/`}
             onClick={eventTracker(CategoryConfig[category.fieldValue].label)}
           >
             {CategoryConfig[category.fieldValue].label} <span>({category.totalCount})</span> <ChevronRight />
@@ -62,7 +62,7 @@ const AllCategories = ({ dark }) => {
         </li>
       ))}
       <li>
-        <Link to="/category" onClick={eventTracker('全てのカテゴリ')}>
+        <Link to="/category/" onClick={eventTracker('全てのカテゴリ')}>
           全てのカテゴリ <ChevronRight />
         </Link>
       </li>

@@ -238,7 +238,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
         <Content>
           <PostInfo>
             <Link
-              to={`/category/${kebabCase(post.category)}`}
+              to={`/category/${kebabCase(post.category)}/`}
               onClick={eventTracker('Category', CategoryConfig[post.category].label)}
             >
               {CategoryConfig[post.category].label}
@@ -250,7 +250,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             {post.tags &&
               post.tags.map(tag => (
                 <div key={tag}>
-                  <Link to={`/tags/${kebabCase(tag)}`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
+                  <Link to={`/tags/${kebabCase(tag)}/`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
                     #{TagsConfig[tag].label}
                   </Link>
                 </div>
@@ -263,7 +263,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
           {post.category === 'vocabulary' && (
             <div style={{ marginTop: `2.5rem` }}>
-              <Link to="/vocabulary">全ての単語•イディオム•スラングを見る→</Link>
+              <Link to="/vocabulary/">全ての単語•イディオム•スラングを見る→</Link>
             </div>
           )}
 

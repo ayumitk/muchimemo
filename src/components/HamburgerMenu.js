@@ -74,15 +74,15 @@ const HamburgerMenu = () => {
       <Link to="/" onClick={eventTracker('ホーム')}>
         <HomeAlt /> ホーム
       </Link>
-      <Link to="/about" onClick={eventTracker('このサイトについて')}>
+      <Link to="/about/" onClick={eventTracker('このサイトについて')}>
         <Info /> このサイトについて
       </Link>
-      <Link to="/contact" onClick={eventTracker('お問い合わせ')}>
+      <Link to="/contact/" onClick={eventTracker('お問い合わせ')}>
         <MailOutline /> お問い合わせ
       </Link>
       <p style={{ fontWeight: 'bold', margin: '1.5rem 0 0.5rem 0' }}>カテゴリ</p>
       <AllCategories dark />
-      <Link to="/privacy" onClick={eventTracker('プライバシーポリシー')}>
+      <Link to="/privacy/" onClick={eventTracker('プライバシーポリシー')}>
         <Key /> プライバシーポリシー
       </Link>
     </Menu>
