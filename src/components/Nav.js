@@ -74,17 +74,17 @@ const Nav = () => {
     <Wrapper>
       <Content>
         <li className="mmRomance">
-          <Link to="/category/mm-romance" onClick={eventTracker(CategoryConfig.mmRomance.label)}>
+          <Link to="/category/mm-romance/" onClick={eventTracker(CategoryConfig.mmRomance.label)}>
             {CategoryConfig.mmRomance.label}
           </Link>
         </li>
         <li className="blManga">
-          <Link to="/category/bl-manga" onClick={eventTracker(CategoryConfig.blManga.label)}>
+          <Link to="/category/bl-manga/" onClick={eventTracker(CategoryConfig.blManga.label)}>
             {CategoryConfig.blManga.label}
           </Link>
         </li>
         <li className="tvMovie">
-          <Link to="/category/tv-movie" onClick={eventTracker(CategoryConfig.tvMovie.label)}>
+          <Link to="/category/tv-movie/" onClick={eventTracker(CategoryConfig.tvMovie.label)}>
             {CategoryConfig.tvMovie.label}
           </Link>
         </li>
@@ -94,17 +94,17 @@ const Nav = () => {
           </Link>
         </li> */}
         <li className="misc">
-          <Link to="/category/misc" onClick={eventTracker(CategoryConfig.misc.label)}>
+          <Link to="/category/misc/" onClick={eventTracker(CategoryConfig.misc.label)}>
             {CategoryConfig.misc.label}
           </Link>
         </li>
         <li className="english">
-          <Link to="/category/english" onClick={eventTracker(CategoryConfig.english.label)}>
+          <Link to="/category/english/" onClick={eventTracker(CategoryConfig.english.label)}>
             {CategoryConfig.english.label}
           </Link>
         </li>
         <li className="vocabulary">
-          <Link to="/vocabulary" onClick={eventTracker(CategoryConfig.vocabulary.label)}>
+          <Link to="/vocabulary/" onClick={eventTracker(CategoryConfig.vocabulary.label)}>
             {CategoryConfig.vocabulary.label}
           </Link>
         </li>
