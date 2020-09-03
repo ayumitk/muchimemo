@@ -90,18 +90,22 @@ function VocabularySeriesHug({ current }) {
       <Container>
         <h4>その他の「抱き締める」単語：</h4>
         <ul>
-          <li>hug（抱き締める）</li>
+          <li>hug（抱く）</li>
+          <li>
+            <a href="/vocabulary/embrace/" className={current === 'embrace' && 'current'}>
+              embrace（愛情を込めて抱擁する）
+            </a>
+          </li>
           <li>
             <a href="/vocabulary/cuddle/" className={current === 'cuddle' && 'current'}>
-              cuddle（抱き締める）
+              cuddle（強く固く抱きしめ合う、イチャイチャする）
             </a>
           </li>
           <li>
             <a href="/vocabulary/snuggle/" className={current === 'snuggle' && 'current'}>
-              snuggle（抱き締める）
+              snuggle（可愛くて抱き寄せる）
             </a>
           </li>
-          <li>embrace（抱き締める）</li>
         </ul>
         <p style={{ fontSize: '0.75rem' }}>他にも見つけたら随時追加しまーす</p>
       </Container>

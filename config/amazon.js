@@ -63,6 +63,22 @@ module.exports = {
       unlimited: true,
     },
   },
+  fairGame: {
+    jp: {
+      asin: 'B00CB7WV66',
+      title: "フェア･ゲーム (All's Fair #1)",
+      url: 'https://amzn.to/2EX8ohW',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B003U89S66',
+      title: "Fair Game (All's Fair #1)",
+      url: 'https://amzn.to/31Q37BI',
+      author: 'Josh Lanyon',
+      unlimited: false,
+    },
+  },
   fairChance: {
     jp: {
       asin: 'B083NX8Q66',
