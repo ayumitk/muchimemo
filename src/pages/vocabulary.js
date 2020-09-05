@@ -230,6 +230,9 @@ const Vocabulary = ({ data: { allMdx } }) => {
                 <MenuItem value="speechless" className={classes.menuItem}>
                   Speechless
                 </MenuItem>
+                <MenuItem value="hellOrHighWater" className={classes.menuItem}>
+                  ヘル･オア･ハイウォーター
+                </MenuItem>
               </Select>
             </FormControl>
 
