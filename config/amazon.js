@@ -255,4 +255,20 @@ module.exports = {
       unlimited: true,
     },
   },
+  catchAGhost: {
+    jp: {
+      asin: 'B01BL25ADW',
+      title: '幽霊狩り (ヘル･オア･ハイウォーター #1)',
+      url: 'https://amzn.to/2F3aVr4',
+      author: 'S･E･ジェイクス',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B00F1XU31W',
+      title: 'Catch a Ghost (Hell or High Water #1)',
+      url: 'https://amzn.to/3gXCC1t',
+      author: 'SE Jakes',
+      unlimited: false,
+    },
+  },
 }

@@ -149,4 +149,8 @@ module.exports = {
     label: 'キム･フィールディング',
     description: '',
   },
+  hellOrHighWater: {
+    label: 'ヘル･オア･ハイウォーター',
+    description: '',
+  },
 }
