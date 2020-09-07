@@ -103,7 +103,7 @@ function VocabularySeriesHug({ current }) {
           </li>
           <li>
             <a href="/vocabulary/snuggle/" className={current === 'snuggle' && 'current'}>
-              snuggle（可愛くて抱き寄せる）
+              snuggle（甘えて擦り寄る、抱き寄せる）
             </a>
           </li>
         </ul>

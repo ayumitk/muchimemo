@@ -62,6 +62,42 @@ const AmazonLink = styled.div`
       border-color:#0186CD;
     }
   }
+  .btn-renta{
+    .gatsby-image-wrapper{
+      width:calc(160px * 0.375);
+      height:calc(48px * 0.375);
+    }
+    &:hover{
+      border-color:#90C31F;
+    }
+    .gatsby-image-wrapper{
+      vertical-align: text-top;
+    }
+  }
+  .btn-cmoa{
+    .gatsby-image-wrapper{
+      width:calc(104px * 0.45);
+      height:calc(46px * 0.45);
+    }
+    &:hover{
+      border-color:#E95108;
+    }
+    .gatsby-image-wrapper{
+      vertical-align: text-top;
+    }
+  }
+  .btn-ebookjapan{
+    .gatsby-image-wrapper{
+      width:calc(275px * 0.275);
+      height:calc(74px * 0.275);
+    }
+    &:hover{
+      border-color:#F8485E;
+    }
+    .gatsby-image-wrapper{
+      vertical-align: text-top;
+    }
+  }
 `
 
 const AmazonImage = styled.div`
@@ -89,6 +125,13 @@ const Author = styled.p`
   margin: 0 !important;
   font-size: ${props => props.theme.fontSize.small} !important;
   color: ${props => props.theme.colors.grey.default};
+`
+
+const Narrator = styled.p`
+  margin: 0 0 0.25rem 0 !important;
+  font-size: ${props => props.theme.fontSize.small} !important;
+  color: ${props => props.theme.colors.grey.default};
+  line-height: 1.4 !important;
 `
 
 const Kindle = styled.p`
@@ -125,6 +168,27 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
           }
         }
       }
+      renta: file(absolutePath: { regex: "/logo-renta.png/" }) {
+        childImageSharp {
+          fluid(maxWidth: 160) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      cmoa: file(absolutePath: { regex: "/logo-cmoa.png/" }) {
+        childImageSharp {
+          fluid(maxWidth: 104) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      ebookjapan: file(absolutePath: { regex: "/logo-ebookjapan.png/" }) {
+        childImageSharp {
+          fluid(maxWidth: 275) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -137,6 +201,41 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
     })
   }
   // console.log(AmazonConfig[book])
+  if (audiobook) {
+    return (
+      <>
+        {AmazonConfig[book].audiobook.url && (
+          <AmazonLink className="amazon-link">
+            <AmazonImage>
+              <img
+                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].audiobook.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                alt={`${AmazonConfig[book].en.title} 画像`}
+              />
+            </AmazonImage>
+            <AmazonInfo>
+              <ProductName>{AmazonConfig[book].en.title}</ProductName>
+              {AmazonConfig[book].en.author ? (
+                <>
+                  <Author>{`作者 : ${AmazonConfig[book].en.author}`}</Author>
+                  <Narrator>{`ナレーター : ${AmazonConfig[book].audiobook.narrator}`}</Narrator>
+                </>
+              ) : (
+                ''
+              )}
+              <a
+                href={AmazonConfig[book].audiobook.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-amazon"
+              >
+                <Image fixed={data.amazon.childImageSharp.fluid} alt="Amazonで購入する" />
+              </a>
+            </AmazonInfo>
+          </AmazonLink>
+        )}
+      </>
+    )
+  }
   if (book) {
     return (
       <>
@@ -178,6 +277,37 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
               ) : (
                 ''
               )} */}
+              {/* {AmazonConfig[book].jp.renta ? (
+                <a
+                  href={AmazonConfig[book].jp.renta}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-renta"
+                >
+                  <Image fixed={data.renta.childImageSharp.fluid} alt="Renta!で購入する" />
+                </a>
+              ) : (
+                ''
+              )} */}
+              {/* {AmazonConfig[book].jp.cmoa ? (
+                <a href={AmazonConfig[book].jp.cmoa} target="_blank" rel="noopener noreferrer" className="btn btn-cmoa">
+                  <Image fixed={data.cmoa.childImageSharp.fluid} alt="コミックシーモアで購入する" />
+                </a>
+              ) : (
+                ''
+              )}
+              {AmazonConfig[book].jp.ebookjapan ? (
+                <a
+                  href={AmazonConfig[book].jp.ebookjapan}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-ebookjapan"
+                >
+                  <Image fixed={data.ebookjapan.childImageSharp.fluid} alt="ebookjapanで購入する" />
+                </a>
+              ) : (
+                ''
+              )} */}
               {AmazonConfig[book].jp.unlimited ? (
                 <div>
                   <Kindle>Kindle Unlimited 対象作品</Kindle>
@@ -188,40 +318,42 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
             </AmazonInfo>
           </AmazonLink>
         )}
-        <AmazonLink className="amazon-link">
-          <AmazonImage>
-            <img
-              src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].en.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
-              alt={`${AmazonConfig[book].en.title} 画像`}
-            />
-          </AmazonImage>
-          <AmazonInfo>
-            <ProductName>{AmazonConfig[book].en.title}</ProductName>
-            {AmazonConfig[book].en.author ? <Author>{`作者 : ${AmazonConfig[book].en.author}`}</Author> : ''}
-            <a href={AmazonConfig[book].en.url} target="_blank" rel="noopener noreferrer" className="btn btn-amazon">
-              <Image fixed={data.amazon.childImageSharp.fluid} alt="Amazonで購入する" />
-            </a>
-            {AmazonConfig[book].en.rakuten ? (
-              <a
-                href={AmazonConfig[book].en.rakuten}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-rakuten"
-              >
-                <Image fixed={data.rakuten.childImageSharp.fluid} alt="楽天ブックスで購入する" />
+        {AmazonConfig[book].en.url && (
+          <AmazonLink className="amazon-link">
+            <AmazonImage>
+              <img
+                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].en.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                alt={`${AmazonConfig[book].en.title} 画像`}
+              />
+            </AmazonImage>
+            <AmazonInfo>
+              <ProductName>{AmazonConfig[book].en.title}</ProductName>
+              {AmazonConfig[book].en.author ? <Author>{`作者 : ${AmazonConfig[book].en.author}`}</Author> : ''}
+              <a href={AmazonConfig[book].en.url} target="_blank" rel="noopener noreferrer" className="btn btn-amazon">
+                <Image fixed={data.amazon.childImageSharp.fluid} alt="Amazonで購入する" />
               </a>
-            ) : (
-              ''
-            )}
-            {AmazonConfig[book].en.unlimited ? (
-              <div>
-                <Kindle>Kindle Unlimited 対象作品</Kindle>
-              </div>
-            ) : (
-              ''
-            )}
-          </AmazonInfo>
-        </AmazonLink>
+              {AmazonConfig[book].en.rakuten ? (
+                <a
+                  href={AmazonConfig[book].en.rakuten}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-rakuten"
+                >
+                  <Image fixed={data.rakuten.childImageSharp.fluid} alt="楽天ブックスで購入する" />
+                </a>
+              ) : (
+                ''
+              )}
+              {AmazonConfig[book].en.unlimited ? (
+                <div>
+                  <Kindle>Kindle Unlimited 対象作品</Kindle>
+                </div>
+              ) : (
+                ''
+              )}
+            </AmazonInfo>
+          </AmazonLink>
+        )}
       </>
     )
   }
