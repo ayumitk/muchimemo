@@ -38,6 +38,155 @@ module.exports = {
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F42ca0f22dab5361e88be4a0f9c339589%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
     },
+    audiobook: {
+      asin: 'B07J5QVK74',
+      url: 'https://amzn.to/2F5JOf7',
+      narrator: 'Darcy Stark',
+    },
+  },
+  collusion: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B00ZDFRJCO',
+      title: 'Collusion (Diversion #2)',
+      url: 'https://amzn.to/3h5kyTa',
+      author: 'Eden Winters',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  highwayMan: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B00LYDWC0S',
+      title: 'Highway Man',
+      url: 'https://amzn.to/3jOEZFS',
+      author: 'Eden Winters',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  drifter: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B089G68SSS',
+      title: 'Drifter',
+      url: 'https://amzn.to/3jKbPHQ',
+      author: 'Eden Winters',
+      unlimited: true,
+      rakuten: '',
+    },
+  },
+  glitterland: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B07BKTXQPG',
+      title: 'Glitterland',
+      url: 'https://amzn.to/3bxXrj9',
+      author: 'Alexis Hall',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  forReal: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B07BRD69LV',
+      title: 'For Real',
+      url: 'https://amzn.to/2ZsvO6r',
+      author: 'Alexis Hall',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  redWhiteRoyalBlue: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B07J4LPZRN',
+      title: 'Red, White & Royal Blue',
+      url: 'https://amzn.to/3jTqJfc',
+      author: 'Casey McQuiston',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  him: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B011LSLI9G',
+      title: 'Him',
+      url: 'https://amzn.to/3lU4ZS3',
+      author: 'Sarina Bowen, Elle Kennedy',
+      unlimited: true,
+      rakuten: '',
+    },
+  },
+  hisRoyalSecret: {
+    jp: {
+      asin: 'B081639HQ8',
+      title: 'ロイヤル・シークレット',
+      url: 'https://amzn.to/3i5aiLY',
+      author: 'ライラ・ペース',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B01CFBV2O4',
+      title: 'His Royal Secret',
+      url: 'https://amzn.to/2QW05G1',
+      author: 'Lilah Pace',
+      unlimited: false,
+      rakuten: '',
+    },
   },
   mermaidMurders: {
     jp: {
@@ -77,6 +226,23 @@ module.exports = {
       unlimited: true,
     },
   },
+  monumentsMenMurders: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B07R818GZ9',
+      title: 'The Monuments Men Murders (The Art of Murder #4)',
+      url: 'https://amzn.to/2BIh7Tn',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
   fairGame: {
     jp: {
       asin: 'B00CB7WV66',
@@ -97,6 +263,24 @@ module.exports = {
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fd7ee6d25152a3155a650a963de541d5e%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
     },
   },
+  fairPlay: {
+    jp: {
+      asin: 'B01MUOQTHX',
+      title: "フェア・プレイ (All's Fair #2)",
+      url: 'https://amzn.to/35bLxu6',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B00KV5Z7M0',
+      title: "Fair Play (All's Fair #2)",
+      url: 'https://amzn.to/3lUVZvV',
+      author: 'Josh Lanyon',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
   fairChance: {
     jp: {
       asin: 'B083NX8Q66',
@@ -115,6 +299,11 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Feb0ab0fa07a037e096b978a47e4ed41c%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+    },
+    audiobook: {
+      asin: 'B07GKL83HC',
+      url: 'https://amzn.to/320s8dz',
+      narrator: 'J. F. Harding',
     },
   },
   dangerousThing: {
@@ -205,6 +394,76 @@ module.exports = {
       url: 'https://amzn.to/2D8VL2M',
       author: 'Josh Lanyon',
       unlimited: true,
+    },
+  },
+  caseOfChristmas: {
+    jp: {
+      asin: 'B07J5FW3ZS',
+      title: 'クリスマスの航路',
+      url: 'https://amzn.to/2B2qxcN',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B018SVP9T4',
+      title: 'A Case of Christmas',
+      url: 'https://amzn.to/2CyLhcf',
+      author: 'Josh Lanyon',
+      unlimited: false,
+    },
+  },
+  strangerOnTheShore: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B00I15VL86',
+      title: 'Stranger on the Shore',
+      url: 'https://amzn.to/2FddLtG',
+      author: 'Josh Lanyon',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  loversAndOtherStrangers: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: false,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B0062QD68O',
+      title: 'Lovers and Other Strangers',
+      url: 'https://amzn.to/3i2OReN',
+      author: 'Josh Lanyon',
+      unlimited: false,
+      rakuten: '',
+    },
+  },
+  murderAtPiratesCove: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: '',
+      unlimited: true,
+      rakuten: '',
+    },
+    en: {
+      asin: 'B0826X61C9',
+      title: "Murder at Pirate's Cove",
+      url: 'https://amzn.to/2DyNaGV',
+      author: 'Josh Lanyon',
+      unlimited: false,
+      rakuten: '',
     },
   },
   dontLookBack: {
@@ -308,6 +567,12 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Ff33bd5abebcb3edda5dbdaabfe5e9f06%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&amp;pid=886722122&amp;vc_url=https%3A%2F%2Fwww.papy.co.jp%2Fcnt%2F%3Fac%3Da-rvaluec2cf1%26pg%3D%252Frenta%252Fsc%252Ffrm%252Fitem%252F95810%252F',
+      cmoa:
+        'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886723452&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101141410%2Fvol%2F1%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886723457&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F350836%2FA001614759%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
     },
     en: {
       asin: 'B00F1XU31W',
