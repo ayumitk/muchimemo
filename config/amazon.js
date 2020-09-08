@@ -205,6 +205,11 @@ module.exports = {
       author: 'Josh Lanyon',
       unlimited: true,
     },
+    audiobook: {
+      asin: 'B07DVCS2G7',
+      url: 'https://amzn.to/3lYAVEM',
+      narrator: 'Kale Williams',
+    },
   },
   monetMurders: {
     jp: {
@@ -306,6 +311,24 @@ module.exports = {
       narrator: 'J. F. Harding',
     },
   },
+  fatalShadows: {
+    jp: {
+      asin: 'B00KW25SO4',
+      title: '天使の影 (アドリアン･イングリッシュ #1)',
+      url: 'https://amzn.to/2R3cPuh',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: true,
+      rakuten:
+        'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F04efd478cde13e19aee9a67e647367b0%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+    },
+    en: {
+      asin: 'B007ZRH38I',
+      title: 'Fatal Shadows (The Adrien English Mysteries #1)',
+      url: 'https://amzn.to/2ZdAMUu',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
   dangerousThing: {
     jp: {
       asin: 'B00KW25SP8',
@@ -392,6 +415,22 @@ module.exports = {
       asin: 'B01N9AERR2',
       title: 'So This is Christmas (The Adrien English Mysteries #6)',
       url: 'https://amzn.to/2D8VL2M',
+      author: 'Josh Lanyon',
+      unlimited: true,
+    },
+  },
+  winterKill: {
+    jp: {
+      asin: '',
+      title: '',
+      url: '',
+      author: 'ジョシュ･ラニヨン',
+      unlimited: false,
+    },
+    en: {
+      asin: 'B00UB6FY7C',
+      title: 'Winter Kill',
+      url: 'https://amzn.to/2F5IrwX',
       author: 'Josh Lanyon',
       unlimited: true,
     },
@@ -538,6 +577,11 @@ module.exports = {
       url: 'https://amzn.to/2Y3Z6az',
       author: 'Eli Easton',
       unlimited: true,
+    },
+    audiobook: {
+      asin: 'B07DY6YW8H',
+      url: 'https://amzn.to/35dGhX2',
+      narrator: 'Matthew Shaw',
     },
   },
   howToWalkLikeAMan: {
