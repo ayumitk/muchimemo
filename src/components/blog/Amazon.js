@@ -277,7 +277,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
               ) : (
                 ''
               )} */}
-              {/* {AmazonConfig[book].jp.renta ? (
+              {AmazonConfig[book].jp.renta ? (
                 <a
                   href={AmazonConfig[book].jp.renta}
                   target="_blank"
@@ -288,7 +288,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
                 </a>
               ) : (
                 ''
-              )} */}
+              )}
               {/* {AmazonConfig[book].jp.cmoa ? (
                 <a href={AmazonConfig[book].jp.cmoa} target="_blank" rel="noopener noreferrer" className="btn btn-cmoa">
                   <Image fixed={data.cmoa.childImageSharp.fluid} alt="コミックシーモアで購入する" />

@@ -59,7 +59,7 @@ const Footer = () => {
           <AllTags />
         </Container>
         <div style={{ textAlign: 'center' }}>
-          <Link to="/contact" onClick={eventTracker('お問い合わせ')}>
+          <Link to="/contact/" onClick={eventTracker('お問い合わせ')}>
             <Button big>
               <MailOutline />
               お問い合わせ
