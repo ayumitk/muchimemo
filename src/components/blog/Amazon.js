@@ -265,7 +265,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
               ) : (
                 ''
               )}
-              {/* {AmazonConfig[book].jp.honto ? (
+              {AmazonConfig[book].jp.honto ? (
                 <a
                   href={AmazonConfig[book].jp.honto}
                   target="_blank"
@@ -276,7 +276,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
                 </a>
               ) : (
                 ''
-              )} */}
+              )}
               {AmazonConfig[book].jp.renta ? (
                 <a
                   href={AmazonConfig[book].jp.renta}
@@ -289,7 +289,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
               ) : (
                 ''
               )}
-              {/* {AmazonConfig[book].jp.cmoa ? (
+              {AmazonConfig[book].jp.cmoa ? (
                 <a href={AmazonConfig[book].jp.cmoa} target="_blank" rel="noopener noreferrer" className="btn btn-cmoa">
                   <Image fixed={data.cmoa.childImageSharp.fluid} alt="コミックシーモアで購入する" />
                 </a>
@@ -307,7 +307,7 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
                 </a>
               ) : (
                 ''
-              )} */}
+              )}
               {AmazonConfig[book].jp.unlimited ? (
                 <div>
                   <Kindle>Kindle Unlimited 対象作品</Kindle>
