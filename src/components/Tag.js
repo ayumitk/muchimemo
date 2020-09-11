@@ -35,7 +35,7 @@ function Tag({ tag }) {
     <Tags>
       {tag.map(t => (
         <li key={tag.fieldValue}>
-          <Link to={`/tags/${kebabCase(t.fieldValue)}`}>#{TagsConfig[t.fieldValue].label}</Link>
+          <Link to={`/tags/${kebabCase(t.fieldValue)}/`}>#{TagsConfig[t.fieldValue].label}</Link>
         </li>
       ))}
     </Tags>
