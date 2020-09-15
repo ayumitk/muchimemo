@@ -144,7 +144,21 @@ const Kindle = styled.p`
   color: #000;
 `
 
-function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, book }) {
+function Amazon({
+  asin,
+  title,
+  linkId,
+  author,
+  KindleUnlimited,
+  audiobook,
+  url,
+  book,
+  rakuten,
+  renta,
+  cmoa,
+  ebookjapan,
+  honto,
+}) {
   const data = useStaticQuery(graphql`
     query AmazonQuery {
       amazon: file(absolutePath: { regex: "/logo-amazon.png/" }) {
@@ -265,18 +279,6 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
               ) : (
                 ''
               )}
-              {AmazonConfig[book].jp.honto ? (
-                <a
-                  href={AmazonConfig[book].jp.honto}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-honto"
-                >
-                  <Image fixed={data.honto.childImageSharp.fluid} alt="hontoで購入する" />
-                </a>
-              ) : (
-                ''
-              )}
               {AmazonConfig[book].jp.renta ? (
                 <a
                   href={AmazonConfig[book].jp.renta}
@@ -304,6 +306,18 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
                   className="btn btn-ebookjapan"
                 >
                   <Image fixed={data.ebookjapan.childImageSharp.fluid} alt="ebookjapanで購入する" />
+                </a>
+              ) : (
+                ''
+              )}
+              {AmazonConfig[book].jp.honto ? (
+                <a
+                  href={AmazonConfig[book].jp.honto}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-honto"
+                >
+                  <Image fixed={data.honto.childImageSharp.fluid} alt="hontoで購入する" />
                 </a>
               ) : (
                 ''
@@ -372,6 +386,41 @@ function Amazon({ asin, title, linkId, author, KindleUnlimited, audiobook, url, 
           <a href={url || link} target="_blank" rel="noopener noreferrer" className="btn btn-amazon">
             <Image fixed={data.amazon.childImageSharp.fluid} alt="Amazonで購入する" />
           </a>
+          {rakuten ? (
+            <a href={rakuten} target="_blank" rel="noopener noreferrer" className="btn btn-rakuten">
+              <Image fixed={data.rakuten.childImageSharp.fluid} alt="楽天ブックスで購入する" />
+            </a>
+          ) : (
+            ''
+          )}
+          {renta ? (
+            <a href={renta} target="_blank" rel="noopener noreferrer" className="btn btn-renta">
+              <Image fixed={data.renta.childImageSharp.fluid} alt="Renta!で購入する" />
+            </a>
+          ) : (
+            ''
+          )}
+          {cmoa ? (
+            <a href={cmoa} target="_blank" rel="noopener noreferrer" className="btn btn-cmoa">
+              <Image fixed={data.cmoa.childImageSharp.fluid} alt="コミックシーモアで購入する" />
+            </a>
+          ) : (
+            ''
+          )}
+          {ebookjapan ? (
+            <a href={ebookjapan} target="_blank" rel="noopener noreferrer" className="btn btn-ebookjapan">
+              <Image fixed={data.ebookjapan.childImageSharp.fluid} alt="ebookjapanで購入する" />
+            </a>
+          ) : (
+            ''
+          )}
+          {honto ? (
+            <a href={honto} target="_blank" rel="noopener noreferrer" className="btn btn-honto">
+              <Image fixed={data.honto.childImageSharp.fluid} alt="hontoで購入する" />
+            </a>
+          ) : (
+            ''
+          )}
           {KindleUnlimited ? (
             <div>
               <Kindle>Kindle Unlimited 対象作品</Kindle>

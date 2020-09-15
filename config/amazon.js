@@ -8,6 +8,14 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fae7c5c753a6b35fe97706215f8a7a59a%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F218675%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101282317%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F597885%2FA002412805%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_30431751.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B077J4Y2BZ',
@@ -28,6 +36,14 @@ module.exports = {
       unlimited: true,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F51a421202db930a1b732fa965e05ce90%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F115942%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101161169%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F382967%2FA001685720%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_28129837.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B00LIC5J00',
@@ -601,6 +617,14 @@ module.exports = {
       unlimited: true,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F4990a1830a40363e8d98f21eff808248%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F48307%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101057702%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F262780%2FA000335142%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_26192077.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B00891DC8Y',
@@ -621,6 +645,14 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fb73d85a576943a0cab69dab2778532f7%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F95811%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101141411%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F350837%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_27726335.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B008MMXCMQ',
@@ -657,6 +689,14 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F1a3115309cbb36c7a2c54bcdc4a51275%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F176493%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101230119%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F518971%2FA002091480%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_29430927.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B00T12QQOW',
@@ -680,6 +720,14 @@ module.exports = {
       unlimited: false,
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F8bfabd82d37a3ff7b47843046ae2b4dc%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F198677%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101257824%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F563859%2FA002257876%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_29951028.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B0176KQPH8',
