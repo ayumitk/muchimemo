@@ -133,6 +133,10 @@ module.exports = {
     label: 'スラング',
     description: '',
   },
+  conjunction: {
+    label: '接続詞',
+    description: '',
+  },
   thinkOfEngland: {
     label: 'イングランドを想え',
     description: '',
