@@ -46,7 +46,8 @@ const StyledLink = styled(Link)`
     padding: 2px 4px;
     font-size: 0.625rem;
     margin-bottom: 0.25rem;
-    &.idiom {
+    &.idiom,
+    &.phrasalVerb {
       background: #f1dee4;
     }
     &.verb {
@@ -61,7 +62,8 @@ const StyledLink = styled(Link)`
     &.adverb {
       background: #e5ecd6;
     }
-    &.slang {
+    &.slang,
+    &.conjunction {
       background: #f2f2f2;
     }
   }
@@ -254,11 +256,17 @@ const Vocabulary = ({ data: { allMdx } }) => {
                 <MenuItem value="adverb" className={classes.menuItem}>
                   副詞（adverb）
                 </MenuItem>
+                <MenuItem value="conjunction" className={classes.menuItem}>
+                  接続詞（conjunction）
+                </MenuItem>
                 <MenuItem value="idiom" className={classes.menuItem}>
                   イディオム（idiom）
                 </MenuItem>
                 <MenuItem value="phrasalVerb" className={classes.menuItem}>
                   句動詞（phrasal verb）
+                </MenuItem>
+                <MenuItem value="slang" className={classes.menuItem}>
+                  スラング（slang）
                 </MenuItem>
               </Select>
             </FormControl>
