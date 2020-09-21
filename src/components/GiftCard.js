@@ -13,6 +13,7 @@ const Container = styled.div`
   padding: 1.5rem 1rem;
   text-align: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 `
 
 const Title = styled.p`

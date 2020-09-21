@@ -35,6 +35,13 @@ const Content = styled.article`
   h2 + h3 {
     margin-top: 1.75rem;
   }
+  ol {
+    margin-top: 2.5rem;
+    padding-left: 1.5rem;
+    li {
+      margin: 0.35rem 0;
+    }
+  }
 `
 
 function Page({ children }) {
