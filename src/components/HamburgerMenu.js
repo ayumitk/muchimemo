@@ -5,6 +5,7 @@ import { HomeAlt } from '@styled-icons/boxicons-regular/HomeAlt'
 import { MailOutline } from '@styled-icons/material/MailOutline'
 import { Info } from '@styled-icons/icomoon/Info'
 import { Key } from '@styled-icons/entypo/Key'
+import { HeartCircle } from '@styled-icons/boxicons-solid/HeartCircle'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
 import AllCategories from './AllCategories'
@@ -76,6 +77,9 @@ const HamburgerMenu = () => {
       </Link>
       <Link to="/about/" onClick={eventTracker('このサイトについて')}>
         <Info /> このサイトについて
+      </Link>
+      <Link to="/support/" onClick={eventTracker('サポート')}>
+        <HeartCircle /> サポート
       </Link>
       <Link to="/contact/" onClick={eventTracker('お問い合わせ')}>
         <MailOutline /> お問い合わせ
