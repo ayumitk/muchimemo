@@ -35,6 +35,14 @@ const Title = styled.h1`
 const marginLg = '2.5rem'
 
 const PostContent = styled.div`
+  span {
+    font-family: ${props => props.theme.fontFamily.sansSerif};
+    font-size: 0.687rem;
+    color: ${props => props.theme.colors.grey.light};
+    display: block;
+    line-height: 1.25;
+    margin: 0 0 0.5rem 0;
+  }
   span.thanks {
     font-size: 0.687rem;
     color: ${props => props.theme.colors.grey.light};
