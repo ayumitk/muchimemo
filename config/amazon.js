@@ -189,9 +189,9 @@ module.exports = {
   hisRoyalSecret: {
     jp: {
       asin: 'B081639HQ8',
-      title: 'ロイヤル・シークレット',
+      title: 'ロイヤル･シークレット',
       url: 'https://amzn.to/3i5aiLY',
-      author: 'ライラ・ペース',
+      author: 'ライラ･ペース',
       unlimited: false,
       rakuten: '',
     },
@@ -309,7 +309,7 @@ module.exports = {
   fairPlay: {
     jp: {
       asin: 'B01MUOQTHX',
-      title: "フェア・プレイ (All's Fair #2)",
+      title: "フェア･プレイ (All's Fair #2)",
       url: 'https://amzn.to/35bLxu6',
       author: 'ジョシュ･ラニヨン',
       unlimited: false,
