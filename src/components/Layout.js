@@ -98,14 +98,14 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
 
-  blockquote:before {
+  /* blockquote:before {
     content: "";
     position: absolute;
     background: ${props => props.theme.colors.primary};
     height: 100%;
     width: 6px;
     margin-left: -1.6rem;
-  }
+  } */
   label {
     margin-bottom: .5rem;
     color: ${props => props.theme.colors.grey.dark};
