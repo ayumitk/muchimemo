@@ -110,7 +110,7 @@ const PostContent = styled.div`
     color: ${props => props.theme.colors.grey.light};
     display: block;
     line-height: 1.25;
-    margin: 0.5rem 0 0 0;
+    margin: 1rem 0 0 0;
     font-style: normal;
   }
   small {
@@ -172,6 +172,30 @@ const PostContent = styled.div`
     @media (max-width: ${theme.breakpoints.phone}) {
       margin-top: 2rem;
     }
+  }
+  .example {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.25rem 0.75rem 1.75rem;
+    margin: ${marginLg} 0 0 0;
+    position: relative;
+    @media (max-width: ${theme.breakpoints.phone}) {
+      margin-top: 2rem;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      background: ${props => props.theme.colors.grey.default};
+      height: 100%;
+      width: 4px;
+      left: 0;
+      top: 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .example + .example {
+    margin-top: 1rem;
   }
 `
 
