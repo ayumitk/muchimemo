@@ -299,7 +299,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             </div>
           )}
 
-          {post.toc && <TableOfContents toc={tableOfContents} />}
+          {post.toc && <TableOfContents toc={tableOfContents} tocSub />}
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
@@ -373,6 +373,7 @@ export const postQuery = graphql`
           }
         }
         toc
+        tocSub
         books
         type
       }
