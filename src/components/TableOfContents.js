@@ -28,25 +28,32 @@ const StyledTableOfContents = styled.div`
   }
 `
 
-function TableOfContents({ toc }) {
-  return (
-    <>
-      {toc.items ? (
-        <StyledTableOfContents>
-          <p>この記事の目次</p>
-          <ol>
-            {toc.items.map(first => (
-              <li key={first.title}>
-                <a href={first.url}>{first.title}</a>
-              </li>
-            ))}
-          </ol>
-        </StyledTableOfContents>
-      ) : (
-        ''
-      )}
-    </>
-  )
+function TableOfContents({ toc, tocSub }) {
+  if (toc.items) {
+    return (
+      <StyledTableOfContents>
+        <p>この記事の目次</p>
+        <ol>
+          {toc.items.map(first => (
+            <li key={first.title}>
+              <a href={first.url}>{first.title}</a>
+              {first.items && tocSub ? (
+                <ol>
+                  {first.items.map(second => (
+                    <li key={second.title}>
+                      <a href={second.url}>{second.title}</a>
+                    </li>
+                  ))}
+                </ol>
+              ) : (
+                ''
+              )}
+            </li>
+          ))}
+        </ol>
+      </StyledTableOfContents>
+    )
+  }
 }
 
 export default TableOfContents
