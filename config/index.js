@@ -19,7 +19,7 @@ module.exports = {
   twitterScreenName: 'muchimemo',
   ogSiteName: 'ムチでメモ', // Facebook Site Name - Optional
   ogLanguage: 'ja_JP', // Facebook Language
-  googleAnalyticsID: 'UA-121956784-2',
+  googleAnalyticsID: 'G-WW3JCQC5ES',
 
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/
