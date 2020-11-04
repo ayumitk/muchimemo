@@ -124,7 +124,7 @@ const PinkGift = styled(Gift)`
 class GiftCard extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: 'gina.muchimemo@gmail.com', copied: false }
+    this.state = { value: 'gina@muchimemo.com', copied: false }
   }
 
   render() {
