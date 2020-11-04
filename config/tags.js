@@ -157,4 +157,8 @@ module.exports = {
     label: 'ヘル･オア･ハイウォーター',
     description: '',
   },
+  secretsAndScrabble: {
+    label: 'Secrets and Scrabble',
+    description: '',
+  },
 }
