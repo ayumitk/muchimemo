@@ -14,15 +14,15 @@ const cfg = {
   },
   plugins: [
     // google analytics
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-        head: true,
-        respectDNT: true,
-        pageTransitionDelay: 250,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: config.googleAnalyticsID,
+    //     head: true,
+    //     respectDNT: true,
+    //     pageTransitionDelay: 250,
+    //   },
+    // },
 
     `gatsby-plugin-material-ui`,
     'gatsby-plugin-react-helmet',
