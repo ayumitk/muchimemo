@@ -123,6 +123,9 @@ const PostContent = styled.div`
     padding-left: 1.5rem;
     li {
       margin: 0.35rem 0;
+      p {
+        margin: 0;
+      }
     }
   }
   table {
@@ -246,8 +249,6 @@ const PostInfo = styled.div`
 const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
   const post = postNode.frontmatter
 
-  const { tableOfContents } = postNode
-
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
   const disqusConfig = {
@@ -299,7 +300,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             </div>
           )}
 
-          {post.toc && <TableOfContents toc={tableOfContents} tocSub />}
+          {post.toc && <TableOfContents tableOfContents={postNode.tableOfContents} tocSub={post.tocSub} />}
 
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>

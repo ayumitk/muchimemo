@@ -161,4 +161,12 @@ module.exports = {
     label: 'Secrets and Scrabble',
     description: '',
   },
+  lilahPace: {
+    label: 'ライラ･ペース ',
+    description: '',
+  },
+  hisRoyalSecret: {
+    label: 'ロイヤル･シークレット',
+    description: '',
+  },
 }

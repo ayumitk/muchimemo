@@ -28,16 +28,16 @@ const StyledTableOfContents = styled.div`
   }
 `
 
-function TableOfContents({ toc, tocSub }) {
-  if (toc.items) {
+function TableOfContents({ tableOfContents, tocSub }) {
+  if (tableOfContents.items) {
     return (
       <StyledTableOfContents>
         <p>この記事の目次</p>
         <ol>
-          {toc.items.map(first => (
+          {tableOfContents.items.map(first => (
             <li key={first.title}>
               <a href={first.url}>{first.title}</a>
-              {first.items && tocSub ? (
+              {first.items && tocSub === true ? (
                 <ol>
                   {first.items.map(second => (
                     <li key={second.title}>
@@ -59,9 +59,11 @@ function TableOfContents({ toc, tocSub }) {
 export default TableOfContents
 
 TableOfContents.propTypes = {
-  toc: PropTypes.object,
+  tableOfContents: PropTypes.object,
+  tocSub: PropTypes.bool,
 }
 
 TableOfContents.defaultProps = {
-  toc: null,
+  tableOfContents: null,
+  tocSub: false,
 }

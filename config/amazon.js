@@ -193,7 +193,16 @@ module.exports = {
       url: 'https://amzn.to/3i5aiLY',
       author: 'ライラ･ペース',
       unlimited: false,
-      rakuten: '',
+      rakuten:
+        'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F71e0643c55393a8385da91d9f2a98014%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9',
+      renta:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F201371%2F%3Fref%3Dvc',
+      cmoa:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731152&vc_url=https%3A%2F%2Fwww.cmoa.jp%2Ftitle%2F1101260884%2F%3F%2F%3Fcmoa%3Ditag01%26cmoa_pg%3D125%26itag01%3D',
+      ebookjapan:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731133&vc_url=https%3A%2F%2Febookjapan.yahoo.co.jp%2Fbooks%2F568681%2FA002281157%2F%3Fdealerid%3D30064%26utm_source%3Dasp%26utm_medium%3Dvc%26utm_campaign%3Drate',
+      honto:
+        '//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731272&vc_url=https%3A%2F%2Fhonto.jp%2Febook%2Fpd_30012792.html%3Fpartnerid%3D02vc01',
     },
     en: {
       asin: 'B01CFBV2O4',
