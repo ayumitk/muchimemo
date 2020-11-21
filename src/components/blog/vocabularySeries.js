@@ -21,6 +21,33 @@ const Container = styled.div`
   }
 `
 
+function VocabularySeriesBite({ current }) {
+  return (
+    <>
+      <Container>
+        <h4>その他の「噛む」単語：</h4>
+        <ul>
+          <li>
+            <a href="/vocabulary/nibble/" className={current === 'nibble' && 'current'}>
+              nibble（少しずつかじる）
+            </a>
+          </li>
+          <li>
+            <a href="/vocabulary/nip/" className={current === 'nip' && 'current'}>
+              nip（摘むように噛む）
+            </a>
+          </li>
+          <li>bite（ガブっと噛む）</li>
+          <li>snap（パクッと噛む）</li>
+          <li>chew（もぐもぐ噛む、かみ砕く）</li>
+          <li>munch（パクパク食べる）</li>
+        </ul>
+        <p>他にも見つけたら随時追加しまーす</p>
+      </Container>
+    </>
+  )
+}
+
 function VocabularySeriesMoan({ current }) {
   return (
     <>
@@ -162,4 +189,11 @@ function VocabularySeriesPush({ current }) {
   )
 }
 
-export { VocabularySeriesMoan, VocabularySeriesThink, VocabularySeriesAnal, VocabularySeriesPush, VocabularySeriesHug }
+export {
+  VocabularySeriesMoan,
+  VocabularySeriesThink,
+  VocabularySeriesAnal,
+  VocabularySeriesPush,
+  VocabularySeriesHug,
+  VocabularySeriesBite,
+}
