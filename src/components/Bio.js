@@ -66,15 +66,9 @@ const Bio = () => {
           <br />
           カナダ、バンクーバー在住。
           <br />
-          <a
-            href="https://marshmallow-qa.com/gina_muchimemo?utm_medium=url_text&utm_source=promotion"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginRight: '0.5rem' }}
-            onClick={eventTracker('質問や感想はこちら »')}
-          >
+          <Link to="/contact/" onClick={eventTracker('質問や感想はこちら »')} style={{ marginRight: '0.5rem' }}>
             質問や感想はこちら »
-          </a>
+          </Link>
           <Link to="/support/" onClick={eventTracker('サポートはこちら »')}>
             サポートはこちら »
           </Link>
