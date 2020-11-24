@@ -8,6 +8,7 @@ module.exports = {
   },
   tvShow: { label: '海外ドラマ', description: '' },
   netflix: { label: 'Netflix', description: '' },
+  amazonPrimeVideo: { label: 'アマゾンプライムビデオ', description: '' },
   englishBook: { label: '洋書', description: '' },
   adrienEnglish: {
     label: 'アドリアン･イングリッシュ',

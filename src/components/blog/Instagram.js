@@ -6,9 +6,10 @@ function Instagram({ id }) {
   return (
     <div style={{ marginTop: '2.5rem' }}>
       <InstagramEmbed
-        url={`https://www.instagram.com/p/${id}/`}
+        url={`https://instagr.am/p/${id}/`}
+        clientAccessToken={`${process.env.GATSBY_INSTAGRAM_CLIENT_ACCESS_TOKEN}`}
         maxWidth={320}
-        hideCaption
+        hideCaption={false}
         containerTagName="div"
         protocol=""
         injectScript
