@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 
 function Instagram({ id }) {
   return (
-    <div style={{ marginTop: '2.5rem' }}>
+    <div>
+      {/* <div style={{ marginTop: '2.5rem' }}>
       <InstagramEmbed
         url={`https://instagr.am/p/${id}/`}
         clientAccessToken={`${process.env.GATSBY_INSTAGRAM_CLIENT_ACCESS_TOKEN}`}
@@ -18,6 +19,7 @@ function Instagram({ id }) {
         onAfterRender={() => {}}
         onFailure={() => {}}
       />
+    </div> */}
     </div>
   )
 }

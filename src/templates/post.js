@@ -177,12 +177,14 @@ const PostContent = styled.div`
     }
   }
   .example {
+    font-family: ${theme.fontFamily.serif};
     background: rgba(0, 0, 0, 0.05);
     padding: 1.25rem 1.25rem 0.75rem 1.75rem;
     margin: ${marginLg} 0 0 0;
     position: relative;
     @media (max-width: ${theme.breakpoints.phone}) {
       margin-top: 2rem;
+      font-size: 0.875rem;
     }
     &::before {
       content: '';
