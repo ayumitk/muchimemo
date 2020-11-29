@@ -1,57 +1,78 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import { Accordion, AccordionSummary, AccordionDetails, Typography, makeStyles } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import theme from '../../config/theme'
 
-const StyledTableOfContents = styled.div`
-  padding: 1rem;
-  margin: 2rem 0 3rem 0;
-  background: rgba(0, 0, 0, 0.05);
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    font-size: 0.937rem;
-    padding: 0.75rem;
-    margin: 0.5rem 0 2rem 0;
-  }
-  p {
-    font-weight: bold;
-    text-align: center;
-  }
-  ol {
-    margin: 0;
-    padding-left: 1.5rem;
-    li {
-      margin: 0.25rem 0;
-      list-style: none;
-      @media (max-width: ${props => props.theme.breakpoints.phone}) {
-        margin: 0.15rem 0;
-      }
-    }
-  }
-`
+const useStyles = makeStyles(() => ({
+  root: {
+    background: 'rgba(0, 0, 0, 0.05)',
+    margin: `1rem 0`,
+    '& .MuiAccordionSummary-root': {
+      justifyContent: `center`,
+      '& .MuiAccordionSummary-content': {
+        flexGrow: 0,
+      },
+    },
+    '& ol': {
+      width: `100%`,
+      margin: 0,
+      paddingLeft: `1.5rem`,
+      '& li': {
+        color: `${theme.colors.primary}`,
+        fontWeight: `bold`,
+        fontSize: `0.875rem`,
+        '& a': {
+          display: `block`,
+          color: `${theme.colors.grey.default}`,
+          padding: '0.5rem 0',
+          fontWeight: `normal`,
+          borderBottom: `solid 1px rgba(0, 0, 0, 0.1)`,
+        },
+        '& ol': {
+          listStyle: 'disc',
+          padding: `0.25rem 0 0.75rem 1rem`,
+          '& li': {
+            '& a': {
+              padding: '0.25rem 0',
+              border: 0,
+            },
+          },
+        },
+      },
+    },
+  },
+}))
 
 function TableOfContents({ tableOfContents, tocSub }) {
+  const classes = useStyles()
   if (tableOfContents.items) {
     return (
-      <StyledTableOfContents>
-        <p>この記事の目次</p>
-        <ol>
-          {tableOfContents.items.map(first => (
-            <li key={first.title}>
-              <a href={first.url}>{first.title}</a>
-              {first.items && tocSub === true ? (
-                <ol>
-                  {first.items.map(second => (
-                    <li key={second.title}>
-                      <a href={second.url}>{second.title}</a>
-                    </li>
-                  ))}
-                </ol>
-              ) : (
-                ''
-              )}
-            </li>
-          ))}
-        </ol>
-      </StyledTableOfContents>
+      <Accordion className={classes.root} defaultExpanded="true">
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Typography>この記事の目次</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <ol>
+            {tableOfContents.items.map(first => (
+              <li key={first.title}>
+                <a href={first.url}>{first.title}</a>
+                {first.items && tocSub === true ? (
+                  <ol>
+                    {first.items.map(second => (
+                      <li key={second.title}>
+                        <a href={second.url}>{second.title}</a>
+                      </li>
+                    ))}
+                  </ol>
+                ) : (
+                  ''
+                )}
+              </li>
+            ))}
+          </ol>
+        </AccordionDetails>
+      </Accordion>
     )
   }
 }
