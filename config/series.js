@@ -276,8 +276,8 @@ module.exports = [
           url: 'https://amzn.to/322rARq',
         },
         ja: {
-          title: '',
-          url: '',
+          title: '星に願いをかけるには',
+          url: 'https://amzn.to/2JnTVxV',
         },
         review: '',
       },
