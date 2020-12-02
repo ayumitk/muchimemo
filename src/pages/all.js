@@ -12,6 +12,7 @@ const AllPage = ({
     <Wrapper>
       <Content>
         <Heading>全ての記事</Heading>
+        <p>{posts.length}記事</p>
         {posts.map(post => (
           <Article
             title={post.frontmatter.title}
