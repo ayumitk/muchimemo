@@ -266,6 +266,8 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
     })
   }
 
+  const { modifiedTime } = postNode.parent
+
   return (
     <Layout customSEO>
       <Wrapper>
@@ -278,7 +280,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             >
               {CategoryConfig[post.category].label}
             </Link>
-            <p>{post.date}</p>
+            <p>最終更新日：{modifiedTime}</p>
           </PostInfo>
           <Title>{post.title}</Title>
           <Tags>
@@ -383,8 +385,7 @@ export const postQuery = graphql`
       timeToRead
       parent {
         ... on File {
-          mtime
-          birthtime
+          modifiedTime(formatString: "YYYY/MM/DD")
         }
       }
     }
