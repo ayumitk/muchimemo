@@ -251,11 +251,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: slug, title: post.title },
-  }
-
   const eventTracker = (category, label) => {
     ReactGA.event({
       category,
@@ -289,33 +284,23 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
                 </div>
               ))}
           </Tags>
-
           <div style={{ lineHeight: '0' }}>
             <Img fluid={featuredImgFluid} />
           </div>
-
           {post.category === 'vocabulary' && (
             <div style={{ marginTop: `2.5rem` }}>
               <Link to="/vocabulary/">全ての単語•イディオム•スラングを見る→</Link>
             </div>
           )}
-
           {post.toc && <TableOfContents tableOfContents={postNode.tableOfContents} tocSub={post.tocSub} />}
-
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
-
           <GiftCard post />
-
           <Marshmallow />
-
           <Bio />
-
           <RelatedPosts category={post.category} tags={post.tags && post.tags} slug={slug} sm />
-
           <PopularPosts sm />
-
           <RecentPosts sm />
         </Content>
       </Wrapper>
