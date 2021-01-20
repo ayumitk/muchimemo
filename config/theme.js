@@ -7,7 +7,7 @@ const colors = {
   grey: {
     dark: 'rgba(0, 0, 0, 0.9)',
     default: 'rgba(0, 0, 0, 0.7)',
-    light: 'rgba(0, 0, 0, 0.54)',
+    light: 'rgba(0, 0, 0, 0.55)',
     ultraLight: 'rgba(0, 0, 0, 0.2)',
   },
   white: 'white',

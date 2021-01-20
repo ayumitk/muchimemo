@@ -235,7 +235,7 @@ const PostInfo = styled.div`
     color: #fff;
     background: ${props => props.theme.colors.primary};
     padding: 0.25rem 0.75rem 0.15rem 0.75rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 1;
   }
   p {
