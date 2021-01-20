@@ -10,7 +10,6 @@ import Nav from './Nav'
 import PrevNext from './PrevNext'
 import SectionTitle from './SectionTitle'
 import SEO from './SEO'
-import Share from './Share'
 import SpotifyPlayer from './SpotifyPlayer'
 import Subline from './Subline'
 import TableOfContents from './TableOfContents'
@@ -30,7 +29,6 @@ export {
   PrevNext,
   SectionTitle,
   SEO,
-  Share,
   SpotifyPlayer,
   Subline,
   TableOfContents,

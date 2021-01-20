@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import { TwitterFollowButton } from 'react-twitter-embed'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
 import config from '../../config'
@@ -66,6 +65,9 @@ const Bio = () => {
           <br />
           カナダ、バンクーバー在住。
           <br />
+          <a href="https://twitter.com/muchimemo" rel="noopener noreferrer" target="_blank">
+            Twitter »
+          </a>
           <Link to="/contact/" onClick={eventTracker('質問や感想はこちら »')} style={{ marginRight: '0.5rem' }}>
             質問や感想はこちら »
           </Link>
@@ -73,7 +75,6 @@ const Bio = () => {
             サポートはこちら »
           </Link>
         </p>
-        <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>
     </BioContainer>
   )
