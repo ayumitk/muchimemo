@@ -20,9 +20,11 @@ const AffiliateBanner = styled.div`
   }
 `
 
+const NotesTitle = styled.p`
+  font-weight: bold;
+`
 const NotesText = styled.div`
   font-size: 0.75rem;
-  margin-top: 1.25rem;
 `
 
 const VocabularyFooter = ({ book }) => {
@@ -78,7 +80,7 @@ const VocabularyFooter = ({ book }) => {
         原書への挑戦のモチベーションにもなりますので、ぜひ、気軽に参加してみてくださいね。
       </p>
       <InternalLink slug="/mm-romance/slack/" />
-      <h4>注釈：</h4>
+      <NotesTitle>注釈：</NotesTitle>
       <NotesText>
         私はカナダのバンクーバーに住んでいますが、同じ英語でも国や地域によって使う単語や言い回しが違う可能性がありますので、ご了承ください。
         <br />
