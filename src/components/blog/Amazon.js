@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import AmazonConfig from '../../../config/amazon'
@@ -207,14 +205,7 @@ function Amazon({
   `)
 
   const link = `https://www.amazon.co.jp/gp/product/${asin}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=${asin}&linkCode=as2&tag=${affiliateId}&linkId=${linkId}&language=ja_JP`
-  const eventTracker = () => {
-    ReactGA.event({
-      category: 'Amazon Button',
-      action: globalHistory.location.pathname,
-      label: `${asin} ${title}`,
-    })
-  }
-  // console.log(AmazonConfig[book])
+
   if (audiobook) {
     return (
       <>

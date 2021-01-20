@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 import config from '../../config'
 import Nav from './Nav'
 import HamburgerMenu from './HamburgerMenu'
@@ -60,32 +58,22 @@ const HeaderContainer = styled.header`
   }
 `
 
-const Header = () => {
-  const eventTracker = () => {
-    ReactGA.event({
-      category: 'Logo',
-      action: globalHistory.location.pathname,
-      label: config.siteTitle,
-    })
-  }
-
-  return (
-    <HeaderContainer>
-      <div style={{ display: `flex`, justifyContent: `space-between` }}>
-        <HamburgerMenu />
-        <Search indices={searchIndices} />
-      </div>
-      <StyledContent>
-        <SiteTitle>
-          <Link to="/" onClick={eventTracker()}>
-            <StyledLogo />
-          </Link>
-          <Tagline>{config.siteTitleManifest}</Tagline>
-        </SiteTitle>
-      </StyledContent>
-      <Nav />
-    </HeaderContainer>
-  )
-}
+const Header = () => (
+  <HeaderContainer>
+    <div style={{ display: `flex`, justifyContent: `space-between` }}>
+      <HamburgerMenu />
+      <Search indices={searchIndices} />
+    </div>
+    <StyledContent>
+      <SiteTitle>
+        <Link to="/">
+          <StyledLogo />
+        </Link>
+        <Tagline>{config.siteTitleManifest}</Tagline>
+      </SiteTitle>
+    </StyledContent>
+    <Nav />
+  </HeaderContainer>
+)
 
 export default Header

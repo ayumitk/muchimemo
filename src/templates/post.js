@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 import { Layout, Wrapper, SEO, Bio, TableOfContents } from '../components'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
@@ -251,26 +249,13 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
-  const eventTracker = (category, label) => {
-    ReactGA.event({
-      category,
-      action: globalHistory.location.pathname,
-      label,
-    })
-  }
-
   return (
     <Layout customSEO>
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
         <Content>
           <PostInfo>
-            <Link
-              to={`/category/${kebabCase(post.category)}/`}
-              onClick={eventTracker('Category', CategoryConfig[post.category].label)}
-            >
-              {CategoryConfig[post.category].label}
-            </Link>
+            <Link to={`/category/${kebabCase(post.category)}/`}>{CategoryConfig[post.category].label}</Link>
             <p>{post.date}</p>
           </PostInfo>
           <Title>{post.title}</Title>
@@ -278,9 +263,7 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             {post.tags &&
               post.tags.map(tag => (
                 <div key={tag}>
-                  <Link to={`/tags/${kebabCase(tag)}/`} onClick={eventTracker('Tag', TagsConfig[tag].label)}>
-                    #{TagsConfig[tag].label}
-                  </Link>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>#{TagsConfig[tag].label}</Link>
                 </div>
               ))}
           </Tags>

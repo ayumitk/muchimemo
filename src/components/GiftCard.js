@@ -4,8 +4,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Gift } from '@styled-icons/boxicons-regular/Gift'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 
 const Container = styled.div`
   background: rgba(0, 0, 0, 0.075);
@@ -128,14 +126,6 @@ class GiftCard extends Component {
   }
 
   render() {
-    const eventTracker = label => {
-      ReactGA.event({
-        category: 'Support',
-        action: globalHistory.location.pathname,
-        label,
-      })
-    }
-
     const { value, copied } = this.state
     const { post } = this.props
 
@@ -163,9 +153,7 @@ class GiftCard extends Component {
               }, 3000)
             }}
           >
-            <button type="button" onClick={eventTracker('コピー')}>
-              コピー
-            </button>
+            <button type="button">コピー</button>
           </CopyToClipboard>
           <span
             style={{
@@ -179,19 +167,10 @@ class GiftCard extends Component {
 
         <Note>
           サポートはAmazonギフト券にて<strong>15円</strong>から受け付けています。上のメールアドレス宛にお送りください。
-          {post ? (
-            <Link to="/support/" onClick={eventTracker('詳しくはこちら »')}>
-              詳しくはこちら »
-            </Link>
-          ) : null}
+          {post ? <Link to="/support/">詳しくはこちら »</Link> : null}
         </Note>
 
-        <SupportButton
-          href="https://www.amazon.co.jp/dp/B06X982RQ9/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={eventTracker('Amazonギフト券でサポート')}
-        >
+        <SupportButton href="https://www.amazon.co.jp/dp/B06X982RQ9/" target="_blank" rel="noopener noreferrer">
           <Gift />
           Amazonギフト券でサポート
         </SupportButton>
