@@ -5,13 +5,11 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
-import { DiscussionEmbed } from 'disqus-react'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
-import { Layout, Wrapper, SEO, Bio, Share, TableOfContents } from '../components'
+import { Layout, Wrapper, SEO, Bio, TableOfContents } from '../components'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
-import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
@@ -315,19 +313,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
           <Bio />
 
           <RelatedPosts category={post.category} tags={post.tags && post.tags} slug={slug} sm />
-
-          <Share
-            socialConfig={{
-              twitterUsername: `${config.userTwitter}`,
-              config: {
-                url: `${config.siteUrl}${slug}`,
-                title: post.title,
-              },
-            }}
-            tags={[`${config.siteTitle}`]}
-          />
-
-          <DiscussionEmbed {...disqusConfig} />
 
           <PopularPosts sm />
 
