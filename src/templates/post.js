@@ -5,13 +5,11 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Img from 'gatsby-image'
-import { DiscussionEmbed } from 'disqus-react'
 import ReactGA from 'react-ga'
 import { globalHistory } from '@reach/router'
-import { Layout, Wrapper, SEO, Bio, Share, TableOfContents } from '../components'
+import { Layout, Wrapper, SEO, Bio, TableOfContents } from '../components'
 import CategoryConfig from '../../config/category'
 import TagsConfig from '../../config/tags'
-import config from '../../config'
 import RelatedPosts from '../components/RelatedPosts'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
@@ -253,11 +251,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
 
   const featuredImgFluid = post.featuredimage.childImageSharp.fluid
 
-  const disqusConfig = {
-    shortname: process.env.GATSBY_DISQUS_NAME,
-    config: { identifier: slug, title: post.title },
-  }
-
   const eventTracker = (category, label) => {
     ReactGA.event({
       category,
@@ -293,46 +286,23 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
                 </div>
               ))}
           </Tags>
-
           <div style={{ lineHeight: '0' }}>
             <Img fluid={featuredImgFluid} />
           </div>
-
           {post.category === 'vocabulary' && (
             <div style={{ marginTop: `2.5rem` }}>
               <Link to="/vocabulary/">全ての単語•イディオム•スラングを見る→</Link>
             </div>
           )}
-
           {post.toc && <TableOfContents tableOfContents={postNode.tableOfContents} tocSub={post.tocSub} />}
-
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
-
           <GiftCard post />
-
           <Marshmallow />
-
           <Bio />
-
           <RelatedPosts category={post.category} tags={post.tags && post.tags} slug={slug} sm />
-
-          <Share
-            socialConfig={{
-              twitterUsername: `${config.userTwitter}`,
-              config: {
-                url: `${config.siteUrl}${slug}`,
-                title: post.title,
-              },
-            }}
-            tags={[`${config.siteTitle}`]}
-          />
-
-          <DiscussionEmbed {...disqusConfig} />
-
           <PopularPosts sm />
-
           <RecentPosts sm />
         </Content>
       </Wrapper>
