@@ -2,9 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import { TwitterFollowButton } from 'react-twitter-embed'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 import config from '../../config'
 
 const BioContainer = styled.div`
@@ -36,14 +33,6 @@ const Bio = () => {
     }
   `)
 
-  const eventTracker = label => {
-    ReactGA.event({
-      category: 'Profile',
-      action: globalHistory.location.pathname,
-      label,
-    })
-  }
-
   return (
     <BioContainer>
       <div>
@@ -66,14 +55,19 @@ const Bio = () => {
           <br />
           カナダ、バンクーバー在住。
           <br />
-          <Link to="/contact/" onClick={eventTracker('質問や感想はこちら »')} style={{ marginRight: '0.5rem' }}>
+          <a
+            href="https://twitter.com/muchimemo"
+            rel="noopener noreferrer"
+            target="_blank"
+            style={{ marginRight: '0.5rem' }}
+          >
+            Twitter »
+          </a>
+          <Link to="/contact/" style={{ marginRight: '0.5rem' }}>
             質問や感想はこちら »
           </Link>
-          <Link to="/support/" onClick={eventTracker('サポートはこちら »')}>
-            サポートはこちら »
-          </Link>
+          <Link to="/support/">サポートはこちら »</Link>
         </p>
-        <TwitterFollowButton screenName={config.twitterScreenName} />
       </Info>
     </BioContainer>
   )

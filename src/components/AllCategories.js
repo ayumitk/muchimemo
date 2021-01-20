@@ -4,8 +4,6 @@ import kebabCase from 'lodash/kebabCase'
 import styled from 'styled-components'
 import { ChevronRight } from '@styled-icons/boxicons-regular/ChevronRight'
 import PropTypes from 'prop-types'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 import CategoryConfig from '../../config/category'
 
 const Categories = styled.ul`
@@ -41,28 +39,17 @@ const AllCategories = ({ dark }) => {
     `
   )
 
-  const eventTracker = label => {
-    ReactGA.event({
-      category: 'Category',
-      action: globalHistory.location.pathname,
-      label,
-    })
-  }
-
   return (
     <Categories dark={dark}>
       {allMdx.group.map(category => (
         <li key={category.fieldValue}>
-          <Link
-            to={`/category/${kebabCase(category.fieldValue)}/`}
-            onClick={eventTracker(CategoryConfig[category.fieldValue].label)}
-          >
+          <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
             {CategoryConfig[category.fieldValue].label} <span>({category.totalCount})</span> <ChevronRight />
           </Link>
         </li>
       ))}
       <li>
-        <Link to="/category/" onClick={eventTracker('全てのカテゴリ')}>
+        <Link to="/category/">
           全てのカテゴリ <ChevronRight />
         </Link>
       </li>

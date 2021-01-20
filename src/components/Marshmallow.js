@@ -2,8 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
-import ReactGA from 'react-ga'
-import { globalHistory } from '@reach/router'
 
 const MarshmallowContainer = styled.div`
   margin-top: 2rem;
@@ -58,21 +56,12 @@ const Marshmallow = () => {
     }
   `)
 
-  const eventTracker = () => {
-    ReactGA.event({
-      category: 'Marshmallow',
-      action: globalHistory.location.pathname,
-      label: 'ジーナにマシュマロを投げる',
-    })
-  }
-
   return (
     <MarshmallowContainer>
       <a
         href="https://marshmallow-qa.com/muchimemo?utm_medium=url_text&utm_source=promotion"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={eventTracker()}
       >
         <Image fixed={data.marshmallow.childImageSharp.fixed} alt="ジーナにマシュマロを投げる" />
         <h2>ジーナにマシュマロを投げる</h2>

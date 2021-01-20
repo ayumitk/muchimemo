@@ -152,10 +152,10 @@ module.exports = {
   },
   redWhiteRoyalBlue: {
     jp: {
-      asin: '',
-      title: '',
-      url: '',
-      author: '',
+      asin: '4576210068',
+      title: '赤と白とロイヤルブルー',
+      url: 'https://amzn.to/393y0GG',
+      author: 'ケイシー･マクイストン',
       unlimited: false,
       rakuten: '',
     },
