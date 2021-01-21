@@ -12,8 +12,10 @@ import Youtube from './Youtube'
 import Series from './Series'
 import EventAnnouncement from './EventAnnouncement'
 import VocabularyFooter from './VocabularyFooter'
+import AffiliateBanner from './AffiliateBanner'
 
 export {
+  AffiliateBanner,
   EventAnnouncement,
   VocabularyFooter,
   Series,
