@@ -533,9 +533,9 @@ module.exports = {
   },
   winterKill: {
     jp: {
-      asin: '',
-      title: '',
-      url: '',
+      asin: '4403560466',
+      title: 'ウィンター･キル',
+      url: 'https://amzn.to/2KEb73a',
       author: 'ジョシュ･ラニヨン',
       unlimited: false,
     },
