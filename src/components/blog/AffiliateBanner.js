@@ -32,7 +32,7 @@ const AffiliateBanner = ({ type }) => {
           }
         }
       }
-      unext: file(absolutePath: { regex: "/2792569.jpg/" }) {
+      unext: file(absolutePath: { regex: "/2792569.png/" }) {
         childImageSharp {
           fixed(width: 300, height: 250) {
             ...GatsbyImageSharpFixed
