@@ -41,7 +41,7 @@ const AffiliateBanner = ({ type }) => {
       }
     }
   `)
-  if (type === 'u-next') {
+  if (type === 'unext') {
     return (
       <>
         <Banners>
