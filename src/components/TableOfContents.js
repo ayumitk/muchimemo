@@ -56,12 +56,16 @@ function TableOfContents({ tableOfContents, tocSub }) {
           <ol>
             {tableOfContents.items.map(first => (
               <li key={first.title}>
-                <a href={first.url}>{first.title}</a>
+                <a href={first.url}>
+                  <span dangerouslySetInnerHTML={{ __html: first.title }} />
+                </a>
                 {first.items && tocSub === true ? (
                   <ol>
                     {first.items.map(second => (
                       <li key={second.title}>
-                        <a href={second.url}>{second.title}</a>
+                        <a href={second.url}>
+                          <span dangerouslySetInnerHTML={{ __html: second.title }} />
+                        </a>
                       </li>
                     ))}
                   </ol>

@@ -9,6 +9,7 @@ module.exports = {
   tvShow: { label: '海外ドラマ', description: '' },
   netflix: { label: 'Netflix', description: '' },
   amazonPrimeVideo: { label: 'アマゾンプライムビデオ', description: '' },
+  uNext: { label: 'U-NEXT', description: '' },
   englishBook: { label: '洋書', description: '' },
   adrienEnglish: {
     label: 'アドリアン･イングリッシュ',

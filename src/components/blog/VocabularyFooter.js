@@ -16,7 +16,7 @@ const NotesText = styled.div`
 const VocabularyFooter = ({ book }) => (
   <>
     <Button label="全ての単語を見る→" url="/vocabulary/" />
-    <AffiliateBanner />
+    <AffiliateBanner type="english" />
     今回、引用したのはこちらの作品。
     <Amazon book={book} />
     <p>

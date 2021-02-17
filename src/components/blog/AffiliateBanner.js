@@ -15,7 +15,7 @@ const Banners = styled.div`
   }
 `
 
-const AffiliateBanner = () => {
+const AffiliateBanner = ({ type }) => {
   const data = useStaticQuery(graphql`
     query AffiliateQuery {
       kimini: file(absolutePath: { regex: "/2844724.png/" }) {
@@ -32,8 +32,33 @@ const AffiliateBanner = () => {
           }
         }
       }
+      unext: file(absolutePath: { regex: "/2792569.jpg/" }) {
+        childImageSharp {
+          fixed(width: 300, height: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
+  if (type === 'u-next') {
+    return (
+      <>
+        <Banners>
+          <a
+            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886977687"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Img
+              fixed={data.unext.childImageSharp.fixed}
+              alt="観るのも読むのも、U-NEXTひとつ。映画/ ドラマ/ アニメから、マンガまで。最新作も見放題も、ぞくぞく配信。"
+            />
+          </a>
+        </Banners>
+      </>
+    )
+  }
   return (
     <>
       <Banners>

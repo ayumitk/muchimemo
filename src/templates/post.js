@@ -43,6 +43,26 @@ const PostContent = styled.div`
     font-size: 0.687rem;
     color: ${props => props.theme.colors.grey.light};
   }
+  [data-ruby] {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: ${props => props.theme.colors.grey.default};
+    display: inline-block;
+    margin: 0;
+  }
+  [data-ruby]::before {
+    text-align: center;
+    /* color: ${props => props.theme.colors.grey.light}; */
+    content: attr(data-ruby);
+    position: absolute;
+    top: -0.35rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0.45rem;
+    white-space: nowrap;
+  }
   img.emoji {
     height: 1em;
     width: 1em;
