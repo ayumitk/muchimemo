@@ -72,7 +72,10 @@ const PostContent = styled.div`
   hr {
     border: 0;
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
-    margin: ${marginLg} 0;
+    margin:4rem 0 -4rem 0;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin:3rem 0 -2rem 0;
+    }
   }
   h2 {
     font-size: 1.625rem;
