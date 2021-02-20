@@ -213,6 +213,24 @@ module.exports = {
       rakuten: '',
     },
   },
+  hisRoyalFavorite: {
+    jp: {
+      asin: 'B08Q351XDM',
+      title: 'ロイヤル･フェイバリット',
+      url: 'https://amzn.to/3aBjOW5',
+      author: 'ライラ･ペース',
+      unlimited: false,
+      renta:
+        'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F201371%2Ftitle%2F776044%2F%3Fref%3Dvc',
+    },
+    en: {
+      asin: 'B01CFBV34S',
+      title: 'His Royal Favorite',
+      url: 'https://amzn.to/3k6ssPB',
+      author: 'Lilah Pace',
+      unlimited: false,
+    },
+  },
   mermaidMurders: {
     jp: {
       asin: 'B07L8WN6FL',
