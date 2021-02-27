@@ -74,7 +74,7 @@ const PostContent = styled.div`
     border-bottom: 1px solid ${props => props.theme.colors.grey.ultraLight};
     margin:4rem 0 -4rem 0;
     @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      margin:3rem 0 -2rem 0;
+      margin:2rem 0 -2rem 0;
     }
   }
   h2 {
@@ -193,6 +193,12 @@ const PostContent = styled.div`
     margin-top: ${marginLg};
     @media (max-width: ${theme.breakpoints.phone}) {
       margin-top: 2rem;
+    }
+  }
+  hr + p{
+    margin-top: 6.5rem;
+    @media (max-width: ${theme.breakpoints.phone}) {
+      margin-top: 4rem;
     }
   }
   .example {

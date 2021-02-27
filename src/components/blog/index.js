@@ -13,6 +13,7 @@ import Series from './Series'
 import EventAnnouncement from './EventAnnouncement'
 import VocabularyFooter from './VocabularyFooter'
 import AffiliateBanner from './AffiliateBanner'
+import PdfDownload from './PdfDownload'
 
 export {
   AffiliateBanner,
@@ -30,4 +31,5 @@ export {
   Twitter,
   Vocabulary,
   Youtube,
+  PdfDownload,
 }
