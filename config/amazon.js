@@ -254,7 +254,7 @@ module.exports = {
       title: 'The Mermaid Murders (The Art of Murder #1)',
       url: 'https://amzn.to/3jCzevF',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
     audiobook: {
       asin: 'B07DVCS2G7',
@@ -285,7 +285,7 @@ module.exports = {
       title: 'The Monet Murders (The Art of Murder #2)',
       url: 'https://amzn.to/318TFb1',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   monumentsMenMurders: {
@@ -302,7 +302,7 @@ module.exports = {
       title: 'The Monuments Men Murders (The Art of Murder #4)',
       url: 'https://amzn.to/2BIh7Tn',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   fairGame: {
@@ -416,7 +416,7 @@ module.exports = {
       title: 'Fatal Shadows (The Adrien English Mysteries #1)',
       url: 'https://amzn.to/2ZdAMUu',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   dangerousThing: {
@@ -442,7 +442,7 @@ module.exports = {
       title: 'A Dangerous Thing (The Adrien English Mysteries #2)',
       url: 'https://amzn.to/3fZxlH5',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   hellYouSay: {
@@ -468,7 +468,7 @@ module.exports = {
       title: 'The Hell You Say (The Adrien English Mysteries #3)',
       url: 'https://amzn.to/31jaLmO',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   deathOfAPirateKing: {
@@ -494,7 +494,7 @@ module.exports = {
       title: 'Death of a Pirate King (The Adrien English Mysteries #4)',
       url: 'https://amzn.to/2EB40VA',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   darkTide: {
@@ -520,7 +520,7 @@ module.exports = {
       title: 'The Dark Tide (The Adrien English Mysteries #5)',
       url: 'https://amzn.to/2CADLOA',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   soThisIsChristmas: {
@@ -546,14 +546,14 @@ module.exports = {
       title: 'So This is Christmas (The Adrien English Mysteries #6)',
       url: 'https://amzn.to/2D8VL2M',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   winterKill: {
     jp: {
-      asin: '4403560466',
+      asin: 'B08W9688D7',
       title: 'ウィンター･キル',
-      url: 'https://amzn.to/2KEb73a',
+      url: 'https://amzn.to/2PjB89V',
       author: 'ジョシュ･ラニヨン',
       unlimited: false,
     },
@@ -562,7 +562,7 @@ module.exports = {
       title: 'Winter Kill',
       url: 'https://amzn.to/2F5IrwX',
       author: 'Josh Lanyon',
-      unlimited: true,
+      unlimited: false,
     },
   },
   caseOfChristmas: {
