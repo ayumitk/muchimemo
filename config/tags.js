@@ -8,7 +8,7 @@ module.exports = {
   },
   tvShow: { label: '海外ドラマ', description: '' },
   netflix: { label: 'Netflix', description: '' },
-  amazonPrimeVideo: { label: 'アマゾンプライムビデオ', description: '' },
+  amazonPrimeVideo: { label: 'Amazonプライムビデオ', description: '' },
   uNext: { label: 'U-NEXT', description: '' },
   englishBook: { label: '洋書', description: '' },
   adrienEnglish: {
@@ -169,6 +169,10 @@ module.exports = {
   },
   hisRoyalSecret: {
     label: 'ロイヤル･シークレット',
+    description: '',
+  },
+  grammar: {
+    label: '文法',
     description: '',
   },
 }
