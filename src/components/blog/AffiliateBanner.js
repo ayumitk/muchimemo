@@ -46,7 +46,7 @@ const AffiliateBanner = ({ type }) => {
       <>
         <Banners>
           <a
-            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886977687"
+            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886995495&vc_url=https%3A%2F%2Fvideo.unext.jp%2Ftitle%2FSID0055445%2F%3Fcid%3DD33139%26adid%3DVC1%26alp%3D1%26alpad%3D1%26alpge%3D1"
             rel="noopener noreferrer"
             target="_blank"
           >
