@@ -13,6 +13,15 @@ const cfg = {
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-WW3JCQC5ES', // Google Analytics / GA
+        ],
+      },
+    },
+
     `gatsby-plugin-material-ui`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
