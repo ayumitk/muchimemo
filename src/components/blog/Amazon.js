@@ -336,12 +336,17 @@ function Amazon({ asin, title, author, audiobook, url, book, rakuten, renta, cmo
         <AmazonInfo>
           <ProductName>{title}</ProductName>
           {author && <Author>{`作者 : ${author}`}</Author>}
-          <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primevideo">
-            <Image
-              fixed={data.primevideo.childImageSharp.fluid}
-              alt={primeVideo ? 'Amazonプライムビデオで視聴する' : 'Amazonで購入する'}
-            />
-          </a>
+
+          {primeVideo ? (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-primevideo">
+              <Image fixed={data.primevideo.childImageSharp.fluid} alt="Amazonプライムビデオで視聴する" />
+            </a>
+          ) : (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="btn btn-amazon">
+              <Image fixed={data.amazon.childImageSharp.fluid} alt="Amazonで購入する" />
+            </a>
+          )}
+
           {rakuten && (
             <a href={rakuten} target="_blank" rel="noopener noreferrer" className="btn btn-rakuten">
               <Image fixed={data.rakuten.childImageSharp.fluid} alt="楽天ブックスで購入する" />
