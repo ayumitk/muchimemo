@@ -118,6 +118,12 @@ const PostContent = styled.div`
       margin-bottom: -0.5rem;
     }
   }
+  h4 {
+    margin-bottom: -2rem;
+    @media (max-width: ${props => props.theme.breakpoints.phone}) {
+      margin-bottom: -1.5rem;
+    }
+  }
   .vocabulary + .vocabulary {
     margin-top: 1rem;
   }
