@@ -195,7 +195,8 @@ const PostContent = styled.div`
   small,
   ul,
   ol,
-  table {
+  table,
+  dl {
     margin-top: ${marginLg};
     @media (max-width: ${theme.breakpoints.phone}) {
       margin-top: 2rem;
@@ -206,6 +207,14 @@ const PostContent = styled.div`
     @media (max-width: ${theme.breakpoints.phone}) {
       margin-top: 4rem;
     }
+  }
+  dl dt{
+    font-weight: bold;
+    margin:0 0 0.25rem 0;
+    color: ${props => props.theme.colors.grey.dark};
+  }
+  dl dd{
+    margin:0 0 1.5rem 0;
   }
   .example {
     font-family: ${theme.fontFamily.serif};
