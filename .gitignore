@@ -64,7 +64,3 @@ bundle-stats.json
 .env
 .env.development
 .env.production
-
-# Design
-design/
-setup.md
