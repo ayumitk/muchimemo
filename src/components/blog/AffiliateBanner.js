@@ -39,6 +39,13 @@ const AffiliateBanner = ({ type }) => {
           }
         }
       }
+      hulu: file(absolutePath: { regex: "/2770350.png/" }) {
+        childImageSharp {
+          fixed(width: 300, height: 250) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
   if (type === 'unext') {
@@ -54,6 +61,13 @@ const AffiliateBanner = ({ type }) => {
               fixed={data.unext.childImageSharp.fixed}
               alt="観るのも読むのも、U-NEXTひとつ。映画/ ドラマ/ アニメから、マンガまで。最新作も見放題も、ぞくぞく配信。"
             />
+          </a>
+          <a
+            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=887359135&vc_url=https%3A%2F%2Fwww.hulu.jp%2Fthe-untamed"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Img fixed={data.hulu.childImageSharp.fixed} alt="Huluで今すぐ視聴！2週間無料トライアル実施中！" />
           </a>
         </Banners>
       </>
