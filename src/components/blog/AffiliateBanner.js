@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
 
 const Banners = styled.div`
   display: flex;
@@ -102,3 +103,11 @@ const AffiliateBanner = ({ type }) => {
 }
 
 export default AffiliateBanner
+
+AffiliateBanner.propTypes = {
+  type: PropTypes.string,
+}
+
+AffiliateBanner.defaultProps = {
+  type: null,
+}
