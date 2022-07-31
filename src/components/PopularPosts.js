@@ -34,7 +34,7 @@ const PopularPosts = ({ sm, grid }) => {
                 in: [
                   "/bl-manga/bl-ish-manga/"
                   "/bl-manga/historical-bl-manga/"
-                  "/mm-romance/slack/"
+                  "/mm-romance/community/"
                   "/english/vocabulary/"
                 ]
               }

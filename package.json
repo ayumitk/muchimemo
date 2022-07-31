@@ -2,7 +2,7 @@
   "name": "muchimemo",
   "description": "",
   "version": "1.0.0",
-  "author": "Gina (https://twitter.com/gina_muchimemo)",
+  "author": "Gina (https://twitter.com/muchimemo)",
   "dependencies": {
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.9.1",

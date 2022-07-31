@@ -4,6 +4,7 @@ import { RightArrowCircle } from '@styled-icons/boxicons-solid/RightArrowCircle'
 
 const Sale = styled.div`
   margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   background: #fff1f2;
   border: solid 2px #fda4af;
   padding: 1rem;

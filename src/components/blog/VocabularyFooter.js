@@ -24,7 +24,7 @@ const VocabularyFooter = ({ book }) => (
       <br />
       原書への挑戦のモチベーションにもなりますので、ぜひ、気軽に参加してみてくださいね。
     </p>
-    <InternalLink slug="/mm-romance/slack/" />
+    <InternalLink slug="/mm-romance/community/" />
     <NotesTitle>注釈：</NotesTitle>
     <NotesText>
       私はカナダのバンクーバーに住んでいますが、同じ英語でも国や地域によって使う単語や言い回しが違う可能性がありますので、ご了承ください。

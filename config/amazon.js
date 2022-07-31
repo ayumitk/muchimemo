@@ -264,11 +264,10 @@ module.exports = {
   },
   monumentsMenMurders: {
     jp: {
-      asin: '',
-      title: '',
-      url: '',
+      asin: 'B09C1MLWJH',
+      title: 'モニュメンツメン・マーダーズ (殺しのアート #4)',
+      url: 'https://amzn.to/2XqzZS0',
       author: 'ジョシュ･ラニヨン',
-      rakuten: '',
     },
     en: {
       asin: 'B07R818GZ9',
