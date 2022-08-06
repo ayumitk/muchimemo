@@ -14,7 +14,7 @@ import EventAnnouncement from './EventAnnouncement'
 import VocabularyFooter from './VocabularyFooter'
 import AffiliateBanner from './AffiliateBanner'
 import PdfDownload from './PdfDownload'
-import SaleInfo from './SaleInfo'
+import Announce from './Announce'
 
 export {
   AffiliateBanner,
@@ -33,5 +33,5 @@ export {
   Vocabulary,
   Youtube,
   PdfDownload,
-  SaleInfo,
+  Announce,
 }

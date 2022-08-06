@@ -14,7 +14,6 @@ import RecentPosts from '../components/RecentPosts'
 import Marshmallow from '../components/Marshmallow'
 import theme from '../../config/theme'
 import GiftCard from '../components/GiftCard'
-// import SaleInfo from '../components/blog/SaleInfo'
 
 const Content = styled.article`
   max-width: 680px;
@@ -321,7 +320,6 @@ const Post = ({ pageContext: { slug }, data: { mdx: postNode } }) => {
             </div>
           )}
           {post.toc && <TableOfContents tableOfContents={postNode.tableOfContents} tocSub={post.tocSub} />}
-          {/* <SaleInfo /> */}
           <PostContent>
             <MDXRenderer>{postNode.body}</MDXRenderer>
           </PostContent>
