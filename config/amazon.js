@@ -3,7 +3,7 @@ module.exports = {
     jp: {
       asin: 'B08CK9CLQM',
       title: 'イングランドを想え',
-      url: 'https://amzn.to/2D5Kq2W',
+      url: 'https://www.amazon.co.jp/dp/B08CK9CLQM?tag=muchimemo-22',
       author: 'KJ･チャールズ',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fae7c5c753a6b35fe97706215f8a7a59a%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -19,7 +19,7 @@ module.exports = {
     en: {
       asin: 'B077J4Y2BZ',
       title: 'Think of England',
-      url: 'https://amzn.to/2By9uQ0',
+      url: 'https://www.amazon.co.jp/dp/B077J4Y2BZ?tag=muchimemo-22',
       author: 'KJ Charles',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F7d9e84d0a37d3350ac053a683ede958a%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -29,7 +29,7 @@ module.exports = {
     jp: {
       asin: 'B01LZ2CASG',
       title: '還流 (ドラッグ･チェイス #1)',
-      url: 'https://amzn.to/2Dq3WY6',
+      url: 'https://www.amazon.co.jp/dp/B01LZ2CASG?tag=muchimemo-22',
       author: 'エデン･ウィンターズ',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F51a421202db930a1b732fa965e05ce90%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -45,14 +45,14 @@ module.exports = {
     en: {
       asin: 'B00LIC5J00',
       title: 'Diversion (Diversion #1)',
-      url: 'https://amzn.to/33hyh6a',
+      url: 'https://www.amazon.co.jp/dp/B00LIC5J00?tag=muchimemo-22',
       author: 'Eden Winters',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F42ca0f22dab5361e88be4a0f9c339589%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
     },
     audiobook: {
       asin: 'B07J5QVK74',
-      url: 'https://amzn.to/2F5JOf7',
+      url: 'https://www.amazon.co.jp/dp/B07J5QVK74?tag=muchimemo-22',
       narrator: 'Darcy Stark',
     },
   },
@@ -67,7 +67,7 @@ module.exports = {
     en: {
       asin: 'B00ZDFRJCO',
       title: 'Collusion (Diversion #2)',
-      url: 'https://amzn.to/3h5kyTa',
+      url: 'https://www.amazon.co.jp/dp/B00ZDFRJCO?tag=muchimemo-22',
       author: 'Eden Winters',
       rakuten: '',
     },
@@ -83,7 +83,7 @@ module.exports = {
     en: {
       asin: 'B00LYDWC0S',
       title: 'Highway Man',
-      url: 'https://amzn.to/3jOEZFS',
+      url: 'https://www.amazon.co.jp/dp/B00LYDWC0S?tag=muchimemo-22',
       author: 'Eden Winters',
       rakuten: '',
     },
@@ -99,7 +99,7 @@ module.exports = {
     en: {
       asin: 'B089G68SSS',
       title: 'Drifter',
-      url: 'https://amzn.to/3jKbPHQ',
+      url: 'https://www.amazon.co.jp/dp/B089G68SSS?tag=muchimemo-22',
       author: 'Eden Winters',
       rakuten: '',
     },
@@ -115,7 +115,7 @@ module.exports = {
     en: {
       asin: 'B07BKTXQPG',
       title: 'Glitterland',
-      url: 'https://amzn.to/3bxXrj9',
+      url: '',
       author: 'Alexis Hall',
       rakuten: '',
     },
@@ -131,7 +131,7 @@ module.exports = {
     en: {
       asin: 'B07BRD69LV',
       title: 'For Real',
-      url: 'https://amzn.to/2ZsvO6r',
+      url: 'https://www.amazon.co.jp/dp/B07BRD69LV?tag=muchimemo-22',
       author: 'Alexis Hall',
       rakuten: '',
     },
@@ -140,14 +140,14 @@ module.exports = {
     jp: {
       asin: '4576210068',
       title: '赤と白とロイヤルブルー',
-      url: 'https://amzn.to/393y0GG',
+      url: 'https://www.amazon.co.jp/dp/B08YNJVHS7?tag=muchimemo-22',
       author: 'ケイシー･マクイストン',
       rakuten: '',
     },
     en: {
       asin: 'B07J4LPZRN',
       title: 'Red, White & Royal Blue',
-      url: 'https://amzn.to/3jTqJfc',
+      url: 'https://www.amazon.co.jp/dp/B07J4LPZRN?tag=muchimemo-22',
       author: 'Casey McQuiston',
       rakuten: '',
     },
@@ -163,7 +163,7 @@ module.exports = {
     en: {
       asin: 'B011LSLI9G',
       title: 'Him',
-      url: 'https://amzn.to/3lU4ZS3',
+      url: 'https://www.amazon.co.jp/dp/B011LSLI9G?tag=muchimemo-22',
       author: 'Sarina Bowen, Elle Kennedy',
       rakuten: '',
     },
@@ -172,7 +172,7 @@ module.exports = {
     jp: {
       asin: 'B081639HQ8',
       title: 'ロイヤル･シークレット',
-      url: 'https://amzn.to/3i5aiLY',
+      url: 'https://www.amazon.co.jp/dp/B081639HQ8?tag=muchimemo-22',
       author: 'ライラ･ペース',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F71e0643c55393a8385da91d9f2a98014%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9',
@@ -188,7 +188,7 @@ module.exports = {
     en: {
       asin: 'B01CFBV2O4',
       title: 'His Royal Secret',
-      url: 'https://amzn.to/2QW05G1',
+      url: 'https://www.amazon.co.jp/dp/B01CFBV2O4?tag=muchimemo-22',
       author: 'Lilah Pace',
       rakuten: '',
     },
@@ -197,7 +197,7 @@ module.exports = {
     jp: {
       asin: 'B08Q351XDM',
       title: 'ロイヤル･フェイバリット',
-      url: 'https://amzn.to/3aBjOW5',
+      url: 'https://www.amazon.co.jp/dp/B08Q351XDM?tag=muchimemo-22',
       author: 'ライラ･ペース',
       renta:
         'https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886731192&vc_url=https%3A%2F%2Frenta.papy.co.jp%2Frenta%2Fsc%2Ffrm%2Fitem%2F201371%2Ftitle%2F776044%2F%3Fref%3Dvc',
@@ -205,7 +205,7 @@ module.exports = {
     en: {
       asin: 'B01CFBV34S',
       title: 'His Royal Favorite',
-      url: 'https://amzn.to/3k6ssPB',
+      url: 'https://www.amazon.co.jp/dp/B01CFBV34S?tag=muchimemo-22',
       author: 'Lilah Pace',
     },
   },
@@ -213,7 +213,7 @@ module.exports = {
     jp: {
       asin: 'B07L8WN6FL',
       title: 'マーメイド･マーダーズ (殺しのアート #1)',
-      url: 'https://amzn.to/30Jnz5z',
+      url: 'https://www.amazon.co.jp/dp/B07L8WN6FL?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F157fc3147bfd3ae59358257d59d7b570%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -229,12 +229,12 @@ module.exports = {
     en: {
       asin: 'B018UJ80EA',
       title: 'The Mermaid Murders (The Art of Murder #1)',
-      url: 'https://amzn.to/3jCzevF',
+      url: 'https://www.amazon.co.jp/dp/B018UJ80EA?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
     audiobook: {
       asin: 'B07DVCS2G7',
-      url: 'https://amzn.to/3lYAVEM',
+      url: 'https://www.amazon.co.jp/dp/B07DVCS2G7?tag=muchimemo-22',
       narrator: 'Kale Williams',
     },
   },
@@ -242,7 +242,7 @@ module.exports = {
     jp: {
       asin: 'B082H6P92M',
       title: 'モネ･マーダーズ (殺しのアート #2)',
-      url: 'https://amzn.to/39NkkOA',
+      url: 'https://www.amazon.co.jp/dp/B082H6P92M?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F011087e602b6373098d94c425a9413d7%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -258,7 +258,7 @@ module.exports = {
     en: {
       asin: 'B01MYC6ZOZ',
       title: 'The Monet Murders (The Art of Murder #2)',
-      url: 'https://amzn.to/318TFb1',
+      url: 'https://www.amazon.co.jp/dp/B01MYC6ZOZ?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -266,13 +266,13 @@ module.exports = {
     jp: {
       asin: 'B09C1MLWJH',
       title: 'モニュメンツメン・マーダーズ (殺しのアート #4)',
-      url: 'https://amzn.to/2XqzZS0',
+      url: 'https://www.amazon.co.jp/dp/B09C1MLWJH?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
     },
     en: {
       asin: 'B07R818GZ9',
       title: 'The Monuments Men Murders (The Art of Murder #4)',
-      url: 'https://amzn.to/2BIh7Tn',
+      url: 'https://www.amazon.co.jp/dp/B07R818GZ9?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -280,7 +280,7 @@ module.exports = {
     jp: {
       asin: 'B00CB7WV66',
       title: "フェア･ゲーム (All's Fair #1)",
-      url: 'https://amzn.to/2EX8ohW',
+      url: 'https://www.amazon.co.jp/dp/B00CB7WV66?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F67213bea8a99318b9c1a18eb7084707e%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
