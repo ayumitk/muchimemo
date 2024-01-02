@@ -49,57 +49,58 @@ const AffiliateBanner = ({ type }) => {
       }
     }
   `)
-  if (type === 'unext') {
-    return (
-      <>
-        <Banners>
-          <a
-            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886995495&vc_url=https%3A%2F%2Fvideo.unext.jp%2Ftitle%2FSID0055445%2F%3Fcid%3DD33139%26adid%3DVC1%26alp%3D1%26alpad%3D1%26alpge%3D1"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Img
-              fixed={data.unext.childImageSharp.fixed}
-              alt="観るのも読むのも、U-NEXTひとつ。映画/ ドラマ/ アニメから、マンガまで。最新作も見放題も、ぞくぞく配信。"
-            />
-          </a>
-          <a
-            href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=887359135&vc_url=https%3A%2F%2Fwww.hulu.jp%2Fthe-untamed"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <Img fixed={data.hulu.childImageSharp.fixed} alt="Huluで今すぐ視聴！2週間無料トライアル実施中！" />
-          </a>
-        </Banners>
-      </>
-    )
-  }
-  return (
-    <>
-      <Banners>
-        <a
-          href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886938238"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Img
-            fixed={data.studysapuri.childImageSharp.fixed}
-            alt="毎日楽しく続けられる日常英会話学習アプリ｜スタディサプリENGLISH"
-          />
-        </a>
-        <a
-          href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886938236"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Img
-            fixed={data.kimini.childImageSharp.fixed}
-            alt="学研のKiminiオンライン英会話｜月々5,480円からはじめられる英語学習"
-          />
-        </a>
-      </Banners>
-    </>
-  )
+  // if (type === 'unext') {
+  //   return (
+  //     <>
+  //       <Banners>
+  //         <a
+  //           href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886995495&vc_url=https%3A%2F%2Fvideo.unext.jp%2Ftitle%2FSID0055445%2F%3Fcid%3DD33139%26adid%3DVC1%26alp%3D1%26alpad%3D1%26alpge%3D1"
+  //           rel="noopener noreferrer"
+  //           target="_blank"
+  //         >
+  //           <Img
+  //             fixed={data.unext.childImageSharp.fixed}
+  //             alt="観るのも読むのも、U-NEXTひとつ。映画/ ドラマ/ アニメから、マンガまで。最新作も見放題も、ぞくぞく配信。"
+  //           />
+  //         </a>
+  //         <a
+  //           href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=887359135&vc_url=https%3A%2F%2Fwww.hulu.jp%2Fthe-untamed"
+  //           rel="noopener noreferrer"
+  //           target="_blank"
+  //         >
+  //           <Img fixed={data.hulu.childImageSharp.fixed} alt="Huluで今すぐ視聴！2週間無料トライアル実施中！" />
+  //         </a>
+  //       </Banners>
+  //     </>
+  //   )
+  // }
+  // return (
+  //   <>
+  //     <Banners>
+  //       <a
+  //         href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886938238"
+  //         rel="noopener noreferrer"
+  //         target="_blank"
+  //       >
+  //         <Img
+  //           fixed={data.studysapuri.childImageSharp.fixed}
+  //           alt="毎日楽しく続けられる日常英会話学習アプリ｜スタディサプリENGLISH"
+  //         />
+  //       </a>
+  //       <a
+  //         href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3549505&pid=886938236"
+  //         rel="noopener noreferrer"
+  //         target="_blank"
+  //       >
+  //         <Img
+  //           fixed={data.kimini.childImageSharp.fixed}
+  //           alt="学研のKiminiオンライン英会話｜月々5,480円からはじめられる英語学習"
+  //         />
+  //       </a>
+  //     </Banners>
+  //   </>
+  // )
+  return <div />
 }
 
 export default AffiliateBanner
