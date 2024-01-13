@@ -6,11 +6,11 @@ module.exports = [
         id: 1,
         en: {
           title: 'Diversion',
-          url: 'https://amzn.to/2QJkVcO',
+          url: 'https://www.amazon.co.jp/dp/B00LIC5J00?tag=muchimemo-22',
         },
         ja: {
           title: '還流',
-          url: 'https://amzn.to/2D5qDO0',
+          url: 'https://www.amazon.co.jp/dp/B01LZ2CASG?tag=muchimemo-22',
         },
         review: 'diversion',
       },
@@ -18,11 +18,11 @@ module.exports = [
         id: 2,
         en: {
           title: 'Collusion',
-          url: 'https://amzn.to/2OaQASu',
+          url: 'https://www.amazon.co.jp/dp/B00ZDFRJCO?tag=muchimemo-22',
         },
         ja: {
-          title: '',
-          url: '',
+          title: '密計',
+          url: 'https://www.amazon.co.jp/dp/B0C7GBYJK4?tag=muchimemo-22',
         },
         review: 'collusion',
       },
@@ -30,7 +30,7 @@ module.exports = [
         id: 3,
         en: {
           title: 'Corruption',
-          url: 'https://amzn.to/2XBAynQ',
+          url: 'https://www.amazon.co.jp/dp/B00FJJKFXY?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -42,7 +42,7 @@ module.exports = [
         id: 4,
         en: {
           title: 'Manipulation',
-          url: 'https://amzn.to/2XESYnC',
+          url: 'https://www.amazon.co.jp/dp/B00OWHYXNW?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -54,7 +54,7 @@ module.exports = [
         id: 5,
         en: {
           title: 'Redemption',
-          url: 'https://amzn.to/35oeccf',
+          url: 'https://www.amazon.co.jp/dp/B012XXT5TI?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -66,7 +66,7 @@ module.exports = [
         id: 6,
         en: {
           title: 'Reunion',
-          url: 'https://amzn.to/2pGCgrx',
+          url: 'https://www.amazon.co.jp/dp/B07483PVDF?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -78,7 +78,7 @@ module.exports = [
         id: 7,
         en: {
           title: 'Suspicion',
-          url: 'https://amzn.to/2pDAVlg',
+          url: 'https://www.amazon.co.jp/dp/B07LDYVBTV?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -90,7 +90,7 @@ module.exports = [
         id: 7.1,
         en: {
           title: 'Relation',
-          url: 'https://amzn.to/2rlHhXd',
+          url: 'https://www.amazon.co.jp/dp/B081LFRLFW?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -114,7 +114,19 @@ module.exports = [
         id: 8,
         en: {
           title: 'Decision',
-          url: 'https://amzn.to/2LdQFmc',
+          url: 'https://www.amazon.co.jp/dp/B084T1DGBH?tag=muchimemo-22',
+        },
+        ja: {
+          title: '',
+          url: '',
+        },
+        review: '',
+      },
+      {
+        id: 9,
+        en: {
+          title: 'Benediction',
+          url: 'https://www.amazon.co.jp/dp/B08R3T3L1W?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -131,11 +143,11 @@ module.exports = [
         id: 1,
         en: {
           title: 'Fatal Shadows',
-          url: 'https://amzn.to/31Z2V0I',
+          url: 'https://www.amazon.co.jp/dp/B007ZRH38I?tag=muchimemo-22',
         },
         ja: {
           title: '天使の影',
-          url: 'https://amzn.to/2Vt6k5C',
+          url: 'https://www.amazon.co.jp/dp/B00KW25SO4?tag=muchimemo-22',
         },
         review: 'fatal-shadow',
       },
@@ -143,11 +155,11 @@ module.exports = [
         id: 2,
         en: {
           title: 'A Dangerous Thing',
-          url: 'https://amzn.to/2MlInJb',
+          url: 'https://www.amazon.co.jp/dp/B0081C8RU4?tag=muchimemo-22',
         },
         ja: {
           title: '死者の囁き',
-          url: 'https://amzn.to/30VMssI',
+          url: 'https://www.amazon.co.jp/dp/B00KW25SP8?tag=muchimemo-22',
         },
         review: 'a-dangerous-thing',
       },
@@ -155,11 +167,11 @@ module.exports = [
         id: 3,
         en: {
           title: 'The Hell You Say',
-          url: 'https://amzn.to/30RwhN1',
+          url: 'https://www.amazon.co.jp/dp/B006LNC468?tag=muchimemo-22',
         },
         ja: {
           title: '悪魔の聖餐',
-          url: 'https://amzn.to/2ASNbAk',
+          url: 'https://www.amazon.co.jp/dp/B00N8RVP24?tag=muchimemo-22',
         },
         review: '',
       },
@@ -167,11 +179,11 @@ module.exports = [
         id: 4,
         en: {
           title: 'Death of a Pirate King',
-          url: 'https://amzn.to/31XWsTC',
+          url: 'https://www.amazon.co.jp/dp/B0067QUX9E?tag=muchimemo-22',
         },
         ja: {
           title: '海賊王の死',
-          url: 'https://amzn.to/30Z71Vv',
+          url: 'https://www.amazon.co.jp/dp/B00U6WBU2E?tag=muchimemo-22',
         },
         review: '',
       },
@@ -179,11 +191,11 @@ module.exports = [
         id: 5,
         en: {
           title: 'The Dark Tide',
-          url: 'https://amzn.to/2pLVtHZ',
+          url: 'https://www.amazon.co.jp/dp/B006N9XHLQ?tag=muchimemo-22',
         },
         ja: {
           title: '瞑き流れ',
-          url: 'https://amzn.to/2nu0Qei',
+          url: 'https://www.amazon.co.jp/dp/B01BL25AEG?tag=muchimemo-22',
         },
         review: '',
       },
@@ -191,11 +203,11 @@ module.exports = [
         id: 6,
         en: {
           title: 'So This is Christmas',
-          url: 'https://amzn.to/2pLZjkm',
+          url: 'https://www.amazon.co.jp/dp/B01N9AERR2?tag=muchimemo-22',
         },
         ja: {
           title: 'So This is Christmas',
-          url: 'https://amzn.to/2Itywjk',
+          url: 'https://www.amazon.co.jp/dp/B077ZGFZ7S?tag=muchimemo-22',
         },
         review: '',
       },
@@ -208,11 +220,11 @@ module.exports = [
         id: 1,
         en: {
           title: 'Fair Game',
-          url: 'https://amzn.to/2Iy6eEw',
+          url: 'https://www.amazon.co.jp/dp/B003U89S66?tag=muchimemo-22',
         },
         ja: {
           title: 'フェア･ゲーム',
-          url: 'https://amzn.to/2LUUjT8',
+          url: 'https://www.amazon.co.jp/dp/B00CB7WV66?tag=muchimemo-22',
         },
         review: 'fair-game',
       },
@@ -220,11 +232,11 @@ module.exports = [
         id: 2,
         en: {
           title: 'Fair Play',
-          url: 'https://amzn.to/2Vp1juz',
+          url: 'https://www.amazon.co.jp/dp/B00KV5Z7M0?tag=muchimemo-22',
         },
         ja: {
           title: 'フェア･プレイ',
-          url: 'https://amzn.to/33dMBJB',
+          url: 'https://www.amazon.co.jp/dp/B01MUOQTHX?tag=muchimemo-22',
         },
         review: 'fair-play',
       },
@@ -232,11 +244,11 @@ module.exports = [
         id: 3,
         en: {
           title: 'Fair Chance',
-          url: 'https://amzn.to/2ooj0hO',
+          url: 'https://www.amazon.co.jp/dp/B01MSLD8L2?tag=muchimemo-22',
         },
         ja: {
           title: 'フェア･チャンス',
-          url: 'https://amzn.to/2QJeztx',
+          url: 'https://www.amazon.co.jp/dp/B083NX8Q66?tag=muchimemo-22',
         },
         review: 'fair-chance',
       },
@@ -249,11 +261,11 @@ module.exports = [
         id: 1,
         en: {
           title: 'How to Howl at the Moon',
-          url: 'https://amzn.to/337bozH',
+          url: 'https://www.amazon.co.jp/dp/B00T12QQOW?tag=muchimemo-22',
         },
         ja: {
           title: '月への吠えかた教えます',
-          url: 'https://amzn.to/31V79pn',
+          url: 'https://www.amazon.co.jp/dp/B07J67WTTM?tag=muchimemo-22',
         },
         review: 'how-to-howl-at-the-moon',
       },
@@ -261,11 +273,11 @@ module.exports = [
         id: 2,
         en: {
           title: 'How to Walk Like a Man',
-          url: 'https://amzn.to/2MUOfdO',
+          url: 'https://www.amazon.co.jp/dp/B0176KQPH8?tag=muchimemo-22',
         },
         ja: {
           title: 'ヒトの世界の歩きかた',
-          url: 'https://amzn.to/2Pt8PUw',
+          url: 'https://www.amazon.co.jp/dp/B07YXLFLG9?tag=muchimemo-22',
         },
         review: 'how-to-walk-like-a-man',
       },
@@ -273,11 +285,11 @@ module.exports = [
         id: 3,
         en: {
           title: 'How to Wish Upon a Star',
-          url: 'https://amzn.to/322rARq',
+          url: 'https://www.amazon.co.jp/dp/B01FISHWJK?tag=muchimemo-22',
         },
         ja: {
           title: '星に願いをかけるには',
-          url: 'https://amzn.to/2JnTVxV',
+          url: 'https://www.amazon.co.jp/dp/B08MW9PG12?tag=muchimemo-22',
         },
         review: '',
       },
@@ -285,7 +297,7 @@ module.exports = [
         id: 4,
         en: {
           title: 'How to Save a Life',
-          url: 'https://amzn.to/2JxRFRH',
+          url: 'https://www.amazon.co.jp/dp/B0751ZW6XG?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -297,7 +309,7 @@ module.exports = [
         id: 5,
         en: {
           title: 'How To Run With The Wolves',
-          url: 'https://amzn.to/2ovLjLo',
+          url: 'https://www.amazon.co.jp/dp/B07VD891ZV?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -314,11 +326,11 @@ module.exports = [
         id: 1,
         en: {
           title: 'The Mermaid Murders',
-          url: 'https://amzn.to/30XRBAx',
+          url: 'https://www.amazon.co.jp/dp/B018UJ80EA?tag=muchimemo-22',
         },
         ja: {
           title: 'マーメイド･マーダーズ',
-          url: 'https://amzn.to/2IDWJDJ',
+          url: 'https://www.amazon.co.jp/dp/B07L8WN6FL?tag=muchimemo-22',
         },
         review: 'the-mermaid-murders',
       },
@@ -326,11 +338,11 @@ module.exports = [
         id: 2,
         en: {
           title: 'The Monet Murders',
-          url: 'https://amzn.to/2IBmvZp',
+          url: 'https://www.amazon.co.jp/dp/B01MYC6ZOZ?tag=muchimemo-22',
         },
         ja: {
           title: 'モネ･マーダーズ',
-          url: 'https://amzn.to/2EtBEJD',
+          url: 'https://www.amazon.co.jp/dp/B082H6P92M?tag=muchimemo-22',
         },
         review: 'the-monet-murders',
       },
@@ -338,7 +350,7 @@ module.exports = [
         id: 3,
         en: {
           title: 'The Magician Murders',
-          url: 'https://amzn.to/33hGiow',
+          url: 'https://www.amazon.co.jp/dp/B07C9TM55R?tag=muchimemo-22',
         },
         ja: {
           title: '',
@@ -350,7 +362,7 @@ module.exports = [
         id: 4,
         en: {
           title: 'The Monuments Men Murders',
-          url: 'https://amzn.to/313zaKV',
+          url: 'https://www.amazon.co.jp/dp/B07R818GZ9?tag=muchimemo-22',
         },
         ja: {
           title: '',

@@ -296,7 +296,7 @@ module.exports = {
     en: {
       asin: 'B003U89S66',
       title: "Fair Game (All's Fair #1)",
-      url: 'https://amzn.to/31Q37BI',
+      url: 'https://www.amazon.co.jp/dp/B003U89S66?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fd7ee6d25152a3155a650a963de541d5e%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -306,7 +306,7 @@ module.exports = {
     jp: {
       asin: 'B01MUOQTHX',
       title: "フェア･プレイ (All's Fair #2)",
-      url: 'https://amzn.to/35bLxu6',
+      url: 'https://www.amazon.co.jp/dp/B01MUOQTHX?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fe3330763ba743f15b2f198e569cd025d%2F&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -322,7 +322,7 @@ module.exports = {
     en: {
       asin: 'B00KV5Z7M0',
       title: "Fair Play (All's Fair #2)",
-      url: 'https://amzn.to/3lUVZvV',
+      url: 'https://www.amazon.co.jp/dp/B00KV5Z7M0?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten: '',
     },
@@ -331,7 +331,7 @@ module.exports = {
     jp: {
       asin: 'B083NX8Q66',
       title: "フェア･チャンス (All's Fair #3)",
-      url: 'https://amzn.to/3fZ7iQk',
+      url: 'https://www.amazon.co.jp/dp/B083NX8Q66?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F460b33c110e03018948ae59b8720ca97%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -347,14 +347,14 @@ module.exports = {
     en: {
       asin: 'B01MSLD8L2',
       title: "Fair Chance (All's Fair #3)",
-      url: 'https://amzn.to/3eXoTXz',
+      url: 'https://www.amazon.co.jp/dp/B01MSLD8L2?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Feb0ab0fa07a037e096b978a47e4ed41c%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
     },
     audiobook: {
       asin: 'B07GKL83HC',
-      url: 'https://amzn.to/320s8dz',
+      url: 'https://www.amazon.co.jp/dp/B07GKL83HC?tag=muchimemo-22',
       narrator: 'J. F. Harding',
     },
   },
@@ -362,7 +362,7 @@ module.exports = {
     jp: {
       asin: 'B00KW25SO4',
       title: '天使の影 (アドリアン･イングリッシュ #1)',
-      url: 'https://amzn.to/2R3cPuh',
+      url: 'https://www.amazon.co.jp/dp/B00KW25SO4?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F04efd478cde13e19aee9a67e647367b0%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -378,7 +378,7 @@ module.exports = {
     en: {
       asin: 'B007ZRH38I',
       title: 'Fatal Shadows (The Adrien English Mysteries #1)',
-      url: 'https://amzn.to/2ZdAMUu',
+      url: 'https://www.amazon.co.jp/dp/B007ZRH38I?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -386,7 +386,7 @@ module.exports = {
     jp: {
       asin: 'B00KW25SP8',
       title: '死者の囁き (アドリアン･イングリッシュ #2)',
-      url: 'https://amzn.to/2EhDsZw',
+      url: 'https://www.amazon.co.jp/dp/B00KW25SP8?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F08e26e629fef3afa93e138d616f929c9%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -402,7 +402,7 @@ module.exports = {
     en: {
       asin: 'B0081C8RU4',
       title: 'A Dangerous Thing (The Adrien English Mysteries #2)',
-      url: 'https://amzn.to/3fZxlH5',
+      url: 'https://www.amazon.co.jp/dp/B0081C8RU4?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -410,7 +410,7 @@ module.exports = {
     jp: {
       asin: 'B00N8RVP24',
       title: '悪魔の聖餐 (アドリアン･イングリッシュ #3)',
-      url: 'https://amzn.to/33yQJHs',
+      url: 'https://www.amazon.co.jp/dp/B00N8RVP24?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fcb923ddc0bff31ab9ad65929c15f009d%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -426,7 +426,7 @@ module.exports = {
     en: {
       asin: 'B006LNC468',
       title: 'The Hell You Say (The Adrien English Mysteries #3)',
-      url: 'https://amzn.to/31jaLmO',
+      url: 'https://www.amazon.co.jp/dp/B006LNC468?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -434,7 +434,7 @@ module.exports = {
     jp: {
       asin: 'B00U6WBU2E',
       title: '海賊王の死 (アドリアン･イングリッシュ #4)',
-      url: 'https://amzn.to/30jfc1F',
+      url: 'https://www.amazon.co.jp/dp/B00U6WBU2E?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F09781469945e3c74b0acee10ad7d3ecf%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -450,7 +450,7 @@ module.exports = {
     en: {
       asin: 'B0067QUX9E',
       title: 'Death of a Pirate King (The Adrien English Mysteries #4)',
-      url: 'https://amzn.to/2EB40VA',
+      url: 'https://www.amazon.co.jp/dp/B0067QUX9E?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -458,7 +458,7 @@ module.exports = {
     jp: {
       asin: 'B01BL25AEG',
       title: '瞑き流れ (アドリアン･イングリッシュ #5)',
-      url: 'https://amzn.to/2Y4lP6A',
+      url: 'https://www.amazon.co.jp/dp/B01BL25AEG?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F822673c680b53e36accb51d1cd419124%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -474,7 +474,7 @@ module.exports = {
     en: {
       asin: 'B006N9XHLQ',
       title: 'The Dark Tide (The Adrien English Mysteries #5)',
-      url: 'https://amzn.to/2CADLOA',
+      url: 'https://www.amazon.co.jp/dp/B006N9XHLQ?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -482,7 +482,7 @@ module.exports = {
     jp: {
       asin: 'B077ZGFZ7S',
       title: 'So This is Christmas (アドリアン･イングリッシュ #6)',
-      url: 'https://amzn.to/3113J5T',
+      url: 'https://www.amazon.co.jp/dp/B077ZGFZ7S?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F2b0ff3ab413236a8a4a30d21eded4f35%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -498,12 +498,12 @@ module.exports = {
     en: {
       asin: 'B01N9AERR2',
       title: 'So This is Christmas (The Adrien English Mysteries #6)',
-      url: 'https://amzn.to/2D8VL2M',
+      url: 'https://www.amazon.co.jp/dp/B01N9AERR2?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
     audiobook: {
       asin: 'B07DP5VDT6',
-      url: 'https://amzn.to/2MxoRgU',
+      url: 'https://www.amazon.co.jp/dp/B07DP5VDT6?tag=muchimemo-22',
       narrator: 'Kale Williams ',
     },
   },
@@ -511,13 +511,13 @@ module.exports = {
     jp: {
       asin: 'B08W9688D7',
       title: 'ウィンター･キル',
-      url: 'https://amzn.to/2PjB89V',
+      url: 'https://www.amazon.co.jp/dp/B08W9688D7?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
     },
     en: {
       asin: 'B00UB6FY7C',
       title: 'Winter Kill',
-      url: 'https://amzn.to/2F5IrwX',
+      url: 'https://www.amazon.co.jp/dp/B00UB6FY7C?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -525,13 +525,13 @@ module.exports = {
     jp: {
       asin: 'B07J5FW3ZS',
       title: 'クリスマスの航路',
-      url: 'https://amzn.to/2B2qxcN',
+      url: 'https://www.amazon.co.jp/dp/B07J5FW3ZS?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
     },
     en: {
       asin: 'B018SVP9T4',
       title: 'A Case of Christmas',
-      url: 'https://amzn.to/2CyLhcf',
+      url: 'https://www.amazon.co.jp/dp/B018SVP9T4?tag=muchimemo-22',
       author: 'Josh Lanyon',
     },
   },
@@ -546,7 +546,7 @@ module.exports = {
     en: {
       asin: 'B00I15VL86',
       title: 'Stranger on the Shore',
-      url: 'https://amzn.to/2FddLtG',
+      url: 'https://www.amazon.co.jp/dp/B00I15VL86?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten: '',
     },
@@ -562,7 +562,7 @@ module.exports = {
     en: {
       asin: 'B0062QD68O',
       title: 'Lovers and Other Strangers',
-      url: 'https://amzn.to/3i2OReN',
+      url: 'https://www.amazon.co.jp/dp/B0062QD68O?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten: '',
     },
@@ -578,7 +578,7 @@ module.exports = {
     en: {
       asin: 'B0826X61C9',
       title: "Murder at Pirate's Cove",
-      url: 'https://amzn.to/2DyNaGV',
+      url: 'https://www.amazon.co.jp/dp/B0826X61C9?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten: '',
     },
@@ -587,7 +587,7 @@ module.exports = {
     jp: {
       asin: 'B00HD59DYY',
       title: 'ドント･ルックバック',
-      url: 'https://amzn.to/31gcSaS',
+      url: 'https://www.amazon.co.jp/dp/B00HD59DYY?tag=muchimemo-22',
       author: 'ジョシュ･ラニヨン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F4990a1830a40363e8d98f21eff808248%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -603,7 +603,7 @@ module.exports = {
     en: {
       asin: 'B00891DC8Y',
       title: "Don't Look Back",
-      url: 'https://amzn.to/3gpPq1d',
+      url: 'https://www.amazon.co.jp/dp/B00891DC8Y?tag=muchimemo-22',
       author: 'Josh Lanyon',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fed0a25fccf11429ca9117e7a7a8eb21e%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -613,7 +613,7 @@ module.exports = {
     jp: {
       asin: 'B01BL25AC8',
       title: 'Speechless',
-      url: 'https://amzn.to/3a8sYat',
+      url: 'https://www.amazon.co.jp/dp/B01BL25AC8?tag=muchimemo-22',
       author: 'キム･フィールディング',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fb73d85a576943a0cab69dab2778532f7%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -629,7 +629,7 @@ module.exports = {
     en: {
       asin: 'B008MMXCMQ',
       title: 'Speechless',
-      url: 'https://amzn.to/3a3UDJV',
+      url: 'https://www.amazon.co.jp/dp/B008MMXCMQ?tag=muchimemo-22',
       author: 'Kim Fielding',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F7add86d1da383d26a3108e265ca42bf7%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -645,7 +645,7 @@ module.exports = {
     en: {
       asin: 'B0722W3LRN',
       title: 'The Gig',
-      url: 'https://amzn.to/31wQGKY',
+      url: 'https://www.amazon.co.jp/dp/B0722W3LRN?tag=muchimemo-22',
       author: 'Kim Fielding',
     },
   },
@@ -653,7 +653,7 @@ module.exports = {
     jp: {
       asin: 'B07J67WTTM',
       title: '月への吠えかた教えます (月吠えシリーズ #1)',
-      url: 'https://amzn.to/2Y0Fu7p',
+      url: 'https://www.amazon.co.jp/dp/B07J67WTTM?tag=muchimemo-22',
       author: 'イーライ･イーストン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F1a3115309cbb36c7a2c54bcdc4a51275%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -669,12 +669,12 @@ module.exports = {
     en: {
       asin: 'B00T12QQOW',
       title: 'How to Howl at the Moon (Howl at the Moon #1)',
-      url: 'https://amzn.to/2Y3Z6az',
+      url: 'https://www.amazon.co.jp/dp/B00T12QQOW?tag=muchimemo-22',
       author: 'Eli Easton',
     },
     audiobook: {
       asin: 'B07DY6YW8H',
-      url: 'https://amzn.to/35dGhX2',
+      url: 'https://www.amazon.co.jp/dp/B07DY6YW8H?tag=muchimemo-22',
       narrator: 'Matthew Shaw',
     },
   },
@@ -682,7 +682,7 @@ module.exports = {
     jp: {
       asin: 'B07YXLFLG9',
       title: 'ヒトの世界の歩きかた (月吠えシリーズ #2)',
-      url: 'https://amzn.to/3av0dVJ',
+      url: 'https://www.amazon.co.jp/dp/B07YXLFLG9?tag=muchimemo-22',
       author: 'イーライ･イーストン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F8bfabd82d37a3ff7b47843046ae2b4dc%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -698,7 +698,7 @@ module.exports = {
     en: {
       asin: 'B0176KQPH8',
       title: 'How to Walk Like a Man (Howl at the Moon #2)',
-      url: 'https://amzn.to/3g00Wzx',
+      url: 'https://www.amazon.co.jp/dp/B0176KQPH8?tag=muchimemo-22',
       author: 'Eli Easton',
     },
   },
@@ -706,7 +706,7 @@ module.exports = {
     jp: {
       asin: 'B08MW9PG12',
       title: '星に願いをかけるには (月吠えシリーズ #3)',
-      url: 'https://amzn.to/2JnTVxV',
+      url: 'https://www.amazon.co.jp/dp/B08MW9PG12?tag=muchimemo-22',
       author: 'イーライ･イーストン',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fe002d23c17dc3e949c46d3fe6d6318f8%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9',
@@ -722,7 +722,7 @@ module.exports = {
     en: {
       asin: 'B01FISHWJK',
       title: 'How to Wish Upon a Star (Howl at the Moon #3)',
-      url: 'https://amzn.to/36hJxjZ',
+      url: 'https://www.amazon.co.jp/dp/B01FISHWJK?tag=muchimemo-22',
       author: 'Eli Easton',
     },
   },
@@ -730,7 +730,7 @@ module.exports = {
     jp: {
       asin: 'B01BL25ADW',
       title: '幽霊狩り (ヘル･オア･ハイウォーター #1)',
-      url: 'https://amzn.to/2F3aVr4',
+      url: 'https://www.amazon.co.jp/dp/B01BL25ADW?tag=muchimemo-22',
       author: 'S･E･ジェイクス',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Ff33bd5abebcb3edda5dbdaabfe5e9f06%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
@@ -746,7 +746,7 @@ module.exports = {
     en: {
       asin: 'B00F1XU31W',
       title: 'Catch a Ghost (Hell or High Water #1)',
-      url: 'https://amzn.to/3gXCC1t',
+      url: 'https://www.amazon.co.jp/dp/B00F1XU31W?tag=muchimemo-22',
       author: 'SE Jakes',
       rakuten:
         'https://hb.afl.rakuten.co.jp/ichiba/1ce58288.c1901dcf.1ce58289.c2be2c6c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fcf336ecb4aa6370688e671a89bec68c9%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsImJidG4iOjEsInByb2QiOjB9',
