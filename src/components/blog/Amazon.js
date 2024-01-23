@@ -203,7 +203,7 @@ function Amazon({ asin, title, author, audiobook, url, book, rakuten, renta, cmo
           <AmazonLink className="amazon-link">
             <AmazonImage>
               <img
-                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].audiobook.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                src={`https://images-fe.ssl-images-amazon.com/images/P/${asin}.LZZZZZZZ`}
                 alt={`${AmazonConfig[book].en.title} 画像`}
               />
             </AmazonImage>
@@ -236,7 +236,7 @@ function Amazon({ asin, title, author, audiobook, url, book, rakuten, renta, cmo
           <AmazonLink className="amazon-link">
             <AmazonImage>
               <img
-                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].jp.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                src={`https://images-fe.ssl-images-amazon.com/images/P/${asin}.LZZZZZZZ`}
                 alt={`${AmazonConfig[book].jp.title} 画像`}
               />
             </AmazonImage>
@@ -298,7 +298,7 @@ function Amazon({ asin, title, author, audiobook, url, book, rakuten, renta, cmo
           <AmazonLink className="amazon-link">
             <AmazonImage>
               <img
-                src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${AmazonConfig[book].en.asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+                src={`https://images-fe.ssl-images-amazon.com/images/P/${asin}.LZZZZZZZ`}
                 alt={`${AmazonConfig[book].en.title} 画像`}
               />
             </AmazonImage>
@@ -329,7 +329,7 @@ function Amazon({ asin, title, author, audiobook, url, book, rakuten, renta, cmo
       <AmazonLink className="amazon-link">
         <AmazonImage>
           <img
-            src={`//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=${asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=${affiliateId}`}
+            src={`https://images-fe.ssl-images-amazon.com/images/P/${asin}.LZZZZZZZ`}
             alt={`${title} 画像`}
           />
         </AmazonImage>
